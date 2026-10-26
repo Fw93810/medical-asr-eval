@@ -66,6 +66,8 @@ ctranslate2 在 Windows 上要从 PATH 里找 `cublas64_12.dll` 和 `cudnn*64_9.
 | `full10-large-v3` | 10 段完整 | large-v3 | 默认 | `.venv` | 已完成 |
 | `full10-large-v3-vad` | 10 段完整 | large-v3 | `--vad` | `.venv` | 已完成 |
 | `full10-parakeet` | 10 段完整，只跑合并声道 | parakeet-tdt-0.6b-v2 | 默认（全注意力） | `.venv-nemo` | 已完成（单独占用 GPU 重跑） |
+| `full10-vad-nocond` | 10 段完整 | large-v3 | `--vad --no-condition-on-previous-text`（H1b） | `.venv` | 已完成 |
+| `full10-vad-nocond-hst2` | 10 段完整 | large-v3 | 上一组再加 `--hallucination-silence-threshold 2`（自动打开词级时间戳） | `.venv` | 已完成 |
 
 汇总表：`results/full10/comparison.csv`、`results/full10/top_insertions.csv`（scispaCy 术语）；`results/lexicon/full10/` 是同样的数据用自带词表算的版本。
 

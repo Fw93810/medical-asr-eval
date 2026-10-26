@@ -37,6 +37,8 @@ def main():
     ap.add_argument("--results", nargs="+", required=True, help="evaluate.py result folders (globs ok)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--top", type=int, default=10)
+    ap.add_argument("--long-run", type=int, default=10,
+                    help="insertion runs with at least this many words count as long runs (loops)")
     args = ap.parse_args()
 
     dirs = sorted({d for pattern in args.results for d in glob.glob(pattern) if os.path.isdir(d)})
@@ -46,7 +48,10 @@ def main():
     for d in dirs:
         run = os.path.basename(os.path.normpath(d))
         extractor = (read(os.path.join(d, "wer.csv")) or [{}])[0].get("term_extractor", "")
+        run_ins = read(os.path.join(d, "insertions.csv"))
         for s in read(os.path.join(d, "summary.csv")):
+            long_runs = [int(r["n_words"]) for r in run_ins
+                         if r["condition"] == s["condition"] and int(r["n_words"]) >= args.long_run]
             n = int(s["ref_words"])
             comp.append({
                 "run": run, "condition": s["condition"], "model": s["model"],
@@ -57,11 +62,11 @@ def main():
                 "ins_rate": round(int(s["insertions"]) / n, 4),
                 "term_recall": s["term_recall_pooled"], "term_extractor": extractor,
                 "sec_per_audio_min": s["sec_per_audio_min"],
+                "long_runs": len(long_runs), "long_run_words": sum(long_runs),
                 **{k: s.get(k, "") for k in ("ov_overlap_s", "del_rate_in", "del_rate_out",
                                               "ins_rate_in", "ins_rate_out", "sub_rate_in", "sub_rate_out")},
             })
-        for r in read(os.path.join(d, "insertions.csv")):
-            ins.append({"run": run, **r})
+        ins += [{"run": run, **r} for r in run_ins]
     comp.sort(key=lambda r: (order.get(r["condition"], 9), r["run"]))
     top = sorted(ins, key=lambda r: -int(r["n_words"]))[:args.top]
 
@@ -79,6 +84,7 @@ def main():
         ("term recall", lambda r: pct(r["term_recall"])), ("terms", lambda r: r["term_extractor"].split("(")[0]),
         ("del in/out overlap", lambda r: f"{pct(r['del_rate_in'])} / {pct(r['del_rate_out'])}"),
         ("ins in/out overlap", lambda r: f"{pct(r['ins_rate_in'])} / {pct(r['ins_rate_out'])}"),
+        (f"runs >= {args.long_run} words", lambda r: f"{r['long_runs']} ({r['long_run_words']} words)"),
         ("s/audio-min", lambda r: r["sec_per_audio_min"]),
     ]))
     print()
