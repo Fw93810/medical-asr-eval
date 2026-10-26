@@ -48,15 +48,21 @@ def load_faster_whisper(args):
             initial_prompt=args.initial_prompt,
             vad_filter=args.vad,
             condition_on_previous_text=not args.no_condition_on_previous_text,
+            word_timestamps=args.word_timestamps,
+            hallucination_silence_threshold=args.hallucination_silence_threshold,
         )
         out = []
         for s in segments:  # generator: decoding happens here
-            out.append({
+            seg = {
                 "start": round(s.start, 2), "end": round(s.end, 2), "text": s.text.strip(),
                 "avg_logprob": round(s.avg_logprob, 3),
                 "no_speech_prob": round(s.no_speech_prob, 3),
                 "compression_ratio": round(s.compression_ratio, 3),
-            })
+            }
+            if s.words:
+                seg["words"] = [{"start": round(w.start, 2), "end": round(w.end, 2), "word": w.word,
+                                 "probability": round(w.probability, 3)} for w in s.words]
+            out.append(seg)
         return out
 
     return run
@@ -66,6 +72,7 @@ def load_parakeet(args):
     import nemo.collections.asr as nemo_asr
 
     name = args.model if args.model.startswith("nvidia/") else "nvidia/parakeet-tdt-0.6b-v2"
+    args.model = name  # recorded in the output JSON
     print(f"NeMo {name}")
     model = nemo_asr.models.ASRModel.from_pretrained(model_name=name)
     if args.local_attention:
@@ -99,11 +106,17 @@ def main():
     ap.add_argument("--beam-size", type=int, default=5)
     ap.add_argument("--vad", action="store_true", help="faster-whisper Silero VAD filter (off by default)")
     ap.add_argument("--no-condition-on-previous-text", action="store_true")
+    ap.add_argument("--word-timestamps", action="store_true", help="faster-whisper: store per-word times")
+    ap.add_argument("--hallucination-silence-threshold", type=float, default=None,
+                    help="faster-whisper: skip silent periods longer than this (s) around suspected "
+                         "hallucinations; turns on --word-timestamps")
     ap.add_argument("--device", default="auto")
     ap.add_argument("--compute-type", default=None)
     ap.add_argument("--cpu-threads", type=int, default=0)
     ap.add_argument("--local-attention", action="store_true", help="parakeet: for audio > ~20 min")
     args = ap.parse_args()
+    if args.hallucination_silence_threshold is not None:
+        args.word_timestamps = True  # faster-whisper ignores the threshold without word timestamps
 
     ids = sorted(d for d in os.listdir(args.data) if os.path.isdir(os.path.join(args.data, d)))
     if args.ids:
@@ -127,7 +140,13 @@ def main():
             runtime = time.time() - t0
             result = {
                 "id": cid, "condition": cond, "backend": args.backend, "model": args.model,
-                "initial_prompt": args.initial_prompt, "audio_s": round(audio_s, 2),
+                "initial_prompt": args.initial_prompt,
+                "settings": {"vad": args.vad, "beam_size": args.beam_size,
+                             "condition_on_previous_text": not args.no_condition_on_previous_text,
+                             "word_timestamps": args.word_timestamps,
+                             "hallucination_silence_threshold": args.hallucination_silence_threshold}
+                if args.backend == "faster-whisper" else {"local_attention": args.local_attention},
+                "audio_s": round(audio_s, 2),
                 "runtime_s": round(runtime, 2), "rtf": round(runtime / audio_s, 4),
                 "text": " ".join(s["text"] for s in segments),
                 "segments": segments,
