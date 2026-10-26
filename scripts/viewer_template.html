@@ -1,0 +1,338 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ASR 对照听写</title>
+<style>
+:root {
+  --bg: #f7f7f5; --panel: #ffffff; --ink: #1d1d1b; --muted: #6b6b66; --line: #e3e2dd;
+  --accent: #2f5bd3; --accent-soft: #e6ecfb; --playing: #fff6d6;
+  --sub-bg: #fde9c8; --sub-ink: #8a4b00;
+  --del-bg: #fbdcdc; --del-ink: #a32020;
+  --ins-bg: #e6defa; --ins-ink: #5530a8;
+  --ok: #1d1d1b;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #141413; --panel: #1e1e1c; --ink: #ecebe6; --muted: #9a9993; --line: #33332f;
+    --accent: #8aa8ff; --accent-soft: #24304f; --playing: #3a3420;
+    --sub-bg: #4a3512; --sub-ink: #ffc978;
+    --del-bg: #4a1e1e; --del-ink: #ff9b9b;
+    --ins-bg: #352a55; --ins-ink: #c7b4ff;
+    --ok: #ecebe6;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #141413; --panel: #1e1e1c; --ink: #ecebe6; --muted: #9a9993; --line: #33332f;
+  --accent: #8aa8ff; --accent-soft: #24304f; --playing: #3a3420;
+  --sub-bg: #4a3512; --sub-ink: #ffc978;
+  --del-bg: #4a1e1e; --del-ink: #ff9b9b;
+  --ins-bg: #352a55; --ins-ink: #c7b4ff;
+  --ok: #ecebe6;
+}
+* { box-sizing: border-box; }
+body { margin: 0; background: var(--bg); color: var(--ink);
+  font: 14px/1.55 -apple-system, "Segoe UI", "Microsoft YaHei", "PingFang SC", sans-serif; }
+header { padding: 20px 24px 8px; max-width: 1400px; margin: 0 auto; }
+h1 { font-size: 20px; margin: 0 0 4px; }
+h2 { font-size: 15px; margin: 0 0 10px; }
+.sub { color: var(--muted); margin: 0; }
+main { max-width: 1400px; margin: 0 auto; padding: 0 24px 60px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; margin-top: 14px; }
+.controls { display: flex; flex-wrap: wrap; gap: 14px 22px; align-items: center; }
+.controls label { color: var(--muted); margin-right: 6px; }
+select, button { font: inherit; color: var(--ink); background: var(--panel); border: 1px solid var(--line); border-radius: 6px; padding: 4px 8px; }
+button { cursor: pointer; }
+.seg { display: inline-flex; border: 1px solid var(--line); border-radius: 7px; overflow: hidden; }
+.seg button { border: 0; border-radius: 0; padding: 4px 12px; }
+.seg button.on { background: var(--accent); color: #fff; }
+.chk { display: inline-flex; gap: 4px; align-items: center; margin-right: 10px; color: var(--ink); }
+.player { position: sticky; top: 0; z-index: 5; background: var(--bg); padding: 10px 0 6px; }
+.player .panel { margin: 0; display: flex; gap: 14px; align-items: center; flex-wrap: wrap; }
+audio { flex: 1 1 360px; min-width: 240px; height: 36px; }
+.now { color: var(--muted); font-variant-numeric: tabular-nums; }
+table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 6px 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { color: var(--muted); font-weight: 500; font-size: 12.5px; }
+td.num, th.num { text-align: right; }
+.best { font-weight: 700; }
+.legend { display: flex; flex-wrap: wrap; gap: 14px; color: var(--muted); font-size: 12.5px; margin-bottom: 8px; }
+.w { border-radius: 3px; padding: 0 2px; cursor: pointer; }
+.w:hover { outline: 1px solid var(--accent); }
+.w.sub { background: var(--sub-bg); color: var(--sub-ink); }
+.w.del { background: var(--del-bg); color: var(--del-ink); text-decoration: line-through; }
+.w.ins { background: var(--ins-bg); color: var(--ins-ink); }
+.w.sub s { opacity: .6; margin-right: 3px; font-size: 12px; }
+.grid { display: grid; gap: 0; border-top: 1px solid var(--line); overflow-x: auto; }
+.row { display: contents; }
+.cell { padding: 8px 10px; border-bottom: 1px solid var(--line); min-width: 0; }
+.row:hover .cell { background: var(--accent-soft); }
+.row.sel .cell { box-shadow: inset 0 0 0 9999px rgba(47,91,211,.08); }
+.row.playing .cell { background: var(--playing); }
+.ghead .cell { font-weight: 600; font-size: 12.5px; color: var(--muted); position: sticky; top: 58px; background: var(--panel); z-index: 2; }
+.ref .t { color: var(--muted); font-size: 12px; font-variant-numeric: tabular-nums; cursor: pointer; }
+.ref .t:hover { color: var(--accent); }
+.spk { font-size: 11.5px; border-radius: 4px; padding: 0 5px; margin-right: 4px; background: var(--accent-soft); color: var(--accent); }
+.spk.patient { background: var(--ins-bg); color: var(--ins-ink); }
+.tag { color: var(--muted); font-size: 12px; }
+.cellstats { font-size: 11.5px; color: var(--muted); }
+.steps { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.step { border: 1px solid var(--line); border-radius: 8px; padding: 10px 12px; }
+.step h3 { font-size: 13px; margin: 0 0 6px; }
+.step p { margin: 4px 0; }
+.mono { font-family: Consolas, "SF Mono", monospace; font-size: 12.5px; word-break: break-word; }
+.k { color: var(--muted); font-size: 12.5px; }
+.inslist li { margin: 4px 0; cursor: pointer; }
+.inslist li:hover { color: var(--accent); }
+details summary { cursor: pointer; font-weight: 600; }
+.hint { color: var(--muted); font-size: 12.5px; }
+@media (max-width: 700px) {
+  header, main { padding-left: 16px; padding-right: 16px; }
+  .ghead .cell { top: 0; position: static; }
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>ASR 对照听写</h1>
+  <p class="sub">边听原声边看各方法的转写与错误。点击任意时间或单词就跳到那里播放。</p>
+</header>
+<main>
+  <div class="panel controls">
+    <span><label>问诊</label><select id="cid"></select></span>
+    <span><label>音轨</label><span class="seg" id="cond"></span></span>
+    <span id="methodChecks"><label>显示方法</label></span>
+  </div>
+
+  <div class="player"><div class="panel">
+    <audio id="audio" controls preload="auto"></audio>
+    <span><label class="k">速度</label>
+      <select id="rate"><option>0.75</option><option selected>1</option><option>1.25</option><option>1.5</option></select></span>
+    <label class="chk"><input type="checkbox" id="follow" checked> 播放时跟随滚动</label>
+    <span class="now" id="now">0:00</span>
+  </div></div>
+
+  <section class="panel">
+    <h2>方法对比 <span class="hint" id="scopeHint"></span></h2>
+    <div class="seg" id="scope" style="margin-bottom:10px"></div>
+    <div style="overflow-x:auto"><table id="cmp"></table></div>
+  </section>
+
+  <section class="panel">
+    <details id="howto" open>
+      <summary>分析过程：以选中的这一句为例（点下面任一行切换）</summary>
+      <div class="steps" id="steps" style="margin-top:10px"></div>
+    </details>
+  </section>
+
+  <section class="panel">
+    <h2>逐句对照</h2>
+    <div class="legend">
+      <span><span class="w">正确</span></span>
+      <span><span class="w sub"><s>参考词</s>识别词</span> 替换</span>
+      <span><span class="w del">参考词</span> 删除（漏识别）</span>
+      <span><span class="w ins">多出的词</span> 插入（可能是幻觉）</span>
+      <span>文字都是规范化之后的（小写、去标点、去 um/uh），这也是算 WER 用的文本。</span>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="panel">
+    <h2>可能的幻觉：连续插入 ≥ 3 个词</h2>
+    <div id="ins"></div>
+  </section>
+</main>
+
+<script>
+const DATA = /*__DATA__*/null;
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const fmt = t => { t = Math.max(0, t); const m = Math.floor(t / 60), s = Math.floor(t % 60); return m + ":" + String(s).padStart(2, "0"); };
+const pct = x => (x * 100).toFixed(1) + "%";
+const COND_LABEL = { doctor: "医生", patient: "患者", mixed: "混合" };
+
+const state = { cid: null, cond: "mixed", shown: new Set(DATA.methods.map(m => m.name)), sel: 0, scope: "item" };
+const audio = $("#audio");
+
+function item() { return DATA.items.find(i => i.id === state.cid && i.condition === state.cond); }
+function shownMethods(it) { return DATA.methods.map(m => m.name).filter(n => state.shown.has(n) && it.methods[n]); }
+
+function seek(t, play = true) { audio.currentTime = Math.max(0, t - 0.3); if (play) audio.play(); }
+
+function init() {
+  const cids = [...new Set(DATA.items.map(i => i.id))];
+  state.cid = cids[0];
+  $("#cid").innerHTML = cids.map(c => `<option value="${c}">${c.replace("day", "第").replace("_consultation", " 天 · 问诊 ")}</option>`).join("");
+  $("#cid").onchange = e => { state.cid = e.target.value; state.sel = 0; load(); };
+  $("#cond").innerHTML = ["doctor", "patient", "mixed"].map(c => `<button data-c="${c}">${COND_LABEL[c]}</button>`).join("");
+  $("#cond").onclick = e => { const c = e.target.dataset.c; if (c) { state.cond = c; state.sel = 0; load(); } };
+  $("#methodChecks").insertAdjacentHTML("beforeend", DATA.methods.map(m =>
+    `<label class="chk"><input type="checkbox" data-m="${m.name}" checked> ${esc(m.name)}</label>`).join(""));
+  $("#methodChecks").onchange = e => { const m = e.target.dataset.m; if (!m) return; e.target.checked ? state.shown.add(m) : state.shown.delete(m); render(); };
+  $("#scope").innerHTML = `<button data-s="item">当前音轨</button><button data-s="all">全部问诊合计</button>`;
+  $("#scope").onclick = e => { const s = e.target.dataset.s; if (s) { state.scope = s; renderTable(); } };
+  $("#rate").onchange = e => audio.playbackRate = +e.target.value;
+  audio.addEventListener("timeupdate", onTime);
+  load();
+}
+
+// Fetch the wav into a blob: simple static servers (python -m http.server) don't do
+// Range requests, and without them the browser can't seek.
+const blobs = {};
+async function load() {
+  const it = item(), url = DATA.audio_base + "/" + it.audio;
+  if (!blobs[url]) blobs[url] = fetch(url).then(r => r.blob()).then(b => URL.createObjectURL(b));
+  audio.src = await blobs[url];
+  audio.playbackRate = +$("#rate").value;
+  document.querySelectorAll("#cond button").forEach(b => b.classList.toggle("on", b.dataset.c === state.cond));
+  render();
+}
+
+function render() { renderTable(); renderGrid(); renderSteps(); renderIns(); }
+
+function runs(ops) {
+  const out = []; let cur = null;
+  ops.forEach(o => {
+    if (o[0] === "ins") { if (!cur) { cur = { words: [], t: o[4] }; out.push(cur); } cur.words.push(o[2]); }
+    else cur = null;
+  });
+  return out;
+}
+
+function renderTable() {
+  const it = item();
+  document.querySelectorAll("#scope button").forEach(b => b.classList.toggle("on", b.dataset.s === state.scope));
+  const names = shownMethods(it);
+  let rows;
+  if (state.scope === "item") {
+    $("#scopeHint").textContent = `· ${it.id} / ${COND_LABEL[it.condition]}`;
+    rows = names.map(n => { const s = it.methods[n].stats;
+      return { n, wer: s.wer, sub: s.sub, del: s.del, ins: s.ins, ref: s.ref_words,
+        recall: it.ref_terms.length ? 1 - s.missed_terms.length / it.ref_terms.length : null,
+        missed: s.missed_terms, longest: Math.max(0, ...runs(it.methods[n].ops).map(r => r.words.length)),
+        spm: s.runtime_s / (s.audio_s / 60) }; });
+  } else {
+    $("#scopeHint").textContent = `· ${COND_LABEL[state.cond]}音轨，${new Set(DATA.items.map(i => i.id)).size} 段问诊合计`;
+    const its = DATA.items.filter(i => i.condition === state.cond);
+    rows = names.map(n => { let sub = 0, del = 0, ins = 0, ref = 0, terms = 0, miss = 0, rt = 0, au = 0, longest = 0; const missed = [];
+      its.forEach(i => { const m = i.methods[n]; if (!m) return; const s = m.stats;
+        sub += s.sub; del += s.del; ins += s.ins; ref += s.ref_words; terms += i.ref_terms.length; miss += s.missed_terms.length;
+        rt += s.runtime_s; au += s.audio_s; missed.push(...s.missed_terms);
+        longest = Math.max(longest, ...runs(m.ops).map(r => r.words.length)); });
+      return { n, wer: (sub + del + ins) / ref, sub, del, ins, ref, recall: terms ? 1 - miss / terms : null,
+        missed: [...new Set(missed)], longest, spm: rt / (au / 60) }; });
+  }
+  const minW = Math.min(...rows.map(r => r.wer));
+  $("#cmp").innerHTML = `<tr><th>方法</th><th class="num">WER</th><th class="num">替换</th><th class="num">删除</th><th class="num">插入</th>
+    <th class="num">参考词数</th><th class="num">医学词召回</th><th>漏掉的医学词</th><th class="num">最长连续插入</th><th class="num">每分钟音频耗时</th></tr>` +
+    rows.map(r => `<tr><td>${esc(r.n)}</td><td class="num ${r.wer === minW ? "best" : ""}">${pct(r.wer)}</td>
+      <td class="num">${r.sub}</td><td class="num">${r.del}</td><td class="num">${r.ins}</td><td class="num">${r.ref}</td>
+      <td class="num">${r.recall === null ? "–" : pct(r.recall)}</td><td>${r.missed.map(esc).join(", ") || "–"}</td>
+      <td class="num">${r.longest} 词</td><td class="num">${r.spm.toFixed(1)} 秒</td></tr>`).join("");
+}
+
+function wordHtml(o) {
+  const [t, r, h, , time] = o;
+  const at = ` data-t="${time}"`;
+  if (t === "eq") return `<span class="w"${at}>${esc(h)}</span>`;
+  if (t === "sub") return `<span class="w sub"${at} title="参考：${esc(r)}"><s>${esc(r)}</s>${esc(h)}</span>`;
+  if (t === "del") return `<span class="w del"${at} title="漏掉了">${esc(r)}</span>`;
+  return `<span class="w ins"${at} title="参考里没有">${esc(h)}</span>`;
+}
+
+function rawRef(raw) {
+  return esc(raw).replace(/&lt;UNSURE&gt;(.*?)&lt;\/UNSURE&gt;/g, '<span class="tag" title="标注员不确定">[?]</span>$1<span class="tag">[/?]</span>')
+    .replace(/&lt;(UNIN|INAUDIBLE_SPEECH)\/&gt;/g, '<span class="tag" title="听不清">[听不清]</span>');
+}
+
+function renderGrid() {
+  const it = item(), names = shownMethods(it);
+  const byRow = {};
+  names.forEach(n => { byRow[n] = it.utterances.map(() => []); it.methods[n].ops.forEach(o => byRow[n][o[3]].push(o)); });
+  const g = $("#grid");
+  g.style.gridTemplateColumns = `minmax(260px, 1.2fr) repeat(${names.length}, minmax(220px, 1fr))`;
+  let html = `<div class="row ghead"><div class="cell">参考转写（人工）</div>${names.map(n => `<div class="cell">${esc(n)}</div>`).join("")}</div>`;
+  it.utterances.forEach((u, i) => {
+    html += `<div class="row${i === state.sel ? " sel" : ""}" data-i="${i}"><div class="cell ref">
+      <div><span class="t" data-t="${u.start}">${fmt(u.start)}–${fmt(u.end)}</span> ${state.cond === "mixed" ? `<span class="spk ${u.speaker}">${COND_LABEL[u.speaker]}</span>` : ""}</div>
+      <div>${rawRef(u.raw)}</div></div>`;
+    names.forEach(n => {
+      const ops = byRow[n][i]; const e = ops.filter(o => o[0] !== "eq").length;
+      html += `<div class="cell">${ops.map(wordHtml).join(" ")}${e ? `<div class="cellstats">${e} 处错误</div>` : ""}</div>`;
+    });
+    html += `</div>`;
+  });
+  g.innerHTML = html;
+}
+
+$("#grid").addEventListener("click", e => {
+  const t = e.target.closest("[data-t]");
+  const row = e.target.closest(".row[data-i]");
+  if (row && +row.dataset.i !== state.sel) {
+    state.sel = +row.dataset.i;
+    document.querySelectorAll("#grid .row.sel").forEach(r => r.classList.remove("sel"));
+    row.classList.add("sel");
+    renderSteps();
+  }
+  if (t) seek(+t.dataset.t);
+});
+
+function renderSteps() {
+  const it = item(), names = shownMethods(it), u = it.utterances[state.sel];
+  if (!u) { $("#steps").innerHTML = ""; return; }
+  const refOps = names.length ? it.methods[names[0]].ops.filter(o => o[3] === state.sel && o[0] !== "ins") : [];
+  const refNorm = refOps.map(o => o[1]).join(" ");
+  const segs = n => it.methods[n].segments.filter(s => s.end > u.start - 0.5 && s.start < u.end + 0.5);
+  let h = `<div class="step"><h3>1 · 人工参考</h3>
+    <p class="k">${fmt(u.start)}–${fmt(u.end)} ${state.cond === "mixed" ? COND_LABEL[u.speaker] : ""}，原始标注（含不确定/听不清标记）：</p>
+    <p class="mono">${rawRef(u.raw)}</p>
+    <p class="k">规范化后（Whisper 英文规范化器：小写、去标点、去 um/uh、数字统一）：</p>
+    <p class="mono">${esc(refNorm) || "（空）"}</p>
+    <button onclick="seek(${u.start})">▶ 听这一句</button></div>`;
+  h += `<div class="step"><h3>2 · 各方法的原始输出（时间重叠的片段）</h3>${names.map(n =>
+    `<p><b>${esc(n)}</b></p>${segs(n).map(s => `<p class="mono"><span class="t" style="cursor:pointer;color:var(--muted)" onclick="seek(${s.start})">[${fmt(s.start)}]</span> ${esc(s.text)}</p>`).join("") || '<p class="k">（这段时间没有输出）</p>'}`).join("")}</div>`;
+  h += `<div class="step"><h3>3 · 词级对齐（jiwer，最小编辑距离）</h3>
+    <p class="k">把参考词序列和识别词序列对齐，每个位置标成 正确 / 替换 / 删除 / 插入。插入的词归到前一个参考词所在的句子。</p>
+    ${names.map(n => { const ops = it.methods[n].ops.filter(o => o[3] === state.sel);
+      const c = k => ops.filter(o => o[0] === k).length;
+      return `<p><b>${esc(n)}</b> <span class="k">替换 ${c("sub")} · 删除 ${c("del")} · 插入 ${c("ins")}</span></p><p>${ops.map(wordHtml).join(" ")}</p>`; }).join("")}</div>`;
+  h += `<div class="step"><h3>4 · 汇总成指标</h3>
+    <p><b>WER</b> = (替换 + 删除 + 插入) ÷ 参考词数。整段音轨上累加，见上方表格。插入不计入分母，所以 WER 可以超过 100%。</p>
+    <p><b>医学词召回</b> = 参考里出现的医学词（这里用 ${esc(DATA.term_extractor)} 词表匹配）中，识别结果里也出现的比例。这一段的参考医学词：<span class="mono">${it.ref_terms.map(esc).join(", ") || "无"}</span></p>
+    <p><b>插入串</b>：连续的插入词。很长的插入串通常是 Whisper 的幻觉（反复 "yeah"、"thanks for watching" 之类），见页面底部。</p>
+    <p class="k">注意：混合音轨的参考按说话开始时间排序，两人同时说话时词序没有唯一正确答案，所以混合 WER 会略偏高。</p></div>`;
+  $("#steps").innerHTML = h;
+}
+
+function renderIns() {
+  const it = item(), names = shownMethods(it);
+  $("#ins").innerHTML = names.map(n => {
+    const rs = runs(it.methods[n].ops).filter(r => r.words.length >= 3).sort((a, b) => b.words.length - a.words.length);
+    return `<p><b>${esc(n)}</b> <span class="k">${rs.length} 处</span></p>` + (rs.length ?
+      `<ul class="inslist">${rs.map(r => `<li data-t="${r.t}"><span class="now">[${fmt(r.t)}]</span> ${r.words.length} 词：<span class="w ins">${esc(r.words.join(" "))}</span></li>`).join("")}</ul>` : "");
+  }).join("");
+}
+$("#ins").addEventListener("click", e => { const li = e.target.closest("[data-t]"); if (li) seek(+li.dataset.t); });
+
+let lastRow = -1;
+function onTime() {
+  const t = audio.currentTime; $("#now").textContent = fmt(t);
+  const us = item().utterances;
+  let idx = -1;
+  for (let i = 0; i < us.length; i++) if (us[i].start <= t + 0.05) idx = i;
+  if (idx >= 0 && us[idx].end < t - 1.5) idx = -1;  // in a gap between utterances
+  if (idx === lastRow) return;
+  lastRow = idx;
+  document.querySelectorAll("#grid .row.playing").forEach(r => r.classList.remove("playing"));
+  if (idx < 0) return;
+  const row = document.querySelector(`#grid .row[data-i="${idx}"]`);
+  if (!row) return;
+  row.classList.add("playing");
+  if ($("#follow").checked && !audio.paused) row.firstElementChild.scrollIntoView({ block: "center", behavior: "smooth" });
+}
+
+init();
+</script>
+</body>
+</html>
