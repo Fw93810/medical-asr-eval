@@ -1,0 +1,343 @@
+# Fallback medical-term lexicon for evaluate.py (used when scispaCy/en_core_sci_sm
+# is unavailable). Hand-written, general primary-care vocabulary; NOT derived
+# from the PriMock57 transcripts. One term per line, '#' starts a comment.
+# Terms are passed through the same Whisper English normaliser as the texts,
+# so British/American spellings (diarrhoea/diarrhea) both work. A term also
+# matches if its last word has a trailing "s" in the text (tablet -> tablets).
+# Deliberately excludes very ambiguous everyday words (e.g. "back", "head",
+# "cold", "chest" alone) to keep precision reasonable. Crude by design.
+
+# --- symptoms / signs
+pain
+ache
+headache
+migraine
+fever
+temperature
+chills
+sweats
+night sweats
+cough
+wheeze
+wheezing
+breathless
+breathlessness
+shortness of breath
+chest pain
+chest tightness
+palpitations
+dizziness
+dizzy
+lightheaded
+fainting
+faint
+blackout
+nausea
+nauseous
+vomiting
+vomit
+diarrhea
+constipation
+bloating
+heartburn
+indigestion
+reflux
+abdominal pain
+stomach pain
+tummy pain
+cramps
+cramping
+blood in the stool
+stool
+stools
+bowel movements
+bowels
+urine
+urinating
+urination
+burning
+itching
+itchy
+rash
+swelling
+swollen
+lump
+bruising
+bleeding
+discharge
+fatigue
+tired
+tiredness
+lethargic
+lethargy
+weakness
+numbness
+tingling
+pins and needles
+insomnia
+weight loss
+weight gain
+appetite
+sore throat
+runny nose
+blocked nose
+congestion
+earache
+blurred vision
+stiffness
+tenderness
+spasm
+anxiety
+anxious
+depression
+low mood
+stress
+panic attack
+phlegm
+sputum
+mucus
+thirst
+
+# --- conditions / diagnoses
+infection
+viral infection
+bacterial infection
+urinary tract infection
+uti
+chest infection
+gastroenteritis
+food poisoning
+flu
+influenza
+covid
+asthma
+copd
+eczema
+psoriasis
+dermatitis
+acne
+allergy
+allergies
+allergic
+hay fever
+diabetes
+type 2 diabetes
+hypertension
+high blood pressure
+low blood pressure
+high cholesterol
+cholesterol
+heart attack
+angina
+stroke
+arrhythmia
+atrial fibrillation
+heart failure
+thyroid
+hypothyroidism
+hyperthyroidism
+arthritis
+osteoarthritis
+gout
+sciatica
+back pain
+lower back pain
+sprain
+fracture
+tendonitis
+irritable bowel syndrome
+ibs
+crohn
+colitis
+appendicitis
+gallstones
+ulcer
+hernia
+kidney stones
+cystitis
+pneumonia
+bronchitis
+sinusitis
+tonsillitis
+conjunctivitis
+glandular fever
+anemia
+cancer
+tumor
+epilepsy
+seizure
+concussion
+dementia
+pregnancy
+pregnant
+period
+periods
+menstrual
+menopause
+contraception
+sexually transmitted infection
+std
+
+# --- anatomy
+abdomen
+stomach
+tummy
+bowel
+bladder
+kidney
+kidneys
+liver
+lungs
+heart
+throat
+tonsils
+sinuses
+ear
+ears
+eye
+eyes
+skin
+joint
+joints
+knee
+ankle
+wrist
+elbow
+shoulder
+hip
+spine
+neck
+muscle
+muscles
+lower abdomen
+left side
+right side
+groin
+pelvis
+rectum
+chest wall
+calf
+thigh
+
+# --- medications / treatments
+medication
+medications
+medicine
+tablet
+pill
+capsule
+inhaler
+blue inhaler
+brown inhaler
+steroid
+steroids
+antibiotic
+antibiotics
+amoxicillin
+penicillin
+paracetamol
+acetaminophen
+ibuprofen
+aspirin
+naproxen
+codeine
+co codamol
+tramadol
+morphine
+omeprazole
+lansoprazole
+gaviscon
+antacid
+antihistamine
+cetirizine
+loratadine
+salbutamol
+ventolin
+prednisolone
+hydrocortisone
+metformin
+insulin
+statin
+statins
+atorvastatin
+simvastatin
+amlodipine
+ramipril
+lisinopril
+levothyroxine
+sertraline
+citalopram
+fluoxetine
+antidepressant
+antidepressants
+contraceptive pill
+the pill
+rehydration
+dioralyte
+oral rehydration
+fluids
+cream
+ointment
+moisturizer
+emollient
+eye drops
+nasal spray
+vaccine
+vaccination
+dose
+dosage
+milligrams
+mg
+side effects
+over the counter
+prescription
+physiotherapy
+surgery
+operation
+
+# --- tests / procedures / measurements
+blood test
+blood tests
+urine test
+urine sample
+stool sample
+swab
+x ray
+scan
+ultrasound
+ct scan
+mri
+ecg
+blood pressure
+heart rate
+pulse
+oxygen
+temperature
+examination
+referral
+specialist
+hospital
+a and e
+emergency
+ambulance
+gp
+pharmacist
+pharmacy
+nurse
+follow up
+smear test
+
+# --- history / lifestyle
+smoke
+smoking
+smoker
+cigarettes
+alcohol
+drink
+units
+exercise
+diet
+family history
+medical history
+past medical history
+allergic to

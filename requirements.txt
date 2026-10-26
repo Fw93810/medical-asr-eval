@@ -1,0 +1,8 @@
+faster-whisper>=1.1
+jiwer>=3.0
+whisper_normalizer>=0.0.10
+soundfile
+numpy
+# optional:
+#   scispacy + en_core_sci_sm   (medical-term extraction; evaluate.py falls back to a lexicon without it)
+#   nemo_toolkit[asr]           (only for --backend parakeet)
