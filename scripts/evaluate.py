@@ -14,6 +14,12 @@ For every <hyp>/<cid>/<condition>.json (from transcribe.py) and the matching
     (see --terms). The extractor used is recorded in the CSV.
   * Insertions: runs of hypothesis words that the jiwer alignment marks as
     "insert" (no reference word). Long runs are a cheap hallucination signal.
+  * Overlap split: errors inside vs outside the time spans where doctor and
+    patient utterances overlap (from utterances.json). Word times are
+    approximate: each utterance's / segment's words are spread evenly over its
+    span. Substitutions and deletions are placed by the reference word's time,
+    insertions by the hypothesis word's time; rates are per reference word in
+    the same region.
 
 Writes to --results:
   wer.csv           one row per consultation x condition
@@ -40,7 +46,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 # single-word scispaCy "entities" that are too generic to count as medical terms
 SCI_STOP = {"yeah", "okay", "ok", "right", "thing", "things", "time", "times", "day", "days",
             "week", "weeks", "morning", "today", "bit", "lot", "sort", "kind", "way", "people",
-            "sorry", "thank", "thanks", "good", "fine", "hello", "hi", "mean", "know", "like"}
+            "sorry", "thank", "thanks", "good", "fine", "hello", "hi", "mean", "know", "like",
+            "i", "you", "we", "he", "she", "it", "they", "me", "my", "your"}
 
 
 def norm_words(text):
@@ -93,6 +100,61 @@ def contains(words, term):
     return False
 
 
+def spread(n, start, end):
+    """Approximate times for n words spread evenly over [start, end]."""
+    end = start if end is None else end
+    return [start + (k + 0.5) / n * (end - start) for k in range(n)]
+
+
+def load_overlap(data_dir, cid, cond, ref_lines):
+    """Overlap intervals (doctor x patient) and approximate time per reference word.
+
+    Returns (intervals, ref_word_times), or (None, None) if utterances.json is
+    missing or does not match ref_<cond>.txt line by line.
+    """
+    path = os.path.join(data_dir, cid, "utterances.json")
+    if not os.path.isfile(path):
+        return None, None
+    with open(path) as f:
+        utts = json.load(f)["utterances"]
+    doc = [(u["start"], u["end"]) for u in utts if u["speaker"] == "doctor"]
+    pat = [(u["start"], u["end"]) for u in utts if u["speaker"] == "patient"]
+    intervals = sorted((max(a, c), min(b, d)) for a, b in doc for c, d in pat if max(a, c) < min(b, d))
+    merged = []
+    for a, b in intervals:
+        if merged and a <= merged[-1][1]:
+            merged[-1][1] = max(merged[-1][1], b)
+        else:
+            merged.append([a, b])
+
+    mine = sorted((u for u in utts if cond == "mixed" or u["speaker"] == cond), key=lambda u: u["start"])
+    if [u["text"].strip() for u in mine] != ref_lines:
+        return None, None
+    times = []
+    for u in mine:
+        times += spread(len(norm_words(u["text"])), u["start"], u["end"])
+    return merged, times
+
+
+def in_any(t, intervals):
+    return any(a <= t <= b for a, b in intervals)
+
+
+OV_COUNTS = ("overlap_s", "ref_in", "ref_out", "sub_in", "sub_out", "del_in", "del_out", "ins_in", "ins_out")
+
+
+def overlap_columns(ov):
+    """Counts plus per-region error rates (per reference word in that region)."""
+    if ov is None:
+        return {}
+    cols = {f"ov_{k}": ov[k] for k in OV_COUNTS}
+    for kind in ("sub", "del", "ins"):
+        for region in ("in", "out"):
+            n = ov[f"ref_{region}"]
+            cols[f"{kind}_rate_{region}"] = round(ov[f"{kind}_{region}"] / n, 4) if n else ""
+    return cols
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="data/prepared")
@@ -115,15 +177,33 @@ def main():
             ref_lines = [l.strip() for l in f if l.strip()]
 
         ref_words = [w for line in ref_lines for w in norm_words(line)]
-        hyp_words, hyp_times = [], []
+        hyp_words, hyp_times, hyp_wtimes = [], [], []
         for seg in hyp["segments"]:
             ws = norm_words(seg["text"])
             hyp_words += ws
             hyp_times += [seg["start"]] * len(ws)
+            hyp_wtimes += spread(len(ws), seg["start"], seg["end"])
 
         if not hyp_words:  # jiwer needs non-empty strings
-            hyp_words, hyp_times = ["<empty>"], [0.0]
+            hyp_words, hyp_times, hyp_wtimes = ["<empty>"], [0.0], [0.0]
         out = jiwer.process_words(" ".join(ref_words), " ".join(hyp_words))
+
+        overlaps, ref_wtimes = load_overlap(args.data, cid, cond, ref_lines)
+        ov = None
+        if overlaps is not None:
+            ref_in = [in_any(t, overlaps) for t in ref_wtimes]
+            ov = {k: 0 for k in ("ref_in", "sub_in", "del_in", "ins_in", "sub_out", "del_out", "ins_out")}
+            ov["ref_in"] = sum(ref_in)
+            for chunk in out.alignments[0]:
+                if chunk.type == "insert":
+                    for j in range(chunk.hyp_start_idx, chunk.hyp_end_idx):
+                        ov["ins_in" if in_any(hyp_wtimes[j], overlaps) else "ins_out"] += 1
+                elif chunk.type in ("substitute", "delete"):
+                    k = "sub" if chunk.type == "substitute" else "del"
+                    for i in range(chunk.ref_start_idx, chunk.ref_end_idx):
+                        ov[f"{k}_in" if ref_in[i] else f"{k}_out"] += 1
+            ov["ref_out"] = len(ref_words) - ov["ref_in"]
+            ov["overlap_s"] = round(sum(b - a for a, b in overlaps), 1)
 
         for chunk in out.alignments[0]:
             if chunk.type != "insert":
@@ -135,6 +215,7 @@ def main():
             ins_rows.append({
                 "id": cid, "condition": cond, "n_words": n,
                 "segment_start_s": hyp_times[a],
+                "in_overlap": "" if overlaps is None else int(in_any(hyp_wtimes[a], overlaps)),
                 "inserted": " ".join(hyp_words[a:b]),
                 "hyp_context": " ".join(hyp_words[max(0, a - 6):a]) + " [[" + " ".join(hyp_words[a:b])
                                + "]] " + " ".join(hyp_words[b:b + 6]),
@@ -158,6 +239,7 @@ def main():
             "audio_s": hyp["audio_s"], "runtime_s": hyp["runtime_s"],
             "sec_per_audio_min": round(hyp["runtime_s"] / audio_min, 2),
         })
+        rows[-1].update(overlap_columns(ov))
         print(f"{cid}/{cond}: WER {out.wer:.3f}  term recall {len(found)}/{len(ref_terms)}")
 
     def write(name, data):
@@ -187,6 +269,8 @@ def main():
             "term_recall_pooled": round(found / terms, 4) if terms else "",
             "sec_per_audio_min": round(runtime / (audio / 60), 2),
         })
+        if all("ov_ref_in" in r for r in rs):
+            summary[-1].update(overlap_columns({k: sum(r[f"ov_{k}"] for r in rs) for k in OV_COUNTS}))
 
     write("wer.csv", rows)
     write("summary.csv", summary)
