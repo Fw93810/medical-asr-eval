@@ -36,6 +36,9 @@ import tempfile
 import time
 from collections import defaultdict
 
+# Frozen: every judged note so far used these prompts and the cached fact lists in <out>/facts.
+# Any change to SYSTEM, FACTS_PROMPT, JUDGE_PROMPT or the schemas needs a new version and a full re-judge.
+JUDGE_VERSION = "v1"
 SYSTEM = ("You are a careful clinical documentation reviewer. You compare medical notes precisely, "
           "judge meaning rather than wording, and answer only in the requested JSON format.")
 
@@ -164,7 +167,8 @@ def main():
         note = read_json(os.path.join(args.notes, cid, f"{source}.json"))["note"]
         listing = "\n".join(f"{i}. {f['fact']}" for i, f in enumerate(facts, 1))
         answer, models = claude(args, JUDGE_PROMPT.format(facts=listing, note=note), JUDGE_SCHEMA)
-        write_json(judged_path, {"id": cid, "source": source, "models": models, **answer})
+        write_json(judged_path, {"id": cid, "source": source, "models": models, "judge_version": JUDGE_VERSION,
+                                 **answer})
         done += 1
         print(f"judged {done}: {cid}/{source}")
 

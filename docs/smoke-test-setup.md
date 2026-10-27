@@ -91,6 +91,19 @@ ctranslate2 在 Windows 上要从 PATH 里找 `cublas64_12.dll` 和 `cudnn*64_9.
 
 汇总表：`results/test47/comparison.csv`。其他分析：`results/test47/overlap/`（重叠段，Whisper）、`results/test47/overlap-parakeet/`、`results/test47/negations/`（否定词）、`results/test47/listening_sample.csv`（待人工标注的 40 处插入）。对照页面：`results/viewer-test47/`。
 
+### 规范化：原始 WER 和修正 WER
+
+Whisper 的英文规范化器有几处不统一的写法，会被算成错误。`evaluate.py --equivalence` 在规范化之后再套一张固定的等价词表：
+
+| 统一成 | 原写法 |
+|---|---|
+| okay | ok，o k，0 k（"O.K." 经规范化器会变成 "0 k"） |
+| alright | all right |
+| mom、mommy | mum、mummy |
+| 0 | ohh、ooh（规范化器会把 "oh" 变成 "0"） |
+
+所有运行都按两种方式各算一遍：原始结果在 `results/<运行名>/`，修正结果在 `results/equiv/<运行名>/`；主结果表（`comparison.csv`）里的 `wer` 和 `wer_corrected` 两列并列。原始 WER 用于跟文献比较，修正 WER 反映真实识别水平。人工标了"不确定"的地方造成的错误只作为上限单独报告，不从 WER 里扣除。
+
 ### 病历层面评测
 
 1. `generate_notes.py`：本地 Ollama 跑 `qwen3:14b`（4 位量化），温度 0、固定种子、关闭思考模式，提示词版本 v3。每段问诊生成三份病历：人工转写、分声道 ASR（`test47-vad-nocond-wt`，按词级时间戳把两个声道合并成话轮并标注说话人）、合并声道 ASR（`test47-vad-nocond`，无说话人标注）。
@@ -100,6 +113,7 @@ ctranslate2 在 Windows 上要从 PATH 里找 `cublas64_12.dll` 和 `cudnn*64_9.
 2. `judge_notes.py`：用 Claude Code CLI 非交互调用（`claude -p`，不开工具，JSON schema 输出），先把每份医生病历拆成事实清单（每段问诊只拆一次），再逐份评判候选病历。评判模型看不到病历来源，任务顺序打乱（种子 0）。每次调用记录实际模型（本轮为 `claude-opus-5-5`）。遇到服务过载会自动重试。
 3. 比较时以"人工转写"组为基线：医生病历本身就和谈话有出入（例如谈话说"三到四天"，病历写"3–5 天"），所以看的是 ASR 组比人工转写组多错多少。
 4. 人工抽查：`results/notes/test47/spotcheck.csv`，20 份病历的逐条评判，填 `your_label` 一列。
+5. **评判流程已冻结（judge v1）**：`judge_notes.py` 里的系统提示词、拆事实和评判两个提示词、两个 JSON schema，以及 `results/notes/test47/facts/` 下每段问诊的事实清单（2026-10-26 拆分，每段只拆一次）都不再改动。之后新增的病历（新的 LLM、新的 ASR）都用同一份事实清单和同样的提示词评判。要改任何一处，就要升版本号并全部重评。判定结果 JSON 里记录 `judge_version`（v1 之前生成的文件没有这个字段，但用的是同一份提示词）。
 
 ### 复现命令（在 `D:\medical-asr-eval` 下运行）
 

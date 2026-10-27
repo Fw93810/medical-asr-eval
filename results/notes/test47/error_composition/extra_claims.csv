@@ -1,0 +1,9 @@
+﻿source,notes,contradicts_per_note,added_negative_per_note,added_other_per_note
+human,47,1.17,2.77,6.89
+human_rejudge,47,1.28,2.66,6.62
+human_plain,47,1.23,2.74,6.83
+human_unlabelled_plain,47,1.23,2.64,6.26
+asr_mixed_plain,47,1.15,2.83,6.89
+asr_separated_plain,47,1.19,2.85,6.77
+asr_mixed,47,1.0,2.68,6.57
+asr_separated,47,1.09,3.0,6.55

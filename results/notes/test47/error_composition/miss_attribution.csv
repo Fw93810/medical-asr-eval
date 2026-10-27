@@ -1,0 +1,9 @@
+﻿source,baseline,facts,not_present,not_present_rate,not_stated,reference_conflict,partly_stated,shared_omission,source_specific,not_stated_rate,reference_conflict_rate,partly_stated_rate,shared_omission_rate,source_specific_rate,source_specific_gained,net_source_specific_rate,recall_on_stated_facts,negative_facts,negative_source_specific,negative_not_stated
+human,,1408,447,0.3175,108,33,86,220,0,0.0767,0.0234,0.0611,0.1562,0.0,,,0.7875,408,0,44
+human_rejudge,human,1408,450,0.3196,109,33,88,213,7,0.0774,0.0234,0.0625,0.1513,0.005,7,0.0,0.7875,408,0,44
+human_plain,human,1408,449,0.3189,106,36,84,156,67,0.0753,0.0256,0.0597,0.1108,0.0476,64,0.0021,0.7847,408,20,44
+human_unlabelled_plain,human_plain,1408,454,0.3224,105,34,90,169,56,0.0746,0.0241,0.0639,0.12,0.0398,54,0.0014,0.7828,408,22,42
+asr_mixed_plain,human_unlabelled_plain,1408,440,0.3125,102,24,83,150,81,0.0724,0.017,0.0589,0.1065,0.0575,75,0.0043,0.7781,408,20,41
+asr_separated_plain,human_plain,1408,462,0.3281,107,32,83,162,78,0.076,0.0227,0.0589,0.1151,0.0554,61,0.0121,0.7705,408,31,44
+asr_mixed,human,1408,456,0.3239,104,28,87,148,89,0.0739,0.0199,0.0618,0.1051,0.0632,72,0.0121,0.7724,408,28,42
+asr_separated,human,1408,448,0.3182,106,27,92,145,78,0.0753,0.0192,0.0653,0.103,0.0554,75,0.0021,0.7856,408,22,44

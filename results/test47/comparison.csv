@@ -1,7 +1,9 @@
-run,condition,model,n_consultations,audio_min,ref_words,wer,sub_rate,del_rate,ins_rate,term_recall,term_extractor,sec_per_audio_min,long_runs,long_run_words,ov_overlap_s,del_rate_in,del_rate_out,ins_rate_in,ins_rate_out,sub_rate_in,sub_rate_out
-test47-parakeet-local,doctor,nvidia/parakeet-tdt-0.6b-v2,47,419.8,41427,0.1138,0.0553,0.0407,0.0178,0.939,scispacy:en_core_sci_sm,0.15,1,10,1105.3999999999999,0.0952,0.0369,0.0553,0.0151,0.1717,0.0471
-test47-vad-nocond,doctor,large-v3,47,419.8,41427,0.1096,0.0546,0.0376,0.0175,0.9428,scispacy:en_core_sci_sm,3.17,0,0,1105.3999999999999,0.1087,0.0326,0.0289,0.0166,0.1658,0.0467
-test47-parakeet-local,patient,nvidia/parakeet-tdt-0.6b-v2,47,419.8,26741,0.1448,0.0502,0.0599,0.0347,0.8921,scispacy:en_core_sci_sm,0.14,2,145,1105.3999999999999,0.101,0.056,0.0413,0.0341,0.134,0.0423
-test47-vad-nocond,patient,large-v3,47,419.8,26741,0.1297,0.0471,0.0551,0.0275,0.8988,scispacy:en_core_sci_sm,2.13,0,0,1105.3999999999999,0.1245,0.0486,0.0191,0.0283,0.1284,0.0394
-test47-parakeet-local,mixed,nvidia/parakeet-tdt-0.6b-v2,47,419.8,68168,0.1291,0.0491,0.062,0.018,0.9264,scispacy:en_core_sci_sm,0.16,0,0,1105.3999999999999,0.2272,0.0488,0.0358,0.0166,0.1358,0.0421
-test47-vad-nocond,mixed,large-v3,47,419.8,68168,0.1252,0.0501,0.0565,0.0187,0.9269,scispacy:en_core_sci_sm,5.12,2,32,1105.3999999999999,0.2527,0.0409,0.0264,0.0181,0.1252,0.0441
+run,condition,model,n_consultations,audio_min,ref_words,wer,wer_corrected,sub_rate,del_rate,ins_rate,term_recall,term_extractor,sec_per_audio_min,long_runs,long_run_words,ov_overlap_s,del_rate_in,del_rate_out,ins_rate_in,ins_rate_out,sub_rate_in,sub_rate_out
+test47-parakeet-local,doctor,nvidia/parakeet-tdt-0.6b-v2,47,419.8,41427,0.1138,0.0794,0.0553,0.0407,0.0178,0.939,scispacy:en_core_sci_sm,0.15,1,10,1105.3999999999999,0.0952,0.0369,0.0553,0.0151,0.1717,0.0471
+test47-vad-nocond,doctor,large-v3,47,419.8,41427,0.1096,0.0778,0.0546,0.0376,0.0175,0.9428,scispacy:en_core_sci_sm,3.17,0,0,1105.3999999999999,0.1087,0.0326,0.0289,0.0166,0.1658,0.0467
+test47-vad-nocond-wt,doctor,large-v3,47,419.8,41427,0.1124,0.0808,0.0546,0.0377,0.0201,0.9409,scispacy:en_core_sci_sm,3.21,0,0,1105.3999999999999,0.1091,0.0327,0.034,0.0191,0.1643,0.0468
+test47-parakeet-local,patient,nvidia/parakeet-tdt-0.6b-v2,47,419.8,26741,0.1448,0.1335,0.0502,0.0599,0.0347,0.8921,scispacy:en_core_sci_sm,0.14,2,145,1105.3999999999999,0.101,0.056,0.0413,0.0341,0.134,0.0423
+test47-vad-nocond,patient,large-v3,47,419.8,26741,0.1297,0.119,0.0471,0.0551,0.0275,0.8988,scispacy:en_core_sci_sm,2.13,0,0,1105.3999999999999,0.1245,0.0486,0.0191,0.0283,0.1284,0.0394
+test47-vad-nocond-wt,patient,large-v3,47,419.8,26741,0.1302,0.1194,0.0475,0.0558,0.027,0.9029,scispacy:en_core_sci_sm,2.17,0,0,1105.3999999999999,0.1218,0.0495,0.0244,0.0272,0.1288,0.0399
+test47-parakeet-local,mixed,nvidia/parakeet-tdt-0.6b-v2,47,419.8,68168,0.1291,0.1066,0.0491,0.062,0.018,0.9264,scispacy:en_core_sci_sm,0.16,0,0,1105.3999999999999,0.2272,0.0488,0.0358,0.0166,0.1358,0.0421
+test47-vad-nocond,mixed,large-v3,47,419.8,68168,0.1252,0.1029,0.0501,0.0565,0.0187,0.9269,scispacy:en_core_sci_sm,5.12,2,32,1105.3999999999999,0.2527,0.0409,0.0264,0.0181,0.1252,0.0441

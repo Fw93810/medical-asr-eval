@@ -1,0 +1,7 @@
+run,condition,ref_words,wer,wer_no_backchannel,wer_content_only,medical_term_error_rate,number_error_rate,clinical_negation_error_rate
+test47-vad-nocond,doctor,41427,0.1096,0.0755,0.0608,0.0466,0.0576,0.0392
+test47-vad-nocond,patient,26741,0.1297,0.1164,0.1159,0.0952,0.0989,0.0541
+test47-vad-nocond,mixed,68168,0.1252,0.0968,0.0838,0.0683,0.0851,0.052
+test47-parakeet-local,doctor,41427,0.1138,0.0811,0.065,0.0497,0.052,0.0539
+test47-parakeet-local,patient,26741,0.1448,0.1341,0.1242,0.1011,0.083,0.0676
+test47-parakeet-local,mixed,68168,0.1291,0.1014,0.0807,0.0631,0.0725,0.07

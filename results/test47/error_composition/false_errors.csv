@@ -1,0 +1,7 @@
+run,condition,wer,normalisation_errors,normalisation_points,in_unsure_span,near_tag,uncertain_reference_points,wer_without_normalisation_errors
+test47-parakeet-local,doctor,0.1138,1372,3.31,287,869,2.79,0.0807
+test47-parakeet-local,mixed,0.1291,1493,2.19,697,1681,3.49,0.1072
+test47-parakeet-local,patient,0.1448,321,1.2,305,870,4.39,0.1328
+test47-vad-nocond,doctor,0.1096,1288,3.11,315,821,2.74,0.0785
+test47-vad-nocond,mixed,0.1252,1502,2.2,746,1604,3.45,0.1032
+test47-vad-nocond,patient,0.1297,315,1.18,350,771,4.19,0.1179

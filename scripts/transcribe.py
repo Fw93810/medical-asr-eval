@@ -1,4 +1,5 @@
-"""Transcribe prepared PriMock57 audio with faster-whisper (default) or NVIDIA Parakeet.
+"""Transcribe prepared PriMock57 audio with faster-whisper (default), NVIDIA Parakeet,
+IBM Granite Speech or Cohere Transcribe.
 
 Reads <data>/<cid>/{doctor,patient,mixed}.wav (from prep_data.py) and writes
 <out>/<cid>/<condition>.json:
@@ -14,8 +15,11 @@ Examples:
   python -I scripts/transcribe.py --data data/prepared --out outputs/fw-large-v3 --model large-v3
   # with a domain prompt
   python -I scripts/transcribe.py ... --initial-prompt "A GP consultation between a doctor and a patient."
-  # Parakeet (needs nemo_toolkit[asr]; untested in the smoke test)
+  # Parakeet (needs nemo_toolkit[asr])
   python -I scripts/transcribe.py --backend parakeet --data data/prepared --out outputs/parakeet
+  # Granite Speech / Cohere Transcribe (transformers; short inputs, so they read a chunk plan
+  # from plan_chunks.py and each chunk becomes one segment with the chunk's start and end)
+  python -I scripts/transcribe.py --backend granite --chunks outputs/chunks/test47 --data data/prepared_test47 ...
 """
 import argparse
 import json
@@ -47,6 +51,7 @@ def load_faster_whisper(args):
             beam_size=args.beam_size,
             initial_prompt=args.initial_prompt,
             vad_filter=args.vad,
+            vad_parameters={"speech_pad_ms": args.vad_speech_pad_ms} if args.vad_speech_pad_ms else None,
             condition_on_previous_text=not args.no_condition_on_previous_text,
             word_timestamps=args.word_timestamps,
             hallucination_silence_threshold=args.hallucination_silence_threshold,
@@ -66,6 +71,69 @@ def load_faster_whisper(args):
         return out
 
     return run
+
+
+def chunked(args, transcribe_chunk):
+    """run(wav) for models that take short inputs: one call per chunk of the plan."""
+    def run(wav_path):
+        cid = os.path.basename(os.path.dirname(wav_path))
+        cond = os.path.splitext(os.path.basename(wav_path))[0]
+        with open(os.path.join(args.chunks, cid, f"{cond}.json")) as f:
+            plan = json.load(f)["chunks"]
+        audio, sr = sf.read(wav_path, dtype="float32")
+        out = []
+        for a, b in plan:
+            text = transcribe_chunk(audio[int(a * sr):int(b * sr)]).strip()
+            if text:
+                out.append({"start": a, "end": b, "text": text})
+        return out
+
+    return run
+
+
+def load_granite(args):
+    import torch
+    from transformers import AutoModelForSpeechSeq2Seq, AutoProcessor
+
+    name = args.model if "/" in args.model else "ibm-granite/granite-speech-4.1-2b"
+    args.model = name
+    print(f"transformers {name} (chunks: {args.chunks})")
+    processor = AutoProcessor.from_pretrained(name)
+    tokenizer = processor.tokenizer
+    model = AutoModelForSpeechSeq2Seq.from_pretrained(name, device_map="cuda", torch_dtype=torch.bfloat16)
+    chat = [{"role": "user", "content": "<|audio|>transcribe the speech with proper punctuation and capitalization."}]
+    prompt = tokenizer.apply_chat_template(chat, tokenize=False, add_generation_prompt=True)
+
+    def one(chunk):
+        wav = torch.from_numpy(chunk).unsqueeze(0)
+        inputs = processor(prompt, wav, device="cuda", return_tensors="pt").to("cuda")
+        with torch.inference_mode():
+            out = model.generate(**inputs, max_new_tokens=args.max_new_tokens, do_sample=False, num_beams=1)
+        new = out[0, inputs["input_ids"].shape[-1]:].unsqueeze(0)
+        return tokenizer.batch_decode(new, add_special_tokens=False, skip_special_tokens=True)[0]
+
+    return chunked(args, one)
+
+
+def load_cohere(args):
+    import torch
+    from transformers import AutoProcessor, CohereAsrForConditionalGeneration
+
+    name = args.model if "/" in args.model else "CohereLabs/cohere-transcribe-03-2026"
+    args.model = name
+    print(f"transformers {name} (chunks: {args.chunks})")
+    processor = AutoProcessor.from_pretrained(name)
+    model = CohereAsrForConditionalGeneration.from_pretrained(name, device_map="cuda", torch_dtype=torch.bfloat16)
+
+    def one(chunk):
+        inputs = processor(chunk, sampling_rate=16000, return_tensors="pt", language="en")
+        inputs = inputs.to(model.device, dtype=model.dtype)
+        with torch.inference_mode():
+            out = model.generate(**inputs, max_new_tokens=args.max_new_tokens)
+        text = processor.decode(out, skip_special_tokens=True)
+        return text[0] if isinstance(text, list) else text
+
+    return chunked(args, one)
 
 
 def load_parakeet(args):
@@ -95,7 +163,7 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--data", default="data/prepared")
     ap.add_argument("--out", required=True)
-    ap.add_argument("--backend", choices=["faster-whisper", "parakeet"], default="faster-whisper")
+    ap.add_argument("--backend", choices=["faster-whisper", "parakeet", "granite", "cohere"], default="faster-whisper")
     ap.add_argument("--model", default="base",
                     help="faster-whisper: tiny/base/small/medium/large-v3/large-v3-turbo; "
                          "parakeet: nvidia/parakeet-tdt-0.6b-v2")
@@ -105,6 +173,8 @@ def main():
     ap.add_argument("--initial-prompt", default=None)
     ap.add_argument("--beam-size", type=int, default=5)
     ap.add_argument("--vad", action="store_true", help="faster-whisper Silero VAD filter (off by default)")
+    ap.add_argument("--vad-speech-pad-ms", type=int, default=None,
+                    help="padding kept around each detected speech region (faster-whisper default: 400)")
     ap.add_argument("--no-condition-on-previous-text", action="store_true")
     ap.add_argument("--word-timestamps", action="store_true", help="faster-whisper: store per-word times")
     ap.add_argument("--hallucination-silence-threshold", type=float, default=None,
@@ -114,6 +184,8 @@ def main():
     ap.add_argument("--compute-type", default=None)
     ap.add_argument("--cpu-threads", type=int, default=0)
     ap.add_argument("--local-attention", action="store_true", help="parakeet: for audio > ~20 min")
+    ap.add_argument("--chunks", help="granite / cohere: chunk plan folder from plan_chunks.py")
+    ap.add_argument("--max-new-tokens", type=int, default=400, help="granite / cohere: per chunk")
     args = ap.parse_args()
     if args.hallucination_silence_threshold is not None:
         args.word_timestamps = True  # faster-whisper ignores the threshold without word timestamps
@@ -124,7 +196,9 @@ def main():
     if args.limit:
         ids = ids[: args.limit]
 
-    run = load_parakeet(args) if args.backend == "parakeet" else load_faster_whisper(args)
+    loaders = {"faster-whisper": load_faster_whisper, "parakeet": load_parakeet, "granite": load_granite,
+               "cohere": load_cohere}
+    run = loaders[args.backend](args)
 
     for cid in ids:
         os.makedirs(os.path.join(args.out, cid), exist_ok=True)
@@ -141,11 +215,13 @@ def main():
             result = {
                 "id": cid, "condition": cond, "backend": args.backend, "model": args.model,
                 "initial_prompt": args.initial_prompt,
-                "settings": {"vad": args.vad, "beam_size": args.beam_size,
+                "settings": {"vad": args.vad, "vad_speech_pad_ms": args.vad_speech_pad_ms, "beam_size": args.beam_size,
                              "condition_on_previous_text": not args.no_condition_on_previous_text,
                              "word_timestamps": args.word_timestamps,
                              "hallucination_silence_threshold": args.hallucination_silence_threshold}
-                if args.backend == "faster-whisper" else {"local_attention": args.local_attention},
+                if args.backend == "faster-whisper" else
+                {"local_attention": args.local_attention} if args.backend == "parakeet" else
+                {"chunks": args.chunks, "max_new_tokens": args.max_new_tokens},
                 "audio_s": round(audio_s, 2),
                 "runtime_s": round(runtime, 2), "rtf": round(runtime / audio_s, 4),
                 "text": " ".join(s["text"] for s in segments),
