@@ -1,259 +1,259 @@
-# 第三阶段：病历网格（生成模型 × 转写来源）
+# Stage 3: note grid (generation model × transcript source)
 
-日期：2026-10-27。
+Date: 2026-10-27.
 
-网格的设计：
-- **行**：四种转写来源，都用合并声道。
-- **列**：三个生成模型。
-- **样本**：每格 25 段测试集问诊。名单在 `results/notes/test47/grid_ids.txt`，从测试集 47 段里用固定种子 0 抽取。
-- **评判**：冻结的 judge v1，事实清单直接用测试集已缓存的那份。
+Grid design:
+- **Rows**: four transcript sources, all mixed channel.
+- **Columns**: three generation models.
+- **Sample**: 25 test consultations per cell, listed in `results/notes/test47/grid_ids.txt`, drawn from the 47 test consultations with fixed seed 0.
+- **Judging**: the frozen judge v1, with the fact lists already cached for the test set.
 
-## 1. 设置
+## 1. Setup
 
-### 生成模型（纵轴：生成模型）
+### Generation models (vertical axis: generation model)
 
-| 生成模型 | 发布 | 家族 / 代际 | 参数 | 量化 | 思考 |
+| Generation model | Released | Family / generation | Parameters | Quantisation | Thinking |
 |---|---|---|---|---|---|
-| Qwen3 14B（`qwen3:14b`） | 2025-04 | Qwen3 | 14.8B，稠密 | Q4_K_M | 关闭 |
-| Qwen3.8-27B（`qwen3.8:27b-q4_K_M`） | 2026-08 | Qwen3.8（Qwen3 之后的第三次大版本更新：3.5、3.6、3.8） | 27.3B，稠密 | Q4_K_M | 关闭 |
-| gpt-oss-120b（`gpt-oss:120b`） | 2025-08 | OpenAI gpt-oss | 117B MoE，激活 5.1B | MXFP4（原生） | **无法关闭，设为最低强度 `low`** |
+| Qwen3 14B (`qwen3:14b`) | 2025-04 | Qwen3 | 14.8B, dense | Q4_K_M | Off |
+| Qwen3.8-27B (`qwen3.8:27b-q4_K_M`) | 2026-08 | Qwen3.8 (the third major update after Qwen3: 3.5, 3.6, 3.8) | 27.3B, dense | Q4_K_M | Off |
+| gpt-oss-120b (`gpt-oss:120b`) | 2025-08 | OpenAI gpt-oss | 117B MoE, 5.1B active | MXFP4 (native) | **Cannot be switched off; set to the lowest effort, `low`** |
 
-**代际混淆**：这三个模型的家族、代际、架构都不同。按公开综合排名，2026 年的 Qwen3.8-27B 高于 2025 年的 gpt-oss-120b。所以纵轴叫"生成模型"，不叫"模型大小"。列与列之间的差异，不能解读成参数量的效应。
+**Generation confound**: the three models differ in family, generation and architecture. By public overall rankings, the 2026 Qwen3.8-27B is above the 2025 gpt-oss-120b. The vertical axis is therefore called "generation model", not "model size"; differences between columns cannot be read as an effect of parameter count.
 
-**gpt-oss 的思考设置**：gpt-oss 的思考关不掉，最低只能设为 `low`。这和另两列"关闭思考"的原则不一致。
-- 思考内容不进入病历，但单独记录。
-- 每份思考约 360 个字符（中位数），最多 1,307 个。
+**gpt-oss thinking**: gpt-oss cannot switch thinking off; the lowest setting is `low`. This departs from the "thinking off" rule used for the other two columns.
+- The reasoning text is not part of the note; it is recorded separately.
+- About 360 characters of reasoning per note (median), at most 1,307.
 
-**运行环境**：
-- **三列都在租用的 A100 80GB 上用 Ollama 0.40.11 生成**，调用同一个 `generate_notes.py`，走 `/api/chat`。生成参数相同：
-  - 提示词版本 v3
-  - 温度 0、种子 0
-  - 上下文 16384
-- **两台机器**：
-  - 14B 和 27B 在一台 A100 PCIe 上（系统盘只有 50 GB）；
-  - gpt-oss 的权重是单个 65 GB 文件，放不下，所以在另一台 A100 SXM4 上跑。
-  - 两台是同一代 GA100 芯片，Ollama 版本相同。
-- **执行方式**：脚本是 `scripts/run_grid.sh`，在服务器上用 nohup 跑，本机断网不影响。
+**Environment**:
+- **All three columns were generated with Ollama 0.40.11 on rented A100 80GB GPUs**, through the same `generate_notes.py` and `/api/chat`, with the same generation settings:
+  - prompt version v3
+  - temperature 0, seed 0
+  - context 16384
+- **Two machines**:
+  - 14B and 27B on one A100 PCIe (system disk only 50 GB);
+  - gpt-oss's weights are a single 65 GB file that did not fit there, so it ran on a second A100 SXM4.
+  - Both are the same GA100 chip with the same Ollama version.
+- **Execution**: `scripts/run_grid.sh`, run with nohup on the server, unaffected by the local network.
 
-**为什么 14B 这一列在服务器上重新生成**：同一个 `qwen3:14b`（权重哈希和本机相同），在服务器上生成的病历与本机的旧病历不完全相同。原因是换显卡后浮点误差会让贪心解码在某处分叉。所以测试集那一轮的旧 14B 病历不复用，网格里三列都在 A100 上生成。这两次生成之间的差异，正好用来量化"重新生成噪声"（见 2.2）。
+**Why the 14B column was regenerated on the server**: the same `qwen3:14b` (weights hash identical to the local copy) wrote notes on the server that were not identical to the earlier local notes. On a different GPU, floating-point differences make greedy decoding diverge at some point. So the old 14B notes from the test-set round were not reused; all three grid columns were generated on A100. The difference between the two generations measures the "regeneration noise" (section 2.2).
 
-### 转写来源（横轴）
+### Transcript sources (horizontal axis)
 
-| 行 | 内容 |
+| Row | Contents |
 |---|---|
-| `human` | 人工转写，带说话人标签 |
-| `human_plain` | 人工转写，套用 Whisper 规范化器（小写、无标点、无填充词）：只改写法的对照 |
-| `asr_mixed` | Whisper large-v3 合并声道（`test47-vad-nocond`），无说话人标签 |
-| `asr_mixed_qwen3asr` | Qwen3-ASR-1.7B 合并声道，无说话人标签 |
+| `human` | Human transcript, with speaker labels |
+| `human_plain` | Human transcript passed through the Whisper normaliser (lower case, no punctuation, no fillers): the surface-form-only control |
+| `asr_mixed` | Whisper large-v3, mixed channel (`test47-vad-nocond`), no speaker labels |
+| `asr_mixed_qwen3asr` | Qwen3-ASR-1.7B, mixed channel, no speaker labels |
 
-**评判噪声对照**：每列另外把 10 段的 `human` 病历原样再评一次（`human_rejudge`），名单在 `grid_rejudge_ids.txt`。
+**Judge-noise control**: in each column, the `human` notes of 10 consultations were judged a second time, unchanged (`human_rejudge`); the list is `grid_rejudge_ids.txt`.
 
-### 用时和用量
+### Time and usage
 
-| 项目 | 用时 |
+| Item | Time |
 |---|---|
-| 服务器 1（14B + 27B，200 份） | 约 1.4 小时，其中 27B 每份约 25 秒 |
-| 服务器 2（gpt-oss，100 份） | 约 1 小时，每份约 25 秒 |
-| Claude 评判 | 330 次 |
+| Server 1 (14B + 27B, 200 notes) | about 1.4 h; the 27B took about 25 s per note |
+| Server 2 (gpt-oss, 100 notes) | about 1 h, about 25 s per note |
+| Claude judging | 330 calls |
 
-评判在本机调用 `claude -p`，每次约 16 秒，没有碰到用量上限。
+Judging ran locally through `claude -p`, about 16 s per call, without hitting the usage limit.
 
-## 2. 结果
+## 2. Results
 
-### 2.1 主指标：说过的事实上的召回
+### 2.1 Primary metric: recall on stated facts
 
-| 指标 | 分子 | 分母 | 地位 |
+| Metric | Numerator | Denominator | Role |
 |---|---|---|---|
-| **说过的事实上的召回** | 病历里有的事实 | 谈话里明确说过的事实（`facts_stated.csv` 状态为 stated） | **主指标**，全文统一使用 |
-| 全部事实上的召回 | 病历里有的事实 | 临床医生病历的全部事实 | 补充 |
+| **Recall on stated facts** | Facts present in the note | Facts explicitly said in the conversation (`facts_stated.csv` status "stated") | **Primary**, used throughout |
+| Recall on all facts | Facts present in the note | All facts in the clinician's note | Supplementary |
 
-**为什么用"说过的事实"作主指标**：临床医生病历里约五分之一的事实（725 条里有 162 条），谈话里没说过或只说了部分。不管转写多准确，病历都不可能写出这些事实。把它们留在分母里，只会给所有格子加上同一块"不可能得分"的部分，冲淡转写来源和生成模型之间的差别。
+**Why stated facts are the primary metric**: about one fifth of the clinician's facts (162 of 725) were never said or only partly said in the conversation. No transcript, however accurate, can let a note contain them. Keeping them in the denominator adds the same "impossible" share to every cell and dilutes the differences between transcript sources and between generation models.
 
-**78.8% 和 69.1% 不矛盾**：测试集那一轮报告的 78.8% 是说过的事实上的召回；第三阶段初稿用的 69.1% 是全部事实上的召回。两者的差别完全来自分母不同，和问诊子集、生成环境都无关：
+**78.8% and 69.1% do not contradict each other**: the 78.8% reported in the test-set round is recall on stated facts; the 69.1% in the first draft of stage 3 is recall on all facts. The difference comes entirely from the denominator, not from the consultation subset or the generation environment:
 
-| 运行 | 问诊数 | 事实数 | 全部事实上的召回 | 说过的事实数 | **说过的事实上的召回** |
+| Run | Consultations | Facts | Recall on all facts | Stated facts | **Recall on stated facts** |
 |---|---|---|---|---|---|
-| 测试集 14B，本机 RTX 5080，全部 47 段 | 47 | 1408 | 68.3% | 1059 | **78.8%** |
-| 测试集 14B，本机 RTX 5080，只取网格的 25 段 | 25 | 725 | 69.1% | 563 | 78.3% |
-| 网格 14B，A100（重新生成） | 25 | 725 | 69.1% | 563 | **77.6%** |
+| Test-set 14B, local RTX 5080, all 47 | 47 | 1408 | 68.3% | 1059 | **78.8%** |
+| Test-set 14B, local RTX 5080, the 25 grid consultations | 25 | 725 | 69.1% | 563 | 78.3% |
+| Grid 14B, A100 (regenerated) | 25 | 725 | **69.1%** | 563 | **77.6%** |
 
-计算脚本：`scripts/recall_definitions.py`。
+Script: `scripts/recall_definitions.py`.
 
-### 2.2 噪声底：解释所有病历层差值的基准
+### 2.2 Noise floor for every note-level difference
 
-**重新生成噪声**：同一批 25 段，人工转写，14B 在本机 RTX 5080 和 A100 上各生成一次，再分别评判。两次的差异就是"换一次环境、重新生成"的噪声：
+**Regeneration noise**: for the same 25 consultations and the human transcript, the 14B generated notes once on the local RTX 5080 and once on the A100, and both were judged. The difference between the two is the noise of "regenerating once in a different environment":
 
-| 事实范围 | 判定改变的比例 | 有 → 无 | 无 → 有 | 召回差值（A100 − 本机） |
+| Facts | Labels changed | Present → not | Not → present | Recall difference (A100 − local) |
 |---|---|---|---|---|
-| **说过的事实**（563 条） | 6.8% | 21 | 17 | **−0.7 [−3.0, +1.6]** |
-| 全部事实（725 条） | 7.2% | 25 | 25 | 0.0 [−1.9, +1.9] |
+| **Stated facts** (563) | 6.8% | 21 | 17 | **−0.7 [−3.0, +1.6]** |
+| All facts (725) | 7.2% | 25 | 25 | 0.0 [−1.9, +1.9] |
 
-**本文把约 ±2 个百分点作为所有病历层差值的噪声底。** 配对 bootstrap 的区间只反映"换一批问诊"的抽样波动，没有包含"同一段问诊重新生成一次病历"的波动。所以：
+**This document takes about ±2 percentage points as the noise floor for every note-level difference.** The paired-bootstrap intervals only reflect sampling over consultations; they do not include the variation from regenerating the note for the same consultation. Therefore:
 
-- 一个差值即使区间不含 0，只要绝对值在 2 个百分点左右，也只能说"与重新生成噪声相当"；
-- 明显超出噪声底的差值，才算实质差异。
+- a difference of around 2 points is only "comparable to regeneration noise", even if its interval excludes 0;
+- only differences clearly beyond the noise floor count as substantive.
 
-**评判噪声**：同一份病历原样再评一次（每列 10 段）。说过的事实上的召回差值，三列合并是 +0.2 [−0.7, +1.1]，比重新生成噪声小得多。
+**Judge noise**: the same note judged again unchanged (10 consultations per column). Pooled over the three columns, the stated-fact recall difference is +0.2 [−0.7, +1.1], much smaller than the regeneration noise.
 
-噪声底的数据在 `results/notes/grid/regeneration_noise.csv`。
+Noise-floor data: `results/notes/grid/regeneration_noise.csv`.
 
-### 2.3 每格的召回
+### 2.3 Recall per cell
 
-格内是"说过的事实上的召回 / 全部事实上的召回"，括号内是矛盾事实占全部事实的比例。每格说过的事实 563 条，全部事实 725 条。
+Each cell shows "recall on stated facts / recall on all facts", with contradicted facts as a share of all facts in brackets. Each cell has 563 stated facts and 725 facts in total.
 
-| 来源 | Qwen3 14B | Qwen3.8-27B | gpt-oss-120b |
+| Source | Qwen3 14B | Qwen3.8-27B | gpt-oss-120b |
 |---|---|---|---|
-| 人工转写 | **77.6%** / 69.1%（3.7%） | **89.7%** / 79.9%（5.1%） | **85.3%** / 77.0%（6.5%） |
-| 人工转写，只改写法 | **77.4%** / 68.0%（5.1%） | **90.8%** / 81.0%（5.2%） | **84.9%** / 76.4%（5.5%） |
-| Whisper 合并 | **76.2%** / 67.2%（5.2%） | **86.3%** / 77.8%（5.7%） | **82.2%** / 74.8%（6.6%） |
-| Qwen3-ASR 合并 | **74.4%** / 67.6%（5.5%） | **88.8%** / 79.7%（5.2%） | **85.6%** / 77.8%（5.7%） |
-| 人工转写，再评一次（10 段） | 78.5% / 65.7%（2.5%） | 94.0% / 78.7%（4.0%） | 86.5% / 74.4%（5.1%） |
+| Human transcript | **77.6%** / 69.1% (3.7%) | **89.7%** / 79.9% (5.1%) | **85.3%** / 77.0% (6.5%) |
+| Human transcript, normalised | **77.4%** / 68.0% (5.1%) | **90.8%** / 81.0% (5.2%) | **84.9%** / 76.4% (5.5%) |
+| Whisper, mixed | **76.2%** / 67.2% (5.2%) | **86.3%** / 77.8% (5.7%) | **82.2%** / 74.8% (6.6%) |
+| Qwen3-ASR, mixed | **74.4%** / 67.6% (5.5%) | **88.8%** / 79.7% (5.2%) | **85.6%** / 77.8% (5.7%) |
+| Human transcript, judged again (10 consultations) | 78.5% / 65.7% (2.5%) | 94.0% / 78.7% (4.0%) | 86.5% / 74.4% (5.1%) |
 
-最后一行只有 10 段，不能和上面几行的数字直接比，只用来看配对差值。
+The last row covers only 10 consultations and cannot be compared directly with the rows above; it is used only for paired differences.
 
-### 2.4 热图
+### 2.4 Heatmap
 
-![网格热图：说过的事实上的召回](../results/notes/grid/heatmap_stated.svg)
+![Grid heatmap: recall on stated facts](../results/notes/grid/heatmap_stated.svg)
 
-- 每格是相对"人工转写写成的病历"的召回差值，单位是百分点，附 95% 区间；粗体表示区间不含 0。
-- 最右一列是"同一份病历再评一次"。
-- 图下注明了重新生成噪声，这是读每一格时都要对照的噪声底。
-- 补充图（全部事实上的召回）：`results/notes/grid/heatmap.svg`。
-- 数字表：`heatmap_stated.csv`、`heatmap.csv`；脚本：`scripts/plot_grid_heatmap.py`。
+- Each cell is the recall difference against the note written from the human transcript, in percentage points, with its 95% interval; bold means the interval excludes 0.
+- The rightmost column is "the same note judged again".
+- The regeneration noise, the floor to read every cell against, is noted under the figure.
+- Supplementary figure (recall on all facts): `results/notes/grid/heatmap.svg`.
+- Tables: `heatmap_stated.csv`, `heatmap.csv`; script: `scripts/plot_grid_heatmap.py`.
 
-### 2.5 生成模型之间
+### 2.5 Between generation models
 
-同一来源配对，以问诊为单位 bootstrap 10000 次，说过的事实上的召回，单位：百分点。
+Paired by source, bootstrap over consultations (10,000 resamples), recall on stated facts, percentage points.
 
-| 来源 | 27B − 14B | gpt-oss − 14B | gpt-oss − 27B |
+| Source | 27B − 14B | gpt-oss − 14B | gpt-oss − 27B |
 |---|---|---|---|
-| 人工转写 | +12.1 [+7.8, +16.4] | +7.6 [+4.3, +10.9] | −4.4 [−7.3, −1.4] |
-| 人工转写，只改写法 | +13.3 [+9.8, +17.2] | +7.5 [+4.2, +10.8] | −5.9 [−8.7, −2.9] |
-| Whisper 合并 | +10.1 [+6.3, +14.5] | +6.0 [+2.6, +9.7] | −4.1 [−7.1, −1.0] |
-| Qwen3-ASR 合并 | +14.4 [+10.0, +18.5] | +11.2 [+7.1, +15.2] | −3.2 [−5.8, −0.4] |
+| Human transcript | +12.1 [+7.8, +16.4] | +7.6 [+4.3, +10.9] | −4.4 [−7.3, −1.4] |
+| Human transcript, normalised | +13.3 [+9.8, +17.2] | +7.5 [+4.2, +10.8] | −5.9 [−8.7, −2.9] |
+| Whisper, mixed | +10.1 [+6.3, +14.5] | +6.0 [+2.6, +9.7] | −4.1 [−7.1, −1.0] |
+| Qwen3-ASR, mixed | +14.4 [+10.0, +18.5] | +11.2 [+7.1, +15.2] | −3.2 [−5.8, −0.4] |
 
-**生成模型的影响远大于 ASR 的影响，也远大于噪声底。**
+**The generation model matters far more than the ASR, and far more than the noise floor.**
 
-- 27B 比 14B 高 10–14 个百分点，是噪声底的 5 倍以上。
-- gpt-oss 介于两者之间，比 27B 低 3–6 个百分点，四种来源下区间都不含 0。
+- The 27B is 10–14 points above the 14B, more than five times the noise floor.
+- gpt-oss lies between them, 3–6 points below the 27B, with intervals excluding 0 for all four sources.
 
-全部事实上的召回给出相同的结论：27B − 14B 为 +10.6 到 +13.0，见 `results/notes/grid/all/paired_summary.csv`。说过的事实版本在 `paired_summary_stated.csv`。
+Recall on all facts gives the same conclusion (27B − 14B: +10.6 to +13.0), see `results/notes/grid/all/paired_summary.csv`. The stated-fact version is `paired_summary_stated.csv`.
 
-### 2.6 ASR 来源的影响
+### 2.6 Effect of the ASR source
 
-说过的事实上的召回，相对同一生成模型、人工转写写成的病历，单位：百分点。
+Recall on stated facts against the note written from the human transcript by the same generation model, percentage points.
 
-| 对比 | Qwen3 14B | Qwen3.8-27B | gpt-oss-120b | 三列合并 |
+| Comparison | Qwen3 14B | Qwen3.8-27B | gpt-oss-120b | Three columns pooled |
 |---|---|---|---|---|
-| Whisper − 人工 | −1.4 [−4.7, +1.8] | −3.4 [−6.3, −0.7] | −3.0 [−5.2, −0.8] | −2.6 [−4.6, −0.7] |
-| Qwen3-ASR − 人工 | −3.2 [−6.0, 0.0] | −0.9 [−3.3, +1.5] | +0.4 [−1.9, +2.7] | −1.2 [−2.6, +0.3] |
+| Whisper − human | −1.4 [−4.7, +1.8] | −3.4 [−6.3, −0.7] | −3.0 [−5.2, −0.8] | −2.6 [−4.6, −0.7] |
+| Qwen3-ASR − human | −3.2 [−6.0, 0.0] | −0.9 [−3.3, +1.5] | +0.4 [−1.9, +2.7] | −1.2 [−2.6, +0.3] |
 | Qwen3-ASR − Whisper | −1.8 [−5.0, +1.6] | +2.5 [−0.5, +5.6] | +3.4 [+1.3, +5.3] | +1.4 [−0.3, +3.3] |
-| 只改写法 − 人工 | −0.2 [−2.8, +2.5] | +1.1 [−1.3, +3.5] | −0.4 [−2.6, +2.0] | +0.2 [−1.6, +1.8] |
-| *噪声底：重新生成* | | | | *−0.7 [−3.0, +1.6]* |
+| Normalised − human | −0.2 [−2.8, +2.5] | +1.1 [−1.3, +3.5] | −0.4 [−2.6, +2.0] | +0.2 [−1.6, +1.8] |
+| *Noise floor: regeneration* | | | | *−0.7 [−3.0, +1.6]* |
 
-"三列合并"把三个生成模型的事实放在一起，仍按问诊重采样（25 个单位）。
+"Pooled" puts the facts of all three generation models together, still resampling consultations (25 units).
 
-结论：
+Conclusions:
 
-- **Whisper 合并声道：召回损失与重新生成噪声相当。**
-  - 三列合并是 −2.6 个百分点，配对区间 [−4.6, −0.7] 不含 0；在 27B 和 gpt-oss 两列单独看也不含 0。
-  - 但损失的大小和重新生成噪声的区间（约 ±2 个百分点）相当，不能当作实质性的影响。
-- **Qwen3-ASR 合并声道**：
-  - 三列合并 −1.2 [−2.6, +0.3]，落在噪声底以内，与人工转写分不开。
-  - 14B 那一列单独看是 −3.2，区间上限正好是 0，而另两列接近 0，三列方向不一致。
-- **Qwen3-ASR 对 Whisper**：
-  - 三列合并 +1.4 [−0.3, +3.3]，不显著；
-  - 只有 gpt-oss 列 +3.4 [+1.3, +5.3] 区间不含 0，14B 列是负值。
-  - 结论：两种 ASR 的 WER 差距（合并声道修正后 8.6% 对 10.3%），在病历层看不出稳定的差别。
-- **只改写法**（去掉标点、大小写和填充词）：+0.2 [−1.6, +1.8]，对病历几乎没有影响。
+- **Whisper, mixed channel: the recall loss is comparable to regeneration noise.**
+  - Pooled it is −2.6 points with a paired interval of [−4.6, −0.7], which excludes 0; it also excludes 0 in the 27B and gpt-oss columns separately.
+  - But the size of the loss matches the regeneration-noise interval (about ±2 points), so it cannot be taken as a substantive effect.
+- **Qwen3-ASR, mixed channel**:
+  - Pooled −1.2 [−2.6, +0.3], within the noise floor and indistinguishable from the human transcript.
+  - The 14B column alone gives −3.2 with an upper bound of exactly 0, while the other two columns are near 0; the three columns do not agree in direction.
+- **Qwen3-ASR vs Whisper**:
+  - Pooled +1.4 [−0.3, +3.3], not significant;
+  - only the gpt-oss column, +3.4 [+1.3, +5.3], excludes 0, and the 14B column is negative.
+  - Conclusion: the WER gap between the two ASR systems (mixed channel, corrected, 8.6% vs 10.3%) does not show up as a stable difference at the note level.
+- **Normalised only** (no punctuation, case or fillers): +0.2 [−1.6, +1.8], almost no effect on the notes.
 
-**补充：全部事实上的召回**
+**Supplementary: recall on all facts**
 
-| 对比（三列合并） | 全部事实上的召回差值 |
+| Comparison (pooled) | Difference in recall on all facts |
 |---|---|
-| Whisper − 人工 | −2.1 [−4.1, −0.1] |
-| Qwen3-ASR − 人工 | −0.3 [−2.1, +1.7] |
+| Whisper − human | −2.1 [−4.1, −0.1] |
+| Qwen3-ASR − human | −0.3 [−2.1, +1.7] |
 | Qwen3-ASR − Whisper | +1.8 [−0.1, +3.8] |
-| *噪声底：重新生成* | *0.0 [−1.9, +1.9]* |
+| *Noise floor: regeneration* | *0.0 [−1.9, +1.9]* |
 
-结论与主指标相同。
+Same conclusion as the primary metric.
 
-### 2.7 矛盾事实
+### 2.7 Contradicted facts
 
-在说过的事实上，ASR 来源的病历比人工转写多出少量矛盾事实（三列合并，单位：百分点）：
+On stated facts, notes from ASR sources contain slightly more contradicted facts than notes from the human transcript (pooled, percentage points):
 
-| 对比 | 矛盾事实比例的差值 |
+| Comparison | Difference in the share of contradicted facts |
 |---|---|
-| Whisper − 人工 | +1.5 [+0.7, +2.3] |
-| Qwen3-ASR − 人工 | +1.2 [+0.5, +2.0] |
-| 只改写法 − 人工 | +0.5 [−0.1, +1.1] |
+| Whisper − human | +1.5 [+0.7, +2.3] |
+| Qwen3-ASR − human | +1.2 [+0.5, +2.0] |
+| Normalised − human | +0.5 [−0.1, +1.1] |
 
-- 两种 ASR 都显著，但幅度只有 1–2 个百分点。
-- 在全部事实上，这两项都不显著（Whisper +0.7 [−0.2, +1.7]，Qwen3-ASR +0.4 [−0.5, +1.2]）。
-- 矛盾事实是病历层最直接的风险，典型例子见 2.10 的关键个案：not → also 的意思翻转。
+- Both ASR systems are significant, but the effect is only 1–2 points.
+- On all facts, neither is significant (Whisper +0.7 [−0.2, +1.7], Qwen3-ASR +0.4 [−0.5, +1.2]).
+- Contradicted facts are the most direct note-level risk; see the key cases in 2.10, e.g. the "not → also" meaning flip.
 
-### 2.8 病历缺失事实的归因
+### 2.8 Why facts are missing from notes
 
-这一节按定义必须用**全部事实**作分母，因为"谈话里没说过"本身就是归因类别之一。分母是每格 725 条事实。
+This section must use **all facts** as the denominator, because "never said in the conversation" is itself one of the categories. Each cell has 725 facts.
 
-| 来源 | 生成模型 | 不在病历里 | 谈话里没说过 | 只说了部分 | 生成模型自己漏写（两份都缺） | **只因这个来源而丢失** |
+| Source | Generation model | Not in note | Never said | Partly said | Generator's own omission (missing from both notes) | **Lost only because of this source** |
 |---|---|---|---|---|---|---|
-| 只改写法 | 14B / 27B / gpt-oss | 32.0 / 19.0 / 23.6% | 5.7 / 5.7 / 5.0% | 6.6 / 4.3 / 5.0% | 12.1 / 4.3 / 7.0% | **4.7 / 2.2 / 4.0%** |
-| Whisper 合并 | 14B / 27B / gpt-oss | 32.8 / 22.2 / 25.2% | 5.8 / 5.4 / 5.0% | 6.8 / 4.3 / 4.7% | 11.2 / 5.0 / 7.4% | **6.8 / 5.0 / 5.8%** |
-| Qwen3-ASR 合并 | 14B / 27B / gpt-oss | 32.4 / 20.3 / 22.2% | 5.5 / 5.5 / 4.8% | 5.7 / 4.7 / 4.6% | 13.4 / 5.0 / 7.3% | **5.9 / 3.2 / 3.3%** |
+| Normalised | 14B / 27B / gpt-oss | 32.0 / 19.0 / 23.6% | 5.7 / 5.7 / 5.0% | 6.6 / 4.3 / 5.0% | 12.1 / 4.3 / 7.0% | **4.7 / 2.2 / 4.0%** |
+| Whisper, mixed | 14B / 27B / gpt-oss | 32.8 / 22.2 / 25.2% | 5.8 / 5.4 / 5.0% | 6.8 / 4.3 / 4.7% | 11.2 / 5.0 / 7.4% | **6.8 / 5.0 / 5.8%** |
+| Qwen3-ASR, mixed | 14B / 27B / gpt-oss | 32.4 / 20.3 / 22.2% | 5.5 / 5.5 / 4.8% | 5.7 / 4.7 / 4.6% | 13.4 / 5.0 / 7.3% | **5.9 / 3.2 / 3.3%** |
 
-- **"只因这个来源而丢失"的比例**（人工转写病历里有、这一份里没有）：
-  - "只改写法"对照本身就有 2.2–4.7%。这部分反映的也是重新生成噪声：输入稍有不同，贪心解码就会写出不同的病历。
-  - Qwen3-ASR 是 3.2–5.9%，Whisper 是 5.0–6.8%。
-  - 两种 ASR 都只比这个对照高 1–2 个百分点。
-- **不在病历里的事实，大部分不是转写造成的**，主要来自三处：
-  - 谈话里本来就没说（约 5–6%）；
-  - 只说了部分（约 4–7%）；
-  - 生成模型自己漏写（14B 约 11–13%，27B 约 4–5%）。
+- **Share of facts lost only because of the source** (present in the human-transcript note, missing here):
+  - The "normalised only" control already has 2.2–4.7%. This too is regeneration noise: a slightly different input makes greedy decoding write a different note.
+  - Qwen3-ASR has 3.2–5.9%, Whisper 5.0–6.8%.
+  - Both ASR systems are only 1–2 points above that control.
+- **Most facts missing from notes are not caused by the transcript.** They come mainly from three places:
+  - never said in the conversation (about 5–6%);
+  - only partly said (about 4–7%);
+  - the generation model's own omissions (14B about 11–13%, 27B about 4–5%).
 
-  所以换更好的生成模型，收益比换 ASR 大。
+  So a better generation model gains more than a better ASR system.
 
-### 2.9 多写的内容
+### 2.9 What notes add
 
-每份病历平均多写的阴性发现（"no ..."，不一定被问过）：
+Negative findings ("no ...", not necessarily asked about) added per note on average:
 
-| 生成模型 | 每份多写的阴性发现 |
+| Generation model | Added negative findings per note |
 |---|---|
-| Qwen3 14B | 2.4–2.8 条 |
-| Qwen3.8-27B | 2.6–3.1 条 |
-| gpt-oss-120b | 3.1–3.5 条 |
+| Qwen3 14B | 2.4–2.8 |
+| Qwen3.8-27B | 2.6–3.1 |
+| gpt-oss-120b | 3.1–3.5 |
 
-在同一个生成模型内，各个来源之间差别不大。也就是说，这些多写的阴性发现主要由生成模型决定，与转写来源关系不大。临床上危险的例子见 2.10。
+Within a generation model, the sources barely differ: these added negatives are determined by the generation model, not by the transcript source. Clinically dangerous examples are in 2.10.
 
-### 2.10 关键个案
+### 2.10 Key cases
 
-见 `results/notes/grid/key_cases.md`，每条都带问诊编号、时间、原文和对照页面链接：
+See `results/notes/grid/key_cases.md`; each case has the consultation id, time, original text and a viewer link:
 
-- 否定翻转：ASR 丢了否定词；
-- 意思翻转：not ↔ also；
-- 生成模型凭空写出的阴性发现：例如头痛加畏光的病例里写"无颈强直"。
+- negation flips: the ASR dropped a negation;
+- meaning flips: not ↔ also;
+- negative findings invented by the generation model, e.g. "no neck stiffness" in a headache-with-photophobia consultation.
 
-## 3. 局限
+## 3. Limitations
 
-- **样本少**：每格只有 25 段。ASR 之间的差别落在噪声底附近。
-- **噪声底只来自一个模型**：重新生成噪声只在 14B、人工转写这一个格子上测过（本机对 A100）。别的格子的重新生成噪声没有单独测量，本文假设它们的大小相近。
-- **只用合并声道**：Qwen3-ASR 没有词级时间戳，分声道病历这一比较没做。
-- **生成模型是一组"代表"，不是一条大小阶梯**：家族、代际、架构、量化格式（Q4_K_M 对 MXFP4）都不同，而且 gpt-oss 开着低强度思考。
-- **每格只生成一次**：贪心解码、固定种子。
-- **评判模型与生成模型的关系**：评判用 Claude（Opus 5.5）。网格里没有 Claude 生成的病历，所以不存在"同家族自评"的偏差。
-- **数据集**：PriMock57 的模拟远程问诊，参考病历由一位临床医生书写。
+- **Small sample**: 25 consultations per cell. Differences between ASR systems lie near the noise floor.
+- **The noise floor comes from one cell**: regeneration noise was measured only for the 14B on the human transcript (local vs A100). Other cells were not measured separately; this document assumes their regeneration noise is of similar size.
+- **Mixed channel only**: Qwen3-ASR has no word timestamps, so the separated-channel comparison was not done.
+- **The generation models are a set of representatives, not a size ladder**: they differ in family, generation, architecture and quantisation format (Q4_K_M vs MXFP4), and gpt-oss runs with low-effort reasoning.
+- **One generation per cell**: greedy decoding, fixed seed.
+- **Judge vs generators**: the judge is Claude (Opus 5.5). No grid notes were written by Claude, so there is no same-family self-preference bias.
+- **Dataset**: PriMock57 simulated telehealth consultations; reference notes written by one clinician.
 
-## 4. 文件
+## 4. Files
 
-| 内容 | 位置 |
+| Contents | Location |
 |---|---|
-| 每列的评判结果 | `results/notes/grid/<模型>/`：`scores.csv`、`fact_labels.csv`、`summary.csv`、`paired_summary.csv`、`discordant_facts.csv`、`spotcheck.csv` |
-| 每列的缺失归因和多写内容 | `results/notes/grid/<模型>/error_composition/` |
-| 网格汇总表（两种召回） | `results/notes/grid/grid_summary.csv`、`grid.md` |
-| 配对比较：说过的事实（主） | `results/notes/grid/all/paired_summary_stated.csv` |
-| 配对比较：全部事实（补充） | `results/notes/grid/all/paired_summary.csv` |
-| 重新生成噪声 | `results/notes/grid/regeneration_noise.csv` |
-| 热图 | `results/notes/grid/heatmap_stated.svg`（主）、`heatmap.svg`（补充） |
-| 关键个案 | `results/notes/grid/key_cases.md` |
-| 病历原文 | `outputs/notes-grid/notes/<模型>/`（不提交） |
-| 脚本 | `scripts/run_grid.sh`、`scripts/generate_notes.py`、`scripts/combine_grid.py`、`scripts/compare_notes.py`（新增 `--stated`）、`scripts/recall_definitions.py`、`scripts/plot_grid_heatmap.py` |
+| Judgements per column | `results/notes/grid/<model>/`: `scores.csv`, `fact_labels.csv`, `summary.csv`, `paired_summary.csv`, `discordant_facts.csv`, `spotcheck.csv` |
+| Missing-fact attribution and additions per column | `results/notes/grid/<model>/error_composition/` |
+| Grid summary (both recalls) | `results/notes/grid/grid_summary.csv`, `grid.md` |
+| Paired comparisons: stated facts (primary) | `results/notes/grid/all/paired_summary_stated.csv` |
+| Paired comparisons: all facts (supplementary) | `results/notes/grid/all/paired_summary.csv` |
+| Regeneration noise | `results/notes/grid/regeneration_noise.csv` |
+| Heatmaps | `results/notes/grid/heatmap_stated.svg` (primary), `heatmap.svg` (supplementary) |
+| Key cases | `results/notes/grid/key_cases.md` |
+| Note texts | `outputs/notes-grid/notes/<model>/` (not committed) |
+| Scripts | `scripts/run_grid.sh`, `scripts/generate_notes.py`, `scripts/combine_grid.py`, `scripts/compare_notes.py` (new `--stated`), `scripts/recall_definitions.py`, `scripts/plot_grid_heatmap.py` |

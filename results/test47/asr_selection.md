@@ -1,81 +1,82 @@
-# 选定"最好的 2026 ASR"：Qwen3-ASR-1.7B
+# Choosing the "best 2026 ASR": Qwen3-ASR-1.7B
 
-测试集 47 段，主要比较合并声道。所有区间都是配对 bootstrap：以问诊为单位有放回重采样 10000 次，各模型使用同一批重采样，取 95% 区间。脚本：`scripts/bootstrap_asr.py`；全部两两比较见 `bootstrap/pairwise.csv`。
+47 test consultations, comparison mainly on the mixed channel. All intervals are paired bootstrap: consultations resampled with replacement 10,000 times, the same resamples for every model, 95% interval. Script: `scripts/bootstrap_asr.py`; all pairwise comparisons in `bootstrap/pairwise.csv`.
 
-## 1. 三个指标（合并声道）
+## 1. Three metrics (mixed channel)
 
-| 运行 | 修正后 WER | 医学术语错误率 | 临床否定词丢失率 |
+| Run | Corrected WER | Medical-term error rate | Clinical-negation loss |
 |---|---|---|---|
 | **Qwen3-ASR-1.7B** | **8.62%** | **5.57%** | **2.2%** |
 | Canary-Qwen 2.5B | 9.67% | 6.24% | 3.6% |
-| Parakeet（统一切分） | 9.96% | 6.47% | 5.0% |
-| Whisper large-v3（自带 VAD，原主结果） | 10.29% | 6.83% | 5.0% |
-| Parakeet（整段） | 10.66% | 6.31% | 6.8% |
-| Whisper large-v3（统一切分） | 10.78% | 6.62% | 7.0% |
+| Parakeet (shared chunk plan) | 9.96% | 6.47% | 5.0% |
+| Whisper large-v3 (built-in VAD, original main result) | 10.29% | 6.83% | 5.0% |
+| Parakeet (whole files) | 10.66% | 6.31% | 6.8% |
+| Whisper large-v3 (shared chunk plan) | 10.78% | 6.62% | 7.0% |
 | Cohere Transcribe | 11.47% | 6.21% | 8.2% |
 | Granite Speech 4.1 2B | 12.60% | 7.79% | 8.6% |
 
-参考数量（分母）：68,050 个参考词，9,837 个医学术语词，500 个临床否定词。
+Reference counts (denominators): 68,050 reference words, 9,837 medical-term words, 500 clinical negations.
 
-- 医学术语错误率 = 医学术语词中被替换或删除的比例。
-- 临床否定词丢失率 = 临床否定词被删除、或被替换成非否定词的比例。
+- Medical-term error rate = share of medical-term words substituted or deleted.
+- Clinical-negation loss = share of clinical negations deleted or replaced by a non-negation.
 
-## 2. Qwen3-ASR 与其他模型的差值（百分点，Qwen3-ASR 减对方，95% 区间）
+## 2. Qwen3-ASR against every other model (percentage points, Qwen3-ASR minus the other, 95% interval)
 
-| 对比 | 修正后 WER | 医学术语错误率 | 临床否定词丢失率 |
+| Comparison | Corrected WER | Medical-term error rate | Clinical-negation loss |
 |---|---|---|---|
 | vs Canary-Qwen 2.5B | −1.06 [−1.31, −0.80] | −0.67 [−1.06, −0.27] | −1.40 [−2.80, −0.20] |
-| vs Whisper（自带 VAD） | −1.67 [−2.09, −1.27] | −1.26 [−1.76, −0.78] | −2.80 [−4.55, −1.11] |
-| vs Whisper（统一切分） | −2.16 [−2.52, −1.81] | −1.05 [−1.50, −0.59] | −4.80 [−7.03, −2.79] |
-| vs Parakeet（统一切分） | −1.35 [−1.69, −1.00] | −0.89 [−1.32, −0.49] | −2.80 [−5.01, −1.01] |
-| vs Parakeet（整段） | −2.04 [−2.47, −1.63] | −0.74 [−1.16, −0.32] | −4.60 [−6.71, −2.58] |
+| vs Whisper (built-in VAD) | −1.67 [−2.09, −1.27] | −1.26 [−1.76, −0.78] | −2.80 [−4.55, −1.11] |
+| vs Whisper (shared chunk plan) | −2.16 [−2.52, −1.81] | −1.05 [−1.50, −0.59] | −4.80 [−7.03, −2.79] |
+| vs Parakeet (shared chunk plan) | −1.35 [−1.69, −1.00] | −0.89 [−1.32, −0.49] | −2.80 [−5.01, −1.01] |
+| vs Parakeet (whole files) | −2.04 [−2.47, −1.63] | −0.74 [−1.16, −0.32] | −4.60 [−6.71, −2.58] |
 | vs Cohere Transcribe | −2.85 [−3.51, −2.26] | −0.64 [−1.06, −0.23] | −6.00 [−8.76, −3.51] |
 | vs Granite Speech 4.1 2B | −3.98 [−4.49, −3.49] | −2.22 [−2.66, −1.77] | −6.40 [−8.78, −4.12] |
 
-Qwen3-ASR 对每个模型、每个指标的区间都不含 0。最接近的一项是对 Canary 的否定词丢失：上限只有 −0.20，因为临床否定词只有 500 个，这一项的证据较弱。
+Against every model and on every metric, Qwen3-ASR's interval excludes 0. The closest is negation loss against Canary: the upper bound is only −0.20, because there are only 500 clinical negations, so the evidence there is weaker.
 
-其他模型之间有不少差值的区间包含 0。例如：
-- Whisper（自带 VAD）对 Parakeet（统一切分）：WER +0.33 [−0.09, +0.77]。
-- 医学术语错误率上，Canary、Parakeet、Whisper、Cohere 之间大多分不开。
+Many differences between the other models include 0. For example:
+- Whisper (built-in VAD) vs Parakeet (shared chunk plan): WER +0.33 [−0.09, +0.77].
+- On medical-term error rate, Canary, Parakeet, Whisper and Cohere are mostly indistinguishable.
 
-所以中间几个模型的排名不稳定。对外报告只说"Qwen3-ASR 最好，其余在误差范围内接近"，不给第 2–5 名排序。
+So the ranking of the middle models is not stable. External reports say only "Qwen3-ASR is best; the others are close within the error margin" and do not rank places 2–5.
 
-## 3. 长重复（同一个词连续 ≥ 10 次）
+## 3. Long repetitions (the same word ≥ 10 times in a row)
 
-脚本：`scripts/count_repeats.py`，结果在 `repeats/`。表中"短语循环"指 2–4 个词的单元连续重复 ≥ 5 次。参考转写里两种都是 0 次，所以这些都是模型幻觉。
+Script: `scripts/count_repeats.py`, results in `repeats/`. "Phrase loops" in the table are a 2–4 word unit repeated ≥ 5 times in a row. The reference transcripts contain none of either, so all of these are model hallucinations.
 
-| 运行 | 声道 | 同词重复：次数（词数） | 短语循环：次数（词数） | 涉及问诊数 |
+| Run | Channel | Same-word runs: count (words) | Phrase loops: count (words) | Consultations affected |
 |---|---|---|---|---|
-| Qwen3-ASR-1.7B | 全部 | 0 | 0 | 0 |
-| Whisper（统一切分） | 全部 | 0 | 0 | 0 |
-| Parakeet（统一切分） | 全部 | 0 | 0 | 0 |
-| Canary-Qwen 2.5B | 病人 | 1（23） | 0 | 1 |
-| Whisper（自带 VAD） | 合并 | 0 | 1（10，"thank you" × 5） | 1 |
-| Parakeet（整段） | 病人 | 1（138，"no"） | 0 | 1 |
-| Cohere Transcribe | 合并 | 1（185，"next"） | 0 | 1 |
-| Granite Speech 4.1 2B | 病人 | 7（1500） | 1（367） | 7 |
+| Qwen3-ASR-1.7B | all | 0 | 0 | 0 |
+| Whisper (shared chunk plan) | all | 0 | 0 | 0 |
+| Parakeet (shared chunk plan) | all | 0 | 0 | 0 |
+| Canary-Qwen 2.5B | patient | 1 (23) | 0 | 1 |
+| Whisper (built-in VAD) | mixed | 0 | 1 (10, "thank you" × 5) | 1 |
+| Parakeet (whole files) | patient | 1 (138, "no") | 0 | 1 |
+| Cohere Transcribe | mixed | 1 (185, "next") | 0 | 1 |
+| Granite Speech 4.1 2B | patient | 7 (1,500) | 1 (367) | 7 |
 
-具体每一处的位置（问诊、声道、起止时间、涉及的段）见 `repeats/repeats.csv`。
+The location of each (consultation, channel, start and end time, segments involved) is in `repeats/repeats.csv`.
 
-Granite 的重复每次约 200 词。这是一个 30 秒的段生成到 400 个 token 的上限后被截断。如果放宽上限，重复只会更长。
+Granite's repetitions are about 200 words each: a 30 s chunk generated up to the 400-token limit and was cut off. With a higher limit the repetitions would only get longer.
 
-## 4. 选择和理由
+## 4. Choice and reasons
 
-按计划，选 **Qwen3-ASR-1.7B**（`Qwen/Qwen3-ASR-1.7B`）作为病历层面网格里"最好的 2026 ASR"：
+As planned, **Qwen3-ASR-1.7B** (`Qwen/Qwen3-ASR-1.7B`) is the "best 2026 ASR" for the note-level grid:
 
-1. **三个声道 WER 都最低**：医生 6.1%、病人 9.5%、合并 8.6%（修正后）。合并声道比第二名 Canary 低 1.06 个百分点，比 Whisper 主结果低 1.67 个百分点，区间都不含 0。
-2. **对病历最要紧的两项也最好**：
-   - 医学术语错误率比 Whisper 低 1.26 个百分点。
-   - 临床否定词丢失率不到 Whisper 的一半（2.2% 对 5.0%）。
-3. **没有长重复**：47 段 × 3 个声道里一次都没有。
-4. **能本地跑，许可证宽松**：Apache 2.0，1.7B 参数，在 16 GB 的 5080 上运行。速度和 Whisper large-v3 相当（合并声道约 5.5 秒/音频分钟）。
+1. **Lowest WER on all three tracks**: doctor 6.1%, patient 9.5%, mixed 8.6% (corrected). On the mixed channel it is 1.06 points below the runner-up Canary and 1.67 points below the Whisper main result, both intervals excluding 0.
+2. **Best on the two metrics that matter most for notes**:
+   - medical-term error rate 1.26 points below Whisper;
+   - clinical-negation loss less than half of Whisper's (2.2% vs 5.0%).
+3. **No long repetitions**: none in 47 consultations × 3 tracks.
+4. **Runs locally, permissive licence**: Apache 2.0, 1.7B parameters, runs on the 16 GB 5080, about as fast as Whisper large-v3 (mixed channel about 5.5 s per audio minute).
 
-**需要注意的地方：**
+**Caveats:**
 
-- **重叠段问题没有解决。** Qwen3-ASR 合并声道在重叠段内的删除率仍有 20.3%，分声道是 7.1%。后插话的人多删 19.6 个百分点，和其他模型一样。这一点换模型解决不了。
-- **只有一个数据集。** 结果来自 PriMock57 的 47 段模拟问诊（英国口音、远程问诊），不代表其他口音或真实临床录音。
-- **切分方式可能有利于部分模型。** Qwen3-ASR 用的是统一切分方案（`plan_chunks.py`，≤ 30 秒，在停顿处切）。换一种切法，排名可能有小变化：Whisper 自己的 VAD 切法就比统一切分好 0.5 个百分点。
-- **分声道病历需要词级时间戳，目前没有。** 分声道病历要按词级时间戳把两个声道交织成话轮，而 Qwen3-ASR 默认只输出整段文本。有两个办法：
-  - 用官方的强制对齐模型（Qwen3-ForcedAligner，需另外验证）补词级时间；
-  - 退而按段（≤ 30 秒）交织，但粒度更粗，会让分声道这一行和 Whisper 那一行不完全可比。
-  **已决定（2026-10-27）**：病历网格只用合并声道，分声道这一比较不做，作为局限写明。
+- **Overlap is not solved.** Qwen3-ASR still deletes 20.3% of the words inside overlaps on the mixed channel (7.1% on the separated channels). The speaker who comes in loses 19.6 points more, as with every other model. A different model does not fix this.
+- **One dataset.** The results come from 47 simulated PriMock57 consultations (British accents, telehealth) and do not represent other accents or real clinical recordings.
+- **Chunking may favour some models.** Qwen3-ASR uses the shared chunk plan (`plan_chunks.py`, ≤ 30 s, cut at pauses). A different segmentation could shift the ranking slightly: Whisper's own VAD segmentation is 0.5 points better for it than the shared plan.
+- **Separated-channel notes need word timestamps, which Qwen3-ASR does not output.** Separated-channel notes interleave the two channels into turns using word timestamps, but Qwen3-ASR outputs only segment text by default. Two options:
+  - add word times with the official forced-alignment model (Qwen3-ForcedAligner, to be verified);
+  - fall back to interleaving by chunk (≤ 30 s), which is coarser and makes the separated-channel row not fully comparable with Whisper's.
+
+  **Decided (2026-10-27)**: the note grid uses the mixed channel only; the separated-channel comparison is not done and is stated as a limitation.
