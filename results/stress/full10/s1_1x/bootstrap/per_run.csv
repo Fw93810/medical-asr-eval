@@ -1,0 +1,7 @@
+metric,condition,run,value,ci95_low,ci95_high
+wer_corrected,mixed,s1_1x-whisper,0.1445,0.1278,0.1599
+wer_corrected,mixed,s1_1x-qwen3asr,0.1185,0.1083,0.1283
+medical_term_error_rate,mixed,s1_1x-whisper,0.0846,0.0617,0.1114
+medical_term_error_rate,mixed,s1_1x-qwen3asr,0.0653,0.0489,0.0841
+clinical_negation_lost,mixed,s1_1x-whisper,0.1077,0.0522,0.1562
+clinical_negation_lost,mixed,s1_1x-qwen3asr,0.0615,0.0165,0.1088

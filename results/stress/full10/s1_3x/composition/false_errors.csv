@@ -1,0 +1,3 @@
+run,condition,wer,normalisation_errors,normalisation_points,in_unsure_span,near_tag,uncertain_reference_points,wer_without_normalisation_errors
+s1_3x-qwen3asr,mixed,0.2063,158,0.92,284,645,5.44,0.197
+s1_3x-whisper,mixed,0.2344,152,0.89,293,704,5.83,0.2255

@@ -1,0 +1,5 @@
+run,condition,class,n,deleted,substituted,substituted_to_non_negation,negation_lost,lost_not_repeat,introduced_negations
+s1_2x-qwen3asr,mixed,negation_clinical,130,0.1077,0.0154,0.0154,0.1231,0.0923,17
+s1_2x-qwen3asr,mixed,negation_discourse,372,0.1102,0.0806,0.0726,0.1828,0.1129,17
+s1_2x-whisper,mixed,negation_clinical,130,0.1385,0.0231,0.0154,0.1538,0.1308,16
+s1_2x-whisper,mixed,negation_discourse,372,0.1855,0.0806,0.078,0.2634,0.1774,16

@@ -18,3 +18,4 @@ results/notes/grid/*/facts/
 results/notes/grid/*/judged/
 !results/stress/
 results/stress/listen/
+results/stress/**/error_ops.csv
