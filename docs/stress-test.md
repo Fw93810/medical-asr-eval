@@ -1,225 +1,225 @@
-# 压力测试：条件变差时，瓶颈会不会从"写"转到"听"
+# Stress test: does the bottleneck move from "writing" to "listening" as conditions get worse?
 
-分支：`stress-test`。开始日期：2026-10-27。
+Branch: `stress-test`. Started 2026-10-27.
 
-目前的主结论"瓶颈在写，不在听"来自 PriMock57：两人对话、环境安静、视频通话音质。目标场景（创伤室）人多、嘈杂、远场，抢话也多。压力测试要回答两个问题：
+The current main conclusion — the bottleneck is in writing the note, not in listening — comes from PriMock57: two people, a quiet room, video-call audio. The target setting (a trauma bay) has more people, more noise, far-field microphones and more interruptions. The stress test asks two questions:
 
-1. **ASR 层**：条件变差时，各类错误怎么增长？重叠段的删除是不是仍然集中在后插话的人身上？
-2. **病历层**：条件差到什么程度时，ASR 的影响会超过生成模型的影响？
+1. **ASR level**: as conditions get worse, how does each kind of error grow? Are deletions in overlaps still concentrated on the speaker who comes in?
+2. **Note level**: how bad must conditions get before the ASR's effect exceeds the generation model's?
 
-**压力测试的定位**：目的不是还原真实场景，而是逐步加压，看错误怎么随压力增长。就像电路的压力测试会把电压推到额定值以上一样，2×、3× 重叠和 0 dB 信噪比本来就该比日常对话更恶劣。各个因素的 1× 或"无噪声"一档才代表真实水平。
+**What the stress test is for**: not to reproduce a real setting, but to raise the pressure step by step and watch how errors grow. Like stress-testing a circuit beyond its rated voltage, 2× and 3× overlap and 0 dB SNR are meant to be worse than everyday conversation. Only each factor's 1× or no-noise level represents the real level.
 
-## 1. 固定原则
+## 1. Fixed rules
 
-- **提交范围**：每完成一步提交一次。生成的音频、噪声素材和试听片段不提交，只提交脚本、配置（`configs/stress/*.yaml`）和结果表。
-- **可复现**：所有合成都用固定随机种子，参数写进配置，一键可复现。
-- **先开发集，后测试集**：先在开发集（前 10 段，`data/prepared_full10`）上验证合成是否正确，再跑测试集。
-- **规范化器和评判协议 v1 冻结**，不改。
-- **GPU 和租卡**（2026-10-27 修订，原计划是"不租卡"）：
-  - ASR 部分（合成音频、Qwen3-ASR 和 Whisper 转写）在本机 RTX 5080 上跑，一次只跑一个 GPU 任务。
-  - 病历层租一台 RunPod A100 80GB，环境与第三阶段网格一致：Ollama 0.40.11，Qwen3.8-27B Q4_K_M，设置相同。
-  - 在**同一次开机**里，先重新生成人工转写那一列，再生成压力条件的病历，这样两者的差值不受"重新生成噪声"影响。
-  - 本次预算上限 **$10**。开机前把预计时长和费用发给项目负责人确认；跑完立刻停机并删除 Pod。
-- **遇到需要取舍的地方**，先停下来问。
+- **What is committed**: one commit per completed step. Synthesised audio, noise material and listening clips are not committed; only scripts, configs (`configs/stress/*.yaml`) and result tables.
+- **Reproducible**: every synthesis uses a fixed random seed, with parameters in the configs, reproducible with one command.
+- **Dev set first, then test set**: synthesis is validated on the dev set (first 10 consultations, `data/prepared_full10`) before running the test set.
+- **The normaliser and judge protocol v1 are frozen.**
+- **GPU and rental** (revised 2026-10-27; the original plan was "no rented GPUs"):
+  - The ASR part (synthesised audio, Qwen3-ASR and Whisper) runs on the local RTX 5080, one GPU job at a time.
+  - The note level runs on one rented RunPod A100 80GB, in the same environment as the stage-3 grid: Ollama 0.40.11, Qwen3.8-27B Q4_K_M, same settings.
+  - Within **the same rental session**, the human-transcript column is regenerated first and then the stress-condition notes, so their difference is free of regeneration noise.
+  - Budget cap **$10**. The estimated time and cost are sent to the project lead for approval before starting the machine; the pod is stopped and deleted as soon as the run finishes.
+- **Where a trade-off is needed**, stop and ask.
 
-## 2. 预期结果（跑之前写下，跑完逐条对照）
+## 2. Expected results (written before running; each checked afterwards)
 
-1. **S1 更多重叠**：删除率随重叠比例近似线性上升，增长主要来自后插话的人。Qwen3-ASR 和 Whisper 的差距不会因为重叠增加而明显变化，因为两者的问题来源相同。
-2. **S2 第三个说话人**：插入错误增多，其中相当一部分能对上第三个人的话。Whisper 比 Qwen3-ASR 更容易把背景人声写进来。
-3. **S3 背景噪声**：0–5 dB 时 WER 急剧上升，Whisper 的长重复和幻觉明显增多。Qwen3-ASR 的优势在低信噪比下扩大。
-4. **S4 混响 / 远场**：整体 WER 上升，离麦克风远的那个说话人受影响更大。
-5. **病历层**：在 3× 重叠和低信噪比下，ASR 造成的召回损失会变成显著的负值。至少在 Whisper 上，损失会接近或超过 5 个百分点。也就是说，瓶颈开始从"写"向"听"转移。
+1. **S1 more overlap**: the deletion rate rises roughly linearly with the overlap ratio, mainly for the speaker who comes in. The gap between Qwen3-ASR and Whisper does not change much as overlap grows, because both have the same source of trouble.
+2. **S2 a third speaker**: insertions increase, and a fair share of them match the third speaker's words. Whisper writes in background speech more readily than Qwen3-ASR.
+3. **S3 background noise**: WER rises sharply at 0–5 dB, and Whisper's long repetitions and hallucinations increase clearly. Qwen3-ASR's advantage widens at low SNR.
+4. **S4 reverberation / far field**: overall WER rises; the speaker farther from the microphone is hit harder.
+5. **Note level**: at 3× overlap and low SNR, the recall loss caused by the ASR becomes significantly negative. At least for Whisper it approaches or exceeds 5 percentage points — the bottleneck starts to move from writing to listening.
 
-如果第 5 条不成立，也就是极端条件下 ASR 的影响仍然很小，这本身就是一个强结论，同样如实写。
+If prediction 5 does not hold — if the ASR's effect stays small even under extreme conditions — that is a strong conclusion in itself and will be reported as such.
 
-## 3. 相关工作
+## 3. Related work
 
-- **降噪反而有害**：Chondhekar 等（arXiv 2512.17562，2025-12，"When De-noising Hurts"）。
-  - 做法：用 MetricGAN+ 先降噪，再交给 Whisper、Parakeet、Gemini Flash 2.0、Parrotlet-a 识别。
-  - 结果：在全部 40 个配置下，降噪后的医学 ASR 都比直接识别带噪原音更差，semWER 绝对值上升 1.1–46.6 个百分点。
-  - 所以本项目**不考虑"先降噪再识别"**这条路，压力条件一律直接送入 ASR。
-- **WER 几乎不变，临床意思却会翻转**：Jiang 等（arXiv 2606.05909，INTERSPEECH 2026，"Beyond WER: A Paired Acoustic Stress Test for Ambient Clinical Scribes"）。
-  - 做法：给同一批对话加入多种噪声，下游模型固定不变。
-  - 结果：稳态环境噪声只让 WER 上升 0.71 个百分点，"不安全输出"的比例却接近翻倍；轻微的声学扰动就可能把临床意思反过来。
-  - 这和本项目第三阶段的发现方向一致：在"说过的事实"上，ASR 主要增加的是矛盾事实，而不是漏写；"饮水减少"被写成"饮水增多"就是一例。
-- **ICU 噪声的主要来源是人声**：University of Portsmouth 的研究在伊拉克的三个 ICU 做了声景分析，发现超过 50% 的累计噪声来自交谈（医护和探视者）。
-  - 论文：*Acoustics Australia*，2024，DOI 10.1007/s40857-024-00321-3。
-  - 新闻稿：https://www.port.ac.uk/news-events-and-blogs/news/study-finds-staff-and-visitor-voices-are-major-source-of-excessive-noise-in-hospital-icus
-  - 这是 S3 主条件用人声嘈杂背景的依据。
+- **Denoising hurts**: Chondhekar et al. (arXiv 2512.17562, December 2025, "When De-noising Hurts").
+  - Method: MetricGAN+ denoising before Whisper, Parakeet, Gemini Flash 2.0 and Parrotlet-a.
+  - Result: in all 40 configurations, medical ASR on denoised audio was worse than on the original noisy audio, by 1.1–46.6 points of absolute semWER.
+  - So this project **does not consider "denoise first, then recognise"**; stress conditions go straight into the ASR.
+- **WER barely changes while clinical meaning flips**: Jiang et al. (arXiv 2606.05909, INTERSPEECH 2026, "Beyond WER: A Paired Acoustic Stress Test for Ambient Clinical Scribes").
+  - Method: several kinds of noise added to the same dialogues, with the downstream model kept fixed.
+  - Result: stationary ambient noise raised WER by only 0.71 points but nearly doubled the rate of unsafe outputs; small acoustic perturbations can invert clinical meaning.
+  - This agrees with stage 3 of this project: on stated facts, the ASR mainly adds contradicted facts rather than omissions; "drinking little" written as "drinking a lot" is one example.
+- **Speech is the main source of ICU noise**: a University of Portsmouth soundscape study of three ICUs in Iraq found that over 50% of the cumulative acoustic noise came from conversation (staff and visitors).
+  - Paper: *Acoustics Australia*, 2024, DOI 10.1007/s40857-024-00321-3.
+  - Press release: https://www.port.ac.uk/news-events-and-blogs/news/study-finds-staff-and-visitor-voices-are-major-source-of-excessive-noise-in-hospital-icus
+  - This is why the main S3 condition uses a speech-babble background.
 
-## 4. 方法
+## 4. Method
 
-### 共同做法
+### Common to all factors
 
-- 每个压力因素**单独**扫，其余保持基线（合并声道）。
-- 合成结果写成与 `prep_data.py` 相同的格式：`mixed.wav` 加上 `utterances.json` 和 `ref_*.txt`。这样 `transcribe.py`、`evaluate.py` 等现有脚本不用改。
-- 合并声道的做法和基线相同：相加后峰值归一到 −1 dBFS。
-- 两个 ASR 的设置与第二阶段相同：
-  - Whisper large-v3：`--vad --no-condition-on-previous-text`
-  - Qwen3-ASR-1.7B：统一切段方案，在**每个条件自己的音频上**重新生成（`plan_chunks.py`）。
-- 运行脚本：`scripts/run_stress_asr.ps1`。
+- Each stress factor is swept **on its own**, with everything else at baseline (mixed channel).
+- Synthesised data use the same format as `prep_data.py`: `mixed.wav` plus `utterances.json` and `ref_*.txt`, so `transcribe.py`, `evaluate.py` and the other scripts run unchanged.
+- The mixed channel is made as in the baseline: summed, then peak-normalised to −1 dBFS.
+- Both ASR systems use their stage-2 settings:
+  - Whisper large-v3: `--vad --no-condition-on-previous-text`
+  - Qwen3-ASR-1.7B: the shared chunk plan, re-planned **on each condition's own audio** (`plan_chunks.py`).
+- Run script: `scripts/run_stress_asr.ps1`.
 
-### S1 更多重叠（`scripts/stress_overlap.py`，`configs/stress/s1_overlap.yaml`）
+### S1 more overlap (`scripts/stress_overlap.py`, `configs/stress/s1_overlap.yaml`)
 
-**合成方法**：
+**Synthesis**:
 
-- **切句**：每句话从本说话人的干净声道里切出来。两头各留 0.15 秒边距，但不会伸进同一说话人的相邻句子。
-- **重排**：把切出的句子放到新的时间轴上。在比例为 p 的话轮交替处，后一个说话人提前 d 秒开口，压进前一个人的话里。之后的所有句子整体提前同样的时间，所以后面的对话仍保持自己的节奏。
-- **两个限制**：
-  - 后一个人至少要等前一句已经说了 0.4 秒才能开口；
-  - 同一说话人的句子不互相重叠。
-- **1× 档也重新合成**：用同样的"切句再拼接"方法，只是 d = 0，保持原始时间。这样各档的合成误差相同，差别只在重叠量。
-- **参考转写**：按新的开始时间重排；每句话的词级时间按平移量同步移动。
+- **Cut**: each utterance is cut from its speaker's clean channel, with 0.15 s padding at each end that never reaches into the same speaker's neighbouring utterance.
+- **Re-place**: the cut utterances are placed on a new time line. At a share p of the turn changes, the next speaker starts d seconds early, into the previous speaker's utterance. Everything after it moves earlier by the same amount, so the rest of the conversation keeps its own timing.
+- **Two limits**:
+  - the next speaker never starts before the previous utterance has run 0.4 s;
+  - a speaker's utterances never overlap each other.
+- **Level 1× is re-synthesised too**, with the same cut-and-place method and d = 0 (original timing). Every level then shares the synthesis artefacts and differs only in the amount of overlap.
+- **Reference**: reordered by the new start times; each utterance's word times move with its shift.
 
-**重叠比例的定义**：两人同时说话的秒数 ÷ 有人说话的秒数，都按句子区间计算。
+**Overlap ratio**: seconds where both speakers talk ÷ seconds where anyone talks, from utterance intervals.
 
-**校准**（开发集 10 段）：基线重叠比例是 0.0751。
+**Calibration** (dev set, 10 consultations): baseline overlap ratio 0.0751.
 
-| 档位 | d（秒） | 开发集重叠比例 | 相对基线 | 提前开口的话轮交替 |
+| Level | d (s) | Dev-set overlap ratio | vs baseline | Turn changes started early |
 |---|---|---|---|---|
 | s1_1x | 0 | 0.0751 | 1.00× | 0 / 972 |
 | s1_2x | 0.86 | 0.1502 | 2.00× | 864 / 972 |
 | s1_3x | 1.65 | 0.2255 | 3.00× | 805 / 972 |
 
-d 越大，受上面两条限制而无法提前的话轮交替越多，所以 3× 档提前的话轮交替比 2× 档少。
+The larger d is, the more turn changes the two limits stop from starting early, so fewer turn changes are shifted at 3× than at 2×.
 
-**测试集重新校准 d**（`configs/stress/s1_overlap_test47.yaml`）：
+**d recalibrated on the test set** (`configs/stress/s1_overlap_test47.yaml`):
 
-- 测试集原本的重叠比测试集少：基线重叠比例 0.0479，开发集是 0.0751。
-- 直接用开发集的 d，测试集会达到自身基线的 2.75× 和 4.46×，超过目标。
-- 所以在测试集上按同样的方法重新校准，其他参数都不变。
-- 校准只用句子的时间，不涉及任何 ASR 结果，不会泄露测试集结果。
+- The test set has less overlap than the dev set: baseline ratio 0.0479 vs 0.0751.
+- With the dev-set d values, the test set would reach 2.75× and 4.46× of its own baseline, beyond the targets.
+- So d was recalibrated on the test set with the same method; all other parameters are unchanged.
+- The calibration uses only utterance times and no ASR output, so nothing about test-set results leaks into it.
 
-| 档位 | d（秒） | 测试集重叠比例 | 相对测试集基线 | 提前开口的话轮交替 |
+| Level | d (s) | Test-set overlap ratio | vs test-set baseline | Turn changes started early |
 |---|---|---|---|---|
 | s1_1x | 0 | 0.0479 | 1.00× | 0 / 4318 |
 | s1_2x | 0.55 | 0.0961 | 2.01× | 3971 / 4318 |
 | s1_3x | 0.97 | 0.1442 | 3.01× | 3859 / 4318 |
 
-**为什么 p = 1.0**：
+**Why p = 1.0**:
 
-- p = 0.6 时，要达到 3× 需要提前 2.75 秒，远长于真实的抢话（一般重叠 0.5–1.5 秒）；
-- p = 1.0 时，2× 和 3× 只需要 0.86 秒和 1.65 秒。
-- 两害相权，选 p = 1.0。
+- with p = 0.6, reaching 3× needs a 2.75 s head start, far longer than real interruptions (typically 0.5–1.5 s of overlap);
+- with p = 1.0, 2× and 3× need only 0.86 s and 1.65 s.
+- p = 1.0 is the lesser of the two problems.
 
-**p = 1.0 的局限**：真实对话里只有一部分话轮交替会重叠，p = 1.0 意味着每次换人都抢话，这一点比真实情况极端。
+**Limitation of p = 1.0**: in real conversation only some turn changes overlap; p = 1.0 means every change of speaker is an interruption, which is more extreme than reality.
 
-**和真实对话对比**（开发集 10 段，972 个话轮交替）：1× 用的就是 PriMock57 原始合并声道的时间，作为真实参照。
+**Compared with real conversation** (dev set, 10 consultations, 972 turn changes). Level 1× uses PriMock57's original timing and serves as the real-conversation reference.
 
-| 档位 | 发生重叠的话轮交替 | 每次重叠的时长：中位数 | 90 分位数 |
+| Level | Turn changes with overlap | Overlap length at those turn changes: median | 90th percentile |
 |---|---|---|---|
-| **1×（PriMock57 原始时间，真实参照）** | **50%** | **0.74 秒** | **5.7 秒** |
-| 2× | 75% | 0.92 秒 | 4.9 秒 |
-| 3× | 84% | 1.35 秒 | 5.3 秒 |
+| **1× (PriMock57 original timing, real reference)** | **50%** | **0.74 s** | **5.7 s** |
+| 2× | 75% | 0.92 s | 4.9 s |
+| 3× | 84% | 1.35 s | 5.3 s |
 
-- **原始对话本身就有不少重叠**：一半的话轮交替有重叠，而且有的长达十几秒。这多半是一个人在另一个人说话时插入"yeah""mm""okay"之类的附和；标注里每个附和都单独算一句，所以也计入话轮交替。
-- **加压后的变化**：3× 档把每次重叠的典型时长从 0.74 秒拉到 1.35 秒，发生重叠的话轮交替从 50% 增加到 84%。90 分位数没有变长，说明合成没有造出不自然的长段双人同时说话。
-- 统计脚本是一次性的检查，数字记在这里。
+- **The original conversations already overlap a lot**: half the turn changes overlap, some for over ten seconds. Most of these are one person saying "yeah", "mm" or "okay" while the other is talking; each backchannel is its own utterance in the annotation, so it counts as a turn change.
+- **What the stress adds**: at 3× the typical overlap grows from 0.74 s to 1.35 s, and turn changes with overlap go from 50% to 84%. The 90th percentile does not grow, so the synthesis does not create unnaturally long stretches of both people talking.
+- The statistics come from a one-off check; the numbers are recorded here.
 
-**试听**（2026-10-27，项目负责人，非英语母语者）：
+**Listening check** (2026-10-27, project lead, not a native English speaker):
 
-- 用固定种子抽了 3 段开发集问诊，在 3× 档里找重叠最多的 30 秒，再在 1×、2× 档截出同一段对话。文件在 `results/stress/listen/s1/`，不提交。
-- 结论：3× 档"有点抢，但仍是正常对话"，不是两段录音机械地叠在一起。**通过。**
-- 没有经过英语母语者验证。
+- Three dev consultations drawn with a fixed seed; in each, the 30 s with the most overlap at 3×, and the same stretch of conversation at 1× and 2×. Files in `results/stress/listen/s1/`, not committed.
+- Verdict: the 3× level is "a bit crowded but still a normal conversation", not two recordings mechanically laid on top of each other. **Passed.**
+- Not checked by a native English speaker.
 
-**1× 和原始合并声道的一致性**（开发集，Whisper large-v3）：
+**1× vs the original mixed channel** (dev set, Whisper large-v3):
 
-| | WER | 替换 | 删除 | 插入 | 重叠段内删除率 | 重叠段外删除率 |
+| | WER | Substitutions | Deletions | Insertions | Deletion rate in overlap | Deletion rate outside overlap |
 |---|---|---|---|---|---|---|
-| 原始合并声道 | 17.15% | 995 | 1534 | 401 | 27.1% | 6.7% |
-| S1 1×（重新合成） | 16.57% | 1014 | 1419 | 399 | 26.8% | 6.0% |
+| Original mixed channel | 17.15% | 995 | 1534 | 401 | 27.1% | 6.7% |
+| S1 1× (re-synthesised) | 16.57% | 1014 | 1419 | 399 | 26.8% | 6.0% |
 
-- 重新合成后 WER 低 0.6 个百分点，主要来自重叠段外的删除变少。原因是合成时句子之间是纯静音，原始声道里的底噪和串音没有了。
-- 这是合成方法本身的误差。所以 2×、3× 只和 1× 比，不和原始合并声道比。
-- 重叠段内的删除率几乎相同。
+- WER is 0.6 points lower after re-synthesis, mainly from fewer deletions outside overlap: the gaps between utterances are pure silence in the synthesis, so the original channels' background noise and crosstalk are gone.
+- This is an artefact of the synthesis method, which is why 2× and 3× are compared only with 1×, never with the original mixed channel.
+- The deletion rate inside overlap is almost the same.
 
-### S2 第三个说话人
+### S2 a third speaker
 
-待做。
+To do.
 
-### S3 背景噪声（`scripts/stress_noise.py`，`configs/stress/s3_noise.yaml`）
+### S3 background noise (`scripts/stress_noise.py`, `configs/stress/s3_noise.yaml`)
 
-**噪声来源**：DEMAND（Thiemann 等，2013；Zenodo 记录 1227121）的两个环境，16 kHz 版本：
+**Noise**: two environments from DEMAND (Thiemann et al., 2013; Zenodo record 1227121), 16 kHz versions:
 
-- **PCAFETER**：食堂
-- **PRESTO**：餐馆
+- **PCAFETER**: cafeteria
+- **PRESTO**: restaurant
 
-两者都以人声嘈杂（babble）为主，夹杂餐具声和脚步声。
+Both are dominated by speech babble, with tableware and footsteps.
 
-**为什么选人声背景**：ICU 声景研究发现，超过 50% 的累计噪声来自交谈（见第 3 节）。
+**Why a speech background**: the ICU soundscape study found that over 50% of the cumulative noise came from conversation (section 3).
 
-**许可证**：
+**Licence**:
 
-- Zenodo 记录写 CC BY 4.0，随数据附带的 PDF 写 CC BY-SA 3.0。
-- 用于研究，只混进本地合成的音频，不再分发任何音频。
+- The Zenodo record lists CC BY 4.0; the PDF shipped with the data lists CC BY-SA 3.0.
+- Used for research, mixed only into locally synthesised audio; no audio is redistributed.
 
-**没选 MUSAN**：全集 11 GB，而且没有现成的人声嘈杂背景，要用其中的语音自己叠出来。
+**Why not MUSAN**: the full corpus is 11 GB and has no ready-made babble; it would have to be built from its speech part.
 
-**没用 m42-health/hospital_ambient_noise**（Hugging Face）：
+**Why not m42-health/hospital_ambient_noise** (Hugging Face):
 
-- 数据卡片上只有字段结构，没有许可证，也没有录音来源；
-- 内容是带医院噪声的语音（有转写），不是纯底噪。
-- 许可证不清楚，所以不用。
+- the dataset card shows only the field structure, with no licence and no description of the recordings;
+- the content is speech recorded with hospital noise (with transcripts), not pure background noise.
+- With an unclear licence, it is not used.
 
-**合成方法**：
+**Synthesis**:
 
-- 加噪对象是**原始合并声道**，参考转写不变。所以 S3 的"无噪声"基线就是第二阶段已有的结果，不需要重新合成。
-- 每段问诊用固定种子：
-  1. 在两个环境中二选一；
-  2. 把该环境的 16 个声道（同一个麦克风阵列，每个约 5 分钟）按随机顺序首尾相接；
-  3. 从随机位置截取与问诊等长的一段。
+- Noise is added to the **original mixed channel** and the reference is unchanged, so the S3 no-noise baseline is the existing stage-2 result and needs no re-synthesis.
+- For each consultation, with a fixed seed:
+  1. one of the two environments is chosen;
+  2. its 16 channels (one microphone array, about 5 minutes each) are joined in random order;
+  3. a stretch as long as the consultation is cut from a random offset.
 
-  这样一段十分钟的问诊也不会听到重复的噪声。
-- **信噪比** = 语音功率 ÷ 噪声功率，语音功率只在有人说话的句子区间内计算。
-- 加噪后峰值归一到 −1 dBFS。
+  So even a ten-minute consultation never hears the same noise twice.
+- **SNR** = speech power ÷ noise power, with speech power measured only inside utterance intervals.
+- After mixing, the audio is peak-normalised to −1 dBFS.
 
-**档位**：20、10、5、0 dB。开发集 10 段的实际信噪比都在目标值 ±0.1 dB 以内；每段的环境和实际信噪比记在 `data/stress/<集>/s3_levels.json`。
+**Levels**: 20, 10, 5 and 0 dB. On the dev set, every consultation's achieved SNR is within ±0.1 dB of the target; each consultation's environment and achieved SNR are recorded in `data/stress/<set>/s3_levels.json`.
 
-**局限**：两个噪声环境都**没有医疗设备声**（监护仪、输液泵、呼吸机等），S3b 只部分补上这一点。
+**Limitation**: neither environment contains **medical equipment sounds** (monitors, infusion pumps, ventilators); S3b covers this only in part.
 
-### S3b 人声背景 + 报警声（同一脚本和配置，档位 `s3b_snr10_alarms`）
+### S3b speech background plus alarms (same script and config, level `s3b_snr10_alarms`)
 
-**做法**：
+**Method**:
 
-- 在 S3 的 10 dB 人声背景之上，随机叠加报警声。
-- 人声背景和 `s3_snr10` 完全相同：同一个环境、同一段噪声，已验证文件逐字节一致。所以两档的差别**只来自报警声**。
+- Alarm sounds are added at random on top of S3's 10 dB speech background.
+- The background is identical to `s3_snr10` — same environment, same stretch of noise; the files were checked to be byte-for-byte identical — so the two levels differ **only by the alarms**.
 
-**参数**：
+**Parameters**:
 
-- **频率**：每分钟报警次数是 2–4 之间的随机整数（固定种子）。
-- **时长**：每次报警截取 3–6 秒，两端各有 20 毫秒的淡入淡出。
-- **音量**：每次报警的功率与说话声功率相等（相对说话声 0 dB）。这是暂定值，写在配置里，可以改。
-- **记录**：每段问诊的报警时间点记在 `s3_levels.json`。
+- **Rate**: the number of alarms per minute is a random integer from 2 to 4 (fixed seed).
+- **Length**: each alarm is a 3–6 s excerpt with 20 ms fade-in and fade-out.
+- **Loudness**: each alarm's power equals the speech power (0 dB relative to speech). This is provisional, set in the config, and can be changed.
+- **Record**: each consultation's alarm times are recorded in `s3_levels.json`.
 
-**素材**：Freesound，**全部是 CC0 1.0**（2026-10-27 在各自页面上核对过）。原始文件要登录才能下载，所以用的是公开的高质量预览版（MP3，重采样到 16 kHz）。
+**Material**: Freesound, **all CC0 1.0** (checked on each sound's page on 2026-10-27). Originals require a login, so the public high-quality previews are used (MP3, resampled to 16 kHz).
 
-| 文件 | 标题和作者 | 链接 | 许可证 |
+| File | Title and author | Link | Licence |
 |---|---|---|---|
-| 668978 | "beeps for heart monitor.wav"，vestibule-door | https://freesound.org/people/vestibule-door/sounds/668978/ | CC0 1.0 |
-| 148897 | "Heart Monitor Beep"，samfk360 | https://freesound.org/people/samfk360/sounds/148897/ | CC0 1.0 |
-| 617170 | "Hospital infusion pump. Alarm"，SonoRec | https://freesound.org/people/SonoRec/sounds/617170/ | CC0 1.0 |
+| 668978 | "beeps for heart monitor.wav", vestibule-door | https://freesound.org/people/vestibule-door/sounds/668978/ | CC0 1.0 |
+| 148897 | "Heart Monitor Beep", samfk360 | https://freesound.org/people/samfk360/sounds/148897/ | CC0 1.0 |
+| 617170 | "Hospital infusion pump. Alarm", SonoRec | https://freesound.org/people/SonoRec/sounds/617170/ | CC0 1.0 |
 
-另有两个 CC0 候选没有用：
+Two other CC0 candidates were not used:
 
-- 617280：输液泵马达的运转声，不是报警；
-- 832259："beeps02"，页面没有说明是什么声音。
+- 617280: the infusion pump's motor running, not an alarm;
+- 832259: "beeps02", with no description of what it is.
 
-**局限**：
+**Limitations**:
 
-- 报警声素材只有 3 个，都是网上的录音，不代表某一家医院的真实设备；
-- 报警声的音量是暂定值；
-- 报警之外的设备声（呼吸机、吸引器等）没有覆盖。
+- only 3 alarm recordings, all from the internet; they do not represent any particular hospital's equipment;
+- the alarm loudness is provisional;
+- equipment sounds other than alarms (ventilators, suction, etc.) are not covered.
 
-### S4 混响 / 远场
+### S4 reverberation / far field
 
-待做。时间不够时第一个砍。
+To do. The first to be dropped if time runs out.
 
-## 5. 结果
+## 5. Results
 
-待补。
+To be added.
 
-## 6. 局限
+## 6. Limitations
 
-- **合成重叠不等于真实抢话**：真实的抢话会改变说话方式，比如提高音量、中途停下；这里只是在时间上把两段录音叠起来。另外 p = 1.0 让每次换人都抢话，比真实情况极端。
-- **加压档不代表真实场景**：S1 的 2×、3× 和 S3 的低信噪比都是人为加压，不代表某个真实创伤室。各因素的 1× 或"无噪声"一档才是真实水平。
-- **噪声库不等于真实创伤室**：主条件只有食堂和餐馆两种人声背景，没有医疗设备声；S3b 的报警声素材有限。
+- **Synthetic overlap is not real interruption**: real interruptions change how people speak (louder, breaking off mid-sentence); here two recordings are only overlapped in time. Also, p = 1.0 makes every change of speaker an interruption, more extreme than reality.
+- **The stressed levels do not represent a real setting**: S1's 2× and 3× and S3's low SNRs are artificial stress, not a particular trauma bay. Only each factor's 1× or no-noise level is the real level.
+- **A noise library is not a real trauma bay**: the main condition has only two speech-babble backgrounds (cafeteria and restaurant) and no medical equipment sounds; S3b's alarm material is limited.
