@@ -18,7 +18,7 @@ import os
 def read(path):
     if not os.path.isfile(path):
         return []
-    with open(path, newline="") as f:
+    with open(path, newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
 
@@ -37,6 +37,8 @@ def main():
     ap.add_argument("--results", nargs="+", required=True, help="evaluate.py result folders (globs ok)")
     ap.add_argument("--out", required=True)
     ap.add_argument("--top", type=int, default=10)
+    ap.add_argument("--corrected-root", help="folder holding the same runs evaluated with --equivalence "
+                                             "(e.g. results/equiv); adds the corrected WER next to the raw one")
     ap.add_argument("--long-run", type=int, default=10,
                     help="insertion runs with at least this many words count as long runs (loops)")
     args = ap.parse_args()
@@ -49,6 +51,8 @@ def main():
         run = os.path.basename(os.path.normpath(d))
         extractor = (read(os.path.join(d, "wer.csv")) or [{}])[0].get("term_extractor", "")
         run_ins = read(os.path.join(d, "insertions.csv"))
+        corrected = ({r["condition"]: r for r in read(os.path.join(args.corrected_root, run, "summary.csv"))}
+                     if args.corrected_root else {})
         for s in read(os.path.join(d, "summary.csv")):
             long_runs = [int(r["n_words"]) for r in run_ins
                          if r["condition"] == s["condition"] and int(r["n_words"]) >= args.long_run]
@@ -57,6 +61,7 @@ def main():
                 "run": run, "condition": s["condition"], "model": s["model"],
                 "n_consultations": s["n_consultations"], "audio_min": s["audio_min"], "ref_words": n,
                 "wer": s["corpus_wer"],
+                "wer_corrected": corrected.get(s["condition"], {}).get("corpus_wer", ""),
                 "sub_rate": round(int(s["substitutions"]) / n, 4),
                 "del_rate": round(int(s["deletions"]) / n, 4),
                 "ins_rate": round(int(s["insertions"]) / n, 4),
@@ -79,7 +84,8 @@ def main():
 
     print(markdown(comp, [
         ("run", lambda r: r["run"]), ("condition", lambda r: r["condition"]),
-        ("WER", lambda r: pct(r["wer"])), ("sub", lambda r: pct(r["sub_rate"])),
+        ("WER", lambda r: pct(r["wer"])), ("WER corrected", lambda r: pct(r["wer_corrected"])),
+        ("sub", lambda r: pct(r["sub_rate"])),
         ("del", lambda r: pct(r["del_rate"])), ("ins", lambda r: pct(r["ins_rate"])),
         ("term recall", lambda r: pct(r["term_recall"])), ("terms", lambda r: r["term_extractor"].split("(")[0]),
         ("del in/out overlap", lambda r: f"{pct(r['del_rate_in'])} / {pct(r['del_rate_out'])}"),

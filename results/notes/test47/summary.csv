@@ -1,0 +1,9 @@
+﻿source,notes,facts,recall,missing_rate,contradicted_rate,negative_facts,negative_missing_rate,negative_contradicted,extra_contradicts_per_note,extra_not_mentioned_per_note
+asr_mixed,47,1408,0.6761,0.2791,0.0447,408,0.3211,12,1.0,9.26
+asr_mixed_plain,47,1408,0.6875,0.2656,0.0469,408,0.2843,13,1.15,9.72
+asr_separated,47,1408,0.6818,0.2805,0.0376,408,0.2819,10,1.09,9.55
+asr_separated_plain,47,1408,0.6719,0.2848,0.0433,408,0.3137,18,1.19,9.62
+human,47,1408,0.6825,0.2756,0.0419,408,0.2941,15,1.17,9.66
+human_plain,47,1408,0.6811,0.2756,0.0433,408,0.299,11,1.23,9.57
+human_rejudge,47,1408,0.6804,0.2798,0.0398,408,0.299,12,1.28,9.28
+human_unlabelled_plain,47,1408,0.6776,0.2777,0.0447,408,0.3088,12,1.23,8.89

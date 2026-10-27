@@ -2,6 +2,12 @@ data/
 outputs/
 results/*
 !results/full10/
+!results/test47/
+!results/notes/
+results/notes/*
+!results/notes/test47/
+results/notes/test47/*/
+!results/notes/test47/error_composition/
 __pycache__/
 *.pyc
 .ipynb_checkpoints/

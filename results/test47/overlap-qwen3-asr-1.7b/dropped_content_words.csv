@@ -1,0 +1,63 @@
+id,t,speaker,word,word_class,role,rel_level_db,level,utt_words,mixed,separated,utterance
+day1_consultation11,15.62,patient,connection,content,came_in,1.7,louder,5,del,eq,Just connection on the screen.
+day1_consultation11,17.13,patient,screen,content,came_in,1.7,louder,5,del,eq,Just connection on the screen.
+day1_consultation11,108.66,doctor,wow,content,came_in,1.6,louder,21,del,eq,"Alright, wow. OK. So you're losing a lot of, a lot of, you're using a lot of fluid there."
+day1_consultation11,471.1,doctor,anus,content,holding,2.8,louder,21,del,eq,"Yeah, yeah. So what I mean by bowel is the whole gut. So it could be anything from the mouth anus."
+day1_consultation12,413.01,patient,name,content,came_in,4.9,louder,9,del,eq,"I'm sorry, what's the name of that?"
+day1_consultation13,375.18,patient,long,content,holding,-13.2,quieter,19,del,eq,"No, uh I've been wearing them since I was five , five year old. So, it's quite a long time."
+day1_consultation13,375.56,patient,time,content,holding,-13.2,quieter,19,del,eq,"No, uh I've been wearing them since I was five , five year old. So, it's quite a long time."
+day1_consultation14,281.52,patient,pretty,content,came_in,2.6,louder,3,del,eq,"Yeah, pretty much."
+day1_consultation14,331.69,doctor,diabetes,content,holding,-9.0,quieter,23,del,eq,"OK, alright. Who's looking after your diabetes? Is there anyone, is there a doctor in a hospital, who looks after your diabetes?"
+day1_consultation14,415.08,patient,able,content,came_in,-9.7,quieter,22,del,eq,"I've been able to take a day off to try and recover. So yeah, I don't think it's related."
+day2_consultation01,246.11,patient,seems,content,holding,-12.7,quieter,21,del,eq,"is that the sort of thing that can cause uh like this uh ringing I've got in my ear, 'cause it seems ."
+day2_consultation02,94.58,patient,bit,content,holding,-13.5,quieter,36,del,eq,"No, not really. Um, not that I know of. I haven't noticed anything. I can actually like move it normally. Um, it's just, I , I can just see that. It feels a bit strange, a bit"
+day2_consultation02,161.65,doctor,physiotherapist,content,holding,9.0,louder,13,del,eq,"OK. , was that a GP or a specialist or, was it, a physiotherapist ?"
+day2_consultation02,190.48,patient,history,content,holding,-7.1,quieter,30,del,eq,"Well not, not really, no. Um, I'm, I'm allergic to, to peanuts. Um, but that's, that's pretty much all I uh, have to say about my medical history, yeah."
+day2_consultation02,206.33,doctor,active,content,holding,4.0,louder,12,del,eq,"No, OK. And are you normally fit and well? Mobile and active?"
+day2_consultation02,289.14,patient,skin,content,holding,-2.3,quieter,9,del,eq,"Uh, no not really. I have skin really dry now."
+day2_consultation02,290.15,patient,dry,content,holding,-2.3,quieter,9,del,eq,"Uh, no not really. I have skin really dry now."
+day2_consultation02,290.66,patient,now,content,holding,-2.3,quieter,9,del,eq,"Uh, no not really. I have skin really dry now."
+day2_consultation03,350.8,patient,pickle,content,holding,-9.2,quieter,31,del,eq,"Obviously, really, anything can just make you really frantic . Hopefully nothing , so serious I will die from it, I don't know I just, I think got myself in a pickle."
+day2_consultation03,429.85,doctor,ring,content,holding,10.4,louder,46,del,eq,"Um, within Central London. OK, and then you can ring the , the support team number, I'll leave that number in your notes. And you can ring them after five minutes, and then they'll slot you in to a place that's convenient for you, OK."
+day2_consultation04,23.19,patient,45,content,holding,13.0,louder,4,del,eq,"God . , I'm forty five."
+day2_consultation05,220.84,patient,probably,content,came_in,-1.6,quieter,9,del,eq,", probably a month and a half, maybe two months."
+day2_consultation05,221.51,patient,month,content,came_in,-1.6,quieter,9,del,eq,", probably a month and a half, maybe two months."
+day2_consultation05,222.09,doctor,ago,content,holding,1.6,louder,23,del,eq,"Right, OK. And, how long have these episodes been going on for? When, when did it all start? Was it a month ago?"
+day2_consultation09,7.28,doctor,afternoon,content,came_in,1.0,louder,2,del,eq,Good afternoon .
+day3_consultation01,372.63,patient,feel,content,holding,6.2,louder,12,del,eq,"Ohh, I feel a little dizzy right now to be honest, ohh."
+day3_consultation01,434.34,patient,hey,content,came_in,-1.8,quieter,16,del,eq,"Hey ohh somebody just came, somebody just came yes, I'm not alone any more. Thank ."
+day3_consultation02,322.42,patient,localized,content,holding,0.1,louder,23,del,eq,"Um, it's uh, the rash is kind of all over my body. Like it's not, it's not, it's not really localised."
+day3_consultation03,138.21,patient,again,content,came_in,26.8,louder,1,del,eq,Again?
+day3_consultation03,327.51,patient,nauseous,content,came_in,10.0,louder,1,del,eq,Nauseous .
+day3_consultation03,627.15,doctor,repeat,content,came_in,4.7,louder,5,del,eq,Sorry? Could you repeat that?
+day3_consultation04,231.4,patient,3,content,holding,-8.3,quieter,9,del,eq,"Uh, yes, just in the last two to three days ."
+day3_consultation04,231.73,patient,days,content,holding,-8.3,quieter,9,del,eq,"Uh, yes, just in the last two to three days ."
+day3_consultation07,38.83,patient,london,content,came_in,-4.5,quieter,1,del,eq,London.
+day3_consultation07,106.34,patient,way,content,holding,-7.3,quieter,16,del,eq,"Uh, I think it's, yeah, it's getting worse, like, the past few days. Way worse ."
+day3_consultation07,106.63,patient,worse,content,holding,-7.3,quieter,16,del,eq,"Uh, I think it's, yeah, it's getting worse, like, the past few days. Way worse ."
+day3_consultation07,207.53,patient,tried,content,holding,-4.2,quieter,5,del,eq,"Yeah, I tried. I tried."
+day3_consultation10,358.7,patient,soft,content,came_in,-5.5,quieter,1,del,eq,Soft .
+day4_consultation03,1.91,patient,hey,content,came_in,-4.6,quieter,1,del,eq,Hey.
+day4_consultation05,12.41,patient,doctor,content,came_in,-5.0,quieter,5,del,eq,"Uh, hi doctor. My name is."
+day4_consultation05,13.16,patient,name,content,came_in,-5.0,quieter,5,del,eq,"Uh, hi doctor. My name is."
+day4_consultation05,121.42,patient,inhaler,content,holding,2.4,louder,39,del,eq,"I don't know, uh, I take an inhaler, um. and um. uh, I have an allergy. I have N, N, NK , NKDA allergy. So, I don't know if it's because, uh, I don't know. Could be the inhaler, or, yeah."
+day4_consultation05,199.61,patient,time,content,holding,-5.7,quieter,17,del,eq,"And, and uh, and, yeah. So, I need to be like close to the toilet uh, all the time ."
+day4_consultation05,503.88,doctor,ahead,content,came_in,9.0,louder,2,del,eq,Go ahead.
+day4_consultation05,573.79,doctor,sound,content,came_in,12.8,louder,4,del,eq,Does that sound OK?
+day4_consultation06,123.83,doctor,1st,content,holding,0.5,louder,6,del,eq,"OK. So, it's a first ."
+day4_consultation06,570.95,patient,sounds,content,holding,3.6,louder,2,del,eq,OK. Sounds.
+day4_consultation08,248.96,doctor,usual,content,holding,-7.8,quieter,7,del,eq,Have you been feeling your usual self ?
+day4_consultation09,52.88,patient,26,content,came_in,-5.3,quieter,2,del,eq,"Twenty six, yeah."
+day4_consultation10,519.38,patient,something,content,came_in,6.1,louder,2,del,eq,Or something.
+day4_consultation10,587.58,patient,uncomfortable,content,holding,1.3,louder,5,del,eq,"Yeah, it's getting uncomfortable ."
+day5_consultation01,225.78,patient,pill,content,holding,-11.1,quieter,2,del,eq,"Uh, Microgynon, pill."
+day5_consultation03,159.32,patient,probably,content,holding,-2.7,quieter,3,del,eq,"About ten, eleven, probably."
+day5_consultation03,159.4,doctor,time,content,came_in,2.7,louder,8,del,eq,And what time do you get to sleep?
+day5_consultation03,441.05,patient,months,content,holding,-10.1,quieter,52,del,eq,"But I, I wonder if it's building up. So this is why I wanted to call, I'm just worried it's building up to that, and I don't know what to do 'cause I have , feel it, felt it, get worse and worse over the past couple of months ."
+day5_consultation04,217.41,doctor,toilet,content,came_in,2.0,louder,6,del,eq,You've been to the toilet?
+day5_consultation05,284.4,patient,time,content,holding,5.2,louder,24,del,eq,"Uh, so, actually my mom had the breast cancer. Uh, but, again, not so important. I mean, just, like, the beginning it was , uh, cured in time."
+day5_consultation07,146.85,doctor,no,negation_clinical,came_in,5.5,louder,4,del,eq,"No vomiting , diarrhoea now?"
+day5_consultation07,474.28,patient,home,content,came_in,10.6,louder,5,del,eq,I'm not at home.
+day5_consultation11,4.66,patient,doctor,content,came_in,-4.8,quieter,3,del,eq,Hi Doctor Smith.
+day5_consultation11,523.55,doctor,reflux,content,holding,-8.1,quieter,12,del,eq,"OK. And, any problems with your stomach, or asthma, indigestion, acid reflux ?"
+day5_consultation11,661.84,patient,sweet,content,came_in,-1.0,quieter,8,del,eq,"OK . Sweet. Thanks so much. OK . Bye, bye."

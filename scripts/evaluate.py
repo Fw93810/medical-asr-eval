@@ -50,8 +50,29 @@ SCI_STOP = {"yeah", "okay", "ok", "right", "thing", "things", "time", "times", "
             "i", "you", "we", "he", "she", "it", "they", "me", "my", "your"}
 
 
+# --equivalence: spelling variants the Whisper normaliser leaves apart, mapped to one form
+# after normalisation. Kept small and explicit; see docs/smoke-test-setup.md.
+EQUIV_WORDS = {"ok": "okay", "mum": "mom", "mummy": "mommy", "ohh": "0", "ooh": "0"}  # the normaliser turns "oh" into "0"
+EQUIV_PAIRS = {("all", "right"): "alright", ("o", "k"): "okay", ("0", "k"): "okay"}  # "O.K." becomes "0 k"
+EQUIVALENCE = False  # set by --equivalence
+
+
+def equivalent(words):
+    out, i = [], 0
+    while i < len(words):
+        pair = tuple(words[i:i + 2])
+        if pair in EQUIV_PAIRS:
+            out.append(EQUIV_PAIRS[pair])
+            i += 2
+        else:
+            out.append(EQUIV_WORDS.get(words[i], words[i]))
+            i += 1
+    return out
+
+
 def norm_words(text):
-    return NORM(text).split()
+    words = NORM(text).split()
+    return equivalent(words) if EQUIVALENCE else words
 
 
 def load_term_extractor(choice):
@@ -161,9 +182,15 @@ def main():
     ap.add_argument("--hyp", required=True, help="output folder of transcribe.py")
     ap.add_argument("--results", required=True)
     ap.add_argument("--terms", choices=["auto", "scispacy", "lexicon"], default="auto")
+    ap.add_argument("--equivalence", action="store_true",
+                    help="after the Whisper normaliser, also map spelling variants it leaves apart "
+                         "(ok/okay, all right/alright, mum/mom, ohh/oh): the corrected WER. Without it: the raw "
+                         "WER, comparable with the literature")
     ap.add_argument("--min-insert-words", type=int, default=1,
                     help="only log insertion runs with at least this many words")
     args = ap.parse_args()
+    global EQUIVALENCE
+    EQUIVALENCE = args.equivalence
 
     extractor_name, extract_terms = load_term_extractor(args.terms)
     os.makedirs(args.results, exist_ok=True)
@@ -215,6 +242,7 @@ def main():
             ins_rows.append({
                 "id": cid, "condition": cond, "n_words": n,
                 "segment_start_s": hyp_times[a],
+                "t_approx_s": round(hyp_wtimes[a], 2),
                 "in_overlap": "" if overlaps is None else int(in_any(hyp_wtimes[a], overlaps)),
                 "inserted": " ".join(hyp_words[a:b]),
                 "hyp_context": " ".join(hyp_words[max(0, a - 6):a]) + " [[" + " ".join(hyp_words[a:b])
@@ -230,6 +258,7 @@ def main():
         audio_min = hyp["audio_s"] / 60
         rows.append({
             "id": cid, "condition": cond, "backend": hyp["backend"], "model": hyp["model"],
+            "normalisation": "whisper+equivalence" if EQUIVALENCE else "whisper",
             "initial_prompt": hyp.get("initial_prompt") or "",
             "ref_words": len(ref_words), "hyp_words": len(hyp_words),
             "wer": round(out.wer, 4), "substitutions": out.substitutions,
@@ -245,7 +274,7 @@ def main():
     def write(name, data):
         if not data:
             return
-        with open(os.path.join(args.results, name), "w", newline="") as f:
+        with open(os.path.join(args.results, name), "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(data[0].keys()))
             w.writeheader()
             w.writerows(data)
@@ -260,7 +289,8 @@ def main():
         terms, found = sum(r["ref_terms"] for r in rs), sum(r["terms_found"] for r in rs)
         audio, runtime = sum(r["audio_s"] for r in rs), sum(r["runtime_s"] for r in rs)
         summary.append({
-            "condition": cond, "model": rs[0]["model"], "n_consultations": len(rs),
+            "condition": cond, "model": rs[0]["model"], "normalisation": rs[0]["normalisation"],
+            "n_consultations": len(rs),
             "audio_min": round(audio / 60, 2), "ref_words": nref,
             "corpus_wer": round(errs / nref, 4),
             "substitutions": sum(r["substitutions"] for r in rs),

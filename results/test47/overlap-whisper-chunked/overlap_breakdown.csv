@@ -1,0 +1,13 @@
+dimension,value,ref_words,del_rate_separated,del_rate_mixed,extra_del_points,share_of_extra_dels
+all,all,5030,0.1117,0.2338,12.2,
+speaker,doctor,2732,0.1054,0.1962,9.1,0.432
+speaker,patient,2298,0.1192,0.2785,15.9,0.568
+word_class,backchannel,1161,0.1507,0.4109,26.0,0.45
+word_class,content,1156,0.0709,0.1427,7.2,0.144
+word_class,function,2517,0.1112,0.1923,8.1,0.365
+word_class,negation_clinical,28,0.0714,0.0714,0.0,0.002
+word_class,negation_discourse,168,0.1369,0.2857,14.9,0.039
+role,came_in,2320,0.1392,0.325,18.6,0.658
+role,holding,2710,0.0882,0.1557,6.8,0.342
+level,louder,2802,0.1017,0.2041,10.2,0.478
+level,quieter,2228,0.1243,0.2711,14.7,0.522
