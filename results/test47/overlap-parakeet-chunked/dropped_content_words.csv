@@ -1,0 +1,65 @@
+id,t,speaker,word,word_class,role,rel_level_db,level,utt_words,mixed,separated,utterance
+day1_consultation11,462.37,patient,bowel,content,came_in,3.9,louder,13,del,eq,"Um bowel, so would, would bowel like, is is the colon like something that"
+day1_consultation11,592.85,doctor,mentioned,content,came_in,5.1,louder,14,del,eq,Sure. you mentioned work. You mentioned work. What is it you do for work?
+day1_consultation11,593.24,doctor,work,content,came_in,5.1,louder,14,del,eq,Sure. you mentioned work. You mentioned work. What is it you do for work?
+day1_consultation11,707.86,doctor,fluid,content,came_in,16.6,louder,43,del,eq,"fluid is probably best. But I am obviously worried about the fact that you are losing minerals and vitamins. Um so, you can get things like Diarolyte, which is um, a fluid replacement you can get from the pharmacy. It's probably worth uh recommending that."
+day1_consultation11,708.54,doctor,probably,content,came_in,16.6,louder,43,del,eq,"fluid is probably best. But I am obviously worried about the fact that you are losing minerals and vitamins. Um so, you can get things like Diarolyte, which is um, a fluid replacement you can get from the pharmacy. It's probably worth uh recommending that."
+day1_consultation11,708.87,doctor,best,content,came_in,16.6,louder,43,del,eq,"fluid is probably best. But I am obviously worried about the fact that you are losing minerals and vitamins. Um so, you can get things like Diarolyte, which is um, a fluid replacement you can get from the pharmacy. It's probably worth uh recommending that."
+day1_consultation12,413.01,patient,name,content,came_in,4.9,louder,9,del,eq,"I'm sorry, what's the name of that?"
+day1_consultation13,375.18,patient,long,content,holding,-13.2,quieter,19,del,eq,"No, uh I've been wearing them since I was five , five year old. So, it's quite a long time."
+day1_consultation13,375.56,patient,time,content,holding,-13.2,quieter,19,del,eq,"No, uh I've been wearing them since I was five , five year old. So, it's quite a long time."
+day1_consultation14,94.43,doctor,no,negation_clinical,came_in,3.7,louder,8,del,eq,"No pain, no discharge coming from your ears."
+day1_consultation14,119.13,doctor,day,content,came_in,11.5,louder,14,del,eq,"Day to day when you walk around, uh you don't feel breathless do you?"
+day1_consultation14,119.7,doctor,day,content,came_in,11.5,louder,14,del,eq,"Day to day when you walk around, uh you don't feel breathless do you?"
+day1_consultation14,281.52,patient,pretty,content,came_in,2.6,louder,3,del,eq,"Yeah, pretty much."
+day1_consultation14,414.61,doctor,reason,content,holding,9.7,louder,6,del,eq,The reason I ask is sometimes
+day1_consultation14,415.05,doctor,ask,content,holding,9.7,louder,6,del,eq,The reason I ask is sometimes
+day1_consultation14,415.49,doctor,sometimes,content,holding,9.7,louder,6,del,eq,The reason I ask is sometimes
+day2_consultation02,94.58,patient,bit,content,holding,-13.5,quieter,36,del,eq,"No, not really. Um, not that I know of. I haven't noticed anything. I can actually like move it normally. Um, it's just, I , I can just see that. It feels a bit strange, a bit"
+day2_consultation02,190.48,patient,history,content,holding,-7.1,quieter,30,del,eq,"Well not, not really, no. Um, I'm, I'm allergic to, to peanuts. Um, but that's, that's pretty much all I uh, have to say about my medical history, yeah."
+day2_consultation02,206.33,doctor,active,content,holding,4.0,louder,12,del,eq,"No, OK. And are you normally fit and well? Mobile and active?"
+day2_consultation02,537.21,patient,sounds,content,holding,-21.3,quieter,4,del,eq,Thank you. Alright. Sounds
+day2_consultation03,350.8,patient,pickle,content,holding,-9.2,quieter,31,del,eq,"Obviously, really, anything can just make you really frantic . Hopefully nothing , so serious I will die from it, I don't know I just, I think got myself in a pickle."
+day2_consultation05,220.84,patient,probably,content,came_in,-1.6,quieter,9,del,eq,", probably a month and a half, maybe two months."
+day2_consultation05,221.82,doctor,month,content,holding,1.6,louder,23,del,eq,"Right, OK. And, how long have these episodes been going on for? When, when did it all start? Was it a month ago?"
+day2_consultation05,222.09,doctor,ago,content,holding,1.6,louder,23,del,eq,"Right, OK. And, how long have these episodes been going on for? When, when did it all start? Was it a month ago?"
+day2_consultation05,519.57,doctor,whether,content,holding,1.3,louder,35,del,eq,"But, um, they'll be doing a range of tests in a short time frame, in order to exclude whether, you have um, any illness. OK, whether you have got any kind of stroke or, mini-stroke."
+day2_consultation06,188.33,patient,wasp,content,holding,-3.2,quieter,29,del,eq,"It's, it's slightly red, yeah and, and kind of there's, a bit of a, like a hole there, where I think that the wasp, stung me."
+day2_consultation08,414.84,patient,60s,content,came_in,-10.9,quieter,3,del,eq,in his sixties .
+day2_consultation08,537.54,doctor,thing,content,holding,14.0,louder,13,del,eq,"Um, the second thing, second factor, is that you've recently come from, uh, Vietnam."
+day2_consultation10,466.94,doctor,headache,content,holding,3.4,louder,31,del,eq,"That's, thing. Um, the other thing I'd like you to do, is maybe consider taking some time off work. OK, because if the headache is due to stress from work."
+day3_consultation01,369.1,patient,6,content,holding,-2.4,quieter,31,del,eq,"Yeah is that well I was like six or something I, I, I think. Ohh sorry, the swelling is getting, ohh my god ohh, yeah I think when I was six ."
+day3_consultation02,322.42,patient,localized,content,holding,0.1,louder,23,del,eq,"Um, it's uh, the rash is kind of all over my body. Like it's not, it's not, it's not really localised."
+day3_consultation03,138.21,patient,again,content,came_in,26.8,louder,1,del,eq,Again?
+day3_consultation03,327.51,patient,nauseous,content,came_in,10.0,louder,1,del,eq,Nauseous .
+day3_consultation04,14.53,patient,name,content,holding,-0.5,quieter,4,del,eq,get to my name
+day3_consultation07,38.83,patient,london,content,came_in,-4.5,quieter,1,del,eq,London.
+day3_consultation07,106.34,patient,way,content,holding,-7.3,quieter,16,del,eq,"Uh, I think it's, yeah, it's getting worse, like, the past few days. Way worse ."
+day3_consultation07,106.63,patient,worse,content,holding,-7.3,quieter,16,del,eq,"Uh, I think it's, yeah, it's getting worse, like, the past few days. Way worse ."
+day3_consultation07,197.81,patient,remember,content,holding,-3.6,quieter,14,del,eq,"I, I, I'm not sure. Uh, ah, yes, yes, yes, I remember now, I"
+day3_consultation07,198.49,patient,now,content,holding,-3.6,quieter,14,del,eq,"I, I, I'm not sure. Uh, ah, yes, yes, yes, I remember now, I"
+day4_consultation01,340.2,patient,yet,content,holding,-9.5,quieter,8,del,eq,"I've noticed nausea, but no vomiting, yet."
+day4_consultation03,1.91,patient,hey,content,came_in,-4.6,quieter,1,del,eq,Hey.
+day4_consultation05,12.41,patient,doctor,content,came_in,-5.0,quieter,5,del,eq,"Uh, hi doctor. My name is."
+day4_consultation05,13.16,patient,name,content,came_in,-5.0,quieter,5,del,eq,"Uh, hi doctor. My name is."
+day4_consultation05,121.42,patient,inhaler,content,holding,2.4,louder,39,del,eq,"I don't know, uh, I take an inhaler, um. and um. uh, I have an allergy. I have N, N, NK , NKDA allergy. So, I don't know if it's because, uh, I don't know. Could be the inhaler, or, yeah."
+day4_consultation05,199.61,patient,time,content,holding,-5.7,quieter,17,del,eq,"And, and uh, and, yeah. So, I need to be like close to the toilet uh, all the time ."
+day4_consultation05,503.88,doctor,ahead,content,came_in,9.0,louder,2,del,eq,Go ahead.
+day4_consultation05,573.79,doctor,sound,content,came_in,12.8,louder,4,del,eq,Does that sound OK?
+day4_consultation06,123.83,doctor,1st,content,holding,0.5,louder,6,del,eq,"OK. So, it's a first ."
+day4_consultation08,248.96,doctor,usual,content,holding,-7.8,quieter,7,del,eq,Have you been feeling your usual self ?
+day4_consultation09,52.88,patient,26,content,came_in,-5.3,quieter,2,del,eq,"Twenty six, yeah."
+day4_consultation10,519.38,patient,something,content,came_in,6.1,louder,2,del,eq,Or something.
+day5_consultation02,207.05,doctor,pardon,content,came_in,-0.6,quieter,3,del,eq,Pardon? No birth .
+day5_consultation03,441.05,patient,months,content,holding,-10.1,quieter,52,del,eq,"But I, I wonder if it's building up. So this is why I wanted to call, I'm just worried it's building up to that, and I don't know what to do 'cause I have , feel it, felt it, get worse and worse over the past couple of months ."
+day5_consultation03,635.84,doctor,ways,content,holding,-6.7,quieter,30,del,eq,"OK. And have you done , anything yourself to help? Have you , have you talked to anyone, talked to any counsellors? Done any, online, looked online at all? Any ways to ?"
+day5_consultation05,407.52,doctor,lot,content,came_in,2.0,louder,5,del,eq,"OK, thanks a lot. Bye."
+day5_consultation07,90.67,doctor,front,content,holding,0.1,louder,8,del,eq,Are you front of your sinuses or anything?
+day5_consultation07,91.92,doctor,sinuses,content,holding,0.1,louder,8,del,eq,Are you front of your sinuses or anything?
+day5_consultation07,474.28,patient,home,content,came_in,10.6,louder,5,del,eq,I'm not at home.
+day5_consultation10,237.89,doctor,cough,content,holding,-2.5,quieter,21,del,eq,"OK. And have you had any cold symptoms, sore throat, sore ears, or pain over the sinuses? Any cough or flem?"
+day5_consultation10,414.74,patient,nothing,negation_clinical,holding,-4.6,quieter,17,del,eq,"Um, no apart from the Ibuprofen that I take, sometimes when, the headache gets really bad, nothing else."
+day5_consultation10,415.16,patient,else,content,holding,-4.6,quieter,17,del,eq,"Um, no apart from the Ibuprofen that I take, sometimes when, the headache gets really bad, nothing else."
+day5_consultation11,4.66,patient,doctor,content,came_in,-4.8,quieter,3,del,eq,Hi Doctor Smith.
+day5_consultation11,523.55,doctor,reflux,content,holding,-8.1,quieter,12,del,eq,"OK. And, any problems with your stomach, or asthma, indigestion, acid reflux ?"
+day5_consultation11,661.84,patient,sweet,content,came_in,-1.0,quieter,8,del,eq,"OK . Sweet. Thanks so much. OK . Bye, bye."

@@ -18,7 +18,7 @@ import os
 def read(path):
     if not os.path.isfile(path):
         return []
-    with open(path, newline="") as f:
+    with open(path, newline="", encoding="utf-8") as f:
         return list(csv.DictReader(f))
 
 

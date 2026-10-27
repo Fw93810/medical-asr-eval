@@ -32,7 +32,7 @@ def main():
     ap.add_argument("--viewer", default="http://127.0.0.1:8765/results/viewer/")
     args = ap.parse_args()
 
-    with open(os.path.join(args.results, "insertions.csv"), newline="") as f:
+    with open(os.path.join(args.results, "insertions.csv"), newline="", encoding="utf-8") as f:
         rows = list(csv.DictReader(f))
     sample = random.Random(args.seed).sample(rows, min(args.n, len(rows)))
     sample.sort(key=lambda r: (r["id"], r["condition"], float(r["t_approx_s"])))

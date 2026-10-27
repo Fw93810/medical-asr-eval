@@ -274,7 +274,7 @@ def main():
     def write(name, data):
         if not data:
             return
-        with open(os.path.join(args.results, name), "w", newline="") as f:
+        with open(os.path.join(args.results, name), "w", newline="", encoding="utf-8") as f:
             w = csv.DictWriter(f, fieldnames=list(data[0].keys()))
             w.writeheader()
             w.writerows(data)
