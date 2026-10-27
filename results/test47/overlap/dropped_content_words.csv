@@ -1,0 +1,85 @@
+id,t,speaker,word,word_class,role,rel_level_db,level,utt_words,mixed,separated,utterance
+day1_consultation11,108.66,doctor,wow,content,came_in,1.6,louder,21,del,eq,"Alright, wow. OK. So you're losing a lot of, a lot of, you're using a lot of fluid there."
+day1_consultation11,593.24,doctor,work,content,came_in,5.1,louder,14,del,eq,Sure. you mentioned work. You mentioned work. What is it you do for work?
+day1_consultation11,707.86,doctor,fluid,content,came_in,16.6,louder,43,del,eq,"fluid is probably best. But I am obviously worried about the fact that you are losing minerals and vitamins. Um so, you can get things like Diarolyte, which is um, a fluid replacement you can get from the pharmacy. It's probably worth uh recommending that."
+day1_consultation11,708.54,doctor,probably,content,came_in,16.6,louder,43,del,eq,"fluid is probably best. But I am obviously worried about the fact that you are losing minerals and vitamins. Um so, you can get things like Diarolyte, which is um, a fluid replacement you can get from the pharmacy. It's probably worth uh recommending that."
+day1_consultation11,708.87,doctor,best,content,came_in,16.6,louder,43,del,eq,"fluid is probably best. But I am obviously worried about the fact that you are losing minerals and vitamins. Um so, you can get things like Diarolyte, which is um, a fluid replacement you can get from the pharmacy. It's probably worth uh recommending that."
+day1_consultation12,413.01,patient,name,content,came_in,4.9,louder,9,del,eq,"I'm sorry, what's the name of that?"
+day1_consultation13,136.27,doctor,help,content,holding,-3.8,quieter,3,del,eq,Did that help ?
+day1_consultation13,374.81,doctor,something,content,came_in,13.2,louder,41,del,eq,"OK, all right. Something for you to bear in mind if you feel that you are, your eyes are straining. Um I would always recommend having a repeat eye test done. Um, have you been feeling more stressed or anxious at work recently?"
+day1_consultation13,375.18,patient,long,content,holding,-13.2,quieter,19,del,eq,"No, uh I've been wearing them since I was five , five year old. So, it's quite a long time."
+day1_consultation13,375.56,patient,time,content,holding,-13.2,quieter,19,del,eq,"No, uh I've been wearing them since I was five , five year old. So, it's quite a long time."
+day1_consultation14,95.66,doctor,discharge,content,came_in,3.7,louder,8,del,eq,"No pain, no discharge coming from your ears."
+day1_consultation14,97.3,doctor,ears,content,came_in,3.7,louder,8,del,eq,"No pain, no discharge coming from your ears."
+day1_consultation14,273.64,doctor,difficult,content,holding,-3.4,quieter,13,del,eq,"Right, OK. OK. I'm sorry. That must be very difficult for you."
+day1_consultation14,281.52,patient,pretty,content,came_in,2.6,louder,3,del,eq,"Yeah, pretty much."
+day1_consultation14,331.69,doctor,diabetes,content,holding,-9.0,quieter,23,del,eq,"OK, alright. Who's looking after your diabetes? Is there anyone, is there a doctor in a hospital, who looks after your diabetes?"
+day1_consultation14,414.61,doctor,reason,content,holding,9.7,louder,6,del,eq,The reason I ask is sometimes
+day1_consultation14,415.05,doctor,ask,content,holding,9.7,louder,6,del,eq,The reason I ask is sometimes
+day1_consultation14,415.49,doctor,sometimes,content,holding,9.7,louder,6,del,eq,The reason I ask is sometimes
+day2_consultation01,245.08,patient,ear,content,holding,-12.7,quieter,21,del,eq,"is that the sort of thing that can cause uh like this uh ringing I've got in my ear, 'cause it seems ."
+day2_consultation01,246.11,patient,seems,content,holding,-12.7,quieter,21,del,eq,"is that the sort of thing that can cause uh like this uh ringing I've got in my ear, 'cause it seems ."
+day2_consultation02,94.58,patient,bit,content,holding,-13.5,quieter,36,del,eq,"No, not really. Um, not that I know of. I haven't noticed anything. I can actually like move it normally. Um, it's just, I , I can just see that. It feels a bit strange, a bit"
+day2_consultation02,186.44,patient,pretty,content,holding,-0.7,quieter,30,del,eq,"Well not, not really, no. Um, I'm, I'm allergic to, to peanuts. Um, but that's, that's pretty much all I uh, have to say about my medical history, yeah."
+day2_consultation02,190.08,patient,medical,content,holding,-7.1,quieter,30,del,eq,"Well not, not really, no. Um, I'm, I'm allergic to, to peanuts. Um, but that's, that's pretty much all I uh, have to say about my medical history, yeah."
+day2_consultation02,190.48,patient,history,content,holding,-7.1,quieter,30,del,eq,"Well not, not really, no. Um, I'm, I'm allergic to, to peanuts. Um, but that's, that's pretty much all I uh, have to say about my medical history, yeah."
+day2_consultation02,206.33,doctor,active,content,holding,4.0,louder,12,del,eq,"No, OK. And are you normally fit and well? Mobile and active?"
+day2_consultation02,290.15,patient,dry,content,holding,-2.3,quieter,9,del,eq,"Uh, no not really. I have skin really dry now."
+day2_consultation02,290.66,patient,now,content,holding,-2.3,quieter,9,del,eq,"Uh, no not really. I have skin really dry now."
+day2_consultation03,350.8,patient,pickle,content,holding,-9.2,quieter,31,del,eq,"Obviously, really, anything can just make you really frantic . Hopefully nothing , so serious I will die from it, I don't know I just, I think got myself in a pickle."
+day2_consultation04,23.19,patient,45,content,holding,13.0,louder,4,del,eq,"God . , I'm forty five."
+day2_consultation05,221.82,doctor,month,content,holding,1.6,louder,23,del,eq,"Right, OK. And, how long have these episodes been going on for? When, when did it all start? Was it a month ago?"
+day2_consultation05,222.09,doctor,ago,content,holding,1.6,louder,23,del,eq,"Right, OK. And, how long have these episodes been going on for? When, when did it all start? Was it a month ago?"
+day2_consultation06,7.08,doctor,morning,content,came_in,0.5,louder,2,del,eq,Good morning. .
+day2_consultation06,178.57,doctor,look,content,holding,15.7,louder,19,del,eq,"OK, all right. That looks OK to me right now. , does it look red to you at the moment?"
+day2_consultation07,36.38,doctor,correct,content,holding,-10.1,quieter,20,del,eq,"Does that, that would make you roughly about fifty years old, fifty one, fifty one years old. Is that is that correct or?"
+day2_consultation08,414.84,patient,60s,content,came_in,-10.9,quieter,3,del,eq,in his sixties .
+day2_consultation08,537.54,doctor,thing,content,holding,14.0,louder,13,del,eq,"Um, the second thing, second factor, is that you've recently come from, uh, Vietnam."
+day2_consultation09,7.28,doctor,afternoon,content,came_in,1.0,louder,2,del,eq,Good afternoon .
+day3_consultation02,441.03,doctor,cheers,content,holding,5.0,louder,10,del,eq,"All right, you take care, Ben. Bye now. Cheers. Bye."
+day3_consultation03,119.79,doctor,tough,content,came_in,0.4,louder,16,del,eq,it's a tough one isn't it? Because we don't want to actually say
+day3_consultation03,138.21,patient,again,content,came_in,26.8,louder,1,del,eq,Again?
+day3_consultation04,14.53,patient,name,content,holding,-0.5,quieter,4,del,eq,get to my name
+day3_consultation07,38.83,patient,london,content,came_in,-4.5,quieter,1,del,eq,London.
+day3_consultation07,76.49,doctor,elbows,content,came_in,-0.8,quieter,7,del,eq,"Elbows , OK. Inside of the elbows, yeah?"
+day3_consultation07,198.32,doctor,used,content,came_in,3.6,louder,5,del,eq,You've used steroids before?
+day3_consultation07,198.49,patient,now,content,holding,-3.6,quieter,14,del,eq,"I, I, I'm not sure. Uh, ah, yes, yes, yes, I remember now, I"
+day3_consultation07,198.69,doctor,steroids,content,came_in,3.6,louder,5,del,eq,You've used steroids before?
+day3_consultation07,215.3,patient,box,content,holding,-7.5,quieter,14,del,eq,"I'm not sure, it's uh, I would have the box is not there."
+day3_consultation10,144.43,doctor,bit,content,came_in,-1.3,quieter,12,del,eq,Sure OK. Bit of both and is there any blood or mucus?
+day3_consultation10,417.69,patient,diarrhea,content,came_in,-3.5,quieter,31,del,eq,"OK , if if the diarrhoea is getting better but isn't getting, or do you want it to go away completely at that point, or if it's like trending upwards ?"
+day4_consultation03,1.91,patient,hey,content,came_in,-4.6,quieter,1,del,eq,Hey.
+day4_consultation03,206.16,patient,tell,content,came_in,-6.9,quieter,8,del,eq,"tell you, I'm allergic to Ibuprofen, though."
+day4_consultation05,12.41,patient,doctor,content,came_in,-5.0,quieter,5,del,eq,"Uh, hi doctor. My name is."
+day4_consultation05,13.16,patient,name,content,came_in,-5.0,quieter,5,del,eq,"Uh, hi doctor. My name is."
+day4_consultation05,199.61,patient,time,content,holding,-5.7,quieter,17,del,eq,"And, and uh, and, yeah. So, I need to be like close to the toilet uh, all the time ."
+day4_consultation05,503.88,doctor,ahead,content,came_in,9.0,louder,2,del,eq,Go ahead.
+day4_consultation05,573.79,doctor,sound,content,came_in,12.8,louder,4,del,eq,Does that sound OK?
+day4_consultation06,570.95,patient,sounds,content,holding,3.6,louder,2,del,eq,OK. Sounds.
+day4_consultation07,35.47,doctor,happy,content,holding,-4.9,quieter,26,del,eq,"And are you in a, uh, a safe place, ohh sorry, a safe and , confidential place to talk and just, happy to go ahead with the consultation?"
+day4_consultation08,577.84,doctor,anyone,content,holding,-0.5,quieter,45,del,eq,". OK. And, just to go back to your, you were saying you had low mood. Some people who , who do have low mood, uh, and low sex drive can sometimes feel uh, suicidal as well. Have you had any thoughts of harming yourself or harming anyone else?"
+day4_consultation08,578.14,doctor,else,content,holding,-0.5,quieter,45,del,eq,". OK. And, just to go back to your, you were saying you had low mood. Some people who , who do have low mood, uh, and low sex drive can sometimes feel uh, suicidal as well. Have you had any thoughts of harming yourself or harming anyone else?"
+day4_consultation09,52.88,patient,26,content,came_in,-5.3,quieter,2,del,eq,"Twenty six, yeah."
+day4_consultation09,522.92,doctor,getting,content,holding,7.9,louder,58,del,eq,"Um, uh, what I'd like to do is, is send you these, the, some prescriptions for your, uh, inhalers, , ongoing. So you, um, you can, once you get better from this asthma attack, you can, you can, use the Clenil Modulite in the morning, with Ventolin as a PRN. , so, a Ventolin when you need to, um, when you're getting wheezy ."
+day4_consultation10,193.65,doctor,having,content,came_in,14.8,louder,27,del,eq,"You having, you're saying you, you're going a bit more frequently. And are you having to go with urgency, to the toilet, for a wee?"
+day4_consultation10,292.85,patient,careful,content,holding,-1.0,quieter,11,del,eq,"Um, probably not, I don't think so. I'm very careful ."
+day4_consultation10,519.38,patient,something,content,came_in,6.1,louder,2,del,eq,Or something.
+day5_consultation01,75.06,patient,painful,content,holding,2.6,louder,27,del,eq,"Um, it just, kind of feels like it's throbbing, it's quite intense, sort of comes and goes. Um, yeah, quite sensitive to light, um, but yeah, quite painful."
+day5_consultation02,96.57,patient,spots,content,holding,-9.0,quieter,11,del,eq,"Yes, but I've had spotted , uh, blood in my urine. Spots."
+day5_consultation03,635.84,doctor,ways,content,holding,-6.7,quieter,30,del,eq,"OK. And have you done , anything yourself to help? Have you , have you talked to anyone, talked to any counsellors? Done any, online, looked online at all? Any ways to ?"
+day5_consultation03,743.9,patient,reading,content,holding,-10.9,quieter,9,del,eq,"That's great, I look forward to reading it."
+day5_consultation04,217.41,doctor,toilet,content,came_in,2.0,louder,6,del,eq,You've been to the toilet?
+day5_consultation05,284.4,patient,time,content,holding,5.2,louder,24,del,eq,"Uh, so, actually my mom had the breast cancer. Uh, but, again, not so important. I mean, just, like, the beginning it was , uh, cured in time."
+day5_consultation05,407.52,doctor,lot,content,came_in,2.0,louder,5,del,eq,"OK, thanks a lot. Bye."
+day5_consultation06,179.4,patient,once,content,holding,-6.8,quieter,29,del,eq,"Ah, ah, my, my bowels is normally fine. I would normally go to the toilet every day. You know, in the morning, just once, yeah, and that's fine."
+day5_consultation07,474.28,patient,home,content,came_in,10.6,louder,5,del,eq,I'm not at home.
+day5_consultation09,300.04,doctor,job,content,holding,1.3,louder,5,del,eq,And what's your job?
+day5_consultation10,237.89,doctor,cough,content,holding,-2.5,quieter,21,del,eq,"OK. And have you had any cold symptoms, sore throat, sore ears, or pain over the sinuses? Any cough or flem?"
+day5_consultation10,414.74,patient,nothing,negation_clinical,holding,-4.6,quieter,17,del,eq,"Um, no apart from the Ibuprofen that I take, sometimes when, the headache gets really bad, nothing else."
+day5_consultation10,415.16,patient,else,content,holding,-4.6,quieter,17,del,eq,"Um, no apart from the Ibuprofen that I take, sometimes when, the headache gets really bad, nothing else."
+day5_consultation10,490.38,doctor,time,content,holding,26.9,louder,25,del,eq,"If, if you're, you said that when you go to bed your headache's, OK, and not waking you up in the night-time."
+day5_consultation10,576.27,patient,confirm,content,holding,-21.8,quieter,18,del,eq,"Um, so will you like, um, send me a referral to a specialist, or do I have to to confirm?"
+day5_consultation11,4.66,patient,doctor,content,came_in,-4.8,quieter,3,del,eq,Hi Doctor Smith.
+day5_consultation11,523.06,doctor,acid,content,holding,-8.1,quieter,12,del,eq,"OK. And, any problems with your stomach, or asthma, indigestion, acid reflux ?"
+day5_consultation11,523.55,doctor,reflux,content,holding,-8.1,quieter,12,del,eq,"OK. And, any problems with your stomach, or asthma, indigestion, acid reflux ?"
+day5_consultation11,661.84,patient,sweet,content,came_in,-1.0,quieter,8,del,eq,"OK . Sweet. Thanks so much. OK . Bye, bye."

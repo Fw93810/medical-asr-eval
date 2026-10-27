@@ -1,0 +1,8 @@
+﻿source,vs,consultations,recall_diff,recall_diff_ci95,contradicted_diff,contradicted_diff_ci95,facts_lost,facts_gained,negative_facts_lost,negative_facts_gained
+human_rejudge,human,47,-0.0021,-0.0095..0.0047,-0.0021,-0.0066..0.0027,13,10,1,2
+human_plain,human,47,-0.0014,-0.0176..0.0156,0.0014,-0.0065..0.0092,83,81,23,25
+human_unlabelled_plain,human_plain,47,-0.0036,-0.0234..0.0149,0.0014,-0.0066..0.0097,75,70,24,19
+asr_mixed_plain,human_unlabelled_plain,47,0.0099,-0.0111..0.0318,0.0021,-0.0113..0.0159,98,112,22,31
+asr_separated_plain,human_plain,47,-0.0092,-0.0295..0.0107,0.0,-0.0091..0.0095,98,85,34,21
+asr_mixed,human,47,-0.0064,-0.0275..0.0145,0.0028,-0.0090..0.0155,109,100,35,27
+asr_separated,human,47,-0.0007,-0.0205..0.0190,-0.0043,-0.0159..0.0073,106,105,26,36

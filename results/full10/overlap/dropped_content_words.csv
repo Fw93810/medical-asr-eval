@@ -1,0 +1,46 @@
+id,t,speaker,word,word_class,role,rel_level_db,level,utt_words,mixed,separated,utterance
+day1_consultation01,151.59,patient,normal,content,came_in,1.3,louder,11,del,eq,"Yeah, yeah, just normal vomit, yeah. No no blood , no. Yeah."
+day1_consultation01,152.26,patient,vomit,content,came_in,1.3,louder,11,del,eq,"Yeah, yeah, just normal vomit, yeah. No no blood , no. Yeah."
+day1_consultation01,154.91,patient,blood,content,holding,-3.2,quieter,11,del,eq,"Yeah, yeah, just normal vomit, yeah. No no blood , no. Yeah."
+day1_consultation01,296.17,doctor,work,content,came_in,6.8,louder,3,del,eq,"Would, would work."
+day1_consultation01,307.31,patient,difficult,content,holding,2.5,louder,14,del,eq,"Uh, yeah, I've been going to work. Yeah. Yeah, it's been quite difficult."
+day1_consultation02,181.12,patient,4,content,came_in,-1.9,quieter,3,del,eq,Four days ago.
+day1_consultation02,181.44,patient,days,content,came_in,-1.9,quieter,3,del,eq,Four days ago.
+day1_consultation02,181.77,patient,ago,content,came_in,-1.9,quieter,3,del,eq,Four days ago.
+day1_consultation02,196.02,doctor,else,content,holding,-4.8,quieter,6,del,eq,Have you been around anyone else?
+day1_consultation02,420.14,patient,while,content,holding,8.4,louder,56,del,eq,"Uh you know, once in a while I can, I like hanging out with people once in a while. So yeah I'd say a few, a few beers per week. Something like this. Nothing, nothing crazy. I used to drink a lot more when I was younger. But it's been, it's been a while."
+day1_consultation04,36.67,doctor,hear,content,came_in,10.2,louder,4,del,eq,Sorry to hear that .
+day1_consultation04,175.73,doctor,night,content,came_in,28.5,louder,3,del,eq,"Night first, OK."
+day1_consultation04,413.48,doctor,brother,content,came_in,10.7,louder,2,del,eq,Your brother?
+day1_consultation04,496.55,patient,usual,content,holding,-15.8,quieter,22,del,eq,"I don't know. I, I like my job. It's just you know, it's a bit more work than usual."
+day1_consultation06,13.14,patient,doctor,content,came_in,-4.6,quieter,4,del,eq,Are you the doctor?
+day1_consultation06,139.53,doctor,ankles,content,came_in,6.8,louder,2,del,eq,Both ankles?
+day1_consultation06,211.23,patient,since,content,holding,-11.7,quieter,12,del,eq,"Uh, yeah, but yeah. I usually pee a lot, , ever since the drugs ."
+day1_consultation06,655.86,patient,soon,content,came_in,1.4,louder,4,del,eq,OK . See you soon.
+day1_consultation07,96.41,patient,sniffling,content,holding,-1.7,quieter,25,del,eq,"Yeah, yeah, yeah, aye, aye you're right. Is that, is that coming through loud and clear on the phone yeah the, the sniffling, yeah, ."
+day1_consultation07,268.55,doctor,pain,content,came_in,-0.8,quieter,19,del,eq,"No pain, OK, OK. Have you noticed yourself, any, any, any temperatures or fevers? Um, feeling hot and cold? Sweaty?"
+day1_consultation07,353.81,patient,trying,content,holding,0.2,louder,70,del,eq,"Uh, yeah I mean I'm, I'm, I'm trying to and I think what, what is you , you starve, a cold and you, feed the. I, can't remember what it is, but I think I've, uh, my appetite's been, been all right yeah, yeah. I'm trying to, trying to keep, keep the fluids up as well you know, I hear that's what you should do."
+day1_consultation07,411.99,doctor,wednesday,content,came_in,1.1,louder,3,del,eq,It's Wednesday.
+day1_consultation07,440.61,doctor,days,content,came_in,-1.7,quieter,17,del,eq,"Four, five days ago, yeah. OK. Are you aware of anything that might have set your symptoms off/"
+day1_consultation07,441.24,doctor,ago,content,came_in,-1.7,quieter,17,del,eq,"Four, five days ago, yeah. OK. Are you aware of anything that might have set your symptoms off/"
+day1_consultation07,483.32,patient,took,content,holding,-3.7,quieter,26,del,eq,"Well, my wife, has just been, uh, promoted. So, she's now going to be, uh, a head teacher, of, of primary school. So, just took her out."
+day1_consultation07,488.88,doctor,nice,content,came_in,-2.2,quieter,2,del,eq,", very nice ."
+day1_consultation07,584.21,doctor,sounds,content,came_in,-2.9,quieter,6,del,eq,"OK. Lisinopril , yeah. That sounds like."
+day1_consultation07,616.81,patient,nah,content,holding,-6.3,quieter,29,del,eq,"Uh, not that I'm, not that I'm aware of. You know, I mean, what, what are the, what are the allergies you get? Just, you know, nah, not."
+day1_consultation07,844.16,patient,cheers,content,came_in,-4.1,quieter,1,del,eq,Cheers.
+day1_consultation09,5.9,patient,hear,content,came_in,2.3,louder,5,del,eq,Hi. Can you hear me?
+day1_consultation09,8.47,patient,hear,content,came_in,11.3,louder,6,del,eq,"Yeah, I can hear you now."
+day1_consultation09,8.95,patient,now,content,came_in,11.3,louder,6,del,eq,"Yeah, I can hear you now."
+day1_consultation09,168.39,doctor,no,negation_clinical,came_in,15.9,louder,16,del,eq,"No fever, OK, fine, sorry. Um, OK. Um, in terms of your bowel, are your bowels working OK?"
+day1_consultation09,168.76,doctor,fever,content,came_in,15.9,louder,16,del,eq,"No fever, OK, fine, sorry. Um, OK. Um, in terms of your bowel, are your bowels working OK?"
+day1_consultation09,178.95,patient,seems,content,holding,-3.3,quieter,6,del,eq,"Um, uh, I think so, yeah, it seems ."
+day1_consultation09,394.83,doctor,need,content,came_in,0.2,louder,33,del,eq,", recommend it, we need doctors. Um, what about smoking and alcohol? Do you drink much in the way of, , do you, do you smoke, or do you drink much in the way of alcohol?"
+day1_consultation09,395.09,doctor,doctors,content,came_in,0.2,louder,33,del,eq,", recommend it, we need doctors. Um, what about smoking and alcohol? Do you drink much in the way of, , do you, do you smoke, or do you drink much in the way of alcohol?"
+day1_consultation09,455.35,doctor,hopefully,content,holding,4.1,louder,34,del,eq,"And , that should hopefully help your symptoms, but I also advise you to drink plenty of fluids. Let's try and flush that, you know, that infection out of your body, if you can."
+day1_consultation10,6.47,patient,hear,content,came_in,-1.9,quieter,6,del,eq,"Yeah I can hear you, hi."
+day1_consultation10,93.84,patient,today,content,came_in,-0.1,quieter,5,del,eq,"Yeah, I think just today ."
+day1_consultation10,218.3,doctor,moment,content,holding,13.5,louder,31,del,eq,"Uh. OK, all right. Um, and Amanda sometimes we have to ask quite sensitive questions as you can imagine. Um, uh, can I ask? Are you currently uh, are you currently sexually active? At the moment?"
+day1_consultation10,438.03,patient,things,content,holding,3.4,louder,37,del,eq,"But my family, uh, live kind of outside of London not too far away. Um, so yeah the my family are fine and I see them now and then. Uh, yeah things I think, I think they're OK generally."
+day1_consultation10,455.62,patient,fun,content,holding,-8.1,quieter,34,del,eq,"Yeah, yeah it's it's going well thanks. Just kind of started a few months ago, a few months ago and yeah I, I really enjoy it. Yeah, yeah it's really fun."
+day1_consultation10,583.45,patient,through,content,holding,-6.7,quieter,23,del,eq,"OK, OK uh great. Um, with, with the urine sample, um, uh, how do I go about doing that, do you know? Is it through the app?"
+day1_consultation10,584.24,patient,app,content,holding,-6.7,quieter,23,del,eq,"OK, OK uh great. Um, with, with the urine sample, um, uh, how do I go about doing that, do you know? Is it through the app?"

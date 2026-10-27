@@ -1,0 +1,13 @@
+run,condition,class,n,deleted,substituted,substituted_to_non_negation,negation_lost,lost_not_repeat,introduced_negations
+test47-parakeet-local,doctor,negation_clinical,204,0.0343,0.0196,0.0196,0.0539,0.049,10
+test47-parakeet-local,doctor,negation_discourse,247,0.0607,0.0567,0.0405,0.1012,0.0891,10
+test47-parakeet-local,mixed,negation_clinical,500,0.052,0.018,0.016,0.068,0.046,34
+test47-parakeet-local,mixed,negation_discourse,1326,0.0875,0.0422,0.0309,0.1184,0.0822,34
+test47-parakeet-local,patient,negation_clinical,296,0.0541,0.0135,0.0135,0.0676,0.0372,17
+test47-parakeet-local,patient,negation_discourse,1079,0.0778,0.05,0.0417,0.1196,0.0751,17
+test47-vad-nocond,doctor,negation_clinical,204,0.0245,0.0147,0.0147,0.0392,0.0294,9
+test47-vad-nocond,doctor,negation_discourse,247,0.0769,0.0688,0.0486,0.1255,0.1093,9
+test47-vad-nocond,mixed,negation_clinical,500,0.038,0.014,0.012,0.05,0.036,18
+test47-vad-nocond,mixed,negation_discourse,1326,0.1003,0.046,0.0377,0.138,0.0935,18
+test47-vad-nocond,patient,negation_clinical,296,0.0372,0.0169,0.0068,0.0439,0.0304,17
+test47-vad-nocond,patient,negation_discourse,1079,0.0825,0.0454,0.0389,0.1214,0.0816,17

@@ -215,6 +215,7 @@ def main():
             ins_rows.append({
                 "id": cid, "condition": cond, "n_words": n,
                 "segment_start_s": hyp_times[a],
+                "t_approx_s": round(hyp_wtimes[a], 2),
                 "in_overlap": "" if overlaps is None else int(in_any(hyp_wtimes[a], overlaps)),
                 "inserted": " ".join(hyp_words[a:b]),
                 "hyp_context": " ".join(hyp_words[max(0, a - 6):a]) + " [[" + " ".join(hyp_words[a:b])

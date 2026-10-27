@@ -174,7 +174,27 @@ function init() {
   $("#scope").onclick = e => { const s = e.target.dataset.s; if (s) { state.scope = s; renderTable(); } };
   $("#rate").onchange = e => audio.playbackRate = +e.target.value;
   audio.addEventListener("timeupdate", onTime);
-  load();
+  window.addEventListener("hashchange", openHash);
+  openHash();
+}
+
+// Deep link: #id=day1_consultation07&cond=mixed&t=445.5 opens that track at that time.
+async function openHash() {
+  const p = new URLSearchParams(location.hash.slice(1));
+  const id = p.get("id"), cond = p.get("cond"), t = parseFloat(p.get("t"));
+  if (id && DATA.items.some(i => i.id === id && i.condition === (cond || state.cond))) {
+    state.cid = id; $("#cid").value = id;
+    if (cond) state.cond = cond;
+  }
+  await load();
+  if (!isNaN(t)) {
+    const us = item().utterances;
+    let i = 0;
+    us.forEach((u, k) => { if (u.start <= t) i = k; });
+    state.sel = i; renderGrid(); renderSteps();
+    audio.currentTime = Math.max(0, t - 2);
+    document.querySelector(`#grid .row[data-i="${i}"]`)?.firstElementChild.scrollIntoView({ block: "center" });
+  }
 }
 
 // Fetch the wav into a blob: simple static servers (python -m http.server) don't do
