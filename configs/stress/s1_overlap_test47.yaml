@@ -1,0 +1,14 @@
+# Stress test S1 on the test set (47 consultations): same method and parameters as
+# s1_overlap.yaml, with d calibrated on the test set's own timing. The test set has less
+# overlap than the dev set (baseline ratio 0.0479 vs 0.0751), so the dev-set d values
+# (0.86 / 1.65 s) would give 2.75x / 4.46x here. Calibration uses only utterance times,
+# no ASR output.
+seed: 0
+p: 1.0
+min_lead_s: 0.4
+gap_s: 0.05
+pad_s: 0.15
+levels:
+  s1_1x: 0.0
+  s1_2x: 0.55      # test set: 2.01x the baseline overlap ratio
+  s1_3x: 0.97      # test set: 3.01x
