@@ -1,0 +1,13 @@
+run,condition,ref_words,wer,wer_no_backchannel,wer_content_only,medical_term_error_rate,number_error_rate,clinical_negation_error_rate
+full10-vad-nocond,doctor,9988,0.1645,0.1302,0.0913,0.0639,0.1045,0.1356
+full10-vad-nocond,patient,7100,0.1461,0.1348,0.1173,0.1,0.0594,0.1268
+full10-vad-nocond,mixed,17088,0.1715,0.1414,0.1083,0.0854,0.1064,0.1154
+full10-vad-nocond-pad800,doctor,9988,0.162,0.1269,0.0895,0.0615,0.1269,0.1017
+full10-vad-nocond-pad800,patient,7100,0.1438,0.1341,0.1152,0.0989,0.0396,0.0986
+full10-vad-nocond-pad800,mixed,17088,0.1703,0.1409,0.1105,0.0895,0.1106,0.0923
+full10-vad-nocond-pad1500,doctor,9988,0.1762,0.1417,0.0986,0.0689,0.1269,0.1186
+full10-vad-nocond-pad1500,patient,7100,0.1637,0.1536,0.1263,0.1034,0.0792,0.0986
+full10-vad-nocond-pad1500,mixed,17088,0.1673,0.1371,0.1046,0.0826,0.1064,0.0923
+full10-novad-nocond,doctor,9988,0.1671,0.1333,0.1027,0.0652,0.1343,0.1017
+full10-novad-nocond,patient,7100,0.1745,0.1644,0.1248,0.108,0.0693,0.1408
+full10-novad-nocond,mixed,17088,0.169,0.1392,0.106,0.0842,0.0936,0.1077

@@ -40,6 +40,9 @@
 | `.venv` | faster-whisper 转写、生成对照页面 | faster-whisper 1.2.1，ctranslate2 4.8.4，cuBLAS 12.9，CUDA runtime 12.9，cuDNN 9.27，numpy 2.4.6 | 主环境，按 requirements.txt 安装 |
 | `.venv-sci` | 用 scispaCy 抽取医学术语、跑 evaluate.py | scispacy 0.6.2，spaCy 3.7.5，en_core_sci_sm 0.5.4，jiwer 4.0.0，numpy 1.26.4 | scispaCy 要求 numpy 1.x，会把主环境的 numpy 降级 |
 | `.venv-nemo` | Parakeet 转写（`--backend parakeet`） | PyTorch 2.11.0+cu128，NeMo 3.0.0，numpy 2.4.6 | NeMo 依赖很多，而且要带 CUDA 的 PyTorch |
+| `.venv-hf` | Granite Speech、Cohere Transcribe（`--backend granite/cohere`） | PyTorch 2.11.0+cu128，transformers 5.21.0，accelerate 1.15 | Cohere 要求 transformers ≥ 5.4 |
+| `.venv-qwen` | Qwen3-ASR（`--backend qwen3asr`） | PyTorch 2.11.0+cu128，qwen-asr 0.0.6，transformers 4.57.6 | `qwen-asr` 把 transformers 锁在 4.57，跟 Cohere 冲突 |
+| `.venv-canary` | Canary-Qwen（`--backend canary-qwen`） | PyTorch 2.11.0+cu128，NeMo 3.1.0 开发版（GitHub），peft 0.21 | 要 NeMo 开发版，不能动已经能用的 Parakeet 环境 |
 
 ### 让 faster-whisper 找到 CUDA 运行库
 
@@ -103,6 +106,25 @@ Whisper 的英文规范化器有几处不统一的写法，会被算成错误。
 | 0 | ohh、ooh（规范化器会把 "oh" 变成 "0"） |
 
 所有运行都按两种方式各算一遍：原始结果在 `results/<运行名>/`，修正结果在 `results/equiv/<运行名>/`；主结果表（`comparison.csv`）里的 `wer` 和 `wer_corrected` 两列并列。原始 WER 用于跟文献比较，修正 WER 反映真实识别水平。人工标了"不确定"的地方造成的错误只作为上限单独报告，不从 WER 里扣除。
+
+### 2026 年的新 ASR 模型
+
+| 模型 | Hugging Face | 许可证 | 环境 | 安装和运行中的问题 |
+|---|---|---|---|---|
+| Granite Speech 4.1 2B | `ibm-granite/granite-speech-4.1-2b` | Apache 2.0 | `.venv-hf` | 无。模型卡没说明长音频怎么处理，用统一切分 |
+| Cohere Transcribe 03-2026 | `CohereLabs/cohere-transcribe-03-2026` | Apache 2.0，**受限访问** | `.venv-hf` | 要用 HF 账号在模型页同意共享联系方式，并在本机 `hf auth login`（令牌存在 `D:\cache\huggingface`）。同意之后才能下载，否则 403 |
+| Qwen3-ASR-1.7B | `Qwen/Qwen3-ASR-1.7B` | Apache 2.0 | `.venv-qwen` | 专用库 `qwen-asr` 锁定 transformers 4.57，跟 Cohere 冲突，所以单独建环境 |
+| Canary-Qwen 2.5B | `nvidia/canary-qwen-2.5b` | CC-BY-4.0 | `.venv-canary` | 要 NeMo 开发版：`pip install "nemo_toolkit[asr] @ git+https://github.com/NVIDIA/NeMo.git"`。按模型卡装 `[asr,tts]` 会失败（tts 里的 `pyopenjtalk` 在 Windows 上要 CMake 编译）；实际只需另外 `pip install peft` |
+
+**统一切分**：这四个模型都只适合短输入，所以用 `plan_chunks.py` 生成同一份切分方案（`outputs/chunks/test47/`）：Silero VAD 找说话区间，只在停顿处切，每段不超过 30 秒，两端各留 0.3 秒边距；超过 30 秒的连续说话在最安静的 100 ms 处切开。测试集 141 个文件切成 2482 段，最长 30.6 秒，保留 84.8% 的音频；约 0.7% 的参考词落在所有段之外（按估计的词时间算）。每段单独解码，输出的片段时间就是段的起止时间。Cohere 的处理器自己会把超过 35 秒的输入再切开，我们的段都短于这个长度，所以不会触发。
+
+为了不把"切分方式"混进模型比较，Whisper 和 Parakeet 也用同一份切分方案各跑了一遍（`test47-whisper-chunked`、`test47-parakeet-chunked`）；原来各自的最佳设置（Whisper 自带 VAD、Parakeet 整段输入）也保留。
+
+**逐段解码，不用批量**：`--batch-size` 可以一次解码多段，快 3–4 倍，但结果跟逐段解码不完全一致（同一文件上 Granite 有 1.6% 的词不同，Qwen3-ASR 有 0.2%），原因是批量时短段被填充到同一长度。为了让各模型可比，正式运行都用逐段（`--batch-size 1`）。
+
+### VAD 边距（开发集）
+
+为检查"句首第一个词错误率高"是不是 VAD 把句首切掉了，在开发集上对比了 `speech_pad_ms` 400（默认）、800、1500 和不开 VAD（都关前文提示）：句首错误率在四组之间几乎不变（合并声道 36.1–36.8%），不开 VAD 时也一样高，所以不是 VAD 造成的。句首错误里 60% 是附和词，替换里 58% 是 "OK/okay" 这类写法差异。WER 的变化都在噪声范围内，测试集保持默认边距。结果在 `results/full10/vad_padding/`。
 
 ### 病历层面评测
 
