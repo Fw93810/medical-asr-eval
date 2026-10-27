@@ -13,3 +13,6 @@ __pycache__/
 .ipynb_checkpoints/
 .venv*/
 .claude/
+!results/notes/grid/
+results/notes/grid/*/facts/
+results/notes/grid/*/judged/

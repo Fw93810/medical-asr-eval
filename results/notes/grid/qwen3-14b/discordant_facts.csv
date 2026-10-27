@@ -1,0 +1,429 @@
+﻿baseline,source,kind,id,n,fact,category,negative,baseline_label,source_label,baseline_evidence,source_evidence
+human,human_rejudge,lost,day2_consultation02,10,No significant family history,negative_finding,True,present,missing,no history of rheumatological diseases in the family,
+human,human_rejudge,lost,day2_consultation05,6,"Episodes increasing in frequency: initially once a week, now daily",history,False,present,missing,recurring more frequently (weekly-to-daily detail not given),only 'recurring more frequently'; weekly-to-daily change not stated
+human,human_rejudge,lost,day3_consultation04,10,Last asthma attack was 3 years ago,past_history,False,present,contradicted,has not had an asthma attack in three to four years,Candidate says no asthma attack in three to four years; reference says the last attack was 3 years ago
+human,human_rejudge,gained,day4_consultation01,13,Previously short of breath walking up hills/stairs,history,False,missing,present,,difficulty with... climbing stairs and walking uphill
+human,human_rejudge,lost,day4_consultation01,19,Was able to walk up stairs until recently,social,False,present,missing,has noticed difficulty with... climbing stairs,
+human,human_rejudge,lost,day4_consultation05,23,No known drug allergies,allergy,True,present,contradicted,"Reports an allergy to NKDA (garbled wording, but means no known drug allergies)",Reports an allergy to NKDA (not specified further) — this records an allergy rather than no known allergies
+human,human_rejudge,lost,day5_consultation01,35,Impression: possible tension headache or first episode of migraine,impression,False,present,missing,possibly migraine-like in nature (tension headache not mentioned),Only migraine-like mentioned; tension headache not mentioned
+human,human_rejudge,lost,day5_consultation01,36,"Impression: no features of meningitic illness, although headache is worse with light",impression,False,present,missing,No immediate red flags for serious pathology,Only generic 'no immediate red flags'; meningitis not addressed
+human,human_plain,gained,day1_consultation13,2,"Headache is all over the head, mainly over the right eye",history,False,missing,present,Only 'mainly around the right eye'; 'all over the head' not stated,primarily around the right eye (does not say 'all over the head')
+human,human_plain,lost,day1_consultation13,3,Headache is constant,history,False,present,missing,present all the time but varying in intensity,
+human,human_plain,lost,day1_consultation13,12,Feels nauseous,history,False,present,contradicted,feels sick with the headache,no nausea or vomiting
+human,human_plain,lost,day1_consultation15,1,Sore and cracked skin on the hands for 3-4 months,history,False,present,contradicted,"cracked, sore skin ... present for three to four months",present for 34 months (reference: 3-4 months)
+human,human_plain,gained,day1_consultation15,19,Has tried E45 cream with minimal relief,medication,False,missing,present,,E45 cream ... without significant improvement
+human,human_plain,gained,day1_consultation15,20,Has tried antihistamines with minimal relief,medication,False,missing,present,,"antihistamines, without significant improvement"
+human,human_plain,lost,day2_consultation02,10,No significant family history,negative_finding,True,present,missing,no history of rheumatological diseases in the family,
+human,human_plain,lost,day2_consultation02,21,"Rheumatology blood tests: ESR, CRP, full blood count, rheumatoid factor and urate",plan,False,present,missing,"inflammatory markers, infection, rheumatological antibodies, and gout",blood tests mentioned but specific tests not listed
+human,human_plain,lost,day2_consultation02,22,"Review after blood results, in person or by video",plan,False,present,contradicted,"follow-up review after blood tests via phone, video, or in person",follow-up may be conducted over the phone or in person (reference: in person or video)
+human,human_plain,gained,day2_consultation04,6,No recent long-haul flights,negative_finding,True,missing,present,,No recent long-haul flights
+human,human_plain,lost,day2_consultation05,3,Right leg weakness during episodes,history,False,present,missing,weakness in the arm and leg,"only 'general tiredness, weakness' mentioned, not right leg weakness"
+human,human_plain,gained,day2_consultation05,4,Noticeable gait disturbance during episodes,history,False,missing,present,,"change in gait, noticed by a colleague"
+human,human_plain,gained,day2_consultation05,14,Blood tests for diabetes were normal when checked a few years ago,past_history,True,missing,present,,blood tests for diabetes ... normal
+human,human_plain,gained,day2_consultation05,15,Cholesterol was normal when checked a few years ago,past_history,True,missing,present,,cholesterol ... normal
+human,human_plain,lost,day2_consultation05,16,Past medical history otherwise nothing of note,past_history,True,present,missing,No significant past medical history,
+human,human_plain,lost,day2_consultation09,9,No symptoms in left leg,negative_finding,True,present,missing,no other neurological symptoms in the left leg,
+human,human_plain,lost,day3_consultation02,15,No cold (coryzal) symptoms,negative_finding,True,present,missing,no cold symptoms,
+human,human_plain,lost,day3_consultation02,18,Generalised muscle aches,history,False,present,missing,some general aching muscles,
+human,human_plain,lost,day3_consultation02,23,"If an urgent appointment is not possible, attend A&E (Accident and Emergency)",plan,False,present,missing,"If this is not available, the patient should consider attending a hospital",Says 'seek urgent medical attention' but A&E not specified
+human,human_plain,gained,day3_consultation02,24,"Further assessment to rule out malaria, dengue and meningitis",plan,False,missing,present,Further assessment mentioned but not specifically to rule out malaria and dengue,further assessment is required
+human,human_plain,lost,day3_consultation03,4,Breathlessness,history,False,present,missing,shortness of breath,
+human,human_plain,lost,day3_consultation03,10,Nausea most of the time,history,False,present,contradicted,nausea at work,occasional nausea
+human,human_plain,gained,day3_consultation03,11,No vomiting,negative_finding,True,missing,present,,no vomiting
+human,human_plain,lost,day3_consultation03,12,Weight loss of about one stone over the past 6 months,history,False,present,contradicted,weight loss over the past six months (amount not given),"weight loss over the past six months, though he is unsure of the exact amount"
+human,human_plain,lost,day3_consultation03,16,Does not remember when last blood tests were done,history,False,present,missing,has not had a recent blood test,
+human,human_plain,lost,day3_consultation03,17,Advised to contact support to arrange blood tests,plan,False,present,missing,contact support to organise the blood test,Plan says to arrange blood tests but does not say to contact support
+human,human_plain,lost,day3_consultation03,23,Book a follow-up appointment after receiving a text message from Babylon,plan,False,present,missing,book an appointment once the results are available,Only says 'book an appointment if needed'; no mention of a text message from Babylon
+human,human_plain,lost,day3_consultation04,10,Last asthma attack was 3 years ago,past_history,False,present,missing,has not had an asthma attack in three to four years,Only 'No recent asthma attack'; no timing
+human,human_plain,lost,day3_consultation04,16,Uses Cetraben for eczema,medication,False,present,contradicted,Cetraben ... for eczema,cetrizine and hydrocortisone for eczema
+human,human_plain,lost,day3_consultation05,9,Feels nauseous,history,False,present,contradicted,nausea,"There is no nausea at the moment, but the patient is now feeling very sick."
+human,human_plain,gained,day3_consultation05,11,No weakness of the arms or legs,negative_finding,True,missing,present,No mention of absent limb weakness in history,No weakness in the arms or legs.
+human,human_plain,gained,day3_consultation08,3,No sputum,negative_finding,True,missing,present,The note says the cough is dry but never says there is no sputum,without phlegm
+human,human_plain,lost,day3_consultation10,6,Still eating and drinking,history,False,present,missing,still able to drink (eating not explicitly stated),Only says still able to drink plenty of fluids; continued eating not stated
+human,human_plain,gained,day3_consultation10,13,No signs of dehydration on examination,negative_finding,True,missing,present,,no significant dehydration
+human,human_plain,lost,day4_consultation01,1,Sudden-onset left-sided chest discomfort/pressure,history,False,present,contradicted,discomfort started suddenly... described as pressure or discomfort (left side not specified),"Sudden onset is stated, but the location is given as the middle of the chest, not the left side"
+human,human_plain,gained,day4_consultation01,10,No vomiting since the pain started,negative_finding,True,missing,present,,no vomiting
+human,human_plain,gained,day4_consultation01,13,Previously short of breath walking up hills/stairs,history,False,missing,present,,difficulty with... climbing stairs and walking uphill (breathlessness not stated explicitly)
+human,human_plain,lost,day4_consultation01,18,Lives at home with his wife,social,False,present,missing,lives at home with his wife,
+human,human_plain,lost,day4_consultation01,19,Was able to walk up stairs until recently,social,False,present,missing,has noticed difficulty with... climbing stairs,
+human,human_plain,lost,day4_consultation02,8,Symptoms started when patient started a new job,history,False,present,missing,began around the time of a recent job change,only libido change linked to changing jobs
+human,human_plain,lost,day4_consultation02,9,New job is high stress and involves working in front of a computer,social,False,present,missing,particularly when sitting at a computer; symptoms may be related to stress,computer mentioned but not the job being high stress
+human,human_plain,gained,day4_consultation02,17,Unintentional weight loss of 5 lbs,history,False,missing,present,,"unintentional weight loss of approximately £5 (unit typo, value 5)"
+human,human_plain,lost,day4_consultation05,17,Ate this morning but vomited immediately,history,False,present,missing,"vomited once this morning, following breakfast",Vomiting this morning noted but not after eating
+human,human_plain,gained,day4_consultation06,6,New headache (first onset),history,False,missing,present,,no history of similar headaches
+human,human_plain,lost,day4_consultation06,13,Moving makes symptoms worse,history,False,present,missing,feels worse when moving,
+human,human_plain,gained,day4_consultation06,17,Unlikely to be pregnant,negative_finding,True,missing,present,,no pregnancy
+human,human_plain,gained,day4_consultation06,23,Family history: mother has migraines,history,False,missing,present,,Family history includes migraines (mother not specified)
+human,human_plain,gained,day4_consultation06,24,Family history: mother has hypothyroidism,history,False,missing,present,,Family history includes ... hypothyroidism
+human,human_plain,lost,day4_consultation06,33,Plan: neurological assessment at face-to-face review,plan,False,present,missing,attend for a full neurological assessment,
+human,human_plain,gained,day4_consultation07,21,No other family history,other,True,missing,present,,no significant family history other than his mother had lung cancer
+human,human_plain,gained,day4_consultation07,23,Non-smoker,social,True,contradicted,present,"No regular smoking, only occasional in the past",No smoking history
+human,human_plain,gained,day4_consultation07,30,"If no better in 5 days, return for further medical review",plan,False,missing,present,,"no improvement in the next 4 to 5 days, the patient should seek further medical attention"
+human,human_plain,lost,day4_consultation08,2,Symptoms present for 8 weeks,history,False,present,missing,ongoing for approximately two months,"Candidate says 'past few weeks' / 'past few months', not 8 weeks"
+human,human_plain,gained,day4_consultation08,7,"Distracted, with difficulty focusing",history,False,missing,present,,trouble focusing
+human,human_plain,lost,day4_consultation08,11,Started a new job 2 months ago,social,False,present,missing,may have coincided with starting a new job,
+human,human_plain,gained,day4_consultation08,18,Family history: mother is well,other,False,missing,present,,His mother is well
+human,human_plain,gained,day4_consultation08,19,Has no brothers or sisters,other,False,missing,present,,he is an only child
+human,human_plain,lost,day4_consultation08,20,Impression: depression,impression,False,present,missing,"potential causes, including ... depression",Impression lists low mood/fatigue but not depression
+human,human_plain,lost,day4_consultation10,15,Vaginal spotting,history,False,present,missing,some pinkish discharge... she thinks may be related to her period,
+human,human_plain,gained,day4_consultation10,16,Last menstrual period 3.5 weeks ago,history,False,missing,present,,last menstrual period was approximately three and a half weeks ago
+human,human_plain,lost,day4_consultation10,21,Family history: brother has type 1 diabetes mellitus,past_history,False,present,missing,brother with type one diabetes,
+human,human_plain,lost,day4_consultation10,22,Impression (differential): simple constipation,impression,False,present,missing,Possible causes include constipation,
+human,human_plain,gained,day5_consultation01,5,No altered sense of smell,negative_finding,True,missing,present,,No... abnormal smells
+human,human_plain,lost,day5_consultation01,8,No prodromal illness,negative_finding,True,present,missing,no recent illness,
+human,human_plain,gained,day5_consultation01,11,No coryzal symptoms,negative_finding,True,missing,present,,No... cold symptoms
+human,human_plain,gained,day5_consultation01,22,Has taken paracetamol only for the headache,medication,False,missing,present,,taking paracetamol for relief; no recent NSAID use
+human,human_plain,gained,day5_consultation01,41,To have a review if headaches become regular,plan,False,missing,present,,Follow-up if symptoms persist or change
+human,human_plain,gained,day5_consultation03,3,Anxiety seems to have started when patient started a new job,history,False,missing,present,,anxiety related to her new job
+human,human_plain,gained,day5_consultation03,5,Pressures from boss at work,history,False,missing,present,,difficult relationship with her boss
+human,human_plain,lost,day5_consultation03,6,Dreads work every morning,history,False,present,missing,"morning anxiety, dread of going to work",only says she is anxious in the mornings about leaving the house
+human,human_plain,gained,day5_consultation03,15,"Previously enjoyed running, tennis and socialising",history,False,missing,present,,used to enjoy running and playing tennis
+human,human_plain,lost,day5_consultation03,18,Palpitations can feel irregular,history,False,present,missing,described as irregular,
+human,human_plain,lost,day5_consultation03,20,Palpitations are a rapid heartbeat lasting about 2-10 minutes,history,False,present,missing,lasting from a few minutes to up to ten minutes... heart racing,
+human,human_plain,lost,day5_consultation03,26,No past psychiatric history or significant anxiety,past_history,True,present,missing,has not previously had similar episodes of anxiety,
+human,human_plain,lost,day5_consultation03,35,Advised to self-refer to NHS Talking Therapies,plan,False,present,contradicted,self-refer for talking therapy via the NHS,will be referred for talking therapy (reference: self-referral)
+human,human_plain,lost,day5_consultation03,39,Patient advised to book the blood test through the support team,plan,False,present,missing,contact the support line to arrange blood tests,
+human,human_plain,lost,day5_consultation04,11,"Constipation lasting one week, last week",history,False,present,missing,history of constipation in the past week,"only 'occasional constipation', no one-week duration"
+human,human_plain,lost,day5_consultation04,13,No other vaginal discharge,negative_finding,True,present,contradicted,no abnormal discharge other than slight vaginal bleeding,reports ... some vaginal discharge
+human,human_plain,gained,day5_consultation04,21,No vomiting,negative_finding,True,missing,present,,without vomiting
+human,human_plain,gained,day5_consultation04,34,"Impression: abdominal pain, cause uncertain",impression,False,missing,present,,"requiring further assessment, including possible gynaecological or gastrointestinal causes"
+human,human_plain,gained,day5_consultation04,36,Patient to contact the practice immediately if pregnancy test is positive,plan,False,missing,present,,"if the pregnancy test is positive, the patient should seek immediate medical attention"
+human,human_plain,gained,day5_consultation04,37,Urgent examination booked with doctor,plan,False,contradicted,present,to be referred ... and to contact the support line to arrange an appointment (not booked urgently with doctor),Arrange a face-to-face examination
+human,human_plain,lost,day5_consultation05,8,More thirsty than normal,history,False,present,missing,more thirsty than usual,
+human,human_plain,gained,day5_consultation06,12,Unsure of urine colour,history,False,missing,present,,unsure of the color
+human,human_plain,lost,day5_consultation08,2,"Wheeze for 2-3 (time unit not stated in note, probably days)",history,False,present,contradicted,lasting two to three days,for 23 days
+human,human_plain,gained,day5_consultation08,16,Has missed a few days of work,history,False,missing,present,,have not been able to go to work due to breathlessness
+human,asr_mixed,gained,day1_consultation13,2,"Headache is all over the head, mainly over the right eye",history,False,missing,present,Only 'mainly around the right eye'; 'all over the head' not stated,primarily around the right eye (the 'all over the head' part is not stated)
+human,asr_mixed,lost,day1_consultation13,3,Headache is constant,history,False,present,missing,present all the time but varying in intensity,
+human,asr_mixed,lost,day1_consultation13,4,Headache severity 8/10,history,False,present,missing,8 out of 10,
+human,asr_mixed,lost,day1_consultation15,2,Skin changes affect mainly the palms,history,False,present,missing,on the palms of her hands,
+human,asr_mixed,lost,day1_consultation15,4,Hands bleed when scratched,history,False,present,missing,intermittent bleeding from scratching,
+human,asr_mixed,lost,day1_consultation15,22,Steroid cream twice daily,plan,False,present,contradicted,Prescribe steroid cream (twice-daily frequency not stated),steroid cream and stronger emollients for use three to four times daily
+human,asr_mixed,gained,day2_consultation02,9,No significant past medical history,past_history,True,contradicted,present,Past medical history: history of osteoarthritis,No other significant medical history
+human,asr_mixed,lost,day2_consultation02,10,No significant family history,negative_finding,True,present,missing,no history of rheumatological diseases in the family,
+human,asr_mixed,gained,day2_consultation04,6,No recent long-haul flights,negative_finding,True,missing,present,,not had any recent long-haul flights
+human,asr_mixed,lost,day2_consultation04,14,Has a cat,social,False,present,contradicted,has a cat as a pet,no pets
+human,asr_mixed,lost,day2_consultation05,5,Episodes ongoing for 1.5 months,history,False,present,contradicted,over the past one and a half to two months (range includes 1.5 months),over the past two months
+human,asr_mixed,lost,day2_consultation05,6,"Episodes increasing in frequency: initially once a week, now daily",history,False,present,missing,recurring more frequently (weekly-to-daily detail not given),says 'increasing in frequency' but not weekly to daily
+human,asr_mixed,lost,day2_consultation05,10,No past medical history of stroke (CVA) or TIA,past_history,True,present,missing,No history of mini-strokes or strokes,
+human,asr_mixed,lost,day2_consultation05,12,Father appears to have had a carotid endarterectomy,past_history,False,present,missing,father had an operation to reduce the risk of stroke,
+human,asr_mixed,gained,day2_consultation05,14,Blood tests for diabetes were normal when checked a few years ago,past_history,True,missing,present,,blood test... showed normal... diabetes
+human,asr_mixed,gained,day2_consultation05,15,Cholesterol was normal when checked a few years ago,past_history,True,missing,present,,normal cholesterol
+human,asr_mixed,gained,day2_consultation09,2,No pain in left arm,negative_finding,True,missing,present,,He reports no pain
+human,asr_mixed,lost,day2_consultation09,9,No symptoms in left leg,negative_finding,True,present,missing,no other neurological symptoms in the left leg,
+human,asr_mixed,lost,day2_consultation09,11,Patient has not noticed any facial asymmetry,negative_finding,True,present,missing,no facial asymmetry,
+human,asr_mixed,lost,day2_consultation09,18,Takes losartan,medication,False,present,contradicted,losartan,low-dose ramipril instead of losartan
+human,asr_mixed,lost,day2_consultation09,19,Takes amlodipine,medication,False,present,missing,amlodipine,
+human,asr_mixed,lost,day3_consultation02,5,A friend (contact) is also unwell,history,False,present,missing,A friend has also been unwell,
+human,asr_mixed,lost,day3_consultation02,23,"If an urgent appointment is not possible, attend A&E (Accident and Emergency)",plan,False,present,missing,"If this is not available, the patient should consider attending a hospital","Says 'seek medical attention promptly' if unavailable, but does not mention A&E"
+human,asr_mixed,lost,day3_consultation03,4,Breathlessness,history,False,present,missing,shortness of breath,
+human,asr_mixed,gained,day3_consultation03,8,Not stressed,negative_finding,True,missing,present,,No specific stressors at home
+human,asr_mixed,lost,day3_consultation03,10,Nausea most of the time,history,False,present,contradicted,nausea at work,nausea intermittently
+human,asr_mixed,gained,day3_consultation03,11,No vomiting,negative_finding,True,missing,present,,no vomiting
+human,asr_mixed,lost,day3_consultation03,15,Not taking thyroxine for a while since changing GP practice,medication,False,present,contradicted,has not been taking thyroxine for some time,not been taking it since changing law firms
+human,asr_mixed,lost,day3_consultation03,16,Does not remember when last blood tests were done,history,False,present,missing,has not had a recent blood test,Candidate states he has not had a recent blood test rather than not remembering
+human,asr_mixed,lost,day3_consultation04,3,Normally uses blue inhaler only as needed,history,False,present,missing,using the blue inhaler as and when symptoms occur,"The note gives 'as needed' as current use, not as her usual pattern"
+human,asr_mixed,lost,day3_consultation04,10,Last asthma attack was 3 years ago,past_history,False,present,contradicted,has not had an asthma attack in three to four years,approximately three to four years ago
+human,asr_mixed,lost,day3_consultation04,11,Never needed antibiotics or steroids for asthma,past_history,True,present,missing,No history of oral steroids or antibiotics for asthma,Only 'No recent use of oral steroids'
+human,asr_mixed,lost,day3_consultation04,12,Never hospitalised because of asthma,past_history,True,present,missing,has not been admitted to hospital for asthma-related issues,Only 'No recent hospital admissions for asthma'
+human,asr_mixed,lost,day3_consultation04,15,Uses hydrocortisone for eczema,medication,False,present,contradicted,Hydrocortisone for eczema,hydrocortisone listed as part of brown inhaler
+human,asr_mixed,lost,day3_consultation04,16,Uses Cetraben for eczema,medication,False,present,contradicted,Cetraben ... for eczema,cetroben listed as part of brown inhaler
+human,asr_mixed,gained,day3_consultation05,11,No weakness of the arms or legs,negative_finding,True,missing,present,No mention of absent limb weakness in history,no weakness in the arms or legs
+human,asr_mixed,gained,day3_consultation08,3,No sputum,negative_finding,True,missing,present,The note says the cough is dry but never says there is no sputum,with no phlegm
+human,asr_mixed,lost,day3_consultation08,9,Past medical history of high blood pressure (hypertension) for 5-6 years,past_history,False,present,missing,mild hypertension (no duration given),Hypertension mentioned but no duration given
+human,asr_mixed,gained,day3_consultation08,13,Blood pressure normal today,other,False,missing,present,,blood pressure was within the normal range this morning
+human,asr_mixed,gained,day3_consultation10,2,Abdominal pain associated with the diarrhoea,history,False,missing,present,,reports some abdominal pain
+human,asr_mixed,lost,day3_consultation10,6,Still eating and drinking,history,False,present,missing,still able to drink (eating not explicitly stated),Only drinking is mentioned ('still able to drink plenty of fluids'); still eating is not stated
+human,asr_mixed,lost,day3_consultation10,7,Diarrhoea is watery,history,False,present,missing,varying between loose and watery,"Stools described as 'loose', not watery"
+human,asr_mixed,gained,day3_consultation10,9,No fever,negative_finding,True,contradicted,present,He mentions a slight fever,no significant fever
+human,asr_mixed,lost,day3_consultation10,23,Advised that yoghurts can be used as probiotics to help gut recovery,plan,False,present,contradicted,Recommend probiotics such as yoghurt,Advises avoiding dairy during the acute phase; no yoghurt or probiotic advice
+human,asr_mixed,gained,day3_consultation10,24,Stool sample needed if diarrhoea continues for more than a week,plan,False,missing,present,"says to seek medical attention if symptoms persist beyond a week, but does not mention a stool sample",If symptoms persist beyond one week ... stool sample
+human,asr_mixed,gained,day3_consultation10,25,Stool sample needed if blood appears in the stool,plan,False,missing,present,"says to seek attention if there is blood in the stool, but does not mention a stool sample","if there is passage of blood, a stool sample"
+human,asr_mixed,lost,day4_consultation01,1,Sudden-onset left-sided chest discomfort/pressure,history,False,present,missing,discomfort started suddenly... described as pressure or discomfort (left side not specified),The note mentions chest discomfort as a pressure sensation but does not say it started suddenly or was left-sided.
+human,asr_mixed,lost,day4_consultation01,4,Chest pain spreads to the left shoulder and left arm,history,False,present,contradicted,associated pain in the left shoulder and arm,associated left shoulder pain; no pain radiating to the right or left arm beyond the left shoulder
+human,asr_mixed,lost,day4_consultation01,7,Chest pain started while gardening,history,False,present,missing,started suddenly while gardening,"The note only says he gardens every other week, not that the pain began while gardening."
+human,asr_mixed,gained,day4_consultation01,10,No vomiting since the pain started,negative_finding,True,missing,present,,without vomiting
+human,asr_mixed,gained,day4_consultation01,13,Previously short of breath walking up hills/stairs,history,False,missing,present,,difficulty with... climbing stairs and walking uphill
+human,asr_mixed,lost,day4_consultation01,19,Was able to walk up stairs until recently,social,False,present,missing,has noticed difficulty with... climbing stairs,
+human,asr_mixed,lost,day4_consultation02,8,Symptoms started when patient started a new job,history,False,present,missing,began around the time of a recent job change,
+human,asr_mixed,lost,day4_consultation02,15,No past medical history of headaches,negative_finding,True,present,missing,does not have a history of headaches prior to these symptoms,"Only 'no previous neurological symptoms', which does not specifically mention headaches"
+human,asr_mixed,gained,day4_consultation02,17,Unintentional weight loss of 5 lbs,history,False,missing,present,,unintentional weight loss of five pounds
+human,asr_mixed,lost,day4_consultation02,22,Palpitations with mild shortness of breath on exertion,history,False,present,missing,"occasional shortness of breath, and palpitations",
+human,asr_mixed,gained,day4_consultation02,23,Palpitations with shortness of breath at rest,history,False,missing,present,,episodes of feeling short of breath while sitting at his desk
+human,asr_mixed,gained,day4_consultation02,26,Past medical history of hypothyroidism,past_history,False,contradicted,present,Past medical history: Hyperthyroidism.,Past medical history: Hypothyroidism
+human,asr_mixed,gained,day4_consultation02,29,"Works as a lawyer, a stressful job",social,False,missing,present,,Works as a lawyer... high stress levels
+human,asr_mixed,gained,day4_consultation06,5,Headache severity 6/10,history,False,contradicted,present,described as 'severe' rather than 6/10,around a 6 on a scale of 1 to 10
+human,asr_mixed,gained,day4_consultation06,6,New headache (first onset),history,False,missing,present,,has not had a headache like this before
+human,asr_mixed,gained,day4_consultation06,8,Associated dizziness,history,False,missing,present,,reports feeling dizzy
+human,asr_mixed,lost,day4_consultation06,10,Took paracetamol 3 hours ago with no improvement,medication,False,present,missing,has not improved with paracetemol (timing of 3 hours not stated),
+human,asr_mixed,gained,day4_consultation06,17,Unlikely to be pregnant,negative_finding,True,missing,present,,the patient is not pregnant
+human,asr_mixed,lost,day4_consultation06,18,Patient worried about brain cancer or stroke,history,False,present,missing,concerned about the possibility of a brain tumour or stroke,
+human,asr_mixed,gained,day4_consultation06,23,Family history: mother has migraines,history,False,missing,present,,Family history of migraines (relative not specified)
+human,asr_mixed,gained,day4_consultation06,24,Family history: mother has hypothyroidism,history,False,missing,present,,Family history of ... hypothyroidism
+human,asr_mixed,lost,day4_consultation06,33,Plan: neurological assessment at face-to-face review,plan,False,present,missing,attend for a full neurological assessment,
+human,asr_mixed,gained,day4_consultation07,2,Feeling unwell for 8 days,history,False,missing,present,"Candidate says 'about a week', not 8 days",sore throat for about a week
+human,asr_mixed,lost,day4_consultation07,20,Family history: mother had lung cancer,other,False,present,missing,Mother had lung cancer,
+human,asr_mixed,gained,day4_consultation07,23,Non-smoker,social,True,contradicted,present,"No regular smoking, only occasional in the past",no history of smoking
+human,asr_mixed,gained,day4_consultation07,24,No asbestos exposure,social,True,missing,present,,no ... asbestos exposure
+human,asr_mixed,gained,day4_consultation07,30,"If no better in 5 days, return for further medical review",plan,False,missing,present,,or if there is no improvement within four to five days
+human,asr_mixed,lost,day4_consultation08,6,Difficulty sleeping for 8 weeks,history,False,present,missing,difficulty sleeping,
+human,asr_mixed,gained,day4_consultation08,7,"Distracted, with difficulty focusing",history,False,missing,present,,"difficulty focusing, being easily distracted"
+human,asr_mixed,lost,day4_consultation08,14,Past medical history of hypothyroidism,past_history,False,present,contradicted,history of hypothyroidism,has a history of hyperthyroidism
+human,asr_mixed,lost,day4_consultation10,6,Lower abdominal pain is constant,history,False,present,missing,The pain is described as constant,
+human,asr_mixed,lost,day4_consultation10,13,Sexually active,social,False,present,missing,Sexually active,
+human,asr_mixed,lost,day4_consultation10,15,Vaginal spotting,history,False,present,missing,some pinkish discharge... she thinks may be related to her period,
+human,asr_mixed,lost,day4_consultation10,25,Impression (differential): urinary tract infection (UTI),impression,False,present,missing,urinary tract infection,
+human,asr_mixed,lost,day5_consultation01,2,Headache is intermittent,history,False,present,contradicted,comes and goes in intensity,"comes and goes in intensity, but does not completely go away"
+human,asr_mixed,gained,day5_consultation01,5,No altered sense of smell,negative_finding,True,missing,present,,abnormal smells
+human,asr_mixed,gained,day5_consultation01,9,No viral symptoms,negative_finding,True,missing,present,,"no cold symptoms, no recent illness"
+human,asr_mixed,gained,day5_consultation01,11,No coryzal symptoms,negative_finding,True,missing,present,,no cold symptoms
+human,asr_mixed,gained,day5_consultation01,22,Has taken paracetamol only for the headache,medication,False,missing,present,,"She has taken paracetamol... NSAIDs in the past, but not recently"
+human,asr_mixed,lost,day5_consultation01,36,"Impression: no features of meningitic illness, although headache is worse with light",impression,False,present,missing,No immediate red flags for serious pathology,
+human,asr_mixed,gained,day5_consultation03,3,Anxiety seems to have started when patient started a new job,history,False,missing,present,,associated with a new job
+human,asr_mixed,gained,day5_consultation03,5,Pressures from boss at work,history,False,missing,present,,difficult relationship with her boss
+human,asr_mixed,lost,day5_consultation03,6,Dreads work every morning,history,False,present,missing,"morning anxiety, dread of going to work",only difficulty leaving the house in the mornings
+human,asr_mixed,gained,day5_consultation03,10,Tired during the day,history,False,missing,present,,low energy during the day
+human,asr_mixed,gained,day5_consultation03,12,Eating pattern normal,history,False,missing,present,,No significant changes in eating patterns
+human,asr_mixed,gained,day5_consultation03,13,Eating more chocolate,history,False,missing,present,,increased chocolate consumption
+human,asr_mixed,lost,day5_consultation03,17,"Associated palpitations, which started only with the anxiety symptoms",history,False,present,missing,experiencing palpitations,"palpitations mentioned, but not that they started with the anxiety"
+human,asr_mixed,lost,day5_consultation03,18,Palpitations can feel irregular,history,False,present,missing,described as irregular,
+human,asr_mixed,lost,day5_consultation03,20,Palpitations are a rapid heartbeat lasting about 2-10 minutes,history,False,present,missing,lasting from a few minutes to up to ten minutes... heart racing,
+human,asr_mixed,lost,day5_consultation03,30,Drinks alcohol on Fridays and Saturdays; unsure of amount but sometimes drinks too much,social,False,present,contradicted,"consumes alcohol, particularly on Fridays and Saturdays",No significant alcohol use beyond occasional weekend drinking (reference: sometimes drinks too much)
+human,asr_mixed,gained,day5_consultation03,34,Impression: insomnia,impression,False,missing,present,,sleep disturbance
+human,asr_mixed,lost,day5_consultation03,39,Patient advised to book the blood test through the support team,plan,False,present,missing,contact the support line to arrange blood tests,
+human,asr_mixed,lost,day5_consultation04,3,Pain is constant,history,False,present,missing,The pain is constant,
+human,asr_mixed,lost,day5_consultation04,11,"Constipation lasting one week, last week",history,False,present,missing,history of constipation in the past week,"only 'intermittent constipation', no duration/timing"
+human,asr_mixed,gained,day5_consultation04,14,Eating and drinking ok,history,False,missing,present,,eating and drinking regularly
+human,asr_mixed,gained,day5_consultation04,21,No vomiting,negative_finding,True,missing,present,,no vomiting
+human,asr_mixed,gained,day5_consultation04,29,Has been able to work as usual,social,False,missing,present,,able to carry out her usual activities
+human,asr_mixed,gained,day5_consultation04,33,Does not use recreational drugs,social,True,missing,present,,or take other drugs
+human,asr_mixed,gained,day5_consultation04,34,"Impression: abdominal pain, cause uncertain",impression,False,missing,present,,Possible gynaecological or gastrointestinal cause
+human,asr_mixed,gained,day5_consultation04,37,Urgent examination booked with doctor,plan,False,contradicted,present,to be referred ... and to contact the support line to arrange an appointment (not booked urgently with doctor),Arrange a face-to-face examination
+human,asr_mixed,lost,day5_consultation05,5,Self-checked temperature was 37°C,history,False,present,missing,"temperature, which was around 37°C",
+human,asr_mixed,gained,day5_consultation05,9,Drinking well,history,False,missing,present,,drinking more than usual
+human,asr_mixed,lost,day5_consultation05,14,No blood in stool,negative_finding,True,present,missing,no blood in the stool,
+human,asr_mixed,lost,day5_consultation06,10,Does not feel she is holding down fluids,history,False,present,missing,unable to keep down any liquids,
+human,asr_mixed,gained,day5_consultation06,12,Unsure of urine colour,history,False,missing,present,,unsure of the color
+human,asr_mixed,lost,day5_consultation06,14,No foreign travel,negative_finding,True,present,missing,no recent travel abroad,
+human,asr_mixed,lost,day5_consultation06,15,Has been taking oral rehydration therapy regularly but has difficulty keeping it down,history,False,present,missing,continue with oral rehydration salts; unable to keep down any liquids,Only advised to continue ORS; prior use and difficulty keeping it down not stated
+human,asr_mixed,gained,day5_consultation06,17,Feels hot but has not checked temperature,history,False,contradicted,present,reports a high fever,"reports a high fever, though she has not measured it"
+human,asr_mixed,gained,day5_consultation06,26,Drinks 1 pint of alcohol a week,social,False,missing,present,"only 'occasionally drinks alcohol', no quantity",no regular alcohol consumption beyond occasional pints
+human,asr_mixed,lost,day5_consultation08,1,Presenting complaint: wheeze,history,False,present,missing,presents with recent onset of wheezing,Presenting complaint is given as dizziness and shortness of breath. Wheeze only appears in the safety-netting.
+human,asr_mixed,lost,day5_consultation08,2,"Wheeze for 2-3 (time unit not stated in note, probably days)",history,False,present,missing,lasting two to three days,"The 2-3 day duration is attached to shortness of breath, not wheeze."
+human,asr_mixed,lost,day5_consultation08,9,No night-time waking,negative_finding,True,present,missing,no nocturnal symptoms,
+human,asr_mixed,gained,day5_consultation08,16,Has missed a few days of work,history,False,missing,present,,'on sick leave recently'
+human,asr_mixed,lost,day5_consultation08,32,Continue to monitor temperature; contact the practice if temperature spikes,plan,False,present,missing,contacting the clinic if fever increases,
+human,asr_mixed_qwen3asr,gained,day1_consultation13,2,"Headache is all over the head, mainly over the right eye",history,False,missing,present,Only 'mainly around the right eye'; 'all over the head' not stated,primarily around the right eye (the 'all over the head' part is not stated)
+human,asr_mixed_qwen3asr,lost,day1_consultation13,3,Headache is constant,history,False,present,missing,present all the time but varying in intensity,
+human,asr_mixed_qwen3asr,lost,day1_consultation13,4,Headache severity 8/10,history,False,present,missing,8 out of 10,
+human,asr_mixed_qwen3asr,lost,day1_consultation13,12,Feels nauseous,history,False,present,missing,feels sick with the headache,
+human,asr_mixed_qwen3asr,lost,day1_consultation13,15,No speech disturbances,negative_finding,True,present,missing,no speech difficulties,
+human,asr_mixed_qwen3asr,lost,day1_consultation13,16,No arm or leg weakness,negative_finding,True,present,missing,no weakness in arms or legs,
+human,asr_mixed_qwen3asr,lost,day1_consultation13,34,Regular paracetamol/NSAIDs,plan,False,present,contradicted,"Naproxen, Paracetamol, or Codeine","Prescribe stronger analgesia (e.g., naproxen or codeine) if needed, not regular paracetamol/NSAIDs"
+human,asr_mixed_qwen3asr,lost,day1_consultation15,22,Steroid cream twice daily,plan,False,present,missing,Prescribe steroid cream (twice-daily frequency not stated),Steroid cream prescribed but twice-daily frequency not stated
+human,asr_mixed_qwen3asr,lost,day2_consultation02,10,No significant family history,negative_finding,True,present,missing,no history of rheumatological diseases in the family,
+human,asr_mixed_qwen3asr,lost,day2_consultation02,23,Patient to contact the practice in the meantime if symptoms get worse or he has concerns,plan,False,present,missing,"seek immediate medical attention if the elbow becomes very red, very painful",
+human,asr_mixed_qwen3asr,gained,day2_consultation04,6,No recent long-haul flights,negative_finding,True,missing,present,,No recent long-haul flights
+human,asr_mixed_qwen3asr,lost,day2_consultation05,3,Right leg weakness during episodes,history,False,present,missing,weakness in the arm and leg,Only non-specific 'weakness' is mentioned; right leg is not specified
+human,asr_mixed_qwen3asr,gained,day2_consultation05,4,Noticeable gait disturbance during episodes,history,False,missing,present,,temporary change in gait
+human,asr_mixed_qwen3asr,lost,day2_consultation05,6,"Episodes increasing in frequency: initially once a week, now daily",history,False,present,missing,recurring more frequently (weekly-to-daily detail not given),Only 'occurring more frequently'; weekly-to-daily progression not stated
+human,asr_mixed_qwen3asr,gained,day2_consultation05,14,Blood tests for diabetes were normal when checked a few years ago,past_history,True,missing,present,,previous blood tests for ... diabetes ... reported as normal
+human,asr_mixed_qwen3asr,gained,day2_consultation05,15,Cholesterol was normal when checked a few years ago,past_history,True,missing,present,,previous blood tests for cholesterol ... normal
+human,asr_mixed_qwen3asr,lost,day2_consultation05,16,Past medical history otherwise nothing of note,past_history,True,present,missing,No significant past medical history,
+human,asr_mixed_qwen3asr,lost,day2_consultation09,9,No symptoms in left leg,negative_finding,True,present,missing,no other neurological symptoms in the left leg,
+human,asr_mixed_qwen3asr,lost,day3_consultation02,15,No cold (coryzal) symptoms,negative_finding,True,present,contradicted,no cold symptoms,The patient reports feeling cold
+human,asr_mixed_qwen3asr,lost,day3_consultation02,18,Generalised muscle aches,history,False,present,missing,some general aching muscles,
+human,asr_mixed_qwen3asr,gained,day3_consultation02,24,"Further assessment to rule out malaria, dengue and meningitis",plan,False,missing,present,Further assessment mentioned but not specifically to rule out malaria and dengue,further assessment is required
+human,asr_mixed_qwen3asr,gained,day3_consultation03,1,Lack of energy for the past 3 months,history,False,missing,present,Lack of energy is described as 'long-standing'; the 3-month duration is not stated,"low energy... for several months (duration vague, not specified as 3 months)"
+human,asr_mixed_qwen3asr,lost,day3_consultation03,10,Nausea most of the time,history,False,present,contradicted,nausea at work,experiencing nausea occasionally
+human,asr_mixed_qwen3asr,gained,day3_consultation03,11,No vomiting,negative_finding,True,missing,present,,no vomiting
+human,asr_mixed_qwen3asr,lost,day3_consultation03,15,Not taking thyroxine for a while since changing GP practice,medication,False,present,contradicted,has not been taking thyroxine for some time,not been taking thyroxine since changing law firms (reference: changing GP practice)
+human,asr_mixed_qwen3asr,lost,day3_consultation03,16,Does not remember when last blood tests were done,history,False,present,missing,has not had a recent blood test,
+human,asr_mixed_qwen3asr,lost,day3_consultation03,23,Book a follow-up appointment after receiving a text message from Babylon,plan,False,present,missing,book an appointment once the results are available,
+human,asr_mixed_qwen3asr,gained,day3_consultation04,2,Currently using blue (reliever) inhaler twice a day,history,False,missing,present,Says blue inhaler is used 'as and when symptoms occur'; twice a day is not stated,including in the morning and evening for prevention
+human,asr_mixed_qwen3asr,lost,day3_consultation04,3,Normally uses blue inhaler only as needed,history,False,present,missing,using the blue inhaler as and when symptoms occur,
+human,asr_mixed_qwen3asr,lost,day3_consultation04,10,Last asthma attack was 3 years ago,past_history,False,present,contradicted,has not had an asthma attack in three to four years,Last asthma attack about three to four years ago
+human,asr_mixed_qwen3asr,lost,day3_consultation04,16,Uses Cetraben for eczema,medication,False,present,contradicted,Cetraben ... for eczema,cetirizine stated instead of Cetraben
+human,asr_mixed_qwen3asr,gained,day3_consultation05,16,Prescribe Stemetil (prochlorperazine) for symptom relief,plan,False,missing,present,prescribed medication to help with the symptoms - drug not named,Prescribe Semital (transcription of Stemetil)
+human,asr_mixed_qwen3asr,gained,day3_consultation08,3,No sputum,negative_finding,True,missing,present,The note says the cough is dry but never says there is no sputum,No phlegm
+human,asr_mixed_qwen3asr,gained,day3_consultation10,2,Abdominal pain associated with the diarrhoea,history,False,missing,present,,some abdominal pain
+human,asr_mixed_qwen3asr,gained,day3_consultation10,9,No fever,negative_finding,True,contradicted,present,He mentions a slight fever,no significant fever
+human,asr_mixed_qwen3asr,gained,day3_consultation10,13,No signs of dehydration on examination,negative_finding,True,missing,present,,no dehydration
+human,asr_mixed_qwen3asr,lost,day3_consultation10,23,Advised that yoghurts can be used as probiotics to help gut recovery,plan,False,present,contradicted,Recommend probiotics such as yoghurt,"Recommend avoiding dairy, which conflicts with the yoghurt/probiotic advice"
+human,asr_mixed_qwen3asr,gained,day3_consultation10,24,Stool sample needed if diarrhoea continues for more than a week,plan,False,missing,present,"says to seek medical attention if symptoms persist beyond a week, but does not mention a stool sample",symptoms persist beyond one week ... consider providing a stool sample
+human,asr_mixed_qwen3asr,gained,day3_consultation10,25,Stool sample needed if blood appears in the stool,plan,False,missing,present,"says to seek attention if there is blood in the stool, but does not mention a stool sample",if there is blood in the stool ... stool sample
+human,asr_mixed_qwen3asr,lost,day4_consultation01,5,Chest pain has lasted 1-2 hours,history,False,present,contradicted,ongoing chest discomfort for a couple of hours,ongoing chest discomfort for a few hours
+human,asr_mixed_qwen3asr,gained,day4_consultation01,13,Previously short of breath walking up hills/stairs,history,False,missing,present,,difficulty with activities such as climbing stairs and walking uphill
+human,asr_mixed_qwen3asr,gained,day4_consultation01,17,Allergic to aspirin,allergy,False,contradicted,present,No known allergies,Allergic to Aspirin
+human,asr_mixed_qwen3asr,lost,day4_consultation01,19,Was able to walk up stairs until recently,social,False,present,missing,has noticed difficulty with... climbing stairs,
+human,asr_mixed_qwen3asr,gained,day4_consultation02,17,Unintentional weight loss of 5 lbs,history,False,missing,present,,"weight loss of five pounds, which is unintentional"
+human,asr_mixed_qwen3asr,lost,day4_consultation02,22,Palpitations with mild shortness of breath on exertion,history,False,present,missing,"occasional shortness of breath, and palpitations",
+human,asr_mixed_qwen3asr,gained,day4_consultation02,25,Symptoms sometimes occur together and sometimes on their own,history,False,missing,present,,not consistently present at the same time
+human,asr_mixed_qwen3asr,gained,day4_consultation02,26,Past medical history of hypothyroidism,past_history,False,contradicted,present,Past medical history: Hyperthyroidism.,Past medical history: Hypothyroidism
+human,asr_mixed_qwen3asr,lost,day4_consultation02,28,Takes thyroxine,medication,False,present,contradicted,takes thyroxine,takes paroxetine for his hypothyroidism
+human,asr_mixed_qwen3asr,gained,day4_consultation02,29,"Works as a lawyer, a stressful job",social,False,missing,present,,lawyer; increased work-related stress
+human,asr_mixed_qwen3asr,gained,day4_consultation02,30,Differential diagnosis: query hypothyroid (uncertain),impression,False,missing,present,,"Given his history of hypothyroidism, further evaluation is warranted; blood tests for thyroxin levels"
+human,asr_mixed_qwen3asr,gained,day4_consultation06,6,New headache (first onset),history,False,missing,present,,No history of similar headaches
+human,asr_mixed_qwen3asr,lost,day4_consultation06,13,Moving makes symptoms worse,history,False,present,missing,feels worse when moving,
+human,asr_mixed_qwen3asr,gained,day4_consultation06,23,Family history: mother has migraines,history,False,missing,present,,Family history of migraines (relative not specified)
+human,asr_mixed_qwen3asr,gained,day4_consultation06,24,Family history: mother has hypothyroidism,history,False,missing,present,,Family history of ... hypothyroidism
+human,asr_mixed_qwen3asr,lost,day4_consultation06,31,Plan: anti-sickness medication until appointment,plan,False,present,missing,with an anti-sickness medication,
+human,asr_mixed_qwen3asr,gained,day4_consultation07,2,Feeling unwell for 8 days,history,False,missing,present,"Candidate says 'about a week', not 8 days",sore throat for about a week (approximates 8 days)
+human,asr_mixed_qwen3asr,gained,day4_consultation07,24,No asbestos exposure,social,True,missing,present,,No known asbestos exposure
+human,asr_mixed_qwen3asr,lost,day4_consultation08,2,Symptoms present for 8 weeks,history,False,present,contradicted,ongoing for approximately two months,over the past few months (reference: 8 weeks)
+human,asr_mixed_qwen3asr,gained,day4_consultation08,7,"Distracted, with difficulty focusing",history,False,missing,present,,difficulty focusing
+human,asr_mixed_qwen3asr,lost,day4_consultation08,11,Started a new job 2 months ago,social,False,present,missing,may have coincided with starting a new job,
+human,asr_mixed_qwen3asr,lost,day4_consultation08,14,Past medical history of hypothyroidism,past_history,False,present,contradicted,history of hypothyroidism,history of hyperthyroidism
+human,asr_mixed_qwen3asr,gained,day4_consultation08,18,Family history: mother is well,other,False,missing,present,,his mother is well
+human,asr_mixed_qwen3asr,gained,day4_consultation08,19,Has no brothers or sisters,other,False,missing,present,,He is an only child
+human,asr_mixed_qwen3asr,gained,day4_consultation10,9,Polyuria (passing a lot of urine),history,False,missing,present,,increased frequency of urination
+human,asr_mixed_qwen3asr,lost,day4_consultation10,13,Sexually active,social,False,present,missing,Sexually active,
+human,asr_mixed_qwen3asr,lost,day4_consultation10,15,Vaginal spotting,history,False,present,missing,some pinkish discharge... she thinks may be related to her period,
+human,asr_mixed_qwen3asr,lost,day4_consultation10,22,Impression (differential): simple constipation,impression,False,present,missing,Possible causes include constipation,
+human,asr_mixed_qwen3asr,lost,day4_consultation10,25,Impression (differential): urinary tract infection (UTI),impression,False,present,missing,urinary tract infection,
+human,asr_mixed_qwen3asr,lost,day5_consultation01,6,No altered sense of taste,negative_finding,True,present,missing,no recent changes in vision or taste,
+human,asr_mixed_qwen3asr,lost,day5_consultation01,8,No prodromal illness,negative_finding,True,present,missing,no recent illness,
+human,asr_mixed_qwen3asr,gained,day5_consultation01,11,No coryzal symptoms,negative_finding,True,missing,present,,no cold symptoms
+human,asr_mixed_qwen3asr,lost,day5_consultation01,29,Family history: mother has hypertension,other,False,present,missing,family history of hypertension,
+human,asr_mixed_qwen3asr,lost,day5_consultation01,30,Family history: mother has migraines,other,False,present,missing,family history of ... migraines,
+human,asr_mixed_qwen3asr,lost,day5_consultation01,36,"Impression: no features of meningitic illness, although headache is worse with light",impression,False,present,missing,No immediate red flags for serious pathology,only generic 'no red flags'
+human,asr_mixed_qwen3asr,gained,day5_consultation03,3,Anxiety seems to have started when patient started a new job,history,False,missing,present,,related to starting a new job
+human,asr_mixed_qwen3asr,gained,day5_consultation03,12,Eating pattern normal,history,False,missing,present,,no significant changes in eating habits
+human,asr_mixed_qwen3asr,gained,day5_consultation03,13,Eating more chocolate,history,False,missing,present,,increased chocolate consumption
+human,asr_mixed_qwen3asr,lost,day5_consultation03,22,Has not missed work,negative_finding,True,present,missing,has not missed work,
+human,asr_mixed_qwen3asr,lost,day5_consultation03,26,No past psychiatric history or significant anxiety,past_history,True,present,missing,has not previously had similar episodes of anxiety,
+human,asr_mixed_qwen3asr,gained,day5_consultation03,34,Impression: insomnia,impression,False,missing,present,,possible contribution from sleep disturbance
+human,asr_mixed_qwen3asr,lost,day5_consultation03,35,Advised to self-refer to NHS Talking Therapies,plan,False,present,contradicted,self-refer for talking therapy via the NHS,Refer the patient to NHS talking therapy (reference: self-referral)
+human,asr_mixed_qwen3asr,lost,day5_consultation03,39,Patient advised to book the blood test through the support team,plan,False,present,missing,contact the support line to arrange blood tests,
+human,asr_mixed_qwen3asr,gained,day5_consultation04,10,Bowels open daily with normal stool,history,False,missing,present,,currently has normal bowel movements
+human,asr_mixed_qwen3asr,gained,day5_consultation04,21,No vomiting,negative_finding,True,missing,present,,without vomiting
+human,asr_mixed_qwen3asr,gained,day5_consultation04,34,"Impression: abdominal pain, cause uncertain",impression,False,missing,present,,Lower abdominal pain ... requiring further assessment
+human,asr_mixed_qwen3asr,gained,day5_consultation04,36,Patient to contact the practice immediately if pregnancy test is positive,plan,False,missing,present,,return immediately if the result is positive
+human,asr_mixed_qwen3asr,gained,day5_consultation04,37,Urgent examination booked with doctor,plan,False,contradicted,present,to be referred ... and to contact the support line to arrange an appointment (not booked urgently with doctor),Arrange a face-to-face examination at a clinic
+human,asr_mixed_qwen3asr,lost,day5_consultation05,5,Self-checked temperature was 37°C,history,False,present,missing,"temperature, which was around 37°C",has not measured a raised temperature; the value of 37°C is not given
+human,asr_mixed_qwen3asr,lost,day5_consultation05,8,More thirsty than normal,history,False,present,missing,more thirsty than usual,Mentions increased fluid intake but not thirst
+human,asr_mixed_qwen3asr,gained,day5_consultation05,9,Drinking well,history,False,missing,present,,increased fluid intake
+human,asr_mixed_qwen3asr,lost,day5_consultation05,18,No dyspepsia,negative_finding,True,present,missing,no history of acid reflux or pain higher up in the stomach,
+human,asr_mixed_qwen3asr,lost,day5_consultation05,22,"Family history: mother had breast cancer, now in remission",other,False,present,missing,"breast cancer in the mother, which was cured",
+human,asr_mixed_qwen3asr,lost,day5_consultation06,4,Urgency to open bowels,history,False,present,missing,urgent need to use the toilet,
+human,asr_mixed_qwen3asr,lost,day5_consultation06,7,Cramps worse when needing to open bowels,history,False,present,missing,often accompanied by an urgent need to use the toilet,
+human,asr_mixed_qwen3asr,gained,day5_consultation06,9,"Vomiting, last vomited 1 hour ago",history,False,contradicted,present,last episode of vomiting occurring about two hours ago,has been vomiting (timing of last vomit not stated)
+human,asr_mixed_qwen3asr,lost,day5_consultation06,11,"Still passing urine OK, last passed urine 1 hour ago",history,False,present,missing,"passing urine normally, with the last episode about an hour ago",
+human,asr_mixed_qwen3asr,lost,day5_consultation06,25,Non-smoker,social,True,present,missing,does not smoke,
+human,asr_mixed_qwen3asr,lost,day5_consultation08,1,Presenting complaint: wheeze,history,False,present,missing,presents with recent onset of wheezing,"Presenting complaint given as shortness of breath, not wheeze"
+human,asr_mixed_qwen3asr,lost,day5_consultation08,2,"Wheeze for 2-3 (time unit not stated in note, probably days)",history,False,present,missing,lasting two to three days,"Gives 2-3 days, but for shortness of breath rather than wheeze"
+human,asr_mixed_qwen3asr,gained,day5_consultation08,16,Has missed a few days of work,history,False,missing,present,,taking sick leave
+human,asr_mixed_qwen3asr,lost,day5_consultation08,19,No intensive care (ITU) admissions,past_history,True,present,missing,no history of intensive care,
+asr_mixed,asr_mixed_qwen3asr,lost,day1_consultation13,12,Feels nauseous,history,False,present,missing,feeling sick,
+asr_mixed,asr_mixed_qwen3asr,lost,day1_consultation13,15,No speech disturbances,negative_finding,True,present,missing,no speech difficulties,
+asr_mixed,asr_mixed_qwen3asr,lost,day1_consultation13,16,No arm or leg weakness,negative_finding,True,present,missing,no motor difficulties,
+asr_mixed,asr_mixed_qwen3asr,lost,day1_consultation13,34,Regular paracetamol/NSAIDs,plan,False,present,contradicted,naproxen or combination with paracetamol,"Prescribe stronger analgesia (e.g., naproxen or codeine) if needed, not regular paracetamol/NSAIDs"
+asr_mixed,asr_mixed_qwen3asr,gained,day1_consultation15,2,Skin changes affect mainly the palms,history,False,missing,present,,cracked skin on her palms
+asr_mixed,asr_mixed_qwen3asr,gained,day1_consultation15,4,Hands bleed when scratched,history,False,missing,present,,occasional bleeding from scratching
+asr_mixed,asr_mixed_qwen3asr,lost,day2_consultation02,9,No significant past medical history,past_history,True,present,contradicted,No other significant medical history,"Past medical history: Osteoarthritis, confirmed by a GP"
+asr_mixed,asr_mixed_qwen3asr,lost,day2_consultation02,23,Patient to contact the practice in the meantime if symptoms get worse or he has concerns,plan,False,present,missing,seek urgent care ... if symptoms worsen,
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation04,14,Has a cat,social,False,contradicted,present,no pets,has a cat
+asr_mixed,asr_mixed_qwen3asr,lost,day2_consultation05,3,Right leg weakness during episodes,history,False,present,missing,weakness in the right arm and leg,Only non-specific 'weakness' is mentioned; right leg is not specified
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation05,4,Noticeable gait disturbance during episodes,history,False,missing,present,,temporary change in gait
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation05,5,Episodes ongoing for 1.5 months,history,False,contradicted,present,over the past two months,over the past one and a half to two months
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation05,10,No past medical history of stroke (CVA) or TIA,past_history,True,missing,present,,No history of stroke or mini strokes
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation05,12,Father appears to have had a carotid endarterectomy,past_history,False,missing,present,,father having undergone an operation to reduce the risk of stroke
+asr_mixed,asr_mixed_qwen3asr,lost,day2_consultation05,16,Past medical history otherwise nothing of note,past_history,True,present,missing,No significant past medical history,
+asr_mixed,asr_mixed_qwen3asr,lost,day2_consultation09,2,No pain in left arm,negative_finding,True,present,missing,He reports no pain,
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation09,11,Patient has not noticed any facial asymmetry,negative_finding,True,missing,present,,No facial asymmetry reported
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation09,18,Takes losartan,medication,False,contradicted,present,low-dose ramipril instead of losartan,losartan
+asr_mixed,asr_mixed_qwen3asr,gained,day2_consultation09,19,Takes amlodipine,medication,False,missing,present,,amlodipine
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation02,5,A friend (contact) is also unwell,history,False,missing,present,,A friend has also been unwell
+asr_mixed,asr_mixed_qwen3asr,lost,day3_consultation02,15,No cold (coryzal) symptoms,negative_finding,True,present,contradicted,no cold symptoms,The patient reports feeling cold
+asr_mixed,asr_mixed_qwen3asr,lost,day3_consultation02,18,Generalised muscle aches,history,False,present,missing,general aching sensation throughout his body,
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation02,23,"If an urgent appointment is not possible, attend A&E (Accident and Emergency)",plan,False,missing,present,"Says 'seek medical attention promptly' if unavailable, but does not mention A&E","If this is not possible, the patient should attend A&E"
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation02,24,"Further assessment to rule out malaria, dengue and meningitis",plan,False,missing,present,"Further examination and blood tests mentioned, but not to rule out malaria or dengue",further assessment is required
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation03,1,Lack of energy for the past 3 months,history,False,contradicted,present,approximately three and a half months,"low energy... for several months (duration vague, not specified as 3 months)"
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation03,4,Breathlessness,history,False,missing,present,,feeling short of breath
+asr_mixed,asr_mixed_qwen3asr,lost,day3_consultation03,8,Not stressed,negative_finding,True,present,contradicted,No specific stressors at home,he notes some stress related to work
+asr_mixed,asr_mixed_qwen3asr,lost,day3_consultation03,23,Book a follow-up appointment after receiving a text message from Babylon,plan,False,present,missing,follow up on the blood test results and book an appointment if needed,
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation04,2,Currently using blue (reliever) inhaler twice a day,history,False,contradicted,present,currently using the blue inhaler as needed,including in the morning and evening for prevention
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation04,11,Never needed antibiotics or steroids for asthma,past_history,True,missing,present,Only 'No recent use of oral steroids',No history of oral steroids (antibiotics not mentioned)
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation04,12,Never hospitalised because of asthma,past_history,True,missing,present,Only 'No recent hospital admissions for asthma',No history of hospital admission for asthma
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation04,15,Uses hydrocortisone for eczema,medication,False,contradicted,present,hydrocortisone listed as part of brown inhaler,hydrocortisone
+asr_mixed,asr_mixed_qwen3asr,lost,day3_consultation05,11,No weakness of the arms or legs,negative_finding,True,present,missing,no weakness in the arms or legs,"Limb weakness only mentioned in safety-netting, not as a current negative"
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation05,16,Prescribe Stemetil (prochlorperazine) for symptom relief,plan,False,missing,present,Only 'medication (chemical)' is mentioned; Stemetil/prochlorperazine is not named,Prescribe Semital (transcription of Stemetil)
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation08,9,Past medical history of high blood pressure (hypertension) for 5-6 years,past_history,False,missing,present,Hypertension mentioned but no duration given,He also has hypertension managed with lisinopril (5-6 year duration not stated for hypertension)
+asr_mixed,asr_mixed_qwen3asr,lost,day3_consultation08,13,Blood pressure normal today,other,False,present,missing,blood pressure was within the normal range this morning,
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation10,6,Still eating and drinking,history,False,missing,present,Only drinking is mentioned ('still able to drink plenty of fluids'); still eating is not stated,still able to drink plenty of fluids (eating is not explicitly stated)
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation10,7,Diarrhoea is watery,history,False,missing,present,"Stools described as 'loose', not watery",stools are described as loose
+asr_mixed,asr_mixed_qwen3asr,gained,day3_consultation10,13,No signs of dehydration on examination,negative_finding,True,missing,present,No examination findings recorded,no dehydration
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation01,1,Sudden-onset left-sided chest discomfort/pressure,history,False,missing,present,The note mentions chest discomfort as a pressure sensation but does not say it started suddenly or was left-sided.,discomfort began suddenly... pressure sensation (left side not stated)
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation01,4,Chest pain spreads to the left shoulder and left arm,history,False,contradicted,present,associated left shoulder pain; no pain radiating to the right or left arm beyond the left shoulder,associated pain in the left shoulder (left arm not mentioned)
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation01,5,Chest pain has lasted 1-2 hours,history,False,present,contradicted,present for a couple of hours,ongoing chest discomfort for a few hours
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation01,7,Chest pain started while gardening,history,False,missing,present,"The note only says he gardens every other week, not that the pain began while gardening.",began suddenly while gardening
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation01,10,No vomiting since the pain started,negative_finding,True,present,missing,without vomiting,
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation01,17,Allergic to aspirin,allergy,False,contradicted,present,No known allergies.,Allergic to Aspirin
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation02,8,Symptoms started when patient started a new job,history,False,missing,present,,occurring in the context of... a recent job change
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation02,15,No past medical history of headaches,negative_finding,True,missing,present,"Only 'no previous neurological symptoms', which does not specifically mention headaches",denies experiencing headaches prior to the current situation
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation02,23,Palpitations with shortness of breath at rest,history,False,present,missing,episodes of feeling short of breath while sitting at his desk,
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation02,25,Symptoms sometimes occur together and sometimes on their own,history,False,missing,present,,not consistently present at the same time
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation02,28,Takes thyroxine,medication,False,present,contradicted,Takes thyroxine,takes paroxetine for his hypothyroidism
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation02,30,Differential diagnosis: query hypothyroid (uncertain),impression,False,missing,present,"The impression suggests stress; thyroid levels are checked, but hypothyroidism is not given as a differential","Given his history of hypothyroidism, further evaluation is warranted; blood tests for thyroxin levels"
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation06,5,Headache severity 6/10,history,False,present,contradicted,around a 6 on a scale of 1 to 10,described as very severe
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation06,8,Associated dizziness,history,False,present,missing,reports feeling dizzy,
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation06,10,Took paracetamol 3 hours ago with no improvement,medication,False,missing,present,,has not improved with paracetamol (timing of 3 hours not stated)
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation06,13,Moving makes symptoms worse,history,False,present,missing,movement exacerbates the headache,
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation06,17,Unlikely to be pregnant,negative_finding,True,present,missing,the patient is not pregnant,
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation06,18,Patient worried about brain cancer or stroke,history,False,missing,present,,concerned about the possibility of a brain tumour or stroke
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation06,31,Plan: anti-sickness medication until appointment,plan,False,present,missing,an anti-sickness medication,
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation06,33,Plan: neurological assessment at face-to-face review,plan,False,missing,present,,attend for a full neurological assessment
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation07,20,Family history: mother had lung cancer,other,False,missing,present,,lung cancer in the mother
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation07,23,Non-smoker,social,True,present,contradicted,no history of smoking,has smoked occasionally in the past
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation07,30,"If no better in 5 days, return for further medical review",plan,False,present,missing,or if there is no improvement within four to five days,
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation08,2,Symptoms present for 8 weeks,history,False,present,contradicted,present for approximately two months,over the past few months (reference: 8 weeks)
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation08,6,Difficulty sleeping for 8 weeks,history,False,missing,present,,difficulty sleeping
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation08,11,Started a new job 2 months ago,social,False,present,missing,coincided with the start of a new job,
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation08,18,Family history: mother is well,other,False,missing,present,,his mother is well
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation08,19,Has no brothers or sisters,other,False,missing,present,,He is an only child
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation10,6,Lower abdominal pain is constant,history,False,missing,present,,abdominal pain is constant
+asr_mixed,asr_mixed_qwen3asr,gained,day4_consultation10,9,Polyuria (passing a lot of urine),history,False,missing,present,"'going to the toilet more frequently' is tied to bowel motions, not urine",increased frequency of urination
+asr_mixed,asr_mixed_qwen3asr,lost,day4_consultation10,22,Impression (differential): simple constipation,impression,False,present,missing,Possible causes include constipation,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation01,2,Headache is intermittent,history,False,contradicted,present,"comes and goes in intensity, but does not completely go away",comes and goes
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,5,No altered sense of smell,negative_finding,True,present,missing,abnormal smells,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,6,No altered sense of taste,negative_finding,True,present,missing,abnormal... tastes,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,8,No prodromal illness,negative_finding,True,present,missing,no recent illness; feeling well the day before,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,9,No viral symptoms,negative_finding,True,present,missing,"no cold symptoms, no recent illness",
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,22,Has taken paracetamol only for the headache,medication,False,present,missing,"She has taken paracetamol... NSAIDs in the past, but not recently",only 'painkillers' stated
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,29,Family history: mother has hypertension,other,False,present,missing,maternal high blood pressure,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation01,30,Family history: mother has migraines,other,False,present,missing,history of migraines,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation03,5,Pressures from boss at work,history,False,present,missing,difficult relationship with her boss,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation03,6,Dreads work every morning,history,False,missing,present,only difficulty leaving the house in the mornings,"morning anxiety, dread of going to work"
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation03,10,Tired during the day,history,False,present,missing,low energy during the day,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation03,17,"Associated palpitations, which started only with the anxiety symptoms",history,False,missing,present,"palpitations mentioned, but not that they started with the anxiety",reports palpitations... likely related to anxiety
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation03,18,Palpitations can feel irregular,history,False,missing,present,,feel irregular
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation03,20,Palpitations are a rapid heartbeat lasting about 2-10 minutes,history,False,missing,present,,last from a few minutes to ten minutes
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation03,22,Has not missed work,negative_finding,True,present,missing,or missed work,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation03,26,No past psychiatric history or significant anxiety,past_history,True,present,missing,No history of similar anxiety in the past,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation03,30,Drinks alcohol on Fridays and Saturdays; unsure of amount but sometimes drinks too much,social,False,contradicted,present,No significant alcohol use beyond occasional weekend drinking (reference: sometimes drinks too much),"alcohol, particularly on Fridays and Saturdays"
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation03,35,Advised to self-refer to NHS Talking Therapies,plan,False,present,contradicted,self-refer for talking therapy via the NHS,Refer the patient to NHS talking therapy (reference: self-referral)
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation04,3,Pain is constant,history,False,missing,present,,persistent
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation04,10,Bowels open daily with normal stool,history,False,missing,present,,currently has normal bowel movements
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation04,11,"Constipation lasting one week, last week",history,False,missing,present,"only 'intermittent constipation', no duration/timing",history of constipation in the past week
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation04,14,Eating and drinking ok,history,False,present,missing,eating and drinking regularly,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation04,29,Has been able to work as usual,social,False,present,missing,able to carry out her usual activities,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation04,33,Does not use recreational drugs,social,True,present,missing,or take other drugs,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation04,36,Patient to contact the practice immediately if pregnancy test is positive,plan,False,missing,present,no instruction to contact if test positive,return immediately if the result is positive
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation05,8,More thirsty than normal,history,False,present,missing,drinking more than usual,Mentions increased fluid intake but not thirst
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation05,14,No blood in stool,negative_finding,True,missing,present,,no blood in the stool
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation05,18,No dyspepsia,negative_finding,True,present,missing,no acid reflux,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation05,22,"Family history: mother had breast cancer, now in remission",other,False,present,missing,mother having had breast cancer which was cured,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,4,Urgency to open bowels,history,False,present,missing,urgent need to defecate,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,7,Cramps worse when needing to open bowels,history,False,present,missing,often accompanied by an urgent need to defecate,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation06,9,"Vomiting, last vomited 1 hour ago",history,False,contradicted,present,last episode occurring approximately two hours ago,has been vomiting (timing of last vomit not stated)
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation06,10,Does not feel she is holding down fluids,history,False,missing,present,,unable to keep down even liquids
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,11,"Still passing urine OK, last passed urine 1 hour ago",history,False,present,missing,She has been passing urine (time of last void not stated),
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,12,Unsure of urine colour,history,False,present,missing,unsure of the color,
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation06,14,No foreign travel,negative_finding,True,missing,present,,No recent travel
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation06,15,Has been taking oral rehydration therapy regularly but has difficulty keeping it down,history,False,missing,present,Only advised to continue ORS; prior use and difficulty keeping it down not stated,taking oral rehydration salts three times a day... unable to keep down even liquids
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,17,Feels hot but has not checked temperature,history,False,present,contradicted,"reports a high fever, though she has not measured it","She has a high fever (reference: feels hot, temperature not checked)"
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,25,Non-smoker,social,True,present,missing,Does not smoke,
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation06,26,Drinks 1 pint of alcohol a week,social,False,present,contradicted,no regular alcohol consumption beyond occasional pints,"No regular alcohol consumption, though she has a pint occasionally"
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation08,9,No night-time waking,negative_finding,True,missing,present,,no night-time waking due to breathlessness
+asr_mixed,asr_mixed_qwen3asr,lost,day5_consultation08,19,No intensive care (ITU) admissions,past_history,True,present,missing,'did not require intensive care',
+asr_mixed,asr_mixed_qwen3asr,gained,day5_consultation08,32,Continue to monitor temperature; contact the practice if temperature spikes,plan,False,missing,present,,seek immediate medical attention if she develops a high temperature
