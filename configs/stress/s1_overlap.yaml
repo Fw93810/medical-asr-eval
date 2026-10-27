@@ -1,0 +1,12 @@
+# Stress test S1: more doctor-patient overlap (scripts/stress_overlap.py).
+seed: 0            # random draws per consultation: random.Random("<seed>:<consultation id>")
+p: 1.0             # share of turn changes where the next speaker starts early. With p = 0.6 the 3x
+                   # level needed d = 2.75 s, far longer than real barge-ins (about 0.5-1.5 s); with
+                   # p = 1.0 the same ratios need d = 0.86 / 1.65 s (dev-set calibration, 2026-10-27)
+min_lead_s: 0.4    # the next speaker never starts before the previous utterance has run this long
+gap_s: 0.05        # minimum gap between two utterances of the same speaker
+pad_s: 0.15        # audio kept before/after each utterance (never into the same speaker's neighbour)
+levels:            # d = seconds the next speaker starts early; calibrated on the dev set
+  s1_1x: 0.0
+  s1_2x: 0.86      # dev set: 2.0x the baseline overlap ratio
+  s1_3x: 1.65      # dev set: 3.0x

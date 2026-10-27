@@ -16,3 +16,5 @@ __pycache__/
 !results/notes/grid/
 results/notes/grid/*/facts/
 results/notes/grid/*/judged/
+!results/stress/
+results/stress/listen/
