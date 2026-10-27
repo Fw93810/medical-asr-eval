@@ -203,6 +203,9 @@ Whisper 的英文规范化器有几处不统一的写法，会被算成错误。
 - **`generate_notes.py`、`judge_notes.py`、`compare_notes.py`**：病历层面评测（见上）。
 - **对照页面**：支持 `#id=…&cond=…&t=…` 深链接，`make_viewer.py` 加了 `--methods`。
 - **`evaluate.py`**：`insertions.csv` 新增按词估计的时间 `t_approx_s`。
+- **`bootstrap_asr.py`**：模型两两配对 bootstrap，以问诊为单位重采样，比较修正 WER、医学术语错误率和临床否定词丢失率。
+- **`count_repeats.py`**：统计长重复，包括同一个词连续 ≥ 10 次，以及 2–4 词的短语连续 ≥ 5 次。
+- 选定 Qwen3-ASR 的理由见 `results/test47/asr_selection.md`；第三阶段的 LLM 候选和费用估算见 `docs/stage3-llm-plan.md`。
 
 `.claude/` 只在本机使用，不提交。
 

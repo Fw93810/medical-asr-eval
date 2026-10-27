@@ -1,0 +1,13 @@
+run,id,condition,kind,unit,repeats,words,t_start,t_end,segments,text
+test47-canary-qwen-2.5b,day4_consultation05,patient,same_word,m,23,23,461.972,491.564,1,a little bit 0 okay [m m m ...]
+test47-vad-nocond,day4_consultation08,mixed,phrase,thank you,5,10,29.42,34.42,5,8th of august 1982 okay [thank you thank you thank you ...]
+test47-parakeet-local,day2_consultation04,patient,same_word,no,138,138,443.04,502.88,1,not that i know of [no no no ...]
+test47-cohere-transcribe,day2_consultation08,mixed,same_word,next,185,185,168.32,198.38,1,stiffness at all no okay [next next next ...]
+test47-granite-4.1-2b,day1_consultation11,patient,same_word,and,169,169,193.172,221.26,1,i can still sit down [and and and ...]
+test47-granite-4.1-2b,day1_consultation12,patient,phrase,now that i know,91,367,203.936,230.828,1,am not that i remember [now that i know now that i know now that i know ...]
+test47-granite-4.1-2b,day1_consultation14,patient,same_word,no,326,326,153.428,183.344,1,and i was still cold [no no no ...]
+test47-granite-4.1-2b,day2_consultation07,patient,same_word,yeah,201,201,29.14,79.168,2,on the 8th of august [yeah yeah yeah ...]
+test47-granite-4.1-2b,day2_consultation07,patient,same_word,okay,201,201,392.596,457.324,2,a mild reaction to it [okay okay okay ...]
+test47-granite-4.1-2b,day3_consultation05,patient,same_word,yeah,200,200,120.372,147.82,1,dizzy and a bit shaky [yeah yeah yeah ...]
+test47-granite-4.1-2b,day4_consultation06,patient,same_word,okay,203,203,538.068,605.132,3,that does not sound good [okay okay okay ...]
+test47-granite-4.1-2b,day5_consultation08,patient,same_word,okay,200,200,479.348,506.508,1,do it or somehow no [okay okay okay ...]
