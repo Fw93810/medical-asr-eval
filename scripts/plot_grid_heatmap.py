@@ -2,9 +2,11 @@
 human transcript, per generation model (rows) and transcript source (columns),
 with the paired-bootstrap 95% interval in each cell and the noise floor next to it.
 
-Reads <grid>/all/paired_summary.csv (compare_notes.py on combine_grid.py output) and
-writes <grid>/heatmap.svg (plain SVG, no plotting library) and heatmap.csv (the
-same numbers as a table).
+Recall on stated facts is the default (reads <grid>/all/paired_summary_stated.csv,
+writes heatmap_stated.svg / .csv); --all-facts uses recall on all facts
+(paired_summary.csv -> heatmap.svg / .csv). The regeneration noise in the footnote
+comes from <grid>/regeneration_noise.csv (recall_definitions.py --regen).
+Plain SVG, no plotting library.
 
 Usage:
   python -I scripts/plot_grid_heatmap.py --grid results/notes/grid
@@ -24,6 +26,11 @@ RED, NEUTRAL, BLUE = (0xE3, 0x49, 0x48), (0xF0, 0xEF, 0xEC), (0x2A, 0x78, 0xD6)
 SURFACE, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#d6d5d0"
 
 
+def num(v, places=1):
+    """Signed number with a true minus sign (a hyphen is hard to see at small sizes)."""
+    return f"{v:+.{places}f}".replace("-", "−")
+
+
 def fill(v):
     t = min(abs(v) / LIMIT, 1.0) * 0.7  # cap the strength so dark text stays readable
     pole = BLUE if v > 0 else RED
@@ -33,9 +40,14 @@ def fill(v):
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--grid", required=True)
+    ap.add_argument("--all-facts", action="store_true", help="recall on all facts instead of stated facts")
     args = ap.parse_args()
-    with open(os.path.join(args.grid, "all", "paired_summary.csv"), newline="", encoding="utf-8-sig") as f:
+    suffix = "" if args.all_facts else "_stated"
+    what = "all clinician facts" if args.all_facts else "facts said in the consultation"
+    with open(os.path.join(args.grid, "all", f"paired_summary{suffix}.csv"), newline="", encoding="utf-8-sig") as f:
         rows = {(r["vs"], r["source"]): r for r in csv.DictReader(f)}
+    with open(os.path.join(args.grid, "regeneration_noise.csv"), newline="", encoding="utf-8-sig") as f:
+        regen = {r["facts"]: r for r in csv.DictReader(f)}["all" if args.all_facts else "stated"]
 
     cells, table = {}, []
     for m, _ in MODELS:
@@ -49,16 +61,18 @@ def main():
             table.append({"model": m, "source": s, "recall_diff_points": round(v, 1),
                           "ci95_low": round(lo, 1), "ci95_high": round(hi, 1), "excludes_zero": lo > 0 or hi < 0})
 
-    cw, ch, left, top, gap = 150, 58, 170, 96, 2
+    cw, ch, left, top, gap = 150, 58, 170, 118, 2
     noise_x = left + len(SOURCES) * cw + 28
-    width, height = noise_x + cw + 24, top + len(MODELS) * ch + 112
+    width, height = noise_x + cw + 24, top + len(MODELS) * ch + 128
     out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 {width} {height}" width="{width}" height="{height}" '
            f'font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">',
            f'<rect width="{width}" height="{height}" fill="{SURFACE}"/>',
            f'<text x="16" y="28" font-size="15" font-weight="600" fill="{INK}">Change in fact recall vs the note written '
            f'from the human transcript</text>',
-           f'<text x="16" y="47" font-size="12" fill="{INK2}">Percentage points, 25 test consultations; '
-           f'paired bootstrap 95% interval; bold = interval excludes 0</text>']
+           f'<text x="16" y="47" font-size="12" fill="{INK2}">Recall on {what}; percentage points; '
+           f'25 test consultations</text>',
+           f'<text x="16" y="63" font-size="12" fill="{INK2}">Paired bootstrap 95% interval; '
+           f'bold = interval excludes 0</text>']
     for k, (s, l1, l2) in enumerate(SOURCES + [NOISE]):
         x = (left + k * cw if k < len(SOURCES) else noise_x) + cw / 2
         for j, t in enumerate((l1, l2)):
@@ -76,11 +90,11 @@ def main():
             x = left + k * cw if k < len(SOURCES) else noise_x
             sig = lo > 0 or hi < 0
             out.append(f'<rect x="{x + gap / 2}" y="{y + gap / 2}" width="{cw - gap}" height="{ch - gap}" rx="4" '
-                       f'fill="{fill(v)}"><title>{name} / {s}: {v:+.1f} [{lo:+.1f}, {hi:+.1f}]</title></rect>')
+                       f'fill="{fill(v)}"><title>{name} / {s}: {num(v)} [{num(lo)}, {num(hi)}]</title></rect>')
             out.append(f'<text x="{x + cw / 2}" y="{y + ch / 2 - 2}" font-size="15" text-anchor="middle" fill="{INK}" '
-                       f'font-weight="{700 if sig else 400}">{v:+.1f}</text>')
+                       f'font-weight="{700 if sig else 400}">{num(v)}</text>')
             out.append(f'<text x="{x + cw / 2}" y="{y + ch / 2 + 15}" font-size="11" text-anchor="middle" '
-                       f'fill="{INK2}">[{lo:+.1f}, {hi:+.1f}]</text>')
+                       f'fill="{INK2}">[{num(lo)}, {num(hi)}]</text>')
     # scale legend
     ly = top + len(MODELS) * ch + 34
     steps = 13
@@ -89,20 +103,25 @@ def main():
         out.append(f'<rect x="{left + j * 22}" y="{ly}" width="22" height="10" fill="{fill(v)}"/>')
     for v, anchor in ((-LIMIT, "start"), (0, "middle"), (LIMIT, "end")):
         x = left + (v + LIMIT) / (2 * LIMIT) * steps * 22
-        out.append(f'<text x="{x}" y="{ly + 25}" font-size="11" text-anchor="{anchor}" fill="{INK2}">{v:+.0f}</text>')
+        out.append(f'<text x="{x}" y="{ly + 25}" font-size="11" text-anchor="{anchor}" fill="{INK2}">'
+                   f'{num(v, 0) if v else "0"}</text>')
     out.append(f'<text x="{left - 12}" y="{ly + 9}" font-size="11" text-anchor="end" fill="{INK2}">fewer facts</text>')
     out.append(f'<text x="{left + steps * 22 + 10}" y="{ly + 9}" font-size="11" fill="{INK2}">more facts</text>')
-    out.append(f'<text x="16" y="{ly + 52}" font-size="11" fill="{INK2}">Regenerating the same Qwen3 14B notes on a '
-               f'different GPU: 0.0 [-1.9, +1.9] points, 7.2% of fact labels change. "Same note, judged again": '
+    lo, hi = (100 * float(x) for x in regen["recall_diff_ci95"].split(".."))
+    out.append(f'<text x="16" y="{ly + 52}" font-size="11" fill="{INK2}">Noise floor for every cell: regenerating the '
+               f'same Qwen3 14B notes on a different GPU gives {num(100 * float(regen["recall_diff"]))} '
+               f'[{num(lo)}, {num(hi)}] points, with {100 * float(regen["label_changed_rate"]):.1f}% of fact labels '
+               f'changed.</text>')
+    out.append(f'<text x="16" y="{ly + 68}" font-size="11" fill="{INK2}">"Same note, judged again": '
                f'10 consultations.</text>')
     out.append("</svg>")
-    with open(os.path.join(args.grid, "heatmap.svg"), "w", encoding="utf-8") as f:
+    with open(os.path.join(args.grid, f"heatmap{suffix}.svg"), "w", encoding="utf-8") as f:
         f.write("\n".join(out) + "\n")
-    with open(os.path.join(args.grid, "heatmap.csv"), "w", newline="", encoding="utf-8") as f:
+    with open(os.path.join(args.grid, f"heatmap{suffix}.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.DictWriter(f, fieldnames=list(table[0].keys()))
         w.writeheader()
         w.writerows(table)
-    print(f"wrote {args.grid}/heatmap.svg, {len(cells)} cells")
+    print(f"wrote {args.grid}/heatmap{suffix}.svg, {len(cells)} cells")
 
 
 if __name__ == "__main__":

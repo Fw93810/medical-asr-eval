@@ -37,10 +37,19 @@ def main():
                                                "against every other source)")
     ap.add_argument("--boot", type=int, default=10000)
     ap.add_argument("--seed", type=int, default=0)
+    ap.add_argument("--stated", help="facts_stated.csv: keep only facts said in the consultation (status "
+                                     "'stated'); outputs get a _stated suffix")
     args = ap.parse_args()
 
     with open(os.path.join(args.judged, "fact_labels.csv"), newline="", encoding="utf-8-sig") as f:
         rows = list(csv.DictReader(f))
+    suffix = ""
+    if args.stated:
+        with open(args.stated, newline="", encoding="utf-8-sig") as f:
+            said = {(r["id"], int(r["n"]) % 1000) for r in csv.DictReader(f) if r["status"] == "stated"}
+        # pooled rows (combine_grid.py) number each model's facts 1000 * k + n
+        rows = [r for r in rows if (r["id"], int(r["n"]) % 1000) in said]
+        suffix = "_stated"
     lab = {(r["id"], r["source"], int(r["n"])): r for r in rows}
     pairs = ([tuple(p.split(":")) for p in args.pairs] if args.pairs else
              [(args.baseline, s) for s in sorted({r["source"] for r in rows} - {args.baseline})])
@@ -93,7 +102,7 @@ def main():
             "negative_facts_lost": lost_neg, "negative_facts_gained": gained_neg,
         })
 
-    for name, data in (("paired_summary.csv", summary), ("discordant_facts.csv", discordant)):
+    for name, data in ((f"paired_summary{suffix}.csv", summary), (f"discordant_facts{suffix}.csv", discordant)):
         with open(os.path.join(args.judged, name), "w", newline="", encoding="utf-8-sig") as f:
             w = csv.DictWriter(f, fieldnames=list(data[0].keys()))
             w.writeheader()

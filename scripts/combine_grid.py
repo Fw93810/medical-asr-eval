@@ -7,10 +7,14 @@ compare_notes.py can compare across models (same consultation, same facts), and
 writes <out>/grid_summary.csv and <out>/grid.md: per cell, fact recall,
 contradicted facts, extra claims per note.
 
+Recall on stated facts (said in the consultation, facts_stated.csv) is the primary
+measure; recall on all facts is reported next to it.
+
 Usage:
-  python -I scripts/combine_grid.py --grid results/notes/grid --models qwen3-14b qwen3.8-27b gpt-oss-120b
-  python -I scripts/compare_notes.py --judged results/notes/grid/all --pairs \
-      qwen3-14b/human:qwen3.8-27b/human ...
+  python -I scripts/combine_grid.py --grid results/notes/grid --models qwen3-14b qwen3.8-27b gpt-oss-120b \
+      --stated results/notes/test47/facts_stated.csv
+  python -I scripts/compare_notes.py --judged results/notes/grid/all --stated results/notes/test47/facts_stated.csv \
+      --pairs qwen3-14b/human:qwen3.8-27b/human ...
 """
 import argparse
 import csv
@@ -38,11 +42,14 @@ def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--grid", required=True)
     ap.add_argument("--models", nargs="+", required=True)
+    ap.add_argument("--stated", required=True, help="facts_stated.csv (check_facts_stated.py)")
     args = ap.parse_args()
+    said = {(r["id"], int(r["n"])) for r in read_csv(args.stated) if r["status"] == "stated"}
 
     labels, cells = [], []
     for k, m in enumerate(args.models):
-        for r in read_csv(os.path.join(args.grid, m, "fact_labels.csv")):
+        own = read_csv(os.path.join(args.grid, m, "fact_labels.csv"))
+        for r in own:
             labels.append({**r, "source": f"{m}/{r['source']}"})
             # all models together: the same consultation keeps its id (so the bootstrap still
             # resamples consultations), each model's facts get their own numbers
@@ -51,7 +58,10 @@ def main():
         for row in ROWS:
             if row in summ:
                 s = summ[row]
-                cells.append({"model": m, "source": row, "notes": s["notes"], "recall": s["recall"],
+                st = [r for r in own if r["source"] == row and (r["id"], int(r["n"])) in said]
+                cells.append({"model": m, "source": row, "notes": s["notes"],
+                              "recall_stated": round(sum(r["label"] == "present" for r in st) / len(st), 4),
+                              "stated_facts": len(st), "recall": s["recall"],
                               "contradicted_rate": s["contradicted_rate"],
                               "negative_missing_rate": s["negative_missing_rate"],
                               "extra_contradicts_per_note": s["extra_contradicts_per_note"],
@@ -61,11 +71,12 @@ def main():
     write_csv(os.path.join(args.grid, "grid_summary.csv"), cells)
 
     by = {(c["model"], c["source"]): c for c in cells}
-    lines = ["Fact recall (contradicted facts) per cell:", "",
+    lines = ["Recall on stated facts / on all facts (contradicted facts) per cell:", "",
              "| source | " + " | ".join(args.models) + " |", "|---|" + "---|" * len(args.models)]
     for row in ROWS:
-        vals = [f"{100 * float(by[(m, row)]['recall']):.1f}% ({100 * float(by[(m, row)]['contradicted_rate']):.1f}%)"
-                if (m, row) in by else "" for m in args.models]
+        vals = [f"{100 * by[(m, row)]['recall_stated']:.1f}% / {100 * float(by[(m, row)]['recall']):.1f}% "
+                f"({100 * float(by[(m, row)]['contradicted_rate']):.1f}%)" if (m, row) in by else ""
+                for m in args.models]
         lines.append(f"| {ROW_NAMES[row]} | " + " | ".join(vals) + " |")
     with open(os.path.join(args.grid, "grid.md"), "w", encoding="utf-8") as f:
         f.write("\n".join(lines) + "\n")
