@@ -1,0 +1,6 @@
+﻿source,baseline,facts,not_present,not_present_rate,not_stated,reference_conflict,partly_stated,shared_omission,source_specific,not_stated_rate,reference_conflict_rate,partly_stated_rate,shared_omission_rate,source_specific_rate,source_specific_gained,net_source_specific_rate,recall_on_stated_facts,negative_facts,negative_source_specific,negative_not_stated
+human,,725,167,0.2303,38,22,29,78,0,0.0524,0.0303,0.04,0.1076,0.0,,,0.8526,196,0,10
+human_rejudge,human,277,71,0.2563,26,5,13,27,0,0.0939,0.0181,0.0469,0.0975,0.0,1,-0.0036,0.865,77,0,5
+human_plain,human,725,171,0.2359,36,19,36,51,29,0.0497,0.0262,0.0497,0.0703,0.04,27,0.0028,0.849,196,7,10
+asr_mixed,human,725,183,0.2524,36,17,34,54,42,0.0497,0.0234,0.0469,0.0745,0.0579,24,0.0248,0.8224,196,9,10
+asr_mixed_qwen3asr,human,725,161,0.2221,35,16,33,53,24,0.0483,0.0221,0.0455,0.0731,0.0331,25,-0.0014,0.8561,196,6,10

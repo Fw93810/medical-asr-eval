@@ -1,0 +1,6 @@
+﻿source,notes,contradicts_per_note,added_negative_per_note,added_other_per_note
+human,25,1.2,2.56,9.08
+human_rejudge,10,0.8,2.2,8.7
+human_plain,25,1.36,2.88,8.4
+asr_mixed,25,1.52,2.8,9.16
+asr_mixed_qwen3asr,25,1.48,3.12,8.64

@@ -1,0 +1,16 @@
+﻿model,source,notes,recall,contradicted_rate,negative_missing_rate,extra_contradicts_per_note,extra_not_mentioned_per_note
+qwen3-14b,human,25,0.691,0.0372,0.2398,1.16,8.48
+qwen3-14b,human_plain,25,0.68,0.051,0.2041,1.4,8.64
+qwen3-14b,asr_mixed,25,0.6717,0.0524,0.199,1.36,8.32
+qwen3-14b,asr_mixed_qwen3asr,25,0.6759,0.0552,0.2449,1.44,8.28
+qwen3-14b,human_rejudge,10,0.657,0.0253,0.2727,1.0,8.9
+qwen3.8-27b,human,25,0.7986,0.051,0.1378,1.2,11.64
+qwen3.8-27b,human_plain,25,0.8097,0.0524,0.1122,1.36,11.28
+qwen3.8-27b,asr_mixed,25,0.7779,0.0566,0.1378,1.52,11.96
+qwen3.8-27b,asr_mixed_qwen3asr,25,0.7972,0.0524,0.1122,1.48,11.76
+qwen3.8-27b,human_rejudge,10,0.787,0.0397,0.1169,0.8,10.9
+gpt-oss-120b,human,25,0.7697,0.0648,0.1276,1.4,11.92
+gpt-oss-120b,human_plain,25,0.7641,0.0552,0.1531,1.36,12.72
+gpt-oss-120b,asr_mixed,25,0.7476,0.0662,0.1633,1.6,12.24
+gpt-oss-120b,asr_mixed_qwen3asr,25,0.7779,0.0566,0.1173,1.48,12.48
+gpt-oss-120b,human_rejudge,10,0.7437,0.0505,0.1299,1.4,12.3

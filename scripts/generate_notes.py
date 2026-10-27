@@ -22,6 +22,12 @@ note. Outputs: <out>/<cid>/<source>.json. Existing outputs are skipped.
 Usage:
   python -I scripts/generate_notes.py --data data/prepared_test47 --hyp outputs/test47-vad-nocond \
       --hyp-separated outputs/test47-vad-nocond-wt --out outputs/notes-qwen3-14b/test47
+  # note grid: a second ASR run as its own row, a subset of consultations
+  python -I scripts/generate_notes.py --data data/prepared_test47 --hyp outputs/test47-qwen3-asr-1.7b \
+      --asr-name qwen3asr --sources asr_mixed --ids-file results/notes/test47/grid_ids.txt \
+      --out outputs/notes-qwen3-14b/test47
+  # gpt-oss cannot switch thinking off: lowest reasoning effort, recorded in each output
+  ... --model gpt-oss:120b --think low
 """
 import argparse
 import json
@@ -118,14 +124,31 @@ def transcript(source, data_dir, hyp_dir, cid):
     return "\n".join(f"{spk.capitalize()}: {t}" for spk, t in lines)
 
 
-def ollama(url, model, user, num_ctx):
-    body = {"model": model, "stream": False, "think": False,
+def ollama(url, model, user, num_ctx, think=False):
+    body = {"model": model, "stream": False, "think": think,
             "options": {"temperature": 0, "seed": 0, "num_ctx": num_ctx},
             "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
     req = urllib.request.Request(f"{url}/api/chat", data=json.dumps(body).encode(),
                                  headers={"Content-Type": "application/json"})
     with urllib.request.urlopen(req, timeout=1800) as r:
         return json.load(r)
+
+
+def openai_compatible(url, model, user, think=False):
+    """Same request through an OpenAI-compatible server (llama.cpp's llama-server), returned in
+    Ollama's shape. The context size is set when the server starts. A reasoning effort is passed to
+    the chat template (gpt-oss reads reasoning_effort there)."""
+    body = {"model": model, "temperature": 0, "seed": 0,
+            "messages": [{"role": "system", "content": SYSTEM}, {"role": "user", "content": user}]}
+    if think:
+        body["chat_template_kwargs"] = {"reasoning_effort": think}
+    req = urllib.request.Request(f"{url}/v1/chat/completions", data=json.dumps(body).encode(),
+                                 headers={"Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=1800) as r:
+        out = json.load(r)
+    msg = out["choices"][0]["message"]
+    return {"message": {"content": msg.get("content") or "", "thinking": msg.get("reasoning_content") or ""},
+            "prompt_eval_count": out["usage"]["prompt_tokens"], "eval_count": out["usage"]["completion_tokens"]}
 
 
 def main():
@@ -139,8 +162,20 @@ def main():
     ap.add_argument("--model", default="qwen3:14b")
     ap.add_argument("--num-ctx", type=int, default=16384)
     ap.add_argument("--ollama", default="http://127.0.0.1:11434")
+    ap.add_argument("--openai-url", help="use an OpenAI-compatible server (e.g. llama-server at "
+                                         "http://127.0.0.1:8080) instead of Ollama")
     ap.add_argument("--ids", nargs="*")
+    ap.add_argument("--ids-file", help="text file with one consultation id per line")
+    ap.add_argument("--think", default="off",
+                    help="'off' (default), or a reasoning effort (low/medium/high) for models such as gpt-oss "
+                         "whose thinking cannot be switched off")
+    ap.add_argument("--asr-name", help="append _<name> to the ASR sources' output names, so notes from a "
+                                       "second ASR run sit next to the first (e.g. asr_mixed_qwen3asr)")
     args = ap.parse_args()
+    think = False if args.think == "off" else args.think
+    if args.ids_file:
+        with open(args.ids_file) as f:
+            args.ids = (args.ids or []) + [l.strip() for l in f if l.strip()]
 
     ids = sorted(d for d in os.listdir(args.data) if os.path.isfile(os.path.join(args.data, d, "utterances.json")))
     if args.ids:
@@ -148,25 +183,32 @@ def main():
     for cid in ids:
         os.makedirs(os.path.join(args.out, cid), exist_ok=True)
         for source in args.sources:
-            path = os.path.join(args.out, cid, f"{source}.json")
+            name = source
+            if args.asr_name and source.startswith("asr_"):
+                base, plain = source.removesuffix("_plain"), source.endswith("_plain")
+                name = f"{base}_{args.asr_name}" + ("_plain" if plain else "")
+            path = os.path.join(args.out, cid, f"{name}.json")
             if os.path.exists(path):
                 continue
             hyp_dir = args.hyp_separated if source.startswith("asr_separated") and args.hyp_separated else args.hyp
             text = transcript(source, args.data, hyp_dir, cid)
             user = USER["unlabelled" if unlabelled(source) else "labelled"].format(transcript=text)
             t0 = time.time()
-            r = ollama(args.ollama, args.model, user, args.num_ctx)
+            r = (openai_compatible(args.openai_url, args.model, user, think) if args.openai_url else
+                 ollama(args.ollama, args.model, user, args.num_ctx, think))
             if r.get("prompt_eval_count", 0) >= args.num_ctx:
                 print(f"warning: {cid}/{source} prompt filled the {args.num_ctx}-token context; raise --num-ctx")
             note = re.sub(r"<think>.*?</think>", "", r["message"]["content"], flags=re.S).strip()
             if len(re.findall(r"^(Doctor|Patient):", note, flags=re.M)) > 3:
                 print(f"warning: {cid}/{source} note seems to repeat the transcript")
             with open(path, "w", encoding="utf-8") as f:
-                json.dump({"id": cid, "source": source, "model": args.model, "prompt_version": PROMPT_VERSION,
-                           "hyp": None if source == "human" else hyp_dir, "note": note,
+                json.dump({"id": cid, "source": name, "model": args.model, "prompt_version": PROMPT_VERSION,
+                           "engine": "llama.cpp" if args.openai_url else "ollama", "think": args.think, "hyp": None if source.startswith("human") else hyp_dir,
+                           "note": note, "thinking_chars": len(r["message"].get("thinking") or ""),
                            "prompt_tokens": r.get("prompt_eval_count"), "output_tokens": r.get("eval_count"),
                            "runtime_s": round(time.time() - t0, 1)}, f, indent=1, ensure_ascii=False)
-            print(f"{cid}/{source}: {r.get('prompt_eval_count')} prompt tokens, {time.time() - t0:.0f}s")
+            print(f"{cid}/{name}: {r.get('prompt_eval_count')} prompt tokens, {r.get('eval_count')} output tokens, "
+                  f"{time.time() - t0:.0f}s")
 
 
 if __name__ == "__main__":

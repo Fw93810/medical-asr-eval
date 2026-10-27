@@ -40,9 +40,9 @@ from collections import Counter, defaultdict
 
 BASELINE = {"human_rejudge": "human", "human_plain": "human", "human_unlabelled_plain": "human_plain",
             "asr_mixed": "human", "asr_separated": "human", "asr_mixed_plain": "human_unlabelled_plain",
-            "asr_separated_plain": "human_plain"}
+            "asr_separated_plain": "human_plain", "asr_mixed_qwen3asr": "human"}
 ORDER = ["human", "human_rejudge", "human_plain", "human_unlabelled_plain", "asr_mixed_plain", "asr_separated_plain",
-         "asr_mixed", "asr_separated"]
+         "asr_mixed", "asr_mixed_qwen3asr", "asr_separated"]
 GROUPS = ["not_stated", "reference_conflict", "partly_stated", "shared_omission", "source_specific"]
 NEGATIVE_CLAIM = re.compile(r"^\s*(no|not|nil|none|denies|denied|never|without|non-?)\b|\bno (known|other|recent)\b", re.I)
 

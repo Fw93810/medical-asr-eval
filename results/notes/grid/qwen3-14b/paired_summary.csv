@@ -1,0 +1,6 @@
+﻿source,vs,consultations,recall_diff,recall_diff_ci95,contradicted_diff,contradicted_diff_ci95,facts_lost,facts_gained,negative_facts_lost,negative_facts_gained
+human_rejudge,human,10,-0.0217,-0.0355..-0.0075,0.0,-0.0142..0.0151,7,1,2,0
+human_plain,human,25,-0.011,-0.0378..0.0142,0.0138,0.0026..0.0263,47,39,7,14
+asr_mixed,human,25,-0.0193,-0.0526..0.0120,0.0152,-0.0013..0.0336,67,53,10,19
+asr_mixed_qwen3asr,human,25,-0.0152,-0.0453..0.0175,0.0179,0.0066..0.0311,56,45,13,10
+asr_mixed_qwen3asr,asr_mixed,25,0.0041,-0.0259..0.0344,0.0028,-0.0105..0.0146,55,58,21,9

@@ -76,7 +76,27 @@ Open `colab_full_run.ipynb` in Colab, choose a GPU runtime and run all cells. By
 `large-v3-turbo` is the faster alternative.
 If you edit the scripts, re-run `python -I scripts/make_colab_notebook.py`.
 
-## CPU smoke-test results
+## Test-set results (47 consultations)
+
+Run on an RTX 5080 Laptop GPU; setup, commands and all tables are in `docs/smoke-test-setup.md` (Chinese).
+Eight ASR runs (Whisper large-v3, Parakeet TDT 0.6B v2, Granite Speech 4.1 2B, Qwen3-ASR-1.7B, Cohere Transcribe,
+Canary-Qwen 2.5B; Whisper and Parakeet also with the shared chunk plan) were compared with paired bootstrap
+over consultations on the mixed channel.
+
+- **Qwen3-ASR-1.7B is the best.** Its corrected WER, medical-term error rate and clinical-negation loss are lower
+  than every other run's, and none of the 95% intervals includes 0. It produced no repetition loops.
+- **The other runs are close to each other within the error margin.** We do not rank them.
+- Details: `results/test47/asr_selection.md`, `results/test47/bootstrap/pairwise.csv`, `results/test47/repeats/`.
+
+Limitations:
+- **Overlap.** Speech overlap remains the main mixed-channel failure for every model. Qwen3-ASR still deletes
+  20% of the words inside doctor-patient overlaps.
+- **One dataset.** All results come from PriMock57: simulated UK telehealth consultations.
+- **Mixed channel only in the note grid.** The note-level grid (ASR source x generation model) uses the
+  mixed channel only. Separated-channel notes need word timestamps to interleave the two channels into turns,
+  and Qwen3-ASR does not produce them by default. That comparison is left out.
+
+## CPU smoke-test results (initial sandbox, superseded by the test-set results above)
 
 **Not run yet.** The sandbox this was built in cannot reach `huggingface.co` (blocked by its egress policy), so the
 faster-whisper weights (`Systran/faster-whisper-*`) and the Parakeet weights could not be downloaded.

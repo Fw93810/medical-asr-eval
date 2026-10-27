@@ -1,0 +1,6 @@
+﻿source,notes,facts,recall,missing_rate,contradicted_rate,negative_facts,negative_missing_rate,negative_contradicted,extra_contradicts_per_note,extra_not_mentioned_per_note
+asr_mixed,25,725,0.7779,0.1655,0.0566,196,0.1378,11,1.52,11.96
+asr_mixed_qwen3asr,25,725,0.7972,0.1503,0.0524,196,0.1122,9,1.48,11.76
+human,25,725,0.7986,0.1503,0.051,196,0.1378,10,1.2,11.64
+human_plain,25,725,0.8097,0.1379,0.0524,196,0.1122,13,1.36,11.28
+human_rejudge,10,277,0.787,0.1733,0.0397,77,0.1169,2,0.8,10.9

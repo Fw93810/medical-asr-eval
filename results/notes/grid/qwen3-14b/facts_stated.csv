@@ -1,0 +1,1409 @@
+﻿id,n,fact,category,negative,status,conflicts,evidence
+day1_consultation11,1,Diarrhoea for 3 days,history,False,stated,False,it's been about three days now
+day1_consultation11,2,Watery stools,history,False,stated,False,super watery
+day1_consultation11,3,Opening bowels every hour,history,False,stated,False,"almost every hour, when I'm awake"
+day1_consultation11,4,No blood in stools,negative_finding,True,stated,False,no... There's nothing like that
+day1_consultation11,5,Associated crampy abdominal pain,history,False,stated,False,I feel a cramp
+day1_consultation11,6,Abdominal pain is central,history,False,stated,False,in the middle... Not on any side
+day1_consultation11,7,Abdominal pain is intermittent,history,False,stated,False,it comes and goes
+day1_consultation11,8,Abdominal pain severity 6/10,history,False,stated,False,"maybe is that like a six, or a seven? / solid six"
+day1_consultation11,9,Feels nauseous,history,False,stated,False,I definitely feel kind of nauseous
+day1_consultation11,10,Has vomited occasionally,history,False,stated,False,"one time I just had some milk, and I just completely vomited; vomiting not as prominent as diarrhoea"
+day1_consultation11,11,Feeling feverish with hot/cold sensations,history,False,partly,False,feel kind of really hot all the time... burning up; no cold sensations mentioned
+day1_consultation11,12,No urinary symptoms,negative_finding,True,partly,False,"waterworks seems to be OK, but less frequently"
+day1_consultation11,13,Passing less urine,history,False,stated,False,I guess less frequently maybe
+day1_consultation11,14,No weight loss,negative_finding,True,not_stated,False,Only 'I'm an OK weight'; weight loss not asked
+day1_consultation11,15,"Brother had similar symptoms, now improving",history,False,stated,False,brother has it for five days... I think he's getting better
+day1_consultation11,16,Tolerating oral intake,history,False,stated,False,fluids do go down... had some lunch today
+day1_consultation11,17,No past medical history,past_history,True,stated,False,otherwise fit and well... can't think of any related medical history
+day1_consultation11,18,No regular medications,medication,True,stated,False,not on any regular medication
+day1_consultation11,19,No known drug allergies,allergy,True,stated,False,don't have any allergies that I know of
+day1_consultation11,20,Family history: father had colon cancer,other,False,stated,False,my dad actually has colon cancer at the moment
+day1_consultation11,21,Lives with sister and mother,social,False,stated,False,I live with my sister and my mum
+day1_consultation11,22,Works in an office,social,False,stated,False,I work at an office in Central London
+day1_consultation11,23,Smokes socially,social,False,stated,False,"I smoke socially, but not regularly"
+day1_consultation11,24,Drinks alcohol socially,social,False,stated,False,"beer during weekdays, more on Fridays, go out with friends once or twice a month"
+day1_consultation11,25,Impression: gastroenteritis,impression,False,stated,False,suggestive of something called gastroenteritis
+day1_consultation11,26,Push fluids / increase fluid intake,plan,False,stated,False,make sure you drink plenty of fluids
+day1_consultation11,27,Over-the-counter Dioralyte (oral rehydration salts),plan,False,stated,False,Dioralyte... you can just get that over the counter
+day1_consultation11,28,Encourage soft diet,plan,False,stated,False,"You can use soft diet, things like soup, mash"
+day1_consultation11,29,Regular paracetamol,plan,False,stated,False,you can try just regular Paracetamol if you are feeling feverish
+day1_consultation11,30,"Review in 48 hours, or earlier if symptoms worsen",plan,False,partly,False,"if symptoms aren't settling in forty eight hours, give me a call back; 'earlier if worse' not said"
+day1_consultation12,1,Vomiting started 3 days ago,history,False,stated,False,it started like three days ago... it started with vomiting
+day1_consultation12,2,"Has since developed diarrhoea, 5-6 times per day",history,False,stated,False,"around, five to six times a day"
+day1_consultation12,3,Stools are watery/loose,history,False,stated,False,"definitely watery, uh, loose stools"
+day1_consultation12,4,No blood in stools,negative_finding,True,stated,False,"No, not that I could see"
+day1_consultation12,5,No abdominal pain,negative_finding,True,stated,False,"tummy pain? Uh, not, not really, no"
+day1_consultation12,6,Reduced oral intake,history,False,stated,False,I can't really drink too much; not much [food]
+day1_consultation12,7,Not drinking enough fluids,history,False,stated,False,I feel like I don't drink enough
+day1_consultation12,8,Feels dehydrated,history,False,stated,False,I feel very dehydrated
+day1_consultation12,9,Reduced appetite,history,False,stated,False,I don't really feel like I have appetite
+day1_consultation12,10,No fever / no recorded raised temperature,negative_finding,True,partly,False,"at the beginning I was feeling I had a bit of temperature, but now I feel kind of fine"
+day1_consultation12,11,Feels warm,history,False,stated,False,I feel a little bit warm
+day1_consultation12,12,Feels weak,history,False,stated,False,I feel very weak though
+day1_consultation12,13,No headaches,negative_finding,True,stated,False,"Any headaches or muscle pains? Not really, no"
+day1_consultation12,14,No muscle pain,negative_finding,True,stated,False,"Any headaches or muscle pains? Not really, no"
+day1_consultation12,15,Not aware of any triggers,history,False,stated,False,Are you aware of any triggers? not that I remember
+day1_consultation12,16,No unwell contacts,negative_finding,True,stated,False,Been around anyone unwell? not that I know
+day1_consultation12,17,Past medical history of asthma,past_history,False,stated,False,I do suffer of asthma
+day1_consultation12,18,Takes salbutamol as needed,medication,False,partly,False,"blue inhaler, used infrequently; salbutamol not named"
+day1_consultation12,19,No known drug allergies,allergy,True,stated,False,allergies? not that I know of
+day1_consultation12,20,Family history: father had hypertension,past_history,False,stated,False,my father used to have high blood pressure
+day1_consultation12,21,Family history: father died of bowel cancer,past_history,False,stated,False,he actually died of bowel cancer ten years ago
+day1_consultation12,22,Family history: mother has type 2 diabetes,past_history,False,stated,False,she has diabetes... type two
+day1_consultation12,23,Lives alone,social,False,stated,False,I live alone
+day1_consultation12,24,Works as a software engineer,social,False,stated,False,I'm a software engineer
+day1_consultation12,25,Does not smoke,social,True,stated,False,I don't smoke
+day1_consultation12,26,Drinks alcohol socially,social,False,stated,False,"I drink infrequently, like socially"
+day1_consultation12,27,Impression: gastroenteritis,impression,False,stated,False,you're probably suffering from gastroenteritis
+day1_consultation12,28,Supportive management: rest and fluids,plan,False,partly,False,"drink plenty of fluids; time off work advised, rest not explicitly said"
+day1_consultation12,29,Over-the-counter Dioralyte (oral rehydration salts),plan,False,stated,False,"Dioralyte from the pharmacy, fluid replacement drink"
+day1_consultation12,30,Regular paracetamol,plan,False,partly,True,"Paracetamol if you're feeling feverish and weak (as needed, not regular)"
+day1_consultation12,31,Review in 3-5 days if not better,plan,False,partly,True,"if you're still not better next week, come back"
+day1_consultation12,32,"Review sooner if symptoms get worse (diarrhoea, vomiting, abdominal pain, reduced oral intake)",plan,False,not_stated,False,
+day1_consultation13,1,Headache for 3 days,history,False,stated,False,around three days ago
+day1_consultation13,2,"Headache is all over the head, mainly over the right eye",history,False,stated,False,"all over my head, but mainly around my right eye"
+day1_consultation13,3,Headache is constant,history,False,stated,False,"it is there all the time, but sometimes it's stronger"
+day1_consultation13,4,Headache severity 8/10,history,False,stated,False,probably a eight
+day1_consultation13,5,Headache is a dull ache with associated sharp pain,history,False,stated,False,it's dull but sometimes it gets a bit sharper
+day1_consultation13,6,Headache had gradual onset,history,False,stated,False,it developed gradually
+day1_consultation13,7,Headache is progressively worsening,history,False,stated,False,headache getting worse over the last three days? Yeah
+day1_consultation13,8,Has tried ibuprofen with limited relief,medication,False,stated,False,tried Ibuprofen... doesn't really help
+day1_consultation13,9,No visual symptoms,negative_finding,True,partly,True,'Not really' but reports shooting lights and pain with bright light
+day1_consultation13,10,Visual aura prior to headaches,history,False,partly,False,when it started I got weird shooting lights; 'prior to' not stated
+day1_consultation13,11,Some photophobia,history,False,stated,False,light is quite annoying... It hurts
+day1_consultation13,12,Feels nauseous,history,False,stated,False,I'm sick with the headache... feel sick
+day1_consultation13,13,No vomiting,negative_finding,True,stated,False,no vomiting
+day1_consultation13,14,No neck pain or stiffness,negative_finding,True,stated,False,Any neck pain or stiffness? No
+day1_consultation13,15,No speech disturbances,negative_finding,True,stated,False,difficulty with speaking? No
+day1_consultation13,16,No arm or leg weakness,negative_finding,True,stated,False,weakness in arms and legs? No
+day1_consultation13,17,No head injury,negative_finding,True,stated,False,recent head injuries? no
+day1_consultation13,18,No fevers,negative_finding,True,stated,False,temperatures or fevers? No
+day1_consultation13,19,No rashes,negative_finding,True,stated,False,rashes? no not that I've noticed
+day1_consultation13,20,No past medical history,past_history,True,stated,False,other medical history? ... It's just the headache
+day1_consultation13,21,No regular medications (drug history nil),medication,True,stated,False,regular medication? no
+day1_consultation13,22,No known drug allergies,allergy,True,stated,False,allergies? not that I know of
+day1_consultation13,23,Family history: mother has migraines,past_history,False,stated,False,my sister and my mom have them
+day1_consultation13,24,Family history: sister has migraines,past_history,False,stated,False,my sister and my mom have them
+day1_consultation13,25,Lives with housemates,social,False,stated,False,I live with housemates
+day1_consultation13,26,Works in IT,social,False,stated,False,I work in IT
+day1_consultation13,27,Wears glasses,social,False,stated,False,Do you wear glasses? Yes
+day1_consultation13,28,Denies stress,social,True,partly,False,"a bit stressful, kicking off a new project... nothing out of the ordinary"
+day1_consultation13,29,Smokes socially,social,False,stated,False,I socially smoke
+day1_consultation13,30,Drinks alcohol socially,social,False,stated,False,I drink only socially
+day1_consultation13,31,Patient thinks the headache may be related to stress or dehydration,other,False,stated,False,"I thought it's stress, or maybe I didn't drink enough water"
+day1_consultation13,32,Patient is concerned about migraines,other,False,stated,False,I don't want it to be a migraine
+day1_consultation13,33,Impression: migraines,impression,False,stated,False,a headache very similar to a migraine
+day1_consultation13,34,Regular paracetamol/NSAIDs,plan,False,partly,False,"ibuprofen dosing, naproxen, paracetamol or codeine discussed; 'regular' not specified"
+day1_consultation13,35,Keep a headache diary,plan,False,stated,False,worth keeping a headache diary
+day1_consultation13,36,Review in 1 week,plan,False,partly,False,"about a week's time, week to two weeks' time"
+day1_consultation13,37,Discuss prophylactic treatment at review if necessary,plan,False,stated,False,we can think about prophylactic... have that discussion next time
+day1_consultation13,38,Patient is aware of red flag symptoms and knows to seek urgent medical attention if they occur,plan,False,stated,False,"problems with vision, weakness in arms and legs... give me a call"
+day1_consultation14,1,Cough for 5 days,history,False,stated,False,Patient: 'maybe five or six days ago'; Doctor: 'It's been five days.'
+day1_consultation14,2,Runny nose for 5 days,history,False,stated,False,"The runny nose was raised together with the cough, which started 5-6 days ago; Doctor: 'It's been five days.'"
+day1_consultation14,3,Cough is dry,history,False,stated,False,'It's quite dry.'
+day1_consultation14,4,Cough keeps patient up at night,history,False,stated,False,'it like keeps me up at night'
+day1_consultation14,5,No ear pain,negative_finding,True,stated,False,"'Nothing on the ears.' Doctor: 'No pain, no discharge.'"
+day1_consultation14,6,No sore throat,negative_finding,True,partly,True,"'the coughing is giving me a sore throat... my throat is irritated from coughing', but swallowing is not bad."
+day1_consultation14,7,No shortness of breath,negative_finding,True,stated,False,Does not feel breathless day to day.
+day1_consultation14,8,No chest pain,negative_finding,True,stated,False,"'No not, not that either.'"
+day1_consultation14,9,Feeling tired,history,False,stated,False,"'I feel you know, generally tired.'"
+day1_consultation14,10,Feeling weak,history,False,stated,False,"Doctor: 'quite lethargic and weak, you mentioned.'"
+day1_consultation14,11,Myalgia (muscle aches),history,False,stated,False,"'My muscle was really hurting... arms, legs, everywhere.'"
+day1_consultation14,12,Feeling shivery,history,False,stated,False,'I've been having like shivers.'
+day1_consultation14,13,Feeling hot and cold,history,False,partly,False,Patient described shivering and feeling cold; feeling hot was not mentioned.
+day1_consultation14,14,Possible fever (unconfirmed),history,False,stated,False,'I haven't taken my temperature... it feels like I probably did.'
+day1_consultation14,15,No nausea,negative_finding,True,stated,False,'No nausea.'
+day1_consultation14,16,No vomiting,negative_finding,True,stated,False,'No vomiting.'
+day1_consultation14,17,Appetite maintained,history,False,stated,False,'it didn't cut my appetite'
+day1_consultation14,18,"Diarrhoea at onset, now resolved",history,False,stated,False,Diarrhoea started with the cough and has since stopped.
+day1_consultation14,19,No urinary symptoms,negative_finding,True,stated,False,"Waterworks: 'No no, it's fine.'"
+day1_consultation14,20,No rashes,negative_finding,True,partly,False,"Doctor asked about rashes, but the patient only answered about muscle pain."
+day1_consultation14,21,Past medical history of type 2 diabetes,past_history,False,stated,False,'I have type two diabetes.'
+day1_consultation14,22,Past medical history of hypertension,past_history,False,stated,False,'quite high blood pressure'
+day1_consultation14,23,Takes metformin,medication,False,stated,False,'I take Metformin.'
+day1_consultation14,24,Takes lisinopril,medication,False,stated,False,'I take Lisinopril.'
+day1_consultation14,25,No known drug allergies,allergy,True,stated,False,'No allergies.'
+day1_consultation14,26,Family history: father has type 2 diabetes,other,False,stated,False,'my dad also has type two diabetes'
+day1_consultation14,27,Lives with partner,social,False,stated,False,'it's just me and my partner'
+day1_consultation14,28,Works in IT,social,False,stated,False,'I am a developer... Work in IT.'
+day1_consultation14,29,Denies stress,social,True,stated,False,'Not more than usual. I don't think it's related to stress.'
+day1_consultation14,30,"Ex-smoker, stopped 6 months ago",social,False,stated,False,'I've stopped for about six months now.'
+day1_consultation14,31,"Drinks alcohol socially, less than 14 units per week",social,False,partly,False,2-3 glasses of wine about 3 evenings a week; doctor said 'just about under the recommended limit'. Neither 'socially' nor 14 units was said.
+day1_consultation14,32,Impression: viral upper respiratory tract infection,impression,False,partly,False,Doctor: 'a bit of a viral illness'; 'upper respiratory tract' was not said.
+day1_consultation14,33,Supportive management: bed rest,plan,False,stated,False,"'get some nice, good rest'"
+day1_consultation14,34,Supportive management: fluids,plan,False,stated,False,'Drink plenty of fluids.'
+day1_consultation14,35,Supportive management: regular paracetamol,plan,False,stated,False,'You can take regular Paracetamol.'
+day1_consultation14,36,Review in 5 days if no better,plan,False,partly,True,"Doctor: come back if not better 'in two to three days', not 5 days."
+day1_consultation14,37,"Review earlier if symptoms get worse (fever, shortness of breath, chest pain)",plan,False,partly,False,"'if your cough isn't getting any better, or your breathing is getting worse... come back sooner'. Chest pain was not listed, and fever came up only in the context of antibiotics."
+day1_consultation15,1,Sore and cracked skin on the hands for 3-4 months,history,False,stated,False,"Patient: soreness in fingers, skin on hands cracked; 'three, four months ago'"
+day1_consultation15,2,Skin changes affect mainly the palms,history,False,stated,False,Patient: 'Uh the palm.'
+day1_consultation15,3,Hands are occasionally itchy,history,False,stated,False,Patient: 'it's itchy. Not all the time'
+day1_consultation15,4,Hands bleed when scratched,history,False,stated,False,"Patient: 'when I scratched it, yes it has bled sometimes'"
+day1_consultation15,5,No pain,negative_finding,True,not_stated,True,Patient reports soreness and 'it hurts a lot'
+day1_consultation15,6,Works as a cleaner and does not always wear gloves; this is a possible trigger,social,False,stated,False,"Patient works as housekeeper, 'not always very good about wearing gloves. So that could be related.'"
+day1_consultation15,7,No fever,negative_finding,True,stated,False,Denies fever or temperatures
+day1_consultation15,8,No bowel symptoms,negative_finding,True,stated,False,Denies problems with bowels
+day1_consultation15,9,No urinary symptoms,negative_finding,True,stated,False,Denies urine/waterworks problems
+day1_consultation15,10,Appetite maintained,negative_finding,True,stated,False,"Eating, drinking, appetite well-maintained: 'Yeah'"
+day1_consultation15,11,Past medical history of type 2 diabetes,past_history,False,stated,False,'I have diabetes.' 'Type two.'
+day1_consultation15,12,Takes metformin,medication,False,stated,False,"Doctor: 'Metformin, OK.'"
+day1_consultation15,13,No known drug allergies,allergy,True,stated,False,No allergies to medications or in general
+day1_consultation15,14,Family history of type 2 diabetes,past_history,False,partly,False,Family history of diabetes mentioned; type not specified
+day1_consultation15,15,Works as a housekeeper in a hotel,social,False,stated,False,Housekeeper 'At a hotel'
+day1_consultation15,16,Changed jobs 4 months ago,social,False,stated,False,"'I switched jobs, uh four months ago.'"
+day1_consultation15,17,Does not smoke,social,True,stated,False,Smoke: 'No.'
+day1_consultation15,18,Drinks minimal alcohol,social,False,stated,False,'a couple of pints a week' - 'very minimal'
+day1_consultation15,19,Has tried E45 cream with minimal relief,medication,False,stated,False,"Tried E45, 'it didn't really do anything'"
+day1_consultation15,20,Has tried antihistamines with minimal relief,medication,False,stated,False,'I also tried an antihistamine... but it didn't'
+day1_consultation15,21,Impression: contact dermatitis,impression,False,stated,False,Doctor: 'dermatitis or contact dermatitis'
+day1_consultation15,22,Steroid cream twice daily,plan,False,partly,False,Steroid creams mentioned; frequency not stated
+day1_consultation15,23,Use emollients regularly,plan,False,stated,False,Stronger emollients three to four times a day
+day1_consultation15,24,Avoid the trigger,plan,False,stated,False,'avoid the triggers'
+day1_consultation15,25,Wear cleaning gloves,plan,False,stated,False,'wear gloves when cleaning at all times'
+day1_consultation15,26,Review in 10-14 days if not better,plan,False,stated,False,'ten days to fourteen days... if it still hasn't got better'
+day1_consultation15,27,Review earlier if symptoms get worse,plan,False,stated,False,'if it's getting worse... come back and see me sooner'
+day2_consultation01,1,Difficulty hearing in left ear for 6 weeks,history,False,stated,False,Patient: about six weeks; just the left ear
+day2_consultation01,2,Tinnitus,history,False,stated,False,ringing in my left ear... Doctor: it's something called Tinnitus
+day2_consultation01,3,Slight nausea,history,False,stated,False,felt kind of a bit sick
+day2_consultation01,4,Slight dizziness,history,False,stated,False,a bit dizzy... nothing major... a little bit kind of off balance
+day2_consultation01,5,One previous similar episode in the past that resolved spontaneously,past_history,False,partly,False,"about a year ago, but it only lasted a couple of days (spontaneous resolution not explicitly stated)"
+day2_consultation01,6,No ear discharge,negative_finding,True,stated,False,"Any discharge coming out of the ear? No, OK."
+day2_consultation01,7,No fever,negative_finding,True,stated,False,"fever? Uh, not specifically"
+day2_consultation01,8,No ear itchiness,negative_finding,True,partly,False,Doctor asked if ear itchy; no answer recorded
+day2_consultation01,9,No ear pain,negative_finding,True,stated,False,any pain from the ear? Uh no
+day2_consultation01,10,Does not use cotton wool buds,negative_finding,True,stated,False,"cotton buds? Uh nah... Doctor: No, OK"
+day2_consultation01,11,No past medical history of note,past_history,True,not_stated,False,
+day2_consultation01,12,On examination looks well,other,False,not_stated,False,
+day2_consultation01,13,On examination not in pain,negative_finding,True,not_stated,False,
+day2_consultation01,14,Impression: need to exclude impacted wax in ear canal first,impression,False,stated,False,Simple things might be wax... we need to exclude that first
+day2_consultation01,15,Face-to-face GP appointment in 5 days to examine ear,plan,False,partly,False,"face-to-face appointment within the next four, five days to look in the ear"
+day2_consultation01,16,Patient to read about tinnitus in the meantime via www.patient.co.uk/tinnitus,plan,False,partly,False,paste the link for a leaflet about Tinnitus; URL not mentioned
+day2_consultation01,17,Patient to ring back if any problems in the interim,plan,False,stated,False,If there's any problem... just book another appointment
+day2_consultation01,18,Patient happy with and understands plan,plan,False,stated,False,Yeah it sounds great. / OK brilliant.
+day2_consultation02,1,Left elbow swelling for 1 week,history,False,stated,False,Left elbow; noticed 'about a week ago'
+day2_consultation02,2,Elbow swelling came on spontaneously,history,False,stated,False,Noticed in shower; no injury that he knows of
+day2_consultation02,3,Elbow swelling is not painful,negative_finding,True,stated,False,It's not painful at all
+day2_consultation02,4,No trauma to the elbow,negative_finding,True,stated,False,"Banged it? 'No, not really... not that I know of'"
+day2_consultation02,5,This has not happened before,negative_finding,True,stated,False,"No, I haven't noticed that before"
+day2_consultation02,6,Otherwise well,history,False,stated,False,I feel fine; I think I'm healthy
+day2_consultation02,7,No family history of rheumatological disease,negative_finding,True,partly,False,"Patient said 'in my family, I'm not sure... No.'"
+day2_consultation02,8,Patient reports doctors have told him before that he has osteoarthritis; needs confirming,past_history,False,partly,False,A GP told him a few years ago that he has osteoarthritis; the need to confirm this was not discussed
+day2_consultation02,9,No significant past medical history,past_history,True,stated,False,"Other illnesses: 'not really, no'"
+day2_consultation02,10,No significant family history,negative_finding,True,partly,False,Only family history of rheumatological disease was asked about
+day2_consultation02,11,Not taking any medication,medication,True,stated,False,Regular medication: 'No'
+day2_consultation02,12,Allergic to peanuts,allergy,False,stated,False,I'm allergic to peanuts
+day2_consultation02,13,Works in a desk job,social,False,stated,False,I just sit at a desk
+day2_consultation02,14,Exercises regularly and is active,social,False,stated,False,Runs two or three times a week
+day2_consultation02,15,On examination looks well and not in pain,other,False,not_stated,False,General appearance was not mentioned
+day2_consultation02,16,Mild redness around the olecranon process of the left elbow,other,False,not_stated,False,Only warmth and dry skin were mentioned; no redness
+day2_consultation02,17,"Minimal swelling, if any, around the olecranon process of the left elbow",other,False,not_stated,False,Doctor did not comment on the amount of swelling on examination
+day2_consultation02,18,Impression: possible bursitis,impression,False,stated,False,This seems like what we call bursitis
+day2_consultation02,19,Start NSAIDs,plan,False,stated,False,Anti-inflammatory medication; ibuprofen 400 mg twice a day
+day2_consultation02,20,Usual advice given about NSAID side effects,plan,False,stated,False,Take after food; stop if heartburn
+day2_consultation02,21,"Rheumatology blood tests: ESR, CRP, full blood count, rheumatoid factor and urate",plan,False,partly,False,"Inflammatory markers, infection, rheumatological antibodies and gout were mentioned; the specific tests were not named"
+day2_consultation02,22,"Review after blood results, in person or by video",plan,False,stated,False,"Follow-up after blood tests: face-to-face, phone or video"
+day2_consultation02,23,Patient to contact the practice in the meantime if symptoms get worse or he has concerns,plan,False,stated,False,"If very red or painful, call or book a video appointment as soon as possible"
+day2_consultation02,24,Patient warned about symptoms of septic arthritis,plan,False,stated,False,Doctor explained septic arthritis and the warning signs
+day2_consultation03,1,Difficulty hearing on the left side for 1 week,history,False,partly,True,"Left-sided hearing loss was discussed, but the patient said 'about three weeks', not 1 week"
+day2_consultation03,2,Left-sided facial numbness for 1 week,history,False,partly,True,"Left facial numbness around the ear and jaw was discussed, but over a few weeks (about three), not 1 week"
+day2_consultation03,3,No difficulty swallowing (dysphagia),negative_finding,True,stated,False,Difficulty swallowing? 'No.'
+day2_consultation03,4,No difficulty speaking (dysarthria),negative_finding,True,stated,False,"Difficulty speaking? 'No, no.'"
+day2_consultation03,5,No one-sided weakness in the rest of the body,negative_finding,True,stated,False,Weakness or numbness in rest of body? 'No... nothing like that'
+day2_consultation03,6,No one-sided numbness in the rest of the body,negative_finding,True,stated,False,Weakness or numbness in rest of body? 'No'
+day2_consultation03,7,No visual disturbances,negative_finding,True,stated,False,"Problems with vision? 'No, that's all good.'"
+day2_consultation03,8,No ear pain,negative_finding,True,stated,False,"Any pain in the ear? 'no, don't think so'"
+day2_consultation03,9,No ear discharge,negative_finding,True,stated,False,"Discharge? 'No, nothing coming out.'"
+day2_consultation03,10,No fever,negative_finding,True,stated,False,"Fever? 'No, nothing like that.'"
+day2_consultation03,11,No ear itchiness,negative_finding,True,partly,False,"The doctor asked about itchiness, but the patient never clearly answered (replied 'Pardon?')"
+day2_consultation03,12,No cotton bud use,negative_finding,True,stated,False,"'no, don't use cotton buds'"
+day2_consultation03,13,"Slight tinnitus at times during the past week, not continuous",history,False,partly,False,"Occasional ringing in the ear was mentioned, but no timeframe like 'past week' was given"
+day2_consultation03,14,Numbness and difficulty hearing are still present now,history,False,partly,False,The patient said the numbness is present now; nobody said whether the hearing loss is still present now
+day2_consultation03,15,Past medical history of labyrinthitis,past_history,False,stated,False,"'ages ago, I had... labyrinthitis'"
+day2_consultation03,16,Past medical history of heartburn,past_history,False,partly,False,"The patient takes Rennies, but heartburn was never named as a condition"
+day2_consultation03,17,Past medical history of nasal polyps,past_history,False,stated,False,'been told I have polyps in my nose'
+day2_consultation03,18,"Takes Rennies as needed, bought over the counter",medication,False,stated,False,"'sometimes take like Rennies, but I just get that from the chemist'"
+day2_consultation03,19,Uses a nasal spray as needed (patient not sure of the name),medication,False,stated,False,Uses the spray when needed; can't remember its name
+day2_consultation03,20,Allergic to latex,allergy,False,stated,False,'no just Latex'
+day2_consultation03,21,No relevant family history,history,True,partly,True,"Family history was discussed: the brother had neurofibromatosis, which is relevant"
+day2_consultation03,22,On examination: no facial asymmetry,negative_finding,True,not_stated,False,No examination was done (video consultation)
+day2_consultation03,23,On examination: looks well,other,False,not_stated,False,No examination was done
+day2_consultation03,24,On examination: normal facial expressions and movements,negative_finding,True,not_stated,False,No examination was done
+day2_consultation03,25,Impression: possible Bell's palsy,impression,False,stated,False,'might be something called Bell's Palsy'
+day2_consultation03,26,Need to rule out any other focal neurological problem,impression,False,stated,False,'neurological examination just to make sure there's nothing else going on'
+day2_consultation03,27,Face-to-face review today for a neurological examination,plan,False,stated,False,Assessment in clinic today; neurological examination
+day2_consultation03,28,Face-to-face review today for an ear examination,plan,False,stated,False,'Have a look inside the ear'
+day2_consultation03,29,Patient to ring the support line to book a face-to-face GP appointment,plan,False,stated,False,'you can ring the support team number... they'll slot you in'
+day2_consultation03,30,Patient understands and is happy with the plan,plan,False,stated,False,"'OK, yep, I will do, that's fine. Thank you very much.'"
+day2_consultation04,1,Shortness of breath for 1 day,history,False,stated,False,Breathless recently; 'Just today really'
+day2_consultation04,2,Slight right-sided pleuritic chest pain for 1 day,history,False,stated,False,"Catches in right-hand side of back on deep breath, today"
+day2_consultation04,3,Feeling warm/feverish for 1 day; temperature not measured,history,False,stated,False,"Slight fever, only checked with back of hand"
+day2_consultation04,4,2 episodes of haemoptysis in the last 1 day,history,False,stated,False,"Coughed up blood on two occasions, last day or so"
+day2_consultation04,5,Palpitations for 1 day,history,False,partly,False,Can feel heart beating; duration not clearly given
+day2_consultation04,6,No recent long-haul flights,negative_finding,True,stated,False,No long-haul flight
+day2_consultation04,7,No family history of deep vein thrombosis or pulmonary embolism,negative_finding,True,stated,False,No family history of clots
+day2_consultation04,8,No past medical history of deep vein thrombosis or pulmonary embolism,negative_finding,True,stated,False,No clots in legs or lungs that she knows of
+day2_consultation04,9,Tired all the time/fatigue for the last few weeks before the current symptoms,history,False,stated,False,Tired for a couple of weeks
+day2_consultation04,10,Past medical history of systemic lupus erythematosus (SLE),past_history,False,stated,False,I've got SLE
+day2_consultation04,11,Takes methotrexate,medication,False,stated,False,Methotrexate
+day2_consultation04,12,No known allergies,allergy,True,stated,False,No medication or other allergies
+day2_consultation04,13,Lives alone,social,False,stated,False,Lives alone in a flat
+day2_consultation04,14,Has a cat,social,False,stated,False,Cat
+day2_consultation04,15,Works in an office,social,False,stated,False,Office desk job
+day2_consultation04,16,"On examination, pulse about 66",other,False,partly,False,Doctor estimated heart rate as 66 to 74
+day2_consultation04,17,"On examination, capillary refill time normal",other,False,stated,False,"Very good circulation; 'perfect, that's great'"
+day2_consultation04,18,"On examination, throat inspection normal",other,False,stated,False,Throat look: 'Perfect... Excellent'
+day2_consultation04,19,Patient cannot feel any lymph nodes in neck,negative_finding,True,stated,False,Glands feel pretty normal
+day2_consultation04,20,Not short of breath during the consultation,negative_finding,True,not_stated,False,
+day2_consultation04,21,Patient looks well,other,False,partly,False,Doesn't seem acutely unstable
+day2_consultation04,22,Impression: probable lower respiratory tract infection,impression,False,stated,False,Sounds like a chest infection
+day2_consultation04,23,Impression: possibly secondary to immunosuppression,impression,False,not_stated,False,
+day2_consultation04,24,Needs face-to-face GP assessment today,plan,False,stated,False,Face-to-face GP appointment today
+day2_consultation04,25,"At face-to-face assessment, listen to the chest",plan,False,stated,False,Someone to listen to your chest
+day2_consultation04,26,"At face-to-face assessment, check blood pressure, pulse and temperature",plan,False,stated,False,"Check blood pressure, recheck pulse, check temperature"
+day2_consultation04,27,May need blood tests to check immune status because of methotrexate,plan,False,not_stated,False,
+day2_consultation05,1,Consultation reason recorded does not match the patient's presentation,other,False,stated,False,Doctor opened by asking about asthma problems; patient described unexplained symptoms instead
+day2_consultation05,2,Episodes of right-sided (unilateral) hand numbness and pins and needles,history,False,stated,False,"Pins and needles and loss of feeling in the right hand, always the right"
+day2_consultation05,3,Right leg weakness during episodes,history,False,partly,False,'my leg feels weaker' at the same time as the arm symptoms; which leg was not said
+day2_consultation05,4,Noticeable gait disturbance during episodes,history,False,stated,False,Colleague said he walks differently; only during episodes
+day2_consultation05,5,Episodes ongoing for 1.5 months,history,False,stated,False,"'probably a month and a half, maybe two months'"
+day2_consultation05,6,"Episodes increasing in frequency: initially once a week, now daily",history,False,stated,False,Started at about once a week to once a month; now a couple of times a day
+day2_consultation05,7,Symptoms not present at the time of consultation,negative_finding,True,stated,False,"'No, I'm perfectly fine at the moment'"
+day2_consultation05,8,No difficulty swallowing (dysphagia),negative_finding,True,partly,False,"No swallowing difficulty now, but feels something in his throat during episodes"
+day2_consultation05,9,No speech or language difficulty (dysphasia),negative_finding,True,stated,False,"'No, I can speak fine'"
+day2_consultation05,10,No past medical history of stroke (CVA) or TIA,past_history,True,stated,False,Said no to any personal history of mini-strokes
+day2_consultation05,11,Father had a stroke (CVA),past_history,False,partly,False,Father had a neck operation to reduce stroke risk; an actual stroke was never mentioned
+day2_consultation05,12,Father appears to have had a carotid endarterectomy,past_history,False,stated,False,Operation on the side of the neck to reduce stroke risk; doctor mentions a carotid ultrasound 'like your father had'
+day2_consultation05,13,Non-smoker,social,True,stated,False,"'No, I don't' smoke"
+day2_consultation05,14,Blood tests for diabetes were normal when checked a few years ago,past_history,True,partly,False,Diabetes was checked and was fine; when it was checked was not said
+day2_consultation05,15,Cholesterol was normal when checked a few years ago,past_history,True,partly,False,Cholesterol was fine; when it was checked was not said
+day2_consultation05,16,Past medical history otherwise nothing of note,past_history,True,stated,False,Said no to any other illnesses
+day2_consultation05,17,Family history otherwise nothing of note,past_history,True,not_stated,False,
+day2_consultation05,18,"Taking aspirin daily, self-started because of family history",medication,False,stated,False,"Aspirin 75mg once a day, started himself after his father's operation"
+day2_consultation05,19,Patient is a medical doctor (plastic surgeon),social,False,stated,False,Medical doctor working in plastic surgery
+day2_consultation05,20,Lives with wife,social,False,stated,False,'I live with my wife'
+day2_consultation05,21,Impression: transient ischaemic attacks (TIAs) despite young age,impression,False,stated,False,Doctor is concerned about TIAs even though he is quite young
+day2_consultation05,22,Need to rule out a systemic disease as the cause (e.g. antiphospholipid syndrome),impression,False,not_stated,False,
+day2_consultation05,23,Urgent referral to TIA clinic,plan,False,stated,False,"Referral to the TIA clinic, described as relatively urgent"
+day2_consultation05,24,Referral to be faxed now,plan,False,partly,False,'I send that referral off now'; fax was not mentioned
+day2_consultation05,25,Patient to contact the TIA clinic via PALS or the clinic phone number to make sure follow-up happens,plan,False,stated,False,Can ring the PALS number or the TIA clinic number to chase the appointment
+day2_consultation05,26,Safety-netting: go to A&E if any prolonged symptoms occur,plan,False,stated,False,"If symptoms come back and are prolonged, he may need to go to A&E"
+day2_consultation06,1,Patient had a bee or wasp sting a few minutes before the appointment,history,False,stated,False,I got stung by a wasp... just a few minutes ago; can't tell bee from wasp
+day2_consultation06,2,Patient is worried about difficulty breathing,history,False,stated,False,I've got this difficulty breathing... anxious that it might get a bit worse
+day2_consultation06,3,Patient is worried about lip swelling,history,False,stated,False,potentially there's a bit of swelling in my lips
+day2_consultation06,4,Patient reports a localized rash,history,False,stated,False,a bit of a rash on my arm where I got stung
+day2_consultation06,5,Patient felt panicked during this episode,history,False,partly,False,"Patient said 'slightly anxious', not panicked"
+day2_consultation06,6,No past medical history of anaphylaxis,past_history,True,stated,False,History of anaphylaxis? Not that I know of
+day2_consultation06,7,Has never used an EpiPen (adrenaline auto-injector),medication,True,stated,False,Have you ever been given an EpiPen? I haven't no
+day2_consultation06,8,Past medical history of anxiety,past_history,False,stated,False,"Anxiety or panic attacks? Yeah, sometimes, occasionally"
+day2_consultation06,9,No relevant family history,other,True,stated,False,Not that I think is particularly relevant
+day2_consultation06,10,Works as a software engineer,social,False,partly,False,"Patient said 'computer scientist', not software engineer"
+day2_consultation06,11,Has a cat at home,social,False,stated,False,I have a cat at home
+day2_consultation06,12,On examination: no lip swelling seen,other,True,stated,False,your lips don't seem swollen to me... I can't see any of that right now
+day2_consultation06,13,On examination: speaking normally,other,False,partly,False,Based on how you're talking to me... not life-threatening
+day2_consultation06,14,On examination: no airway compromise,other,True,stated,False,Your breathing seems all right; no compromise of breathing seen
+day2_consultation06,15,On examination: no rash seen on arm,other,True,partly,False,"Doctor: 'That looks OK to me right now', but patient described slight redness, blotchiness and a puncture mark"
+day2_consultation06,16,Impression: localized inflammatory reaction to insect sting,impression,False,stated,False,localised inflammatory reaction... localised allergic reaction
+day2_consultation06,17,Impression: no evidence of acute anaphylactic reaction,impression,True,stated,False,I don't feel that you're having a life-threatening allergic reaction
+day2_consultation06,18,Impression: no evidence of cellulitis,impression,True,partly,False,Signs of local infection only discussed as a future possibility that might need antibiotics
+day2_consultation06,19,Plan: over-the-counter antihistamines,plan,False,stated,False,Piriton/chlorphenamine over the counter
+day2_consultation06,20,Plan: warned about red flag signs and symptoms; to seek urgent medical review if they occur,plan,False,stated,False,"Warned about lip swelling, breathing difficulty, stridor; go to A&E if it gets worse"
+day2_consultation06,21,Plan: no allergy testing needed for a one-off episode,plan,True,stated,False,I don't think you need any allergy testing... unless it becomes recurrent
+day2_consultation06,22,Plan: to phone back if any concerns or anxiety; may need more reassurance,plan,False,stated,False,"lower threshold for having a chat with us, sometimes a chat is all you need"
+day2_consultation07,1,Chest pain started earlier today,history,False,stated,False,"doing some gardening, a couple of hours ago"
+day2_consultation07,2,Chest pain began while gardening (mild physical exertion),history,False,stated,False,started just when I was gardening. So nothing that was too strenuous
+day2_consultation07,3,Chest pain is central,history,False,stated,False,middle of my chest... not necessarily to one side
+day2_consultation07,4,Chest pain radiates to the shoulder,history,False,stated,False,mainly in my left arm... and in my shoulder as well
+day2_consultation07,5,Chest pain radiates to the neck,history,False,not_stated,False,Doctor asked about the neck; patient mentioned only left arm and shoulder
+day2_consultation07,6,Nausea with the chest pain,history,False,stated,False,"a bit of nausea, not, no vomiting"
+day2_consultation07,7,Sweatiness with the chest pain,history,False,stated,False,I'm pretty sweaty
+day2_consultation07,8,Palpitations with the chest pain,history,False,stated,False,It's beating a bit faster now. I think that's 'cause I'm a little bit stressed
+day2_consultation07,9,Chest pain is still present now,history,False,stated,False,"no, they're still present"
+day2_consultation07,10,No previous similar episodes,negative_finding,True,stated,False,"No, this is the first time, actually"
+day2_consultation07,11,Chronic smoker,social,False,stated,False,about ten cigarettes a day... for the past fifteen years
+day2_consultation07,12,Family history of ischaemic heart disease,past_history,False,stated,False,"father died of a heart attack around sixty, mother had some heart problems"
+day2_consultation07,13,Hypertension,past_history,False,stated,False,I have high blood pressure
+day2_consultation07,14,Overweight,past_history,False,stated,False,"yes, I'm overweight"
+day2_consultation07,15,Moderate alcohol intake,social,False,stated,False,about seven or eight pints a week
+day2_consultation07,16,Mild allergy to aspirin,allergy,False,stated,False,allergy to aspirin... swell up a bit... mild reaction
+day2_consultation07,17,Other medications not asked about; London Ambulance Service to clarify,medication,False,not_stated,False,"Medications were not discussed, and there was no mention of the ambulance service clarifying them"
+day2_consultation07,18,Lives alone,social,False,stated,False,I live alone at the moment
+day2_consultation07,19,"Haemodynamically stable now, at rest and seated",other,False,not_stated,False,Examination finding not discussed
+day2_consultation07,20,Well perfused on video inspection,other,False,not_stated,False,Examination finding not discussed
+day2_consultation07,21,Not short of breath,negative_finding,True,not_stated,True,Patient said he was short of breath
+day2_consultation07,22,Impression: acute cardiac event,impression,False,stated,False,they indicate the possibility of a heart attack
+day2_consultation07,23,Needs urgent ECG,plan,False,stated,False,put some stickers on your chest and do an ECG
+day2_consultation07,24,Needs urgent troponin T,plan,False,not_stated,False,Troponin never mentioned
+day2_consultation07,25,London Ambulance Service called as blue-light emergency,plan,False,partly,False,We're probably gonna have to call an ambulance; neither blue-light priority nor London Ambulance Service was mentioned
+day2_consultation07,26,Front door left open so ambulance crew can get in if he collapses,plan,False,stated,False,"Have the front door open so that, in case people need access, they could access you"
+day2_consultation07,27,Clinician stayed on the line until London Ambulance Service arrived and handed over to them,plan,False,partly,False,"Doctor said he planned to stay on the line and hand over, but the call ended before the crew arrived"
+day2_consultation07,28,Assessment and plan explained to patient,plan,False,stated,False,"Doctor explained possible heart attack, ECG, and hospital decision"
+day2_consultation08,1,Fever for 1 week,history,False,stated,False,fever for the past week... about seven days ago
+day2_consultation08,2,Sweatiness with the fever,history,False,stated,False,really hot and sweaty all the time
+day2_consultation08,3,Body and muscle aches,history,False,stated,False,"aching all over really, my muscles are really aching"
+day2_consultation08,4,Nausea,history,False,stated,False,feeling quite nauseous
+day2_consultation08,5,Fatigue,history,False,stated,False,generally quite tired and unwell
+day2_consultation08,6,Night sweats,history,False,stated,False,I'm sweating during the night
+day2_consultation08,7,Hot and cold episodes,history,False,stated,False,periods hot and cold - quite interchangeable
+day2_consultation08,8,Drinking less than normal,history,False,stated,False,I have been drinking but it's been quite a small amount
+day2_consultation08,9,"Taking over-the-counter ibuprofen and paracetamol; not helping overall, brings temperature down slightly",medication,False,stated,False,ibuprofen and paracetamol over the counter... not really helping... Perhaps slightly
+day2_consultation08,10,No cough,negative_finding,True,stated,False,cough or cold or sore throat? - not those sort of symptoms
+day2_consultation08,11,No sore throat,negative_finding,True,stated,False,cough or cold or sore throat? - not those sort of symptoms
+day2_consultation08,12,No runny nose,negative_finding,True,partly,False,Only 'cold' symptoms asked generally; runny nose not specifically mentioned
+day2_consultation08,13,No ear pain,negative_finding,True,stated,False,"no, my ears are fine"
+day2_consultation08,14,No diarrhoea,negative_finding,True,stated,False,not really no
+day2_consultation08,15,No neck stiffness,negative_finding,True,stated,False,My neck's been fine
+day2_consultation08,16,"No headache beyond usual; usual headache on top of head, put down to screen use",negative_finding,True,stated,False,Not more than usual... from staring at the screen... centralized over the head
+day2_consultation08,17,No rash,negative_finding,True,stated,False,I haven't noticed any rashes
+day2_consultation08,18,No joint swelling,negative_finding,True,stated,False,Any joints swollen? - not really
+day2_consultation08,19,No dysuria,negative_finding,True,stated,False,Any painful urination? - not at all
+day2_consultation08,20,No urinary frequency,negative_finding,True,stated,False,fairly regular
+day2_consultation08,21,"Recently returned from foreign travel to Vietnam, stayed a few weeks",history,False,stated,False,"Vietnam, came back four weeks ago; there for a few weeks"
+day2_consultation08,22,"Rural and urban tourism in Vietnam, including trekking and cycling",history,False,stated,False,countryside and some cities... trekking and cycling through farmland
+day2_consultation08,23,Took daily malaria prevention medication during travel; cannot remember which medication,medication,False,stated,False,can't remember now... I think it was daily
+day2_consultation08,24,Past medical history: nothing of note,past_history,True,stated,False,haven't really had any major illnesses in the past
+day2_consultation08,25,Ongoing back pain under physiotherapy; working diagnosis possibly muscular/postural,past_history,False,stated,False,under a physiotherapist... related to sitting at a desk and bad posture
+day2_consultation08,26,Family history: father had a myocardial infarction at age 68,other,False,stated,False,father passed away of heart attack... sixty eight
+day2_consultation08,27,Drug history: on Cerazette (desogestrel progestogen-only pill),medication,False,partly,True,"Patient said 'just Seroxat' (paroxetine), not Cerazette"
+day2_consultation08,28,No known allergies,allergy,True,stated,False,"No, I've just really pollen allergy"
+day2_consultation08,29,Hay fever,past_history,False,stated,False,just hay fever
+day2_consultation08,30,Works as a nurse,social,False,stated,False,I work as a nurse
+day2_consultation08,31,Up to date with vaccinations including hepatitis B,social,False,stated,False,"up to date with vaccinations, Hepatitis B - Yes"
+day2_consultation08,32,Non-smoker,social,True,stated,False,"No, I'm not"
+day2_consultation08,33,Moderate alcohol intake,social,False,stated,False,moderate alcohol intake
+day2_consultation08,34,Moderate physical exercise,social,False,stated,False,moderate physical exercise a few times a week
+day2_consultation08,35,Impression: pyrexia of unknown origin,impression,False,partly,False,no apparent reason... if we can't find a focus of infection
+day2_consultation08,36,Impression: malaria needs to be excluded,impression,False,stated,False,need to think about things like malaria
+day2_consultation08,37,Plan: face-to-face appointment with a GP today,plan,False,stated,False,come into one of our clinics... I can come straight into central London today
+day2_consultation08,38,Plan: then blood tests including CRP and ESR,plan,False,partly,False,inflammatory markers mentioned; CRP/ESR not named
+day2_consultation08,39,Plan: thick and thin blood films for malaria,plan,False,stated,False,"thick and thin blood films, to check for malaria"
+day2_consultation08,40,Plan: bloods to be routine or via A&E depending on the second GP's assessment,plan,False,partly,False,GP who examines you can decide how urgent the blood tests are; A&E offered as alternative to clinic attendance
+day2_consultation09,1,"Difficulty moving left arm, noticed on waking this morning",history,False,stated,False,"I woke up this morning, about an hour ago, and I couldn't move my left arm"
+day2_consultation09,2,No pain in left arm,negative_finding,True,stated,False,"I feel no pain but just, uh, can't move it"
+day2_consultation09,3,Still unable to move left arm,history,False,stated,False,The arm still can't move
+day2_consultation09,4,No previous similar episodes,negative_finding,True,stated,False,"No, uh, it's really the first time"
+day2_consultation09,5,Slept normally last night,history,False,stated,False,everything as usual
+day2_consultation09,6,No discolouration of the hand,negative_finding,True,stated,False,discoloration in your hand? - no
+day2_consultation09,7,Left arm does not feel cold,negative_finding,True,stated,False,does your hand feel cold? - no
+day2_consultation09,8,Symptoms limited to left arm,history,False,not_stated,True,"Patient also reported facial tingling, swallowing and speech difficulty"
+day2_consultation09,9,No symptoms in left leg,negative_finding,True,stated,False,symptoms in your left leg? - No
+day2_consultation09,10,Tingling on left side of face for 1 hour,history,False,stated,False,tingling on the left side of my face... since I woke up... an hour ago
+day2_consultation09,11,Patient has not noticed any facial asymmetry,negative_finding,True,stated,False,"asymmetry in your face... - no, not really"
+day2_consultation09,12,"Difficulty swallowing water, with dribbling of water",history,False,partly,False,I was trying to drink earlier and I'd be bold a bit; difficulties swallowing - yeah (water/dribbling not clearly said)
+day2_consultation09,13,Speech seems harder or slower,history,False,stated,False,it feels a bit harder... maybe more slow
+day2_consultation09,14,No one at home with patient,social,False,stated,False,Is there anyone at home with you? - no
+day2_consultation09,15,Past medical history of type 2 diabetes mellitus,past_history,False,stated,False,I have type two diabetes
+day2_consultation09,16,Past medical history of hypertension,past_history,False,stated,False,and high blood pressure
+day2_consultation09,17,Takes metformin,medication,False,stated,False,I'm taking Metformin
+day2_consultation09,18,Takes losartan,medication,False,stated,False,losartan
+day2_consultation09,19,Takes amlodipine,medication,False,stated,False,and Amlodipine
+day2_consultation09,20,Allergic to penicillin,allergy,False,stated,False,"only penicillin, I believe"
+day2_consultation09,21,Family history: father has heart disease,other,False,stated,False,my dad has got heart disease
+day2_consultation09,22,Lives alone,social,False,stated,False,normally living alone? - yes
+day2_consultation09,23,Ex-smoker,social,False,stated,False,Do you smoke? - I used to
+day2_consultation09,24,Mild to moderate alcohol intake,social,False,partly,False,"a few drinks over the weekend, a couple more during the week, pints of beer; 'mild to moderate' is GP's interpretation"
+day2_consultation09,25,Impression: possible stroke (cerebrovascular accident),impression,False,stated,False,I'm concerned that some of the symptoms... may be symptoms of a stroke
+day2_consultation09,26,London Ambulance Service called for blue-light (emergency) response,plan,False,partly,False,colleague to call an ambulance to your home address now; London Ambulance Service/blue-light not mentioned
+day2_consultation09,27,Patient advised to keep front door open,plan,False,stated,False,"leave the front door unlocked, sit in the hallway"
+day2_consultation09,28,Clinician to stay on the line until the ambulance arrives,plan,False,stated,False,I'm gonna stay on the line until they reach there
+day2_consultation09,29,Clinician to hand over to the ambulance crew on arrival,plan,False,not_stated,False,Handover to crew not discussed
+day2_consultation10,1,Left-sided headache present since waking this morning,history,False,stated,False,woke up this morning... horrible pain on the left side of my head
+day2_consultation10,2,Headache pain woke patient up at 5:30am,history,False,stated,False,it woke me up... around five thirty ish
+day2_consultation10,3,Headache still present now,history,False,stated,False,Is the headache still present now? Yes
+day2_consultation10,4,History of previous headaches that were less severe and located at the front of the head,history,False,stated,False,nothing as severe as this before... cluster at the front of my head
+day2_consultation10,5,No neck stiffness,negative_finding,True,stated,False,neck stiffness? No
+day2_consultation10,6,No fever,negative_finding,True,stated,False,fever? No
+day2_consultation10,7,Some sensitivity to bright light (photophobia) now,history,False,stated,False,I'm a little bit sensitive... makes my eyes a little bit sore
+day2_consultation10,8,No nausea currently,negative_finding,True,stated,False,nauseous? Not really
+day2_consultation10,9,Felt dizzy this morning,history,False,stated,False,"When I first got up this morning, my head felt a bit dizzy"
+day2_consultation10,10,Not dizzy now,negative_finding,True,stated,False,that's kind of subsided now
+day2_consultation10,11,No family history of migraines,negative_finding,True,stated,False,migraines in family? No
+day2_consultation10,12,"Work is stressful with late nights at work, ongoing for a few months",social,False,stated,False,work's a bit stressful... late nights... about a couple of months
+day2_consultation10,13,Mood is stable,history,False,partly,False,not moody... get a bit frustrated... ebbs and flows
+day2_consultation10,14,Past medical history of anxiety for 2 years,past_history,False,stated,False,anxiety for about two years
+day2_consultation10,15,Does not feel anxious right now; experiences anxiety at work at times,history,False,stated,False,at work sometimes I do feel a bit anxious... don't feel massively anxious
+day2_consultation10,16,No thoughts of self-harm,negative_finding,True,stated,False,thoughts about harming yourself? No
+day2_consultation10,17,Headache is better when lying down,history,False,stated,False,"better when you lie down? Yeah, I would say so"
+day2_consultation10,18,"Patient has taken paracetamol, which has not helped",medication,False,stated,False,taken some Paracetamol... not really helped
+day2_consultation10,19,No other past medical history,past_history,True,stated,False,any other illnesses? None
+day2_consultation10,20,Has not had blood pressure checked,other,True,stated,False,Have you ever had your blood pressure checked? No
+day2_consultation10,21,Family history: mother has anxiety,other,False,stated,False,my mum's had a history of anxiety
+day2_consultation10,22,Current medication: sertraline,medication,False,stated,False,other than Sertraline... nothing else
+day2_consultation10,23,No known drug allergies,allergy,True,stated,False,allergies? Not that I'm aware of
+day2_consultation10,24,Lives with partner,social,False,stated,False,I live with my partner
+day2_consultation10,25,Non-smoker,social,True,stated,False,smoker? No
+day2_consultation10,26,Has a cat,social,False,stated,False,I have a cat
+day2_consultation10,27,Exercises well,social,False,stated,False,running at least three times a week
+day2_consultation10,28,Reasonable diet,social,False,stated,False,it's OK... I wouldn't say unhealthy
+day2_consultation10,29,Impression: tension-type headache with or without migraine,impression,False,partly,False,could be tension headache... other possibility is migraine
+day2_consultation10,30,Ibuprofen first line as per SIGN 2018 migraine guidelines,plan,False,partly,False,guidelines have changed... now it's Ibuprofen or Aspirin (SIGN 2018 not named)
+day2_consultation10,31,Hydration with 1.5-2 litres of water daily,plan,False,stated,False,one point five to two litres of water or fluids a day
+day2_consultation10,32,Sleep a minimum of 7-8 hours daily,plan,False,stated,False,"minimum of seven, eight hours sleep at night"
+day2_consultation10,33,Consider time off work; to self-certify for a few days to see if this helps,plan,False,partly,True,"maybe having a week off if you self-certify (a week, not a few days)"
+day2_consultation10,34,Self-referral to IAPT (Improving Access to Psychological Therapies),plan,False,partly,False,counselling service in your area... to self-refer (IAPT not named)
+day2_consultation10,35,Review in one week,plan,False,stated,False,follow-up in a week's time
+day2_consultation10,36,"Ring back sooner if any red flag symptoms, as per patient.co.uk headache information",plan,False,partly,False,lower threshold for ringing us back... link to danger signs (patient.co.uk not named)
+day2_consultation10,37,Patient understands and is happy with the plan,plan,False,stated,False,that sounds brilliant. Thank you
+day3_consultation01,1,Lip swelling for the past 1 hour,history,False,partly,False,Soup was eaten around 7 and swelling started about half an hour later. No total duration was given.
+day3_consultation01,2,Symptoms started after eating prawn soup,history,False,stated,False,I ordered a prawn soup... then my lips started feeling a little weird
+day3_consultation01,3,Initially had an abnormal (weird) sensation around the lips,history,False,stated,False,my lips started feeling a little weird just in the corner sort of on the left first
+day3_consultation01,4,Lip swelling began about 30 minutes after symptom onset,history,False,partly,False,"Half an hour was given as the time from eating the soup to the swelling, not from symptom onset."
+day3_consultation01,5,Feeling of throat closing,history,False,partly,False,"Asked about the throat closing, the patient said 'I feel like I can't breathe that well right now'. She did not confirm her throat was closing."
+day3_consultation01,6,Chest tightness at present,history,False,partly,False,"Asked about chest tightness: 'I don't know if it's the chest... it might be, I'm not sure'"
+day3_consultation01,7,Difficulty breathing at present,history,False,stated,False,I feel like I can't breathe that well right now
+day3_consultation01,8,"On examination, patient appeared to have difficulty breathing during the consultation",other,False,not_stated,False,No examination finding was mentioned.
+day3_consultation01,9,"On examination, lip swelling appeared to be getting worse during the consultation",other,False,partly,False,The patient said 'the swelling is getting...' during the call. No examination was described.
+day3_consultation01,10,Past medical history of asthma,past_history,False,stated,False,I generally have asthma
+day3_consultation01,11,"Peanut allergy, treated with an injection as a child",allergy,False,partly,False,Peanut allergy was stated. She vaguely remembered her mum mentioning something as a child but did not know what it was. A hospital visit around age 6 was mentioned.
+day3_consultation01,12,Currently using salbutamol inhalers,medication,False,stated,False,I take... Salbutamol inhalers... I do take that regularly
+day3_consultation01,13,Mother present during consultation,social,False,stated,False,"somebody just came... Mum, do we have any antihistamines"
+day3_consultation01,14,Suspected anaphylactic reaction,impression,False,stated,False,there is a suspected anaphylactic reaction
+day3_consultation01,15,Advised to take an antihistamine immediately,plan,False,stated,False,straight away take the antihistamines in the meantime
+day3_consultation01,16,Advised mother to call 999 for an ambulance,plan,False,stated,False,"Mum, if you can call the... nine nine nine"
+day3_consultation01,17,"After discharge from hospital, book a review with the doctor to consider prescribing an EpiPen (adrenaline auto-injector)",plan,False,partly,False,after you come out from the hospital do give us a ring back we might need to sort you out with your injections. An EpiPen was not named.
+day3_consultation02,1,Headache for 4 days,history,False,stated,False,"very sort of bad, severe headache, the past four days"
+day3_consultation02,2,Taking paracetamol for headache with no relief,medication,False,stated,False,I've had some Paracetamol... not really helping
+day3_consultation02,3,Taking ibuprofen for headache with no relief,medication,False,stated,False,"and some Ibuprofen, but it's not really helping"
+day3_consultation02,4,Returned from Thailand 1 week ago,history,False,stated,False,"I have been away to Thailand. Um, uh week or so ago"
+day3_consultation02,5,A friend (contact) is also unwell,history,False,stated,False,a friend of mine has also been a bit unwell
+day3_consultation02,6,Has had mosquito bites,history,False,stated,False,"had some, like, usual mosquito bites"
+day3_consultation02,7,Rash all over the body,history,False,stated,False,the rash is kind of all over my body
+day3_consultation02,8,Rash is blanching (fades under glass test),history,False,stated,False,"put a glass on top of the rash, does that rash go away? - Uh, yes."
+day3_consultation02,9,No neck pain on movement (no neck stiffness),negative_finding,True,partly,False,Asked about neck pain on movement; patient said general aching 'not necessarily sort of in my neck' - not a clear denial
+day3_consultation02,10,No photophobia (no pain on looking at light),negative_finding,True,stated,False,light doesn't seem to bother me too much
+day3_consultation02,11,No muscle weakness,negative_finding,True,stated,False,"Any muscle weaknesses... hold a cup - Uh, no."
+day3_consultation02,12,No pins and needles (paraesthesia),negative_finding,True,stated,False,"pins and needles in your face, arms and legs? - Uh, no."
+day3_consultation02,13,No vomiting,negative_finding,True,stated,False,"No, no I haven't, I haven't been sick."
+day3_consultation02,14,No cough,negative_finding,True,stated,False,"Uh no, no cough."
+day3_consultation02,15,No cold (coryzal) symptoms,negative_finding,True,stated,False,"there's no cough or cold, yeah? - Uh, no. No."
+day3_consultation02,16,No ear pain,negative_finding,True,stated,False,There's no earaches? - it seems to be OK
+day3_consultation02,17,No bleeding spots on the skin (no petechiae/purpura),negative_finding,True,stated,False,blood spots or bleeding... which you don't have? - no bleeding
+day3_consultation02,18,Generalised muscle aches,history,False,stated,False,general aching muscles... a bit all over
+day3_consultation02,19,No past medical history,past_history,True,stated,False,general medical history is fine
+day3_consultation02,20,No known allergies,allergy,True,stated,False,"any allergies at all? - Uh, no."
+day3_consultation02,21,"Need to rule out serious conditions including malaria, dengue and meningitis",impression,False,partly,False,Dengue and meningitis mentioned; malaria never named (only 'viral illnesses' from mosquito bites)
+day3_consultation02,22,Advised to book an urgent appointment to see a doctor within the next few hours,plan,False,stated,False,"urgently seen by the doctor, preferably in the next few hours time"
+day3_consultation02,23,"If an urgent appointment is not possible, attend A&E (Accident and Emergency)",plan,False,partly,False,'if that's not available I'd like you to take yourself to .' - destination not captured
+day3_consultation02,24,"Further assessment to rule out malaria, dengue and meningitis",plan,False,partly,False,Blood tests and examinations discussed; dengue/meningitis mentioned but not malaria
+day3_consultation03,1,Lack of energy for the past 3 months,history,False,partly,False,"Lack of energy was discussed and said to have 'started long, long ago'. The 3-3.5 month figure was given for loss of appetite, not lack of energy."
+day3_consultation03,2,Loss of appetite,history,False,stated,False,"'I'm having a loss of appetite, I'm not eating very much'"
+day3_consultation03,3,Lack of motivation,history,False,partly,False,Doctor: 'you're not having the umph'; patient feels down and out of place. Motivation was not named.
+day3_consultation03,4,Breathlessness,history,False,stated,False,'I'm feeling short of breath'
+day3_consultation03,5,Palpitations sometimes associated with breathlessness,history,False,stated,False,In the lift: 'my heart starts beating and I can't really breathe'
+day3_consultation03,6,No chest pain,negative_finding,True,stated,False,'No chest pain.'
+day3_consultation03,7,Not depressed,negative_finding,True,not_stated,False,Patient avoided answering whether he is depressed and agreed his mood is low.
+day3_consultation03,8,Not stressed,negative_finding,True,stated,False,"Asked about stress at home: 'it is OK... other than that, it's OK'"
+day3_consultation03,9,Bowels normal,negative_finding,True,stated,False,"No problems going to the toilet, no diarrhoea, no blood or mucus"
+day3_consultation03,10,Nausea most of the time,history,False,partly,True,"'I feel nauseous every now and again', which does not match 'most of the time'"
+day3_consultation03,11,No vomiting,negative_finding,True,stated,False,"Asked if he had ever been sick: 'No, actually not.'"
+day3_consultation03,12,Weight loss of about one stone over the past 6 months,history,False,stated,False,'at least six months'... 'So about a stone'
+day3_consultation03,13,No history of acid reflux,negative_finding,True,stated,False,"'I do not, no.'"
+day3_consultation03,14,Past medical history of underactive thyroid (hypothyroidism),past_history,False,stated,False,'too little activity of my thyroid' - 'underactive thyroid'
+day3_consultation03,15,Not taking thyroxine for a while since changing GP practice,medication,False,stated,False,'not been taking it... since I changed doctor'
+day3_consultation03,16,Does not remember when last blood tests were done,history,False,partly,False,'haven't taken one in a long time'. He did not say he could not remember when.
+day3_consultation03,17,Advised to contact support to arrange blood tests,plan,False,stated,False,'you need to call support so that we can organise that blood test'
+day3_consultation03,18,Blood tests to check for anaemia,plan,False,stated,False,'we look at things like anaemia'
+day3_consultation03,19,Blood tests to check thyroid function,plan,False,not_stated,False,Thyroid tests were not explicitly listed among the bloods.
+day3_consultation03,20,Blood tests to check liver function,plan,False,stated,False,'your livers'
+day3_consultation03,21,Blood tests to check kidney function,plan,False,stated,False,'how your kidney functions are'
+day3_consultation03,22,Blood tests to check vitamin levels,plan,False,stated,False,'with vitamin levels'
+day3_consultation03,23,Book a follow-up appointment after receiving a text message from Babylon,plan,False,stated,False,'you will receive a text message... to tell you to book an appointment'
+day3_consultation03,24,Safety netting: contact urgently if chest pain develops with palpitations,plan,False,stated,False,'with palpitations or chest pain... You need to go to A and E'
+day3_consultation03,25,Safety netting: contact urgently if change in bowel habit,plan,False,stated,False,'if your bowels change... you need to get in touch with us'
+day3_consultation04,1,Breathlessness for 3-4 days,history,False,partly,True,"Patient said 'about two to three days ago', not 3-4 days"
+day3_consultation04,2,Currently using blue (reliever) inhaler twice a day,history,False,partly,False,Using it every day 'morning or evening'; unclear whether this is the blue inhaler or the preventer
+day3_consultation04,3,Normally uses blue inhaler only as needed,history,False,stated,False,'using that as and when I have symptoms'
+day3_consultation04,4,Taking Clenil 2 puffs twice a day every day,medication,False,partly,True,"Preventer used every day, twice a day; doctor referred to 'three puffs twice a day', not 2"
+day3_consultation04,5,Cough present,history,False,stated,False,"'wheezing a bit, and coughing'"
+day3_consultation04,6,No sputum,negative_finding,True,stated,False,"'OK, no sputum'"
+day3_consultation04,7,Some wheezing present,history,False,stated,False,'I'm just wheezing a bit'
+day3_consultation04,8,Asthma since childhood,past_history,False,not_stated,False,When the asthma started was never discussed
+day3_consultation04,9,History of eczema,past_history,False,partly,False,'a few issues that I think could be eczema'
+day3_consultation04,10,Last asthma attack was 3 years ago,past_history,False,partly,False,'about three to four years ago'
+day3_consultation04,11,Never needed antibiotics or steroids for asthma,past_history,True,partly,False,Never had oral steroids; no steroids or antibiotics at the last attack 'that I can remember'
+day3_consultation04,12,Never hospitalised because of asthma,past_history,True,stated,False,Never admitted to hospital
+day3_consultation04,13,Normal (baseline) peak flow reading is 380,past_history,False,stated,False,'about three eighty'
+day3_consultation04,14,No known allergies,allergy,True,stated,False,No allergies to medication (has hay fever)
+day3_consultation04,15,Uses hydrocortisone for eczema,medication,False,partly,False,Hydrocortisone mentioned; its link to eczema was the doctor's inference
+day3_consultation04,16,Uses Cetraben for eczema,medication,False,partly,False,Cetraben mentioned; not said to be for eczema
+day3_consultation04,17,Increase brown (Clenil) inhaler to 4 puffs twice daily,plan,False,stated,False,'increase it to four puffs twice a day'
+day3_consultation04,18,May use blue inhaler up to every 2-4 hours,plan,False,stated,False,'maximum about every two to four hours'
+day3_consultation04,19,Chest review by a doctor within the next 2 days,plan,False,partly,False,'seen by one of our GPs in the next few days'; 2 days not said
+day3_consultation04,20,Go to A&E if increasingly breathless despite advised treatment and not yet seen by a doctor,plan,False,stated,False,"'if your breathing's getting worse and you've not seen us, do take yourself to A and E'"
+day3_consultation05,1,Dizziness for the past few hours,history,False,stated,False,Started probably about two hours ago; doctor: it started a few hours ago
+day3_consultation05,2,"Similar episode of dizziness one month ago, lasting only 10 minutes",history,False,partly,False,"Similar thing about a month ago, lasted 'probably only about five, ten minutes'"
+day3_consultation05,3,Dizziness described as feeling like being in a boat,history,False,stated,False,Doctor: 'so that you won't feel as if you're going around in a boat'
+day3_consultation05,4,No recent viral illness,negative_finding,True,stated,False,"Viral illness recently? 'No.' No cold, no cough"
+day3_consultation05,5,Buzzing noise in the ears (tinnitus),history,False,stated,False,'my ears are buzzing a bit'
+day3_consultation05,6,No hearing problems,negative_finding,True,stated,False,Any problems hearing? 'No... I can hear everything'
+day3_consultation05,7,No ear discharge,negative_finding,True,stated,False,"Any ear pain or ear discharge? 'No, nothing.'"
+day3_consultation05,8,No ear pain,negative_finding,True,stated,False,"Any ear pain or ear discharge? 'No, nothing.'"
+day3_consultation05,9,Feels nauseous,history,False,stated,False,'now I'm feeling very sick'; doctor: 'Nausea'
+day3_consultation05,10,No vomiting,negative_finding,True,stated,False,Physically sick? 'No'
+day3_consultation05,11,No weakness of the arms or legs,negative_finding,True,stated,False,'My legs and arms and everything are working fine'; no weakness
+day3_consultation05,12,Past medical history of premature ovarian failure,past_history,False,stated,False,'I've had premature ovarian failure'
+day3_consultation05,13,Takes hormone replacement therapy (HRT),medication,False,stated,False,'I've taken HRT'
+day3_consultation05,14,No known allergies,allergy,True,stated,False,Any allergies? 'No.'
+day3_consultation05,15,Most likely diagnosis is labyrinthitis,impression,False,stated,False,Most common diagnosis is labyrinthitis
+day3_consultation05,16,Prescribe Stemetil (prochlorperazine) for symptom relief,plan,False,partly,False,"Medication for symptom relief prescribed, one tablet three times a day for ten days; drug name not heard in the transcript"
+day3_consultation05,17,Book a face-to-face appointment to have ears examined,plan,False,stated,False,Wants her seen by a doctor to look inside her ears; call support to book the appointment
+day3_consultation05,18,Safety-netting: go to A&E if weakness of arms or legs develops,plan,False,stated,False,Go to A&E if weakness of legs or arms develops
+day3_consultation05,19,Safety-netting: go to A&E if vomiting develops,plan,False,stated,False,Go to A&E if she starts being violently sick
+day3_consultation06,1,Breathing difficulty for the past 20 minutes,history,False,partly,True,"Patient: 'about fifteen minutes ago, I was gardening and... I was stung by wasp'; breathing difficulty since then. The note says 20 minutes, not 15."
+day3_consultation06,2,Breathing difficulty began after being stung by a wasp,history,False,stated,False,'I was stung by wasp... now I'm... having quite shallow breath'; Doctor: 'You're having difficulties breathing since then'
+day3_consultation06,3,Blotchy rash present,history,False,stated,False,'Yes there's a bit of blotching'
+day3_consultation06,4,Tingling sensation around the lips,history,False,stated,False,'I can definitely feel something in the lips' / 'like a tingling kind of feeling?' 'Yes'
+day3_consultation06,5,No sensation of throat closing,negative_finding,True,stated,False,'feel your throat is closing up?' 'Not throat'
+day3_consultation06,6,No previous similar episodes,negative_finding,True,stated,False,"'Have you had anything like this before?' 'Uh, no.'"
+day3_consultation06,7,Past medical history of eczema,past_history,False,stated,False,'a bit of eczema'
+day3_consultation06,8,Allergic to penicillin,allergy,False,stated,False,'I'm allergic to penicillin'
+day3_consultation06,9,Possible urticaria (hives),impression,False,stated,False,'it might just be an articularly reaction' (likely a mis-transcription of 'urticarial reaction')
+day3_consultation06,10,Possible anaphylactic reaction needs to be ruled out,impression,False,stated,False,'what we are worried about is... in case you develop an anaphylactic reaction'
+day3_consultation06,11,Advised to start antihistamines immediately,plan,False,stated,False,"'I'll ask her to give you the antihistamine, in the meantime while the ambulance is coming'"
+day3_consultation06,12,Call an ambulance to rule out possible anaphylactic reaction,plan,False,stated,False,'I'd like her to call the ambulance... in case you develop an anaphylactic reaction'
+day3_consultation07,1,"Red, sore rash for the past few days",history,False,stated,False,over the past few days... sore and red
+day3_consultation07,2,"Rash is on the chest, hands and arms",history,False,stated,False,"all over my chest, my hands and arms"
+day3_consultation07,3,Rash is worse on the inner arms,history,False,stated,False,especially inside of the elbows... the worst area
+day3_consultation07,4,No scratch marks,negative_finding,True,stated,False,there's no scratch mark
+day3_consultation07,5,No thickened skin,negative_finding,True,stated,False,"Is there any thickened skin? ... no, I don't think so"
+day3_consultation07,6,Rash is dry,history,False,stated,False,"very itchy and, uh, dry"
+day3_consultation07,7,Rash is itchy,history,False,stated,False,It's very itchy
+day3_consultation07,8,No fever,negative_finding,True,partly,False,Doctor asked 'No fever?' but the patient answered about antihistamines instead
+day3_consultation07,9,No joint pains,negative_finding,True,partly,False,Doctor asked 'no joint pains' but the patient never confirmed it
+day3_consultation07,10,Has used hydrocortisone and cetirizine without improvement,history,False,stated,False,"Hydrocortisone 'not helping'; OTC antihistamine 'didn't work', doctor said 'like cetirizine'"
+day3_consultation07,11,Past medical history of asthma,past_history,False,stated,False,I have asthma
+day3_consultation07,12,Past medical history of eczema,past_history,False,stated,False,your usual eczema... history of eczema
+day3_consultation07,13,Current medication: Diprobase,medication,False,stated,False,a cream called diprobase
+day3_consultation07,14,Current medication: Dermol,medication,False,stated,False,in the shower I use something called dermal
+day3_consultation07,15,Current medication: hydrocortisone,medication,False,stated,False,"So you're using the Hydrocortisone, yeah? Yes."
+day3_consultation07,16,Current medication: salbutamol,medication,False,partly,False,Blue inhaler used on and off; salbutamol was not named
+day3_consultation07,17,Family history of hypothyroidism,other,False,stated,False,in my family there's hypothyroidism... My mother
+day3_consultation07,18,No known allergies,allergy,True,stated,False,"No, no allergies"
+day3_consultation07,19,Impression: eczema flare,impression,False,stated,False,extensive eczema; getting worse
+day3_consultation07,20,Prescribe fexofenadine,plan,False,stated,False,antihistamine is called Fexofenadine
+day3_consultation07,21,Prescribe Betnovate for eczema,plan,False,stated,False,we'll try with some Betnovate first
+day3_consultation07,22,Advised to use steroid cream sparingly,plan,False,stated,False,"very small amount, like one fingertip"
+day3_consultation07,23,Explained that one fingertip unit is enough to cover the palms and backs of the hands,plan,False,stated,False,enough to cover your palms. And your back of your hands
+day3_consultation07,24,Advised to speak with a doctor urgently if symptoms worsen or there is an allergic reaction,plan,False,partly,False,Told to get in touch or call beforehand if worse or allergic reaction; 'urgently' was not said
+day3_consultation07,25,Advised to book another appointment if symptoms are not better within 2 weeks,plan,False,stated,False,"If there's no improvement, you need to get back to us... wait for two weeks"
+day3_consultation08,1,Cough and cold for 5 days,history,False,stated,False,Patient: 'about like five days' with cough and runny nose
+day3_consultation08,2,Cough is dry,history,False,stated,False,'it's like a dry cough... hacking'
+day3_consultation08,3,No sputum,negative_finding,True,stated,False,"Asked about phlegm; patient: 'No, no, it's like a dry cough'"
+day3_consultation08,4,No blood in cough (no haemoptysis),negative_finding,True,partly,False,"Doctor asked 'You're not bringing up any blood, are you?' but the transcript has no answer"
+day3_consultation08,5,No wheeze,negative_finding,True,stated,False,'So you're not wheezy or rattly noises in your chest.' Patient: 'No.'
+day3_consultation08,6,No breathlessness,negative_finding,True,stated,False,"'No, no, no shortness... I'm breathing fine.'"
+day3_consultation08,7,Has used paracetamol for current symptoms,medication,False,stated,False,"Painkillers taken; doctor: 'Paracetamol, OK.'"
+day3_consultation08,8,Past medical history of diabetes for 5-6 years,past_history,False,stated,False,Diabetic 'maybe five or six years'
+day3_consultation08,9,Past medical history of high blood pressure (hypertension) for 5-6 years,past_history,False,partly,False,Lisinopril for 'slight blood pressure'; how long he has had high blood pressure was never said
+day3_consultation08,10,Regular medication: metformin,medication,False,stated,False,'I take... metformin. I'm a diabetic'
+day3_consultation08,11,Regular medication: lisinopril,medication,False,stated,False,'I also... have... lisinopril'
+day3_consultation08,12,Blood sugar levels normal today,other,False,partly,False,Sugars at the moment: 'no issues nothing like out of the ordinary'; no reading today was mentioned
+day3_consultation08,13,Blood pressure normal today,other,False,stated,False,"Checked BP this morning, 'within the normal range'"
+day3_consultation08,14,Impression: upper respiratory tract infection,impression,False,stated,False,'it's just a viral infection... just a cold and a cough'
+day3_consultation08,15,Advised to use Night Nurse and Day Nurse (over-the-counter cold and flu remedies),plan,False,stated,False,"'you can use the... Night Nurse, Day Nurse'"
+day3_consultation08,16,Safety-netting: call back if breathlessness develops,plan,False,stated,False,'If... you're feeling short of breath... get in touch with us'
+day3_consultation08,17,Safety-netting: call back if wheezing develops,plan,False,stated,False,"Round-up: 'shortness of breath, wheezy... get in touch with us'"
+day3_consultation08,18,Safety-netting: call back if cough lasts more than 3 weeks,plan,False,stated,False,"'symptoms are lasting more than three weeks, then get in touch with us'"
+day3_consultation09,1,Numbness of the left arm for 2 weeks,history,False,stated,False,numb... for at least two weeks
+day3_consultation09,2,Mild weakness when holding things,history,False,partly,False,Can grasp a glass; doctor concludes 'some form of weakness'; 'mild' and holding difficulty not clearly said
+day3_consultation09,3,Mild weakness when playing the piano,history,False,stated,False,harder to get the notes on piano
+day3_consultation09,4,No neck pain,negative_finding,True,stated,False,"No, not, no, nothing"
+day3_consultation09,5,"Visual disturbance in the left peripheral visual field lasting 20 minutes, 2 weeks ago",history,False,partly,False,left eye field loss ~20 minutes 'a few weeks ago'; 2 weeks not specified
+day3_consultation09,6,Recently started boxing lessons,social,False,stated,False,taking this boxing class for a few weeks
+day3_consultation09,7,"Vomiting for 2 weeks, starting over a month ago",history,False,partly,False,sick for two weeks about a month ago with cold/flu; vomiting never mentioned
+day3_consultation09,8,Vomiting started after a party,history,False,partly,False,got sick after partying; vomiting not mentioned
+day3_consultation09,9,"Numbness over the left second, third and fourth fingers",history,False,stated,False,"second, third, and fourth finger"
+day3_consultation09,10,No fits (seizures),negative_finding,True,stated,False,"no, nothing like that"
+day3_consultation09,11,No weakness elsewhere,negative_finding,True,stated,False,"weakness is only in your left arm - Right, exactly"
+day3_consultation09,12,Gait is normal,negative_finding,True,stated,False,walking is normal
+day3_consultation09,13,Takes ibuprofen,medication,False,stated,False,I just take ibuprofen every once in a while
+day3_consultation09,14,Takes vitamin D,medication,False,stated,False,I take vitamin D
+day3_consultation09,15,Takes iron tablets,medication,False,stated,False,GP wants me to take iron supplements... mostly forget
+day3_consultation09,16,Takes melatonin,medication,False,stated,False,sometimes I take Melatonin
+day3_consultation09,17,Family history: father has hypothyroidism,past_history,False,stated,False,dad... I think it's hypothyroidism
+day3_consultation09,18,Family history: mother has diabetes,past_history,False,stated,False,diabetes type two
+day3_consultation09,19,Family history: mother has high cholesterol,past_history,False,stated,False,high cholesterol
+day3_consultation09,20,Family history: mother has high blood pressure,past_history,False,stated,False,hypertension
+day3_consultation09,21,Multiple sclerosis to be ruled out,impression,False,stated,False,things like MS... important to find out whether you have it
+day3_consultation09,22,Urgent neurology review,plan,False,stated,False,very urgent neurology referral
+day3_consultation09,23,Safety-netting: go to A&E if there is progressive weakness of the arms or legs,plan,False,partly,False,if the weakness progresses to your legs; arms not specified
+day3_consultation09,24,Safety-netting: go to A&E if vomiting occurs,plan,False,stated,False,"headaches, vomiting, fits... A and E"
+day3_consultation09,25,Safety-netting: go to A&E if visual disturbances occur,plan,False,stated,False,visual symptoms are getting worse
+day3_consultation09,26,Safety-netting: go to A&E if fits (seizures) occur,plan,False,stated,False,fits... A and E
+day3_consultation10,1,Diarrhoea for 3 days,history,False,stated,False,"Patient: 'it's been happening for about, three days now'"
+day3_consultation10,2,Abdominal pain associated with the diarrhoea,history,False,stated,False,"Patient: 'pretty standard diarrhoea, where it's was like a little bit of abdominal pain'"
+day3_consultation10,3,No mucus in stool,negative_finding,True,stated,False,Patient said 'No' when asked about mucus; doctor: 'so no mucus'
+day3_consultation10,4,No blood in stool,negative_finding,True,stated,False,Patient: 'No blood.'
+day3_consultation10,5,Vomited once,history,False,stated,False,Patient: 'I threw up once'
+day3_consultation10,6,Still eating and drinking,history,False,stated,False,Asked if still able to eat and drink: patient said 'a little bit' and confirmed drinking plenty
+day3_consultation10,7,Diarrhoea is watery,history,False,partly,False,"Patient: 'It probably depends on the time of day'; doctor: 'Bit of both' (watery and loose), so not simply watery"
+day3_consultation10,8,Diarrhoea 4-5 times a day,history,False,stated,False,Patient: 'four to five'
+day3_consultation10,9,No fever,negative_finding,True,partly,True,"Asked about fever, patient said 'maybe a little bit', which contradicts 'no fever'"
+day3_consultation10,10,Loss of appetite,history,False,stated,False,Patient: 'Appetite loss I guess worse than normal'
+day3_consultation10,11,Has not eaten out,negative_finding,True,stated,False,"Doctor: 'You haven't had anything from outside? Nothing dodgy' - Patient: 'No, no no no'"
+day3_consultation10,12,No recent foreign travel,negative_finding,True,stated,False,Patient: 'no travels recently'
+day3_consultation10,13,No signs of dehydration on examination,negative_finding,True,stated,False,Doctor: 'you look like you're not dehydrated which is a good sign'
+day3_consultation10,14,Past medical history of asthma,past_history,False,stated,False,Patient: 'I had asthma... I guess I still have it'
+day3_consultation10,15,Family history: father died of bowel cancer 10 years ago,other,False,stated,False,Patient: 'he died of bowel cancer ten years ago'
+day3_consultation10,16,Family history of hypertension (written on the family history line; the note does not say which relative),other,False,stated,False,Patient: 'my dad had hypertension'
+day3_consultation10,17,Medication uncertain: 'Lapriso' (recorded with a question mark; drug name unclear),medication,False,partly,False,"Patient said 'Lexapro' (doctor heard 'Laxepro'), a yellow inhaler; doctor was unsure and said he would check it. The name was never said as 'Lapriso'."
+day3_consultation10,18,No known allergies,allergy,True,stated,False,Patient: 'No... nothing' when asked about allergies
+day3_consultation10,19,Diagnosis: gastroenteritis,impression,False,not_stated,False,The doctor never named a diagnosis
+day3_consultation10,20,Advised to eat a soft diet,plan,False,stated,False,Doctor: 'things that one would advise is a soft diet'
+day3_consultation10,21,Advised to drink plenty of fluids,plan,False,stated,False,Doctor: 'You still need to drink plenty of water'
+day3_consultation10,22,"Advised to start with crackers, soups and mash, then build up to mash and vegetables",plan,False,partly,False,"Doctor mentioned crackers, toast and jam, then boiled vegetables and mash. Soups were not mentioned."
+day3_consultation10,23,Advised that yoghurts can be used as probiotics to help gut recovery,plan,False,stated,False,"Doctor: 'yoghurts are a good idea because they are probiotics, it help to build up the normal... gut bacteria'"
+day3_consultation10,24,Stool sample needed if diarrhoea continues for more than a week,plan,False,stated,False,Doctor: 'if your diarrhoea doesn't go away in a week's time... we need a stool sample'
+day3_consultation10,25,Stool sample needed if blood appears in the stool,plan,False,stated,False,"Doctor: 'or if you're passing blood, we need a stool sample'"
+day3_consultation10,26,"Book an appointment if diarrhoea exceeds 8 episodes a day, because of the risk of dehydration",plan,False,stated,False,Doctor: 'we start worrying... if you're going more than eight times a day'; later said six to eight times means a risk of dehydration and to get in touch
+day4_consultation01,1,Sudden-onset left-sided chest discomfort/pressure,history,False,partly,True,"Sudden onset confirmed, but patient said 'somewhere in the middle of my chest', not left-sided"
+day4_consultation01,2,"Chest pain described as a heavy, crushing feeling, like someone sitting on his chest",history,False,stated,False,"'it's like someone's sitting on my chest', 'pressure, discomfort'"
+day4_consultation01,3,Chest pain severity 7 out of 10,history,False,stated,False,"'say about, say, seven out of ten'"
+day4_consultation01,4,Chest pain spreads to the left shoulder and left arm,history,False,stated,False,'There is some pain in my left shoulder and arm.'
+day4_consultation01,5,Chest pain has lasted 1-2 hours,history,False,partly,False,'ongoing for a couple of hours now'; 1-2 hours not specified
+day4_consultation01,6,This is the first episode of this chest pain,history,False,not_stated,False,Previous episodes not asked about
+day4_consultation01,7,Chest pain started while gardening,history,False,stated,False,'I was digging in the garden'
+day4_consultation01,8,No spread of pain to the head,negative_finding,True,stated,False,"'not to my head, no'"
+day4_consultation01,9,Complains of nausea since the pain started,history,False,partly,False,'I've noticed nausea'; timing relative to pain onset not stated
+day4_consultation01,10,No vomiting since the pain started,negative_finding,True,stated,False,"'but no vomiting, yet'"
+day4_consultation01,11,Short of breath at rest,history,False,partly,False,"Currently short of breath, but 'at rest' not explicitly stated"
+day4_consultation01,12,Longer-term reduced ability to do activities of daily living because of shortness of breath on exertion,history,False,stated,False,'some problems just performing daily activities... difficulties climbing up the stairs and going uphill'
+day4_consultation01,13,Previously short of breath walking up hills/stairs,history,False,stated,False,'some difficulty climbing the stairs... walk uphill'
+day4_consultation01,14,No chest discomfort with earlier exertional breathlessness when walking up hills/stairs,negative_finding,True,stated,False,"'no pain as such, but there's often calf pain and leg swellings'"
+day4_consultation01,15,Past medical history of high cholesterol,past_history,False,stated,False,'high cholesterol'
+day4_consultation01,16,Past medical history of high blood pressure,past_history,False,stated,False,'I've had hypertension'
+day4_consultation01,17,Allergic to aspirin,allergy,False,not_stated,False,Patient's answer to allergy question is inaudible/not recorded
+day4_consultation01,18,Lives at home with his wife,social,False,stated,False,"'do you live at home with your wife?' 'Uh, yes.'"
+day4_consultation01,19,Was able to walk up stairs until recently,social,False,partly,False,"'recently I've noticed... some difficulty climbing the stairs' implies earlier ability, not explicitly stated"
+day4_consultation01,20,Possible diagnosis: myocardial infarction (heart attack),impression,False,partly,False,"'my concern is, it might be something to do with your heart'; MI not named"
+day4_consultation01,21,Possible diagnosis: pulmonary embolism,impression,False,not_stated,False,PE not mentioned
+day4_consultation01,22,Possible diagnosis: gastro-oesophageal reflux disease,impression,False,not_stated,False,GORD not mentioned
+day4_consultation01,23,Ambulance called for suspected myocardial infarction,plan,False,partly,False,Ambulance called due to concern about the heart; MI not specifically named
+day4_consultation01,24,Sent to hospital for further tests and assessment,plan,False,stated,False,"'get you to the hospital as soon as possible'; seen by consultant, checks of BP and heart rate"
+day4_consultation02,1,Presenting with headaches,history,False,stated,False,severe headaches confirmed
+day4_consultation02,2,Loss of appetite,history,False,stated,False,I kinda lose my appetite
+day4_consultation02,3,Tingling,history,False,stated,False,tingling in my arms
+day4_consultation02,4,Feeling hot,history,False,stated,False,Doctor: you are feeling hot... Patient: Yeah
+day4_consultation02,5,Palpitations,history,False,stated,False,my heart is beating kinda fast
+day4_consultation02,6,Symptoms are acute in onset,history,False,not_stated,False,
+day4_consultation02,7,Symptoms occur at random times of the day while at work,history,False,stated,False,Almost randomly... generally during work times
+day4_consultation02,8,Symptoms started when patient started a new job,history,False,stated,False,started roughly when I changed jobs
+day4_consultation02,9,New job is high stress and involves working in front of a computer,social,False,stated,False,stress seven or eight; fifty-fifty meetings and computer
+day4_consultation02,10,No aura before headaches,negative_finding,True,stated,False,any idea the headache is going to come? Not really
+day4_consultation02,11,Headaches are frontal,history,False,stated,False,mostly in the front
+day4_consultation02,12,Headaches do not radiate,negative_finding,True,stated,False,Does it go anywhere else? No... stays there
+day4_consultation02,13,Some nausea with headaches,history,False,stated,False,feel a little bit nauseous maybe
+day4_consultation02,14,No vomiting,negative_finding,True,not_stated,False,
+day4_consultation02,15,No past medical history of headaches,negative_finding,True,stated,False,normally get headaches before? No
+day4_consultation02,16,Reduced appetite,history,False,stated,False,reduced appetite... Yeah
+day4_consultation02,17,Unintentional weight loss of 5 lbs,history,False,stated,False,Five pounds... not intentional
+day4_consultation02,18,Pins and needles in both arms,history,False,stated,False,tingling in my arms; both
+day4_consultation02,19,Pins and needles do not spread to the legs,negative_finding,True,stated,False,in your legs as well? No
+day4_consultation02,20,"Motor function and sensation preserved, no loss of function",negative_finding,True,not_stated,False,
+day4_consultation02,21,Fevers occur with the headaches,history,False,not_stated,True,Feeling hot reinterpreted as shortness of breath; symptoms occur one at a time
+day4_consultation02,22,Palpitations with mild shortness of breath on exertion,history,False,partly,True,Short of breath when exercising? No
+day4_consultation02,23,Palpitations with shortness of breath at rest,history,False,partly,False,short of breath sitting at desk; link to palpitations not stated
+day4_consultation02,24,No warning symptoms before episodes,negative_finding,True,stated,False,any idea the headache is going to come? Not really
+day4_consultation02,25,Symptoms sometimes occur together and sometimes on their own,history,False,partly,True,"one time, one thing at a time"
+day4_consultation02,26,Past medical history of hypothyroidism,past_history,False,partly,True,Patient said hyperthyroidism
+day4_consultation02,27,No known allergies,allergy,True,not_stated,False,"Allergy question asked, no answer recorded"
+day4_consultation02,28,Takes thyroxine,medication,False,stated,False,Thyroxine
+day4_consultation02,29,"Works as a lawyer, a stressful job",social,False,stated,False,I'm a lawyer... always pressure
+day4_consultation02,30,Differential diagnosis: query hypothyroid (uncertain),impression,False,not_stated,False,
+day4_consultation02,31,Plan: further examination,plan,False,stated,False,We can give you an examination
+day4_consultation02,32,Plan: blood tests,plan,False,stated,False,do some blood tests for your thyroxine
+day4_consultation03,1,Presenting complaint: shortness of breath at rest,history,False,stated,False,Patient became short of breath while sitting watching TV.
+day4_consultation03,2,Caesarean section 2-3 weeks ago,history,False,partly,True,Patient said 'four weeks'; the doctor later said 'a couple of weeks ago'.
+day4_consultation03,3,Shortness of breath came on suddenly while watching TV,history,False,stated,False,"'over the last hour, I've started to feel... short of breath' while watching TV; doctor: 'come on quite recently and quite quickly'."
+day4_consultation03,4,Dry (non-productive) cough starting 1 day before,history,False,stated,False,'I started with a cough yesterday'; nothing brought up.
+day4_consultation03,5,No fever,negative_finding,True,not_stated,False,
+day4_consultation03,6,No chills,negative_finding,True,not_stated,False,
+day4_consultation03,7,Breathlessness does not change with position,negative_finding,True,not_stated,False,
+day4_consultation03,8,No chest pain,negative_finding,True,stated,False,"'does it cause any pain in your chest?' 'Um, no.'"
+day4_consultation03,9,No pain on breathing in,negative_finding,True,partly,True,"On a deep breath in: 'My chest feels sore, but so does my C-section scar.'"
+day4_consultation03,10,No complications from the caesarean section,negative_finding,True,not_stated,False,
+day4_consultation03,11,Baby is well,history,False,stated,False,"'No, no. He's fine.'"
+day4_consultation03,12,No symptoms after the caesarean section,negative_finding,True,not_stated,False,
+day4_consultation03,13,Not taking blood thinners (anticoagulants),medication,True,partly,False,"Medications since the C-section: 'Um, no. Just some painkillers' (codeine). Anticoagulants were not mentioned specifically."
+day4_consultation03,14,No past medical history,past_history,True,stated,False,"Asked about other medical problems: 'Um, no.'"
+day4_consultation03,15,Allergic to ibuprofen,allergy,False,stated,False,'I'm allergic to Ibuprofen.'
+day4_consultation03,16,"On examination: heart rate about 120 bpm, checked over the telephone; fast (tachycardic) and regular",other,False,partly,False,Pulse taken over the phone: patient counted 30 beats over an unstated time period; doctor said 'your heart is running slightly fast'. 120 bpm and a regular rhythm were not stated.
+day4_consultation03,17,Family history: mother has had blood clots in the legs,other,False,stated,False,"'my mum's had, uh, clots in her legs before.'"
+day4_consultation03,18,Differential diagnosis: pulmonary embolism,impression,False,stated,False,"Doctor was worried about clots 'in your chest, so in your lungs' after the C-section."
+day4_consultation03,19,Plan: further examination and investigation in an acute setting,plan,False,stated,False,'It might be worth you going into the hospital to get checked out'; the patient will take herself.
+day4_consultation04,1,Presenting complaint: shortness of breath at rest,history,False,partly,False,"Patient reports feeling short of breath, but never says it happens at rest"
+day4_consultation04,2,Wheezing for 2 days,history,False,stated,False,Wheeze started about two days ago
+day4_consultation04,3,Shortness of breath at rest for 2 days,history,False,partly,False,"Shortness of breath is mentioned and wheeze for two days, but neither 'at rest' nor the duration of the breathlessness is said"
+day4_consultation04,4,Symptoms started after cleaning a dusty environment,history,False,stated,False,"Started about an hour after cleaning the house, when dust came out of the carpet"
+day4_consultation04,5,Shortness of breath is worse at night,history,False,partly,False,"'It gets a bit worse at night' is said about the wheeze, not specifically the shortness of breath"
+day4_consultation04,6,Now has difficulty speaking in full sentences,history,False,stated,False,Sometimes unable to complete her sentences when talking
+day4_consultation04,7,No chest pain,negative_finding,True,stated,False,No pain on taking a deep breath
+day4_consultation04,8,No nausea,negative_finding,True,not_stated,False,
+day4_consultation04,9,No vomiting,negative_finding,True,not_stated,False,
+day4_consultation04,10,No problems with eating and drinking,negative_finding,True,stated,False,"Eating and drinking OK, four or five glasses of water a day"
+day4_consultation04,11,Past medical history of childhood asthma,past_history,False,stated,False,Had asthma as a child
+day4_consultation04,12,Past medical history of hay fever,past_history,False,stated,False,Sometimes gets hay fever in summer
+day4_consultation04,13,No known drug allergies,allergy,True,stated,False,No allergies 'that I know of'
+day4_consultation04,14,No regular medications,medication,True,partly,False,"Takes nothing for the wheeze or hay fever, but uses an asthma inhaler now and then; regular medications not directly asked about"
+day4_consultation04,15,Differential diagnosis: acute exacerbation of asthma,impression,False,stated,False,Doctor wants to rule out asthma
+day4_consultation04,16,Differential diagnosis: possible allergic reaction (uncertain),impression,False,stated,False,"Doctor says it could be asthma or an allergy, and suggests an antihistamine 'just in case it is an allergy'"
+day4_consultation04,17,Plan: start an antihistamine,plan,False,stated,False,Advised to get an over-the-counter antihistamine
+day4_consultation04,18,Plan: further examination,plan,False,partly,False,"Doctor arranges an in-person GP visit at the clinic, but an examination is not explicitly mentioned"
+day4_consultation04,19,Plan: further investigations,plan,False,stated,False,"Clinic visit for more tests, including a finger device to check oxygen levels"
+day4_consultation05,1,Diarrhea for 3 days,history,False,stated,False,it's lasting for like three days
+day4_consultation05,2,Central abdominal pain for 3 days,history,False,partly,False,"Pain is in the centre of the abdomen, but its duration was not given; the doctor said 'now you're having pain'"
+day4_consultation05,3,Unable to go to work due to frequency of bowel movements,social,False,stated,False,I can't go to work because I need to go like every...
+day4_consultation05,4,No fevers,negative_finding,True,stated,False,I didn't have any fever recently... I don't think so
+day4_consultation05,5,"Severe diarrhea, 5-6 or more bowel movements per day",history,False,partly,False,going to the toilet every ten minute; the number per day was not said
+day4_consultation05,6,Stools are only fluid (watery),history,False,not_stated,False,
+day4_consultation05,7,No blood in stool,negative_finding,True,stated,False,I haven't noticed any blood
+day4_consultation05,8,Feeling of incomplete evacuation,history,False,stated,False,"when I finish, I feel I need to go again"
+day4_consultation05,9,Abdominal pain present since onset of illness,history,False,partly,False,"Abdominal pain was discussed, but its onset was not"
+day4_consultation05,10,Abdominal pain does not radiate,negative_finding,True,stated,False,"No, no, just there"
+day4_consultation05,11,Mild to moderate abdominal tenderness,other,False,partly,False,"Pressing causes pain 'a little bit'; this was self-reported, not examined"
+day4_consultation05,12,Abdominal cramping,history,False,not_stated,False,
+day4_consultation05,13,Eating and drinking cause nausea,history,False,partly,False,After eating fruit he felt nausea and vomited; no general link to eating and drinking was stated
+day4_consultation05,14,Feeling of gas (bloating/flatulence),history,False,stated,False,maybe it's like trapped gas
+day4_consultation05,15,Some vomiting,history,False,stated,False,I had a bit of vomiting
+day4_consultation05,16,Currently unable to tolerate fluids or solids,history,False,not_stated,True,'You've been able to eat and drink?' 'yes'
+day4_consultation05,17,Ate this morning but vomited immediately,history,False,partly,False,He had fruit and vomited afterwards; 'immediately' was not said
+day4_consultation05,18,Feels dehydrated,history,False,partly,False,I think I don't drink enough water
+day4_consultation05,19,Appears dehydrated,other,False,not_stated,False,
+day4_consultation05,20,No breathing problems,negative_finding,True,stated,False,"apart of the normal, I haven't"
+day4_consultation05,21,No chest pain,negative_finding,True,stated,False,I haven't noticed any chest pain
+day4_consultation05,22,No headache,negative_finding,True,not_stated,False,
+day4_consultation05,23,No known drug allergies,allergy,True,stated,False,NKDA allergy
+day4_consultation05,24,Family history: father has a history of stomach cancer,other,False,partly,True,"Father died about ten years ago of bowel cancer, not stomach cancer"
+day4_consultation05,25,Impression (differential diagnosis): gastroenteritis,impression,False,stated,False,this is normally called gastroenteritis
+day4_consultation05,26,Plan: fluids,plan,False,stated,False,drink lots of water and fluids
+day4_consultation05,27,Plan: paracetamol,plan,False,not_stated,False,
+day4_consultation05,28,Plan: advised to visit the GP surgery if symptoms do not improve,plan,False,stated,False,if you feel you're getting much worse... go and see your GP in person
+day4_consultation06,1,Name and date of birth confirmed,other,False,stated,False,"Doctor asks for name and DOB; patient gives Maria, 22 March 1990"
+day4_consultation06,2,Presenting complaint: significant headache,history,False,stated,False,"really, really strong headache"
+day4_consultation06,3,Symptoms started this morning,history,False,stated,False,it started in the morning
+day4_consultation06,4,Headache was sudden in onset,history,False,stated,False,"it came like, kind of suddenly"
+day4_consultation06,5,Headache severity 6/10,history,False,stated,False,"maybe five, well, six, six probably"
+day4_consultation06,6,New headache (first onset),history,False,stated,False,"like this, no, definitely. It's something new"
+day4_consultation06,7,Headache is over the left side of the head,history,False,stated,False,"the left side, only"
+day4_consultation06,8,Associated dizziness,history,False,stated,False,"I feel like um, uh, dizzy"
+day4_consultation06,9,Associated blurry vision with 'funny lines',history,False,stated,False,vision is quite blurred... zigzag lines; doctor: there's funny lines
+day4_consultation06,10,Took paracetamol 3 hours ago with no improvement,medication,False,stated,False,tried Paracetamol... didn't work... maybe three hours ago
+day4_consultation06,11,Visual problems ongoing but somewhat improved,history,False,stated,False,visual problem still ongoing? Yeah... I feel a little bit better
+day4_consultation06,12,Looking at screens makes symptoms worse,history,False,stated,False,I cannot stand screens
+day4_consultation06,13,Moving makes symptoms worse,history,False,stated,False,"I start to feel like, even worse if I move"
+day4_consultation06,14,Has felt nauseous,history,False,stated,False,I still feel nausea
+day4_consultation06,15,Vomited twice,history,False,stated,False,I vomit twice
+day4_consultation06,16,No neurological symptoms,negative_finding,True,stated,False,"No weakness, walking fine; doctor: you've got no neurological symptoms"
+day4_consultation06,17,Unlikely to be pregnant,negative_finding,True,stated,False,I really doubt it
+day4_consultation06,18,Patient worried about brain cancer or stroke,history,False,stated,False,some kind of brain tumour... or maybe a stroke
+day4_consultation06,19,Patient wondering whether she needs to go to A&E,history,False,stated,False,wonder if i should go to A and E urgently
+day4_consultation06,20,Past medical history of renal stones,past_history,False,stated,False,I had the kidney stone
+day4_consultation06,21,No regular medications,medication,True,stated,False,"regular medications? Uh, no"
+day4_consultation06,22,No known drug allergies,allergy,True,stated,False,Not that I'm aware
+day4_consultation06,23,Family history: mother has migraines,history,False,stated,False,my mother has migraines
+day4_consultation06,24,Family history: mother has hypothyroidism,history,False,stated,False,She also has Hypothyroidism
+day4_consultation06,25,Video assessment: appeared well,other,False,not_stated,False,
+day4_consultation06,26,Video assessment: in a brightly lit environment and does not appear photophobic,negative_finding,True,not_stated,False,
+day4_consultation06,27,Impression: likely migraine,impression,False,stated,False,it sounds like what you're suffering from is what's known as a migraine
+day4_consultation06,28,More serious differential diagnoses need to be considered,impression,False,partly,False,full neurological exam to make sure everything all seems fine; serious differentials not explicitly named
+day4_consultation06,29,Plan: try ibuprofen until appointment,plan,False,stated,False,maybe something like ibuprofen
+day4_consultation06,30,Plan: sugary drink until appointment,plan,False,stated,False,"sugary and carbonated drinks, something like Coke"
+day4_consultation06,31,Plan: anti-sickness medication until appointment,plan,False,stated,False,ibuprofen with an anti-sickness
+day4_consultation06,32,"Plan: face-to-face review today at earliest available appointment, as first onset of headache",plan,False,partly,False,we can see you today at some point; reason (first onset) not stated
+day4_consultation06,33,Plan: neurological assessment at face-to-face review,plan,False,stated,False,to do like a full neurological exam
+day4_consultation06,34,"Plan: assess for neck stiffness, fever and rash at face-to-face review",plan,False,not_stated,False,
+day4_consultation07,1,Name and date of birth confirmed,other,False,stated,False,Doctor confirmed the patient's name (Vincent) and date of birth
+day4_consultation07,2,Feeling unwell for 8 days,history,False,partly,False,"Patient said 'about a week'; the sore throat began last Thursday or Friday, and today is Friday"
+day4_consultation07,3,Illness started with a sore throat,history,False,stated,False,'the sore throat came first'
+day4_consultation07,4,Then developed a cough,history,False,stated,False,"'after a day or two, the cough'"
+day4_consultation07,5,Cough is dry and non-productive,history,False,stated,False,"'No, it's very dry'"
+day4_consultation07,6,No sputum,negative_finding,True,stated,False,Patient said he was not coughing anything up; doctor repeated 'not coughing up any phlegm'
+day4_consultation07,7,No blood when coughing (no haemoptysis),negative_finding,True,stated,False,"Doctor: 'you're not coughing up blood... No, no'"
+day4_consultation07,8,No chest pain,negative_finding,True,stated,True,"Patient said he had 'a bit of both' wheeze and chest pain. Doctor later said 'you say you don't have any chest pain, as such' and got no answer"
+day4_consultation07,9,Mild shortness of breath,history,False,stated,False,"Breathless when walking, 'hasn't been superbad'; doctor: 'slightly short of breath'"
+day4_consultation07,10,No shortness of breath at rest,negative_finding,True,partly,False,Doctor asked about breathlessness at rest; patient only described it when walking or exercising
+day4_consultation07,11,Shortness of breath not concerning to the patient and not limiting his activities,history,False,partly,True,"Patient said it hasn't stopped his activities, but called it 'unusual, and a little bit worrying'"
+day4_consultation07,12,Slight fever symptoms,history,False,stated,False,"'a little bit feverish' for the first three days, now gone"
+day4_consultation07,13,Symptoms gradually improving,history,False,partly,True,"Patient described it as 'up and down', better then worse again, not improving"
+day4_consultation07,14,Reduced appetite,history,False,stated,False,'have been losing my appetite recently'
+day4_consultation07,15,No unintentional weight loss,negative_finding,True,stated,False,'no weight loss'
+day4_consultation07,16,No history of asthma,past_history,True,stated,False,Asked about asthma history: 'No'
+day4_consultation07,17,No significant past medical history,past_history,True,stated,False,'no past medical history'
+day4_consultation07,18,No significant drug history (no regular medications),medication,True,stated,False,"Not taking any medications: 'No, no'"
+day4_consultation07,19,No known drug allergies,allergy,True,stated,False,"'Not to any medication, but I'm allergic to peanuts'"
+day4_consultation07,20,Family history: mother had lung cancer,other,False,stated,False,'my mother had lung cancer'
+day4_consultation07,21,No other family history,other,True,stated,False,'that's the only one'
+day4_consultation07,22,No significant travel history,social,True,stated,False,Recent travel only to Europe; doctor: 'no significant recent travel'
+day4_consultation07,23,Non-smoker,social,True,stated,False,Patient said 'No' to smoking; only once or twice in Amsterdam
+day4_consultation07,24,No asbestos exposure,social,True,partly,True,"Patient said 'Don't know with asbestos', which is not the same as no exposure"
+day4_consultation07,25,On examination: looks well,other,False,not_stated,False,Remote consultation; no examination was done
+day4_consultation07,26,"Impression: viral upper respiratory tract infection with post-viral cough, improving (implied; no diagnosis written in the note)",impression,False,not_stated,False,Doctor gave no diagnosis aloud
+day4_consultation07,27,Time-off-work certificate requested; advised the patient can self-certify,plan,False,partly,True,Patient asked for a sick note; doctor said he would provide one and did not mention self-certifying
+day4_consultation07,28,"Safety-netted: needs review if symptoms get worse, especially a sudden change in shortness of breath",plan,False,stated,False,"'if you get more short of breath, or sudden change in your breathlessness... go and see a GP'"
+day4_consultation07,29,Expected to improve and be better within 5 days,plan,False,stated,False,"'getting better in the next, four or five days'"
+day4_consultation07,30,"If no better in 5 days, return for further medical review",plan,False,stated,False,"'if it's not, please get in touch with a medical professional again'"
+day4_consultation08,1,Patient's name and date of birth confirmed,other,False,stated,False,Doctor confirms name (Brian) and DOB 8 August 1982
+day4_consultation08,2,Symptoms present for 8 weeks,history,False,stated,False,"More like two months, I would say"
+day4_consultation08,3,Unable to get up in the morning for 8 weeks,history,False,stated,False,getting up in the morning's really difficult; about two months
+day4_consultation08,4,No energy during the day for 8 weeks,history,False,stated,False,don't have much energy at all during the day; about two months
+day4_consultation08,5,Not eating / reduced appetite for 8 weeks,history,False,stated,False,I'm not eating very much at the moment
+day4_consultation08,6,Difficulty sleeping for 8 weeks,history,False,stated,False,"having trouble sleeping at all, really"
+day4_consultation08,7,"Distracted, with difficulty focusing",history,False,stated,False,Distracted... quite difficult to keep focusing
+day4_consultation08,8,Lower mood recently,history,False,stated,False,my mood is a bit lower recently
+day4_consultation08,9,Decreased sex drive (libido),history,False,stated,False,my sex drive has kind of decreased
+day4_consultation08,10,No suicidal ideation,negative_finding,True,stated,False,"No thoughts of harming yourself; not feeling suicidal, confirmed"
+day4_consultation08,11,Started a new job 2 months ago,social,False,stated,False,started new job a couple of months ago; Two months ago? Yeah
+day4_consultation08,12,"Ideas, concerns and expectations: patient would like to get back to how he was",history,False,stated,False,"what I want to do is just like, kind of return to that previous state"
+day4_consultation08,13,Married,social,False,stated,False,"I'm married, have been for many years"
+day4_consultation08,14,Past medical history of hypothyroidism,past_history,False,stated,False,I have a history of hypothyroidism
+day4_consultation08,15,Takes thyroxine (levothyroxine),medication,False,stated,False,Taking thyroxine at the moment - Yes
+day4_consultation08,16,No known drug allergies,allergy,True,stated,False,I have no medication allergies
+day4_consultation08,17,Family history: father died by suicide,other,False,stated,False,my father committed suicide about fifteen years ago
+day4_consultation08,18,Family history: mother is well,other,False,stated,False,Yeah she's fine
+day4_consultation08,19,Has no brothers or sisters,other,False,stated,False,I'm an only child
+day4_consultation08,20,Impression: depression,impression,False,not_stated,False,No diagnosis discussed
+day4_consultation08,21,"Impression: hypothyroidism, with low T3/T4",impression,False,not_stated,False,No impression or T3/T4 results discussed
+day4_consultation08,22,Plan: check thyroid-stimulating hormone (TSH),plan,False,partly,False,"Blood tests planned, TSH not specified"
+day4_consultation08,23,Plan: full blood count (FBC),plan,False,partly,False,"Blood tests planned, FBC not specified"
+day4_consultation08,24,Plan: examination,plan,False,stated,False,"see you in person, and do an examination"
+day4_consultation08,25,Plan: GP review,plan,False,stated,False,book an appointment in the next few days with your GP
+day4_consultation09,1,Chest tightness for 3 hours,history,False,stated,False,Patient: chest tight for about three hours now
+day4_consultation09,2,Slight shortness of breath,history,False,stated,False,"'a little bit short of breath, not too bad'"
+day4_consultation09,3,Slight wheeze,history,False,stated,False,'I'm feeling a bit wheezy'
+day4_consultation09,4,Slight cough,history,False,stated,False,"Doctor: 'Slight cough, yeah.'"
+day4_consultation09,5,"Slight cold last week, cold symptoms still present",history,False,partly,False,"Patient had a cold last week and still has cold symptoms, but no one said the cold was 'slight'"
+day4_consultation09,6,Cough has continued since the cold,history,False,stated,False,'the cough's kind of stuck around'
+day4_consultation09,7,Cough is non-productive,negative_finding,True,stated,False,Not coughing anything up; doctor: 'non-productive cough'
+day4_consultation09,8,Cough is worse at night,history,False,stated,False,'it gets a little bit worse at night'
+day4_consultation09,9,Previous asthma exacerbation at age 16,past_history,False,stated,False,Hospitalised and intubated in high school: 'like seventeen... Sixteen maybe'
+day4_consultation09,10,Past medical history of asthma,past_history,False,stated,False,'I have asthma'
+day4_consultation09,11,Past medical history of hay fever,past_history,False,stated,False,"'I have like, a hayfever'"
+day4_consultation09,12,Dust allergy,allergy,False,stated,False,'some allergies just to dust'
+day4_consultation09,13,Takes Ventolin (salbutamol) inhaler,medication,False,stated,False,"'Ventolin. It's called uh, Salbutamol'"
+day4_consultation09,14,Takes Clenil Modulite (beclometasone) inhaler,medication,False,stated,False,'Clenil inhaler' / Doctor: 'Clenil Modulite'
+day4_consultation09,15,No known drug allergies,allergy,True,stated,False,'not allergic to anything... no drugs'
+day4_consultation09,16,Family history: mother has eczema,other,False,stated,False,'my mum has eczema'
+day4_consultation09,17,Family history: father has asthma,other,False,stated,False,'my dad has asthma'
+day4_consultation09,18,Patient expects inhalers,other,False,stated,False,'probably getting my inhalers would be helpful'
+day4_consultation09,19,Impression: asthma exacerbation,impression,False,stated,False,Doctor: 'once you get better from this asthma attack'
+day4_consultation09,20,Further salbutamol inhaler prescribed,plan,False,stated,False,"Doctor will prescribe more inhalers, including Ventolin"
+day4_consultation09,21,Further Clenil (beclometasone) inhaler prescribed,plan,False,stated,False,"Prescriptions for ongoing inhalers, including Clenil Modulite"
+day4_consultation09,22,Inhalers to be used with a spacer,plan,False,stated,False,Doctor will send a spacer to help the medication get into the lungs
+day4_consultation09,23,Advised to read the inhaler label and warned about side effects,plan,False,partly,True,"The advice to read the label and the side-effect warning were about the steroid tablets, not the inhalers"
+day4_consultation09,24,Prednisolone 40 mg for 5 days,plan,False,partly,False,"Steroid tablets for five days, two in the morning; neither the drug name nor 40 mg was said"
+day4_consultation09,25,"Warned about prednisolone side effects: mood changes, high blood sugar, nausea",plan,False,stated,False,"Mood change, high blood sugar, rash, nausea, headaches"
+day4_consultation09,26,Safety-netted: seek further medical attention if shortness of breath worsens or there are concerns,plan,False,stated,False,"If symptoms get worse, e.g. more shortness of breath, seek further medical attention"
+day4_consultation10,1,Patient identity (name) confirmed,other,False,stated,False,Doctor asked to confirm name; patient: 'my name's Lizzy Irvine'
+day4_consultation10,2,Feeling sick (nausea) for 2 days,history,False,stated,False,'just nauseous... only been for a couple of days' / Doctor: 'Two days yeah'
+day4_consultation10,3,No vomiting,negative_finding,True,stated,False,'no vomiting yet'
+day4_consultation10,4,Lower abdominal ache for 2 days,history,False,stated,False,'ache in my lower tummy'; 'only been for the last two days'
+day4_consultation10,5,Lower abdominal pain is aching in character,history,False,stated,False,'a dull ache... just below the belly button'
+day4_consultation10,6,Lower abdominal pain is constant,history,False,stated,False,"'feeling pretty constant, over the last couple of day'"
+day4_consultation10,7,Feeling hot and sweaty,history,False,stated,False,'feeling quite like hot and sweaty'
+day4_consultation10,8,Drinks lots of water (increased thirst),history,False,partly,False,"'I tend to drink a lot of water anyway' - drinking lots of water stated, but increased thirst was not"
+day4_consultation10,9,Polyuria (passing a lot of urine),history,False,partly,False,'going to the toilet more' - urinary frequency stated; passing large volumes was not
+day4_consultation10,10,No urinary urgency,negative_finding,True,stated,False,"'No, there's no urgency'"
+day4_consultation10,11,No dysuria (no pain on passing urine),negative_finding,True,stated,False,"'no pain'; 'No stinging?' 'Uh, no'"
+day4_consultation10,12,Constipated for 1 week,history,False,partly,True,"'a little bit bunged up... about a week ago that kinda cleared, and I'm normal now' - constipation was a week ago and has resolved, not ongoing for a week"
+day4_consultation10,13,Sexually active,social,False,stated,False,"'sexually active at the moment?' 'Yes, yeah'"
+day4_consultation10,14,Uses contraceptive implant,medication,False,stated,False,"'I've got the arm, the implants... Implanon'"
+day4_consultation10,15,Vaginal spotting,history,False,stated,False,"Pink-tinged pee; doctor: 'A little bit of spotting', patient agreed, last couple of days"
+day4_consultation10,16,Last menstrual period 3.5 weeks ago,history,False,stated,False,'three and a bit weeks ago'
+day4_consultation10,17,Has a regular boyfriend,social,False,stated,False,'one sexual partner? a regular boyfriend' 'Yep'; lives with boyfriend
+day4_consultation10,18,"Past medical history section lists amoxicillin (likely amoxicillin allergy, but the note does not say what it refers to)",past_history,False,stated,False,'I'm allergic to Amoxicillin'
+day4_consultation10,19,Takes no regular medications,medication,True,stated,False,"'no medications, but I'm on the implants'"
+day4_consultation10,20,Non-smoker,social,True,stated,False,'do you smoke?' 'No.'
+day4_consultation10,21,Family history: brother has type 1 diabetes mellitus,past_history,False,stated,False,'my brother is a type one diabetic'
+day4_consultation10,22,Impression (differential): simple constipation,impression,False,stated,False,'It could just be simple constipation'
+day4_consultation10,23,Impression (differential): pelvic inflammatory disease (PID),impression,False,not_stated,False,PID not mentioned
+day4_consultation10,24,Impression (differential): sexually transmitted infection (STI),impression,False,not_stated,False,STI not mentioned
+day4_consultation10,25,Impression (differential): urinary tract infection (UTI),impression,False,not_stated,False,UTI not mentioned as a differential
+day4_consultation10,26,Plan: needs further examination,plan,False,stated,False,'I would quite like to see you... to do an examination'
+day4_consultation10,27,Plan: needs further investigations,plan,False,stated,False,'to do some tests as well'; 'investigations'
+day4_consultation10,28,Plan: pregnancy test,plan,False,stated,False,'we need to definitely rule out pregnancy'
+day4_consultation10,29,Plan: urea and electrolytes (U+E) blood test,plan,False,not_stated,False,No specific blood tests mentioned
+day5_consultation01,1,Left-sided headache since yesterday morning,history,False,stated,False,ever since yesterday morning... mainly on the left side
+day5_consultation01,2,Headache is intermittent,history,False,stated,False,sort of comes and goes... kind of fades
+day5_consultation01,3,Headache is not positional,negative_finding,True,stated,False,"Is it worse when you lie flat, or when you bend forward? Um, no"
+day5_consultation01,4,Headache has not woken her from sleep,negative_finding,True,not_stated,False,
+day5_consultation01,5,No altered sense of smell,negative_finding,True,stated,False,Any abnormal smells or tastes? No.
+day5_consultation01,6,No altered sense of taste,negative_finding,True,stated,False,Any abnormal smells or tastes? No.
+day5_consultation01,7,Eating and drinking normally,history,False,stated,False,have you been eating and drinking OK? Yeah
+day5_consultation01,8,No prodromal illness,negative_finding,True,stated,False,I seemed OK the day before
+day5_consultation01,9,No viral symptoms,negative_finding,True,stated,False,"not really any sort of, cold symptoms"
+day5_consultation01,10,No sore ears,negative_finding,True,stated,False,"runny nose, sore ears? No, not really"
+day5_consultation01,11,No coryzal symptoms,negative_finding,True,stated,False,"runny nose... No, not really any sort of cold symptoms"
+day5_consultation01,12,Does not feel feverish,negative_finding,True,stated,False,I don't feel like I'm feverish
+day5_consultation01,13,Has not checked her temperature,history,False,stated,False,"Um, I haven't"
+day5_consultation01,14,No nausea,negative_finding,True,stated,False,"Any nausea, vomiting? no"
+day5_consultation01,15,No vomiting,negative_finding,True,stated,False,"Any nausea, vomiting? no"
+day5_consultation01,16,No tingling,negative_finding,True,stated,False,"weakness, tingling, numbness... No, not at all"
+day5_consultation01,17,No numbness,negative_finding,True,stated,False,"weakness, tingling, numbness... No, not at all"
+day5_consultation01,18,No weakness,negative_finding,True,stated,False,"weakness, tingling, numbness... No, not at all"
+day5_consultation01,19,No rash,negative_finding,True,stated,False,"changes in your skin? No, skin feeling fine"
+day5_consultation01,20,Headache is worse with light (photophobia),history,False,stated,False,quite sensitive to light... worse when I'm in a light room
+day5_consultation01,21,Vision is not altered,negative_finding,True,stated,False,"problems with your eyes, or your eyesight? no, not at all"
+day5_consultation01,22,Has taken paracetamol only for the headache,medication,False,stated,False,just Paracetamol
+day5_consultation01,23,Her period stopped last week,history,False,stated,False,my period was about a week ago
+day5_consultation01,24,No previous history of headaches,past_history,True,stated,False,not something I've ever had before
+day5_consultation01,25,Past medical history: nothing significant,past_history,True,stated,False,"no, not recently, nothing"
+day5_consultation01,26,Takes Microgynon (combined oral contraceptive pill),medication,False,stated,False,"Microgynon, pill"
+day5_consultation01,27,No side effects from Microgynon,medication,True,stated,False,"not really, um, no, not too much"
+day5_consultation01,28,Blood pressure was normal when checked for her last Microgynon prescription; date of that check uncertain,medication,False,stated,False,probably about six months ago... always been fine I think
+day5_consultation01,29,Family history: mother has hypertension,other,False,stated,False,my mum had high blood pressure
+day5_consultation01,30,Family history: mother has migraines,other,False,stated,False,she's got a history of migraines
+day5_consultation01,31,Lives with flatmates,social,False,stated,False,just with housemates
+day5_consultation01,32,Drinks alcohol: a few glasses of wine at weekends,social,False,partly,False,a few drinks at the weekend (wine not mentioned)
+day5_consultation01,33,Non-smoker,social,True,stated,False,do you smoke? No
+day5_consultation01,34,Some stress at work recently,social,False,stated,False,may have been a bit stressed out at work
+day5_consultation01,35,Impression: possible tension headache or first episode of migraine,impression,False,partly,False,sound quite like a migraine (tension headache not mentioned)
+day5_consultation01,36,"Impression: no features of meningitic illness, although headache is worse with light",impression,False,not_stated,False,
+day5_consultation01,37,Advised to get blood pressure checked,plan,False,stated,False,try and arrange to get your blood pressure checked
+day5_consultation01,38,Advised to get temperature checked,plan,False,stated,False,"have a thermometer at home, so you can make sure that your temperature's OK"
+day5_consultation01,39,"Safety-netting: advised to call back straight away if headache worsens or persists, or if fever, rash or new symptoms develop",plan,False,stated,False,"if it isn't settling, or it's getting worse... high temperature... rashes... speak to you straight away"
+day5_consultation01,40,"Advised to start regular ibuprofen, taken with food",plan,False,partly,False,taking some anti-inflammatories along with the Paracetamol (regular/with food not said)
+day5_consultation01,41,To have a review if headaches become regular,plan,False,stated,False,if you're getting persistent headaches... worth having a further discussion
+day5_consultation02,1,Presenting complaint: dysuria,history,False,stated,False,It hurts when I pee.
+day5_consultation02,2,Dysuria for 6 days,history,False,stated,False,"Uh, six days."
+day5_consultation02,3,"Burning, stinging sensation when passing urine",history,False,partly,False,"Pain when passing urine was reported, but 'burning' or 'stinging' was never said."
+day5_consultation02,4,No difficulty actually passing urine,negative_finding,True,stated,False,Able to pass water OK? Yes
+day5_consultation02,5,Strong urine odour,history,False,stated,False,very unpleasant smell that comes out
+day5_consultation02,6,Eating and drinking normally,history,False,stated,False,Able to eat and drink OK? Yes.
+day5_consultation02,7,No new vaginal discharge,negative_finding,True,stated,False,"Any vaginal discharge? No, just the blood spot"
+day5_consultation02,8,No back pain,negative_finding,True,stated,False,Doctor: you said you didn't have any lower back pain? Patient: No
+day5_consultation02,9,No loin pain,negative_finding,True,stated,False,and no loin pain as well
+day5_consultation02,10,Does not feel feverish,negative_finding,True,stated,False,"No, not at all. / No fever at all."
+day5_consultation02,11,Temperature not checked,history,False,stated,False,Has no thermometer at home
+day5_consultation02,12,No obvious trigger identified,negative_finding,True,stated,False,Asked about possible contributing factors: No.
+day5_consultation02,13,No history of dehydration,negative_finding,True,stated,False,Dehydration was asked about; patient answered No.
+day5_consultation02,14,No history of frequent sexual intercourse,negative_finding,True,stated,False,Regular sexual intercourse was asked about; patient answered No.
+day5_consultation02,15,No previous history of urine infections or similar symptoms,negative_finding,True,partly,False,Said no to having these symptoms before; the question about previous urine infections got the answer 'I had IBS before' instead.
+day5_consultation02,16,No recent change in bowel habit,negative_finding,True,stated,False,Any change in your bowel habit? Any weight loss? No.
+day5_consultation02,17,No blood in stool,negative_finding,True,partly,False,"Asked about blood in stool; patient replied about spotting in her urine, so this was never clearly answered."
+day5_consultation02,18,Past medical history of irritable bowel syndrome (IBS),past_history,False,stated,False,I had IBS before.
+day5_consultation02,19,No relevant family history,past_history,True,stated,False,Family medical problems? No.
+day5_consultation02,20,Takes mebeverine 200 mg three times daily,medication,False,stated,False,"Mebeverine regularly, three times a day, 200 mg: yes"
+day5_consultation02,21,No known drug allergies,allergy,True,not_stated,True,Patient is allergic to clindamycin.
+day5_consultation02,22,Lives with friends,social,False,stated,False,I live with friends.
+day5_consultation02,23,Works as a support worker,social,False,stated,False,I'm a support worker.
+day5_consultation02,24,Non-smoker,social,True,stated,False,Do you smoke? No.
+day5_consultation02,25,Drinks 1 unit of alcohol per week,social,False,partly,False,One glass of wine a week; units were not stated.
+day5_consultation02,26,Impression: likely urinary tract infection (UTI),impression,False,stated,False,it sounds very much like you might have an infection in your urine
+day5_consultation02,27,Prescribed a 3-day course of nitrofurantoin,plan,False,partly,False,A 3-day course of antibiotics was discussed; the drug was never named.
+day5_consultation02,28,Advised to contact the practice if fever develops,plan,False,stated,False,or you're getting a high temperature... important that we speak to you again
+day5_consultation02,29,Advised to contact the practice if back pain develops,plan,False,stated,False,you get lower back pain
+day5_consultation02,30,Advised to contact the practice if symptoms persist,plan,False,stated,False,pain is getting worse or not settling / not resolving with the treatment
+day5_consultation02,31,Advised to contact the practice if similar symptoms recur,plan,False,stated,False,if it becomes a recurrent problem then we need to talk to you again
+day5_consultation03,1,Presenting complaint: anxiety symptoms,history,False,stated,False,I've been feeling really anxious over the past few months
+day5_consultation03,2,Feeling anxious all the time for 2 months,history,False,stated,False,about two months or so... on edge the whole time
+day5_consultation03,3,Anxiety seems to have started when patient started a new job,history,False,stated,False,coincides with me starting a new job
+day5_consultation03,4,New job is in a different industry,history,False,stated,False,brand new sector. I've never worked in retail before
+day5_consultation03,5,Pressures from boss at work,history,False,stated,False,my boss is not very nice to me
+day5_consultation03,6,Dreads work every morning,history,False,stated,False,I just get really nervous every morning... I just really dread going there
+day5_consultation03,7,"Marked initial insomnia, taking about 3 hours to fall asleep",history,False,partly,False,can't get to sleep for hours and hours; about 3 hours never stated
+day5_consultation03,8,Early morning waking,history,False,stated,False,I find myself waking up before that [alarm]
+day5_consultation03,9,Often gets only 3-4 hours of sleep,history,False,stated,False,"maybe three, four hours"
+day5_consultation03,10,Tired during the day,history,False,stated,False,I'm just so tired
+day5_consultation03,11,Low energy,history,False,stated,False,"It's just really, really low"
+day5_consultation03,12,Eating pattern normal,history,False,stated,False,wouldn't say that I'm eating much differently; eating regularly
+day5_consultation03,13,Eating more chocolate,history,False,stated,False,I probably have more chocolate than normal
+day5_consultation03,14,Anhedonia both at work and outside work,history,False,stated,False,It's not just my job... not enjoyable
+day5_consultation03,15,"Previously enjoyed running, tennis and socialising",history,False,stated,False,used to like to go running... play tennis; see friends
+day5_consultation03,16,Still sees friends but often avoids socialising,history,False,partly,False,Avoids friends somewhat; never said explicitly that she still sees them
+day5_consultation03,17,"Associated palpitations, which started only with the anxiety symptoms",history,False,stated,False,only in the past couple of months
+day5_consultation03,18,Palpitations can feel irregular,history,False,stated,False,"Irregular, I think"
+day5_consultation03,19,Chest discomfort with palpitations,history,False,stated,False,it's painful when my heart is beating fast
+day5_consultation03,20,Palpitations are a rapid heartbeat lasting about 2-10 minutes,history,False,stated,False,rapid heart beating... couple of minutes... ten minutes
+day5_consultation03,21,No panic attacks,negative_finding,True,stated,False,No I wouldn't say so
+day5_consultation03,22,Has not missed work,negative_finding,True,stated,False,No... I've always managed to make it to work
+day5_consultation03,23,Public transport also provokes anxiety,history,False,stated,False,I find public transport really stressful
+day5_consultation03,24,Low mood most of the time,history,False,stated,False,constant feeling of just being a bit down
+day5_consultation03,25,Denies suicidal ideation,negative_finding,True,stated,False,I haven't had any suicidal thoughts
+day5_consultation03,26,No past psychiatric history or significant anxiety,past_history,True,stated,False,I've never felt anything this bad before
+day5_consultation03,27,Family history: mother has had depression,past_history,False,stated,False,she's suffered from like depression in the past
+day5_consultation03,28,Lives with parents,social,False,stated,False,I live with my parents
+day5_consultation03,29,Parents are supportive,social,False,stated,False,"I have a good support system, like I do have good family"
+day5_consultation03,30,Drinks alcohol on Fridays and Saturdays; unsure of amount but sometimes drinks too much,social,False,stated,False,quite a lot on Friday or Saturday... probably go over my limit... don't keep track
+day5_consultation03,31,Smokes occasionally,social,False,stated,False,"I try not to smoke, but I do, occasionally"
+day5_consultation03,32,No illicit drug use,social,True,stated,False,I don't take drugs
+day5_consultation03,33,Impression: work-related anxiety,impression,False,partly,False,"Doctor referred to anxiety, but never stated an impression of work-related anxiety"
+day5_consultation03,34,Impression: insomnia,impression,False,partly,False,Sleep information mentioned; insomnia not stated as an impression
+day5_consultation03,35,Advised to self-refer to NHS Talking Therapies,plan,False,stated,False,you can self-refer via the NHS for talking therapy
+day5_consultation03,36,Advised to use online CBT in the meantime; information given,plan,False,partly,False,online resources mentioned; CBT not specified
+day5_consultation03,37,Safety-netting: contact the practice if anxiety or mood symptoms get worse or if unable to cope with work,plan,False,stated,False,if your anxiety is getting worse to the point where you can't cope with work... give us a call
+day5_consultation03,38,Blood test advised as initial investigation for palpitations,plan,False,stated,False,worth having couple of basic blood tests
+day5_consultation03,39,Patient advised to book the blood test through the support team,plan,False,stated,False,if you call the support line you can arrange the blood test
+day5_consultation04,1,Presenting complaint: abdominal pain,history,False,stated,False,I'm having really bad tummy ache
+day5_consultation04,2,Pain is periumbilical,history,False,partly,True,"Middle of lower abdomen, 'Below. Mainly below' the belly button, so not around it"
+day5_consultation04,3,Pain is constant,history,False,stated,False,It's there all the time.
+day5_consultation04,4,Pain is getting worse,history,False,stated,False,It is getting worse.
+day5_consultation04,5,Pain severity 8/10,history,False,stated,False,It may be a eight.
+day5_consultation04,6,Some light vaginal (PV) bleeding,history,False,stated,False,vaginal sometime bleeding... light pink colour
+day5_consultation04,7,No dysuria,negative_finding,True,partly,False,Said no problems passing water; answer to the question about pain was unclear
+day5_consultation04,8,No urinary frequency,negative_finding,True,partly,False,Frequency was asked; the answer was unclear ('I do drink a lot though')
+day5_consultation04,9,Some difficulty passing urine,history,False,not_stated,True,Any problems passing water? - No.
+day5_consultation04,10,Bowels open daily with normal stool,history,False,partly,False,This week 'it's fine now'; daily frequency and stool type not clearly answered
+day5_consultation04,11,"Constipation lasting one week, last week",history,False,stated,False,I was constipated for a week... last week
+day5_consultation04,12,Last menstrual period 2 weeks ago,history,False,stated,False,"My period stopped, like, last two weeks ago"
+day5_consultation04,13,No other vaginal discharge,negative_finding,True,partly,True,"Just very small, extra, like, a vaginal discharge"
+day5_consultation04,14,Eating and drinking ok,history,False,stated,False,Have you been eating and drinking OK? Yeah.
+day5_consultation04,15,Has not checked temperature,history,False,stated,False,"Have you got a thermometer? No, I don't."
+day5_consultation04,16,Does not feel feverish,negative_finding,True,stated,False,Do you feel feverish? No.
+day5_consultation04,17,Not feeling faint,negative_finding,True,stated,False,Feel faint when you stand up? No.
+day5_consultation04,18,No difficulty in breathing,negative_finding,True,stated,False,Any difficulty breathing...? No.
+day5_consultation04,19,No shoulder tip pain,negative_finding,True,stated,False,pain in your shoulders...? No.
+day5_consultation04,20,Nausea,history,False,stated,False,I get nauseated
+day5_consultation04,21,No vomiting,negative_finding,True,stated,False,but I don't vomit
+day5_consultation04,22,No diarrhoea,negative_finding,True,partly,False,Diarrhoea was asked about; the answer was garbled
+day5_consultation04,23,Last foreign travel 1 year ago,history,False,stated,False,"A year ago, not recently."
+day5_consultation04,24,Implanon (contraceptive implant) inserted 1 year ago,medication,False,stated,False,Implanon was just put in a year ago? Yes.
+day5_consultation04,25,No significant past medical history,past_history,True,partly,False,"Past history asked; only amoxicillin allergy, no operations"
+day5_consultation04,26,No regular medications (drug history nil),medication,True,partly,False,'You take any other drugs? No.' - unclear whether this meant medications
+day5_consultation04,27,Allergic to amoxicillin,allergy,False,stated,False,Amoxicillin allergy.
+day5_consultation04,28,Works as a teacher,social,False,stated,False,I'm a teacher. School teacher.
+day5_consultation04,29,Has been able to work as usual,social,False,stated,False,I work regular other activities
+day5_consultation04,30,Lives with parents,social,False,partly,True,"My husband, and my husband's family."
+day5_consultation04,31,Does not smoke,social,True,partly,False,Smoking was asked; answer 'I don't know.'
+day5_consultation04,32,Does not drink alcohol,social,True,partly,False,Alcohol was asked; answer 'I don't know.'
+day5_consultation04,33,Does not use recreational drugs,social,True,stated,False,You take any other drugs? No.
+day5_consultation04,34,"Impression: abdominal pain, cause uncertain",impression,False,partly,False,Exam to get 'more of an idea what's causing the problem'
+day5_consultation04,35,Patient to do a pregnancy test today,plan,False,stated,False,do a pregnancy test today
+day5_consultation04,36,Patient to contact the practice immediately if pregnancy test is positive,plan,False,stated,False,"if it's positive we need to see you straight away, so give us a call back"
+day5_consultation04,37,Urgent examination booked with doctor,plan,False,partly,False,Face-to-face exam arranged via support line; not said to be urgent
+day5_consultation04,38,Patient to get in touch before the appointment if pain worsens or new symptoms develop,plan,False,partly,False,if it gets a lot worse or not holding fluids down... see you before then; new symptoms not mentioned
+day5_consultation05,1,Presenting complaint: abdominal pain,history,False,stated,False,pain in my lower tummy
+day5_consultation05,2,Lower abdominal pain for 2 days,history,False,stated,False,pain in my lower tummy the last two days
+day5_consultation05,3,Abdominal pain is central in location,history,False,stated,False,"Doctor: In the middle, OK (the patient's reply was garbled)"
+day5_consultation05,4,Has noticed some blood in the urine,history,False,stated,False,slight blood in the urine... a little bit pink
+day5_consultation05,5,Self-checked temperature was 37°C,history,False,stated,False,around thirty seven
+day5_consultation05,6,No back pain,negative_finding,True,stated,False,no back pain
+day5_consultation05,7,Feels sweaty,history,False,stated,False,hot and sweaty
+day5_consultation05,8,More thirsty than normal,history,False,stated,False,"Are you more thirsty than normal? Uh, yeah."
+day5_consultation05,9,Drinking well,history,False,stated,True,I wasn't drinking a lot in these days
+day5_consultation05,10,No dysuria,negative_finding,True,stated,False,"Any pain when you pass water? no, that's fine"
+day5_consultation05,11,No urinary frequency,negative_finding,True,stated,True,"Going more often? yeah, a little bit"
+day5_consultation05,12,Was constipated last week,history,False,stated,False,constipated... last week
+day5_consultation05,13,Now opening bowels normally,history,False,stated,False,but now it's fine; last stool normal
+day5_consultation05,14,No blood in stool,negative_finding,True,partly,False,Asked about blood in stool; patient answered about blood in urine
+day5_consultation05,15,Last bowel movement 2 hours ago,history,False,stated,False,like two hours ago
+day5_consultation05,16,No nausea,negative_finding,True,stated,True,I'm just a bit nausea but no vomiting
+day5_consultation05,17,No vomiting,negative_finding,True,stated,False,no vomiting
+day5_consultation05,18,No dyspepsia,negative_finding,True,stated,False,pain higher up / acid? No
+day5_consultation05,19,No past medical history,past_history,True,stated,False,"nothing... normal stuff like cold, flu"
+day5_consultation05,20,No regular medications,medication,True,stated,False,regular medications? no
+day5_consultation05,21,Allergic to amoxicillin,allergy,False,stated,False,"yes, amoxycillin"
+day5_consultation05,22,"Family history: mother had breast cancer, now in remission",other,False,stated,False,mom had the breast cancer... cured in time
+day5_consultation05,23,Lives with parents,social,False,stated,False,with my parents
+day5_consultation05,24,Non-smoker,social,True,stated,False,I don't smoke
+day5_consultation05,25,No recreational drug use,social,True,not_stated,False,
+day5_consultation05,26,Drinks 1 beer 4 times per week,social,False,stated,False,"a beer per time, four times a week"
+day5_consultation05,27,Impression: possible urinary tract infection,impression,False,stated,False,might be having an infection in the urine
+day5_consultation05,28,Advised 3-day course of antibiotics,plan,False,stated,False,three day course of antibiotics
+day5_consultation05,29,Will pick up antibiotics from pharmacy,plan,False,stated,False,send it through to the pharmacy
+day5_consultation05,30,To start antibiotics as soon as possible,plan,False,stated,False,Start taking them as soon as you get them
+day5_consultation05,31,Safety-netting: call back if develops a temperature,plan,False,stated,False,or you have a high temperature
+day5_consultation05,32,Safety-netting: call back if pain is persistent or worsening,plan,False,stated,False,if the pain is getting worse... not getting better
+day5_consultation05,33,Safety-netting: call back if similar symptoms recur,plan,False,stated,False,if you're getting a recurrence of the same problem
+day5_consultation06,1,Presenting complaint: diarrhoea,history,False,stated,False,I've been having this serious diarrhoea
+day5_consultation06,2,Diarrhoea for 3 days,history,False,stated,False,It was three days ago
+day5_consultation06,3,Watery stools,history,False,stated,False,very loose but it started as being very watery
+day5_consultation06,4,Urgency to open bowels,history,False,stated,False,I feel this strong urge to go to the loo
+day5_consultation06,5,No blood in stool,negative_finding,True,stated,False,No blood
+day5_consultation06,6,Periumbilical cramps that come in waves,history,False,stated,False,towards my navel area... it does come and go
+day5_consultation06,7,Cramps worse when needing to open bowels,history,False,stated,False,"When it comes, I feel this strong urge to go to the loo"
+day5_consultation06,8,"Very frequent bowel opening, already 4 times today by midday",history,False,partly,False,"Today alone, I've been at least four time (no time of day given)"
+day5_consultation06,9,"Vomiting, last vomited 1 hour ago",history,False,partly,True,"sick after breakfast, maybe about two hours ago, not 1 hour"
+day5_consultation06,10,Does not feel she is holding down fluids,history,False,stated,False,can't seem to keep anything in me. Not even water
+day5_consultation06,11,"Still passing urine OK, last passed urine 1 hour ago",history,False,stated,False,urinating OK... an hour ago
+day5_consultation06,12,Unsure of urine colour,history,False,stated,False,I really couldn't say
+day5_consultation06,13,"Bowel habit normally regular, once a day",history,False,stated,False,go to the toilet every day... just once
+day5_consultation06,14,No foreign travel,negative_finding,True,stated,False,Have you been abroad anywhere? No
+day5_consultation06,15,Has been taking oral rehydration therapy regularly but has difficulty keeping it down,history,False,stated,False,ORS three times a day for the past two days; vomiting everything I take
+day5_consultation06,16,No rash,negative_finding,True,stated,False,"No, no rash"
+day5_consultation06,17,Feels hot but has not checked temperature,history,False,stated,False,not got one but to the touch I'm literally roasting
+day5_consultation06,18,Last menstrual period 2 weeks ago,history,False,stated,False,two weeks ago
+day5_consultation06,19,No regular sexual intercourse,history,True,stated,False,Are you having regular sexual intercourse? No
+day5_consultation06,20,Not using contraception,history,True,stated,False,Are you on any contraception? No
+day5_consultation06,21,"Was at work until today, now working from home",social,False,partly,False,working from home today; not explicitly said she was at work until today
+day5_consultation06,22,No past medical history,past_history,True,stated,False,any other medical issues? ... no
+day5_consultation06,23,Drug history: takes vitamins,medication,False,stated,False,vitamin D every day
+day5_consultation06,24,Lives with brother and mother,social,False,stated,False,I live with my brother and my mum
+day5_consultation06,25,Non-smoker,social,True,stated,False,I don't smoke
+day5_consultation06,26,Drinks 1 pint of alcohol a week,social,False,partly,False,a pint from time to time; frequency not given
+day5_consultation06,27,Works as a graphic designer,social,False,stated,False,A graphics designer
+day5_consultation06,28,"Impression: gastroenteritis, possibly viral or possibly food poisoning",impression,False,stated,False,infectious gastroenteritis... usually caused by a virus. But it can be from something you've eaten
+day5_consultation06,29,"Stool culture to be sent to exclude bacterial cause, as symptoms ongoing with fever",plan,False,partly,False,stool sample to exclude bacterial infection as going on a few days; fever not cited as reason
+day5_consultation06,30,Advised to keep taking small sips of oral rehydration therapy constantly,plan,False,stated,False,Just tiny sips constantly
+day5_consultation06,31,Booked an urgent appointment to assess hydration status,plan,False,stated,False,urgent appointment... check your hydration
+day5_consultation06,32,"Safety-netting: if she feels worse, has abdominal pain or feels unwell in the meantime, contact the practice to arrange urgent A&E assessment",plan,False,partly,False,"if feeling more unwell, seen urgently in A and E; call us back; abdominal pain not mentioned"
+day5_consultation07,1,Presenting complaint: cough and cold,history,False,stated,False,"cough, and my nose is just constantly streaming"
+day5_consultation07,2,Runny nose for 4-5 days,history,False,partly,False,five days or so ago (4-5 not stated)
+day5_consultation07,3,Dry cough for 4-5 days,history,False,partly,False,quite dry cough; five days or so
+day5_consultation07,4,No sputum,negative_finding,True,stated,False,bringing up any phlegm? No
+day5_consultation07,5,No haemoptysis (no coughing up blood),negative_finding,True,stated,False,coughed up any blood? Nope
+day5_consultation07,6,No epistaxis (no nosebleeds),negative_finding,True,stated,False,any blood coming from the nose? No
+day5_consultation07,7,No sinus pain,negative_finding,True,stated,False,nothing up in here but just constant streaming
+day5_consultation07,8,Feels hot but has not measured temperature,history,False,stated,False,feeling really hot... checked temperature? no
+day5_consultation07,9,No shortness of breath,negative_finding,True,stated,False,"short of breath... No, that's all fine"
+day5_consultation07,10,No pain on breathing in,negative_finding,True,stated,False,pain when you take a deep breath? No
+day5_consultation07,11,No wheeze,negative_finding,True,partly,True,"wheezing, short of breath? if I do intense exercise, then yes"
+day5_consultation07,12,Aches and pains,history,False,stated,False,quite achy muscles
+day5_consultation07,13,No vomiting,negative_finding,True,stated,False,"No vomiting, diarrhoea now? No"
+day5_consultation07,14,Eating and drinking normally,history,False,stated,False,eating and drinking normally? yes
+day5_consultation07,15,Passing urine normally,history,False,stated,False,"passing water OK? Yeah, that's fine"
+day5_consultation07,16,No history of chest problems,negative_finding,True,stated,False,any chest problems? no
+day5_consultation07,17,No history of recurrent chest infections,negative_finding,True,stated,False,regularly have any infections in your chest? No
+day5_consultation07,18,No weight loss,negative_finding,True,stated,False,weight been stable? Yeah
+day5_consultation07,19,Patient thinks last blood pressure reading was normal,history,False,not_stated,True,Do you know if it's been stable? I can't remember
+day5_consultation07,20,Patient cannot remember when last blood pressure/diabetes check-up was,history,False,partly,True,"BP checked 'a while ago'; diabetes blood test around three weeks ago, normal"
+day5_consultation07,21,Does not check blood sugars or urine at home,history,False,partly,False,Do you have blood sugar checking equipment? ... No (urine not discussed)
+day5_consultation07,22,No increased thirst,negative_finding,True,stated,False,"increased thirst? no, not particularly"
+day5_consultation07,23,No increased urinary frequency,negative_finding,True,stated,False,"increase in frequency? no, not particularly"
+day5_consultation07,24,"Taking 2-3 Lemsips a day, which ease symptoms",medication,False,stated,False,maybe two or three... soothe my throat
+day5_consultation07,25,Past medical history: hypertension,past_history,False,stated,False,I've got hypertension
+day5_consultation07,26,Past medical history: type 2 diabetes mellitus,past_history,False,partly,False,I'm diabetic (type not stated)
+day5_consultation07,27,Regular medication: lisinopril,medication,False,stated,False,lisinopril I think is the other one
+day5_consultation07,28,Regular medication: metformin,medication,False,stated,False,something called metformin
+day5_consultation07,29,Height 5 ft 5 in,other,False,stated,False,my height is five foot five
+day5_consultation07,30,Weight 65 kg,other,False,stated,False,weight is sixty five kilograms
+day5_consultation07,31,Non-smoker,social,True,not_stated,False,Doctor asked 'do you smoke' but no answer recorded
+day5_consultation07,32,Drinks the odd sherry (occasional alcohol),social,False,stated,False,"Yes, the odd cherry [sherry]"
+day5_consultation07,33,Lives with partner and dog,social,False,stated,False,my partner and my dog
+day5_consultation07,34,Works as an office manager,social,False,stated,False,I'm an office manager
+day5_consultation07,35,Impression: viral bronchitis,impression,False,partly,False,infection in the chest... most of the time caused by viruses
+day5_consultation07,36,Advised to continue Lemsips,plan,False,stated,False,fine to carry on... with the lemsip
+day5_consultation07,37,Advised not to take any other paracetamol-containing products,plan,False,stated,False,don't take any other paracetamol containing products
+day5_consultation07,38,"Advised to avoid cough syrup, but may take it if unable to sleep at night",plan,False,stated,False,cough syrup isn't advisable in the daytime... if kept up all night OK
+day5_consultation07,39,Advised illness may take 1-2 weeks to settle and cough may persist for up to a month,plan,False,partly,False,a week or two... cough ongoing longer than that (month not stated)
+day5_consultation07,40,Safety-netting: contact surgery if symptoms worsen/do not improve,plan,False,stated,False,"if it's not settling... getting worse, then we definitely need to talk to you again"
+day5_consultation07,41,Safety-netting: contact surgery if fever persists; advised to check temperature with a thermometer,plan,False,stated,False,getting a thermometer and checking your temperature... temperature's ongoing
+day5_consultation07,42,Safety-netting: contact surgery if coughing up phlegm,plan,False,stated,False,coughing up lots of nasty phlegm
+day5_consultation07,43,Safety-netting: contact surgery if blood in sputum,plan,False,stated,False,you cough up any blood
+day5_consultation07,44,Safety-netting: contact surgery if nosebleeds,plan,False,stated,False,get blood coming out your nose
+day5_consultation08,1,Presenting complaint: wheeze,history,False,stated,False,recently I'm wheezy
+day5_consultation08,2,"Wheeze for 2-3 (time unit not stated in note, probably days)",history,False,stated,False,"two, three days"
+day5_consultation08,3,No fever,negative_finding,True,stated,True,Patient said 'I have a fever' but reported 37 and agreed it was normal
+day5_consultation08,4,Patient checked own temperature: 37°C,history,False,stated,False,"thirty seven, yeah"
+day5_consultation08,5,Has cold symptoms,history,False,partly,False,"Asked about cold symptoms; patient said 'Yeah, so I have cough... and I have a fever'"
+day5_consultation08,6,Not coughing up sputum,negative_finding,True,stated,False,Have you coughed any phlegm up? No.
+day5_consultation08,7,No haemoptysis,negative_finding,True,stated,False,"blood when you cough? No, I don't think so."
+day5_consultation08,8,No chest pain,negative_finding,True,stated,False,"No chest pain, no."
+day5_consultation08,9,No night-time waking,negative_finding,True,stated,False,"No, just daytime"
+day5_consultation08,10,Not exercising at the moment,history,False,stated,False,"Able to do any exercise? No, I can't."
+day5_consultation08,11,Sometimes unable to complete sentences,history,False,stated,False,"hard to complete your sentences? Yeah, sometimes."
+day5_consultation08,12,No shortness of breath at rest,negative_finding,True,stated,False,short of breath sitting still? No. Just walk
+day5_consultation08,13,No problems walking upstairs,negative_finding,True,stated,False,up and down the stairs OK? Yeah.
+day5_consultation08,14,More wheezy when walking to work,history,False,partly,False,Used to walk to work but can't now because very short of breath; wheeze on walking not specifically mentioned
+day5_consultation08,15,Does not have a peak flow meter at home,history,False,stated,False,"peak flow meter? No, no."
+day5_consultation08,16,Has missed a few days of work,history,False,partly,False,work from home or sometimes I take sick leave
+day5_consultation08,17,"History of asthma as a child, used inhalers (type unknown)",past_history,False,stated,False,I had asthma... asthma inhaler... can't remember which
+day5_consultation08,18,"Hospital admissions for asthma in childhood, missed school",past_history,False,stated,False,"hospital? Yeah, sometimes. Miss school? occasionally"
+day5_consultation08,19,No intensive care (ITU) admissions,past_history,True,stated,False,"No, not that bad"
+day5_consultation08,20,Stopped asthma medication 3-4 years ago,medication,False,stated,False,three or four years ago I think
+day5_consultation08,21,"Still sometimes uses salbutamol, every few weeks",medication,False,stated,False,took salbutamol... Every few weeks
+day5_consultation08,22,Needs salbutamol when exercising,medication,False,stated,False,"when you exercise... inhalers? Yeah, a bit."
+day5_consultation08,23,Past medical history: asthma,past_history,False,stated,False,I had asthma
+day5_consultation08,24,Past medical history: hay fever,past_history,False,stated,False,I have hay fever as well
+day5_consultation08,25,Current medication: salbutamol,medication,False,stated,False,"salbutamol, normally"
+day5_consultation08,26,No known drug allergies,allergy,True,stated,False,"No, no allergies."
+day5_consultation08,27,Non-smoker,social,True,stated,False,"No, I don't smoke."
+day5_consultation08,28,Alcohol: 1 unit every 2-3 days,social,False,partly,False,one glass of wine every two or three days; units not stated
+day5_consultation08,29,Lives with partner,social,False,stated,False,I live with my partner.
+day5_consultation08,30,Works as an engineer,social,False,stated,False,I'm engineer.
+day5_consultation08,31,Impression: asthma exacerbation,impression,False,stated,False,sounds like you've had a flare up of your asthma
+day5_consultation08,32,Continue to monitor temperature; contact the practice if temperature spikes,plan,False,partly,False,if you get a high temperature... call us back straightaway; monitoring not explicitly advised
+day5_consultation08,33,Collect prescription for peak flow meter and spacer; pharmacist can advise on use,plan,False,stated,False,prescribe you a peak flow meter... and a spacer... pharmacist can show you
+day5_consultation08,34,"Record peak expiratory flow rate twice daily, on waking and at night",plan,False,stated,False,record a value first thing when you wake up and in the evening
+day5_consultation08,35,Increase salbutamol via spacer to 2-4 puffs every 4 hours,plan,False,stated,False,two to four puffs every four hours; spacer to use inhaler
+day5_consultation08,36,Review with GP next week; may need another inhaler added,plan,False,stated,False,review in a week... see whether you need another inhaler
+day5_consultation08,37,"Book an urgent appointment if wheeze does not settle, gets worse, or patient feels unwell in the meantime",plan,False,partly,False,if wheezing getting worse call back straightaway; 'does not settle' not mentioned
+day5_consultation09,1,Consultation 1 – presenting complaint: tired all the time,history,False,stated,False,"aching all over... feeling really tired, run down"
+day5_consultation09,2,Tired and feeling run down for the last 6 weeks,history,False,stated,False,"definitely the last six weeks... feeling really tired, run down"
+day5_consultation09,3,Last felt well at Christmas,history,False,stated,False,"definitely Christmas, New Year, I felt relatively well"
+day5_consultation09,4,Symptoms seemed to start after returning from a holiday in the United States,history,False,stated,False,probably a couple of weeks after I got back
+day5_consultation09,5,Did a lot of walking in shorts in Yosemite,history,False,partly,False,Walking in shorts and boots mentioned; Yosemite never named
+day5_consultation09,6,Did not notice an insect bite,negative_finding,True,stated,False,"I don't recall any bugs, I don't remember seeing anything bitten"
+day5_consultation09,7,Was well while on holiday,history,False,stated,False,"had a great time, very active"
+day5_consultation09,8,Felt unwell after returning from holiday,history,False,stated,False,the symptoms sort of all started afterwards
+day5_consultation09,9,Had a red circular rash on the back of the calf in mid-to-late February,history,False,partly,False,"Rash on back of calf, middle to end of Feb; red/circular appearance not described verbally"
+day5_consultation09,10,Calf rash lasted a few weeks and then faded,history,False,stated,False,it faded over a couple of weeks
+day5_consultation09,11,Had a fever around the time of the rash,history,False,partly,False,possibly a little bit feverish
+day5_consultation09,12,Had a sore throat around the time of the rash,history,False,stated,False,it was a bit of a sore throat I had
+day5_consultation09,13,Reduced appetite,history,False,stated,False,I'm probably less hungry
+day5_consultation09,14,No weight loss,negative_finding,True,stated,False,no weight change
+day5_consultation09,15,No change in bowel habit,negative_finding,True,stated,False,Any change in your bowel habit... No
+day5_consultation09,16,No blood in stool,negative_finding,True,stated,False,blood in the stool? No
+day5_consultation09,17,No dyspepsia,negative_finding,True,stated,False,"acid in your throat, or abdominal pain? No"
+day5_consultation09,18,General headache,history,False,stated,False,the sort of headache maybe in just generally feeling a bit crappy
+day5_consultation09,19,No visual disturbance,negative_finding,True,stated,False,blurred vision... no
+day5_consultation09,20,No altered sensation,negative_finding,True,stated,False,"tingling, numbness? no"
+day5_consultation09,21,No weakness,negative_finding,True,not_stated,False,
+day5_consultation09,22,No cough,negative_finding,True,stated,False,chest cough... No
+day5_consultation09,23,No sputum,negative_finding,True,stated,False,phlegm... No
+day5_consultation09,24,No chest pain,negative_finding,True,not_stated,False,
+day5_consultation09,25,No shortness of breath,negative_finding,True,stated,False,shortness of breath... No
+day5_consultation09,26,No coryzal symptoms,negative_finding,True,stated,False,persistent cold symptoms... No
+day5_consultation09,27,No sore throat at present,negative_finding,True,stated,False,sore throat... No
+day5_consultation09,28,Not exercising because of lack of energy,social,False,partly,False,not exercising as normal but unsure if unable or 'a bit lazy'
+day5_consultation09,29,"Aching shoulders, legs and back",history,False,stated,False,"aching shoulders, back, the hips, knees"
+day5_consultation09,30,No joint swelling,negative_finding,True,stated,False,"Any swelling? No... hands, wrists, ankles, toes? no"
+day5_consultation09,31,No other rashes noted,negative_finding,True,stated,False,I don't have any rashes now
+day5_consultation09,32,No symptoms of depression,negative_finding,True,stated,False,mental health... pretty good at the moment
+day5_consultation09,33,Past medical history of asthma,past_history,False,stated,False,Asthma and hay fever
+day5_consultation09,34,Past medical history of hayfever,past_history,False,stated,False,Asthma and hay fever
+day5_consultation09,35,"Uses a twice-daily inhaler, possibly an inhaled corticosteroid (uncertain)",medication,False,stated,False,preventative... using the everyday for the morning and night
+day5_consultation09,36,Does not take salbutamol regularly,medication,False,partly,False,"but not the, uh... (reliever not named)"
+day5_consultation09,37,Cetirizine once daily,medication,False,partly,False,one of the antihistamines from the pharmacy; name/frequency not given
+day5_consultation09,38,Lives with his wife,social,False,stated,False,just my wife
+day5_consultation09,39,Non-smoker,social,True,partly,False,Smoking asked but answer inaudible
+day5_consultation09,40,Drinks alcohol occasionally,social,False,stated,False,occasionally
+day5_consultation09,41,Impression: 6-week history of fatigue with a history of circular rash on the calf,impression,False,partly,False,Doctor linked rash and six weeks of symptoms; circular not said
+day5_consultation09,42,Plan: screening blood tests for tiredness (tired all the time),plan,False,stated,False,"blood tests, checking all the normal things, like liver, kidneys, blood count"
+day5_consultation09,43,Plan: blood tests to include Lyme serology,plan,False,stated,False,lyme disease... we would do a test for
+day5_consultation09,44,Plan: follow-up with the GP in 1 week,plan,False,stated,False,arrange a follow up about a week after
+day5_consultation09,45,"Consultation 2 (13:30-13:50) – presenting complaint: headache (""I have a blinding headache"")",history,False,not_stated,False,
+day5_consultation09,46,Headache for 3 days,history,False,not_stated,False,
+day5_consultation09,47,Headache starts on waking up,history,False,not_stated,False,
+day5_consultation09,48,Headache is over the right eye,history,False,not_stated,False,
+day5_consultation09,49,Seeing lights in front of the eyes,history,False,not_stated,False,
+day5_consultation09,50,Headache can be worse on standing up,history,False,not_stated,False,
+day5_consultation09,51,"Headache not worse on bending over, coughing or sneezing",negative_finding,True,not_stated,False,
+day5_consultation09,52,Vision not disturbed,negative_finding,True,not_stated,False,
+day5_consultation09,53,No nausea,negative_finding,True,not_stated,False,
+day5_consultation09,54,No vomiting,negative_finding,True,not_stated,False,
+day5_consultation09,55,No altered taste or smell,negative_finding,True,not_stated,False,
+day5_consultation09,56,Headache worse in light (photophobia),history,False,not_stated,False,
+day5_consultation09,57,No rash,negative_finding,True,not_stated,False,
+day5_consultation09,58,No fever,negative_finding,True,not_stated,False,
+day5_consultation09,59,No coryzal symptoms,negative_finding,True,not_stated,False,
+day5_consultation09,60,Not woken at night by the headache,negative_finding,True,not_stated,False,
+day5_consultation09,61,"No tingling, numbness or weakness",negative_finding,True,not_stated,False,
+day5_consultation09,62,Was well before this episode,history,False,not_stated,False,
+day5_consultation09,63,Has been lacking energy,history,False,not_stated,False,
+day5_consultation09,64,No weight loss,negative_finding,True,not_stated,False,
+day5_consultation09,65,Headache severity 5-8 out of 10,history,False,not_stated,False,
+day5_consultation09,66,"Taking ibuprofen, which eases the headache slightly but does not resolve it",medication,False,not_stated,False,
+day5_consultation09,67,"Has had generalised headaches before, but not severe; wording on associated symptoms/altered vision with previous headaches is ambiguous",history,False,not_stated,False,
+day5_consultation09,68,No past medical history,past_history,True,not_stated,False,
+day5_consultation09,69,Takes Mercilon (combined oral contraceptive pill),medication,False,not_stated,False,
+day5_consultation09,70,Blood pressure last checked 1 year ago and was normal,other,False,not_stated,False,
+day5_consultation09,71,Family history: mother has migraine,other,False,not_stated,False,
+day5_consultation09,72,Non-smoker,social,True,not_stated,False,
+day5_consultation09,73,No illicit drug use,social,True,not_stated,False,
+day5_consultation09,74,Drinks 3 beers per week,social,False,not_stated,False,
+day5_consultation09,75,Works from home,social,False,not_stated,False,
+day5_consultation09,76,Impression: likely migraine,impression,False,not_stated,False,
+day5_consultation09,77,"Plan: needs a neurological examination to rule out other causes, as the headache is ongoing and persistent",plan,False,not_stated,False,
+day5_consultation09,78,Plan: advised to take paracetamol regularly,plan,False,not_stated,False,
+day5_consultation09,79,Plan: advised to take naproxen with food; will be prescribed,plan,False,not_stated,False,
+day5_consultation09,80,Safety-netting: contact the surgery straight away if the headache gets worse in the meantime,plan,False,not_stated,False,
+day5_consultation09,81,Safety-netting: go to A&E if the headache is severe or unrelenting,plan,False,not_stated,False,
+day5_consultation10,1,Presenting complaint: headache,history,False,stated,False,blinding headache for a few days
+day5_consultation10,2,Headache for 3 days,history,False,stated,False,that was three days ago
+day5_consultation10,3,Headache starts on waking up,history,False,stated,False,I woke up one morning with a headache... I can wake up with it in the morning
+day5_consultation10,4,Headache is located over the right eye,history,False,partly,False,"kind of all over but... over my right eye, it's bit stronger"
+day5_consultation10,5,Seeing lights in front of the eyes,history,False,stated,False,"I get this, shooting light sometimes"
+day5_consultation10,6,Headache can be worse on standing up,history,False,stated,False,Sometimes when I stand up quickly I get a bit of a stabbing pain
+day5_consultation10,7,"Headache not worse on bending over, coughing or sneezing",negative_finding,True,partly,False,Asked about bending/coughing; patient only described standing up; sneezing not mentioned
+day5_consultation10,8,No disturbance of vision,negative_finding,True,partly,True,"Eye check showed vision unchanged, but patient reported 'weird kind of vision' and shooting lights"
+day5_consultation10,9,No nausea or vomiting,negative_finding,True,partly,True,"no, feeling a bit sick, but no vomiting"
+day5_consultation10,10,No altered taste or smell,negative_finding,True,stated,False,"Any change in your smell or taste? No, none at all."
+day5_consultation10,11,Headache worse in the light,history,False,stated,False,lights definitely make me more sensitive
+day5_consultation10,12,No rash,negative_finding,True,not_stated,False,
+day5_consultation10,13,No fever,negative_finding,True,stated,False,I don't really feel feverish or anything
+day5_consultation10,14,No coryzal symptoms,negative_finding,True,stated,False,"cold symptoms, sore throat... No, no."
+day5_consultation10,15,Not woken at night by the headache,negative_finding,True,stated,False,Is it waking you up in the night-time? No
+day5_consultation10,16,"No tingling, numbness or weakness",negative_finding,True,stated,False,Any tingling? Or numbness? Or weakness anywhere? No.
+day5_consultation10,17,Was well before this episode,history,False,partly,False,Asked if recently well; patient only denied weight change and noted low energy
+day5_consultation10,18,Has been lacking in energy,history,False,stated,False,maybe lack of energy
+day5_consultation10,19,No weight loss,negative_finding,True,stated,False,no change of weight
+day5_consultation10,20,Headache severity 5 to 8 out of 10,history,False,stated,False,"mostly eight, and then it kinda comes down to maybe a five"
+day5_consultation10,21,"Taking ibuprofen, which eases the headache slightly but does not resolve it",medication,False,stated,False,It gets a little bit better but doesn't go away
+day5_consultation10,22,"Has had some generalised headaches before, which were not bad (note wording unclear on whether they had associated symptoms or altered vision)",history,False,stated,False,"a bit of a pressure in between my eyes... nothing major; no visual symptoms, nausea or vomiting"
+day5_consultation10,23,No past medical history,past_history,True,partly,False,had a pain when I was younger but no causes found and that went away
+day5_consultation10,24,Taking Mercilon (combined oral contraceptive pill),medication,False,partly,False,just the pill; pill name inaudible
+day5_consultation10,25,Blood pressure was normal when last checked 1 year ago,other,False,stated,False,checked in the pharmacy... normal... a year ago
+day5_consultation10,26,Family history: mother has migraine,other,False,stated,False,my mum... has migraines
+day5_consultation10,27,Non-smoker,social,True,stated,False,do you smoke? no
+day5_consultation10,28,No illicit drug use,social,True,stated,False,any other drugs? no apart from the Ibuprofen
+day5_consultation10,29,Drinks 3 beers per week,social,False,partly,False,"probably like, three, once a week; drink type not said"
+day5_consultation10,30,Works from home,social,False,stated,False,I work from home
+day5_consultation10,31,Impression: likely migraine,impression,False,partly,False,it could possibly be a migraine type headache
+day5_consultation10,32,"Headache is ongoing and persistent, so needs a neurological examination to exclude other pathology",plan,False,partly,False,"ongoing for three days, we should do a neurological examination; excluding other pathology not said"
+day5_consultation10,33,Advised regular paracetamol (will prescribe),plan,False,partly,False,you can also take Paracetamol at the same time; regular use and prescribing not said
+day5_consultation10,34,Advised naproxen taken with food (will prescribe),plan,False,partly,False,something similar to Ibuprofen but a bit stronger... take it with food; naproxen not named
+day5_consultation10,35,Safety-netting: contact the practice straightaway if it gets worse in the meantime,plan,False,partly,False,you can call us for further advice on that
+day5_consultation10,36,Safety-netting: go to A&E if the headache is severe or unrelenting,plan,False,stated,False,"headache is getting unbearable, getting worse or changing... go to A and E"
+day5_consultation11,1,Presenting complaint: right knee pain,history,False,stated,False,it's actually my right knee that hurts
+day5_consultation11,2,Right knee pain for 2 weeks,history,False,stated,False,it's been about two weeks
+day5_consultation11,3,Training for a marathon,social,False,stated,False,currently training for a marathon
+day5_consultation11,4,Currently running up to 7-8 miles a few times a week,social,False,partly,False,"Runs of 7-8 miles were mentioned, but not how often she runs; 'few times a week' was about the gym"
+day5_consultation11,5,Goes to the gym a few times a week,social,False,stated,False,I go to the gym like few times a week
+day5_consultation11,6,This week had to stop running at the 20-minute point because of pain,history,False,partly,False,"Pain starts after about 20 minutes; last time she ran a little longer, then stopped. 'This week' was not said"
+day5_consultation11,7,Pain is at the front and right side of the knee,history,False,partly,False,Pain is in the middle and moves to the right; 'front' was not said
+day5_consultation11,8,No specific area of tenderness,negative_finding,True,partly,True,"Asked about tenderness, she answered 'yes', then talked about possible fluid"
+day5_consultation11,9,Has noticed puffiness (swelling) of the knee after exercise,history,False,partly,False,Knee was a little swollen the first time she ran; not described as happening generally after exercise
+day5_consultation11,10,Knee swelling settled completely with ice,history,False,stated,False,"put some ice on it, and it went away"
+day5_consultation11,11,No giving way of the knee,negative_finding,True,stated,False,"Not bad, it just kinda starts hurting"
+day5_consultation11,12,No locking of the knee,negative_finding,True,stated,False,Locking up of the knee? No
+day5_consultation11,13,No problems going up or down stairs,negative_finding,True,stated,False,Stairs? No
+day5_consultation11,14,No problems with normal walking,negative_finding,True,stated,False,"Walking normally? No, none"
+day5_consultation11,15,Full range of movement of the knee,other,False,stated,False,Can fully straighten and fully flex the leg
+day5_consultation11,16,Patient feels the pain is generally getting worse,history,False,stated,False,I feel like it's getting worse
+day5_consultation11,17,Previous ice hockey injury with bruising afterwards,past_history,False,stated,False,fell on the ice and had a huge bruise
+day5_consultation11,18,No other joint pains,negative_finding,True,stated,False,Any other joint problems... No
+day5_consultation11,19,Not generally unwell,negative_finding,True,not_stated,False,Only mentioned in the safety-netting advice
+day5_consultation11,20,No fever,negative_finding,True,not_stated,False,Only mentioned in the safety-netting advice
+day5_consultation11,21,"Has had tingling in the right side of the forefoot, which has settled",history,False,stated,False,"tingling in my right toes, just once; back to normal now"
+day5_consultation11,22,Slight ankle swelling with indentation from socks,history,False,partly,False,Feet/legs swell with sock indentation; ankle not specified
+day5_consultation11,23,No change in temperature of the leg/foot,negative_finding,True,stated,False,Change in colour or temperature? No
+day5_consultation11,24,No change in colour of the leg/foot,negative_finding,True,stated,False,Change in colour or temperature? No
+day5_consultation11,25,No problems walking on hard floors,negative_finding,True,stated,False,Problems walking on hard floors? No
+day5_consultation11,26,No pain in the sole of the foot,negative_finding,True,stated,False,Pain on the underside in the arch? No
+day5_consultation11,27,Past medical history of LASIK eye surgery,past_history,False,stated,False,I had Lasik surgery
+day5_consultation11,28,Possible past history of kidney stones (uncertain),past_history,False,stated,False,"bad UTI, they thought it was kidney stones"
+day5_consultation11,29,Takes vitamin D,medication,False,stated,False,I take vitamin D
+day5_consultation11,30,Takes melatonin,medication,False,stated,False,I take melatonin
+day5_consultation11,31,Takes ibuprofen,medication,False,stated,False,I take Ibuprofen
+day5_consultation11,32,Takes Xanax (alprazolam) sometimes,medication,False,stated,False,occasionally I'll take Xanax
+day5_consultation11,33,Occasionally smokes a joint (cannabis),social,False,stated,False,sometimes will smoke a joint
+day5_consultation11,34,No history of gastrointestinal symptoms,negative_finding,True,stated,False,"Stomach, indigestion, acid reflux? No problems"
+day5_consultation11,35,No history of asthma,negative_finding,True,stated,False,Asthma? No problems
+day5_consultation11,36,Advised to replace ibuprofen with naproxen; naproxen to be prescribed,plan,False,partly,False,A stronger anti-inflammatory to take instead of ibuprofen; naproxen was not named
+day5_consultation11,37,Advised to keep using ice as much as possible,plan,False,stated,False,"as much as you can, use the ice"
+day5_consultation11,38,Advised to reduce exercise,plan,False,stated,False,try and ease up on the running
+day5_consultation11,39,Advised not to keep running through pain,plan,False,stated,False,"if painful enough that you're having to stop running, not a good idea"
+day5_consultation11,40,Referral to physiotherapy for assessment and ongoing treatment,plan,False,stated,False,"physiotherapist for assessment and examination, most likely initial treatment; referral"
+day5_consultation11,41,"Safety-netting: see a doctor as soon as possible if there is persistent swelling, heat, redness or locking",plan,False,stated,False,"persistent swelling, heat, redness, locks up - see a doctor urgently"
+day5_consultation12,1,Presenting complaint: headache,history,False,stated,False,I keep having a headache.
+day5_consultation12,2,Headache is left-sided and posterior,history,False,stated,False,It's on the left side at the back
+day5_consultation12,3,Headache started mid-morning,history,False,stated,False,About mid-morning.
+day5_consultation12,4,Headache severity 8/10,history,False,stated,False,I'd say about eight.
+day5_consultation12,5,No visual disturbance,negative_finding,True,stated,False,Denied blurred vision and funny lights in vision
+day5_consultation12,6,No visual floaters,negative_finding,True,partly,False,Asked about funny lights or anything like that in vision; floaters not specifically mentioned
+day5_consultation12,7,No tingling,negative_finding,True,stated,False,"Any nausea, vomiting, tingling, numbness, weakness? No, nothing."
+day5_consultation12,8,No numbness,negative_finding,True,stated,False,"No, nothing."
+day5_consultation12,9,No weakness,negative_finding,True,stated,False,"No, nothing."
+day5_consultation12,10,No nausea,negative_finding,True,stated,False,"No, nothing like that"
+day5_consultation12,11,No vomiting,negative_finding,True,stated,False,"No, nothing like that"
+day5_consultation12,12,No fever,negative_finding,True,stated,False,"No, no fever"
+day5_consultation12,13,No neck stiffness,negative_finding,True,not_stated,False,"Neck stiffness only mentioned in safety-netting, never asked about"
+day5_consultation12,14,Headache not worse with coughing,negative_finding,True,stated,False,"lie down, stand up, bend over, cough or sneeze? Um, no."
+day5_consultation12,15,Headache not worse with sneezing,negative_finding,True,stated,False,cough or sneeze... no
+day5_consultation12,16,Headache not worse with bending,negative_finding,True,stated,False,bend over... no
+day5_consultation12,17,Headache did not wake her at night; slept okay,negative_finding,True,stated,False,did you manage to sleep through the night OK? Yes I did.
+day5_consultation12,18,Eating and drinking normally,history,False,stated,False,"Yes, yes, like normal."
+day5_consultation12,19,Finding it hard to concentrate on work,history,False,partly,False,finding it really hard to do any of my work; concentration not specifically mentioned
+day5_consultation12,20,No previous history of headaches,past_history,True,stated,False,had any headache before? Not really.
+day5_consultation12,21,No change in diet,negative_finding,True,stated,False,change in your diet or lifestyle? Not that I can think of.
+day5_consultation12,22,No change in lifestyle,negative_finding,True,stated,False,Not that I can think of.
+day5_consultation12,23,No increased stress,negative_finding,True,stated,False,Any increased stress... Not that I can think of.
+day5_consultation12,24,No regular medications (drug history nil),medication,True,stated,False,Anything you take medication for? No I don't.
+day5_consultation12,25,Family history: mother has hypertension,past_history,False,stated,False,my mother's had hypertension
+day5_consultation12,26,Lives with partner,social,False,stated,False,My partner.
+day5_consultation12,27,Works as a designer,social,False,stated,False,I'm a designer.
+day5_consultation12,28,Impression: new-onset headache,impression,False,partly,False,Doctor noted it's unusual headaches have developed; no formal impression stated
+day5_consultation12,29,"Naproxen prescribed, advised to take instead of ibuprofen",plan,False,partly,False,"slightly stronger pain relief, similar to Ibuprofen, instead of it; naproxen not named"
+day5_consultation12,30,Can take paracetamol alongside naproxen,plan,False,stated,False,You can take Paracetamol along with that.
+day5_consultation12,31,"Safety-netting: contact doctor as soon as possible if pain is not settling, worsens, or new symptoms develop",plan,False,partly,False,"if getting worse, new symptoms, or not settling in a day or two, call back; 'as soon as possible' not said"
+day5_consultation12,32,"If episodes recur, to have further assessment with GP",plan,False,stated,False,or you keep getting episodes... we need to speak to you and make a plan
