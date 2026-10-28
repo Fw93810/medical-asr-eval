@@ -289,7 +289,7 @@ Figures: `results/stress/test47/fig_s1_overlap.svg`, `fig_s3_noise.svg`, `fig_ov
    - Clinical negations: Qwen3-ASR loses fewer than Whisper down to 5 dB (11.0% vs 16.6%); at 0 dB both lose about a quarter.
    - **S3b alarms** add little on top of the 10 dB background: +0.6 points for Whisper, +0.4 for Qwen3-ASR (no interval computed for this difference). At 0 dB relative to speech and 2–4 alarms per minute, the alarms are a much weaker stressor than lowering the babble SNR by 5 dB.
 4. **S4 — not run** (dropped for time; see section 6).
-5. **Note level — not yet run** (section 5.4).
+5. **Note level — holds.** The recall loss is −5.9 points at 5 dB for both models and about −14 points at 0 dB, the same size as the 27B − 14B generation-model gap (+12.1). Details in section 5.4.
 
 ### 5.3 Key cases
 
@@ -320,7 +320,68 @@ Counts of clinical negations kept at the baseline level and lost at the stressed
 
 **Analysis, beyond stated-fact recall and the contradiction rate**: attribute note errors to ASR error types — of the facts missing from a note, how many fall in stretches the ASR deleted; of the contradicted facts, how many match a substitution — comparing Qwen3-ASR (more deletions) and Whisper (more substitutions) at 0 dB. Key cases focus on negation flips that reach the note.
 
-Results: to be added.
+**Run** (2026-10-28): RunPod A100-SXM4 80GB, Ollama 0.40.11, about 46 minutes for 125 notes (median about 21 s per note); environment and log in `outputs/notes-stress/stress-qwen3.8-27b/` (not committed). Judging: 125 calls, frozen v1 protocol, with the grid's cached fact lists (checked byte-identical). Results in `results/notes/stress/qwen3.8-27b/`.
+
+**Regeneration check**: the regenerated human column differs from the grid's 27B human column in 2 of 563 stated-fact labels (0.4%), against 6.8% when the GPU changed (stage 3). In the same environment, regeneration noise is negligible, so the differences below are due to the transcripts.
+
+#### Recall and contradictions (stated facts, 563 facts, 25 consultations)
+
+| Source | Stated-fact recall | vs human transcript | Contradicted | vs human transcript |
+|---|---|---|---|---|
+| Human transcript (regenerated) | 89.3% | — | 1.6% | — |
+| *Clean, Whisper (stage-3 grid)* | *86.3%* | *−3.4 vs grid human* | *3.4%* | |
+| *Clean, Qwen3-ASR (stage-3 grid)* | *88.8%* | *−0.9 vs grid human* | *2.5%* | |
+| S3 5 dB, Whisper | 83.5% | −5.9 [−8.8, −2.6] | 3.6% | +2.0 [+0.7, +3.2] |
+| S3 5 dB, Qwen3-ASR | 83.5% | −5.9 [−8.6, −3.3] | 3.6% | +2.0 [+1.0, +3.1] |
+| S3 0 dB, Whisper | 75.0% | −14.4 [−18.8, −9.8] | 6.2% | +4.6 [+2.7, +6.4] |
+| S3 0 dB, Qwen3-ASR | 75.1% | −14.2 [−17.1, −11.0] | 8.2% | +6.6 [+4.8, +8.4] |
+
+Clean rows (italic) come from the stage-3 grid, a different rental session; their differences are against the grid's own human column. Intervals are paired bootstrap over consultations (`paired_summary_stated.csv`).
+
+- **Dose-response**: the ASR's cost grows from about −1 to −3 points in clean audio, to −6 at 5 dB, to −14 at 0 dB. From 5 dB to 0 dB alone, recall drops by a further 8.5 [4.1, 13.1] points (Whisper) and 8.4 [5.9, 10.7] (Qwen3-ASR).
+- **Compared with the generation model**: on the same 25 consultations, Qwen3.8-27B writes notes with 12.1 [7.8, 16.4] points higher stated recall than Qwen3-14B from the same human transcript (stage 3). At 5 dB the ASR costs about half of that; at 0 dB about the same or more (14.4 vs 12.1, overlapping intervals). **At 0 dB babble, listening is as large a bottleneck as writing.**
+- **The two ASR systems end level at both SNRs**: Qwen3-ASR − Whisper recall +0.0 [−3.7, +3.4] at 5 dB and +0.2 [−4.1, +4.4] at 0 dB. Qwen3-ASR's WER advantage at 5 dB, and Whisper's at 0 dB, do not reach the notes.
+- **Contradictions grow with noise**, from 1.6% to 6–8% of stated facts. At 0 dB Qwen3-ASR has more than Whisper (+2.0 [−0.2, +4.1] points), the opposite of what its higher deletion rate suggested.
+
+#### Attribution to ASR error types
+
+`scripts/attribute_note_errors.py` locates each stated fact's supporting quote in the transcript (92–99% located per group) and measures the ASR's deletion and substitution rates in that utterance. Groups, against the human-transcript note: **kept** (present in both), **lost** (present → missing), **contradicted** (newly contradicted). Results: `attribution/attribution_summary.csv`.
+
+| Source | Group | Facts | Deletion rate | Substitution rate | Utterance ≥ 50% deleted |
+|---|---|---|---|---|---|
+| 0 dB Whisper | kept | 409 | 17% | 12% | 8% |
+| | lost | 68 | 28% | 26% | 21% |
+| | contradicted | 28 | 25% | 24% | 19% |
+| 0 dB Qwen3-ASR | kept | 406 | 19% | 11% | 10% |
+| | lost | 62 | 32% | 21% | 28% |
+| | contradicted | 38 | 24% | 24% | 11% |
+| 5 dB Whisper | kept | 451 | 13% | 8% | 6% |
+| | lost | 41 | 31% | 11% | 20% |
+| | contradicted | 13 | 16% | 10% | 8% |
+| 5 dB Qwen3-ASR | kept | 454 | 10% | 9% | 4% |
+| | lost | 37 | 18% | 20% | 11% |
+| | contradicted | 13 | 28% | 17% | 17% |
+
+- **Lost facts sit where the ASR dropped speech.** Their utterances have far higher deletion rates than kept facts, and about three times as often lost at least half their words. For Qwen3-ASR at 0 dB this is the clearest pattern: 28% of lost facts sit in a mostly deleted utterance, against 11% of its contradicted facts.
+- **Contradicted facts sit where the ASR misheard**: substitution rates are double those of kept facts for both models at 0 dB.
+- **But the mapping is not clean.** Lost facts also sit in stretches with more substitutions, and contradicted facts in stretches with more deletions. Deleting a single "no" turns a negative into a positive, so a deletion can produce a contradiction (case N5 below); and an LLM decoder can turn a masked "No" into a fluent "Yeah", a substitution that reads like a confident answer (case N1). The prediction "Qwen3-ASR's extra deletions show up as missing facts, Whisper's errors as contradicted facts" does not hold at the note level: both lose the same share of facts, and Qwen3-ASR has more contradictions.
+- Numbers of contradicted facts are small (13–38 per source); no intervals are given for this table. The quote is matched to one utterance by word overlap; a very short quote such as "No." can match the wrong utterance.
+
+#### Negation flips that reach the note
+
+20 negative facts are contradicted in an ASR note but not in the human note. Examples, checked against the ASR text (times in the original timing):
+
+| # | Consultation · time | Said | ASR | Note |
+|---|---|---|---|---|
+| N1 | day5_consultation01 · 282 s | Doctor: "And do you smoke?" Patient: "No." Doctor: "Do you take any other drugs of any sort?" Patient: "No." | **Qwen3-ASR, 0 dB**: "Do you smoke? **Yeah.** Do you take any other drugs of any sort? **Yeah.**" (Whisper at 0 dB: correct) | "Smokes" |
+| N2 | day5_consultation05 · 261 s | "Uh, no back pain. No, I typically don't suffer from back pain, so, no." | **Whisper, 0 dB**: "not back pain, no, I think it's **just some back pain**" | "lower back pain" |
+| N3 | day5_consultation05 · 301 s | "Uh, so, I don't smoke. I drink…" | **Whisper, 0 dB**: "So I **go smoking**, but I go, let's say, four times a week" | "Smokes and drinks alcohol" |
+| N4 | day4_consultation05 · 106 s | "I have N, N, NK, NKDA allergy" (no known drug allergies) | **Qwen3-ASR**: "I have an an an **KBA** allergy" (5 dB); "an **aneka** allergy" (0 dB) | "Allergy to KBA"; "Allergy to 'aneka'" — an invented allergy |
+| N5 | day4_consultation05 · 500 s | "I didn't have any fever recently… I don't think so" | 34–40% of the utterance's words deleted in three of the four noisy transcripts | "possible low-grade fever" (Qwen3-ASR 5 dB); "reports a low-grade fever" (Whisper 0 dB); "mild fever" (Qwen3-ASR 0 dB) |
+
+- N1 is an LLM-decoder failure: Qwen3-ASR writes a fluent, plausible "Yeah" where the noise masked "No", twice in a row. Whisper keeps both answers at the same SNR.
+- N2 and N3 are in day5_consultation05, the consultation of stage-3 case B1 (not → also); at 0 dB it gains two more flipped negatives.
+- N4 shows a term error becoming a clinical claim: "NKDA" is unfamiliar to the recogniser, and the note-writer turns the made-up word into a drug allergy.
 
 ## 6. Limitations
 

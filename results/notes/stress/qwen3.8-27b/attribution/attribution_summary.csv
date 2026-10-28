@@ -1,0 +1,13 @@
+source,group,facts,located,mean_del_rate,mean_sub_rate,share_stretch_deleted,share_with_substitution
+asr_mixed_s3_snr5_whisper,kept,451,434,0.133,0.077,0.055,0.583
+asr_mixed_s3_snr5_whisper,lost,41,40,0.307,0.111,0.2,0.6
+asr_mixed_s3_snr5_whisper,contradicted,13,12,0.159,0.096,0.083,0.667
+asr_mixed_s3_snr5_qwen3asr,kept,454,437,0.103,0.087,0.037,0.625
+asr_mixed_s3_snr5_qwen3asr,lost,37,36,0.181,0.202,0.111,0.806
+asr_mixed_s3_snr5_qwen3asr,contradicted,13,12,0.283,0.168,0.167,0.833
+asr_mixed_s3_snr0_whisper,kept,409,393,0.17,0.118,0.079,0.649
+asr_mixed_s3_snr0_whisper,lost,68,67,0.281,0.258,0.209,0.821
+asr_mixed_s3_snr0_whisper,contradicted,28,26,0.248,0.235,0.192,0.923
+asr_mixed_s3_snr0_qwen3asr,kept,406,390,0.193,0.107,0.103,0.685
+asr_mixed_s3_snr0_qwen3asr,lost,62,60,0.316,0.213,0.283,0.783
+asr_mixed_s3_snr0_qwen3asr,contradicted,38,37,0.242,0.239,0.108,0.865
