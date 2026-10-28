@@ -1,0 +1,751 @@
+id,condition,n_words,segment_start_s,t_approx_s,in_overlap,inserted,hyp_context,ref_context
+day1_consultation11,mixed,5,1.97,9.55,1,just it is just a,that okay am i meant to [[just it is just a]] connection on the screen it is,that ok am i meant to this audio and then it is
+day1_consultation11,mixed,1,55.71,56.08,0,is,does not feel very solid it [[is]] so just it is just pouring,does not feel very solid it so it just it is just
+day1_consultation11,mixed,1,67.39,69.52,0,that,getting better so sorry to hear [[that]] seems like there is a lot,so wow no sorry to hear seems like there is a lot
+day1_consultation11,mixed,4,139.47,143.4,0,i said when i,your tummy it is kind of [[i said when i]] if i think about it it,your tummy it is kind of if i think about it it
+day1_consultation11,mixed,1,187.17,187.6,0,have,of 10 the worst pain you [[have]] ever had or is it more,of 10 the worst pain you ever had or is it more
+day1_consultation11,mixed,1,226.29,230.59,0,like,i want to vomit and actually [[like]] yeah one time i just like,i want to vomit and actually yeah one time i just like
+day1_consultation11,mixed,1,242.37,247.71,0,okay,the diarrhea no it is not [[okay]] okay all right any other symptoms,right no no it is not ok ok alright any other symptoms
+day1_consultation11,mixed,1,269.07,271.88,0,water,hot okay in terms of your [[water]] works are you passing urine okay,ok and in terms of your waterworks are you passing urine ok
+day1_consultation11,mixed,1,288.05,288.43,0,now,mean have you for example gone [[now]] i had some takeaway food have,mean have you for example gone out had some takeaway food have
+day1_consultation11,mixed,1,288.05,291.49,0,and,have you been around anyone else [[and]] with diarrhea for example so i,have you been around anyone else with diarrhea for example so i
+day1_consultation11,mixed,1,292.63,293.64,0,know,with diarrhea for example so i [[know]] so my my brother has had,with diarrhea for example so i so my my brother has had
+day1_consultation11,mixed,1,465.35,467.43,0,note,while now i will make a [[note]] though because it is important to,ok yeah i will make a not of that because important to
+day1_consultation11,mixed,1,526.55,528.97,0,i,and i have not really been [[i]] have not really gone into detail,and i have not really been have not really gone into detail
+day1_consultation11,mixed,1,553.43,553.58,0,government,is so i work in government [[government]] okay so office okay right just,is so i work in government ok so ok right and just
+day1_consultation11,mixed,1,553.43,554.5,0,office,work in government government okay so [[office]] okay right just a couple of,i work in government ok so ok right and just a couple
+day1_consultation11,mixed,1,553.43,556.33,0,of,office okay right just a couple [[of]] last final couple of questions there,ok right and just a couple last final couple couple questions smoking
+day1_consultation11,mixed,1,553.43,558.16,0,there,of last final couple of questions [[there]] smoking and alcohol do you do,couple last final couple couple questions smoking and alcohol do you do
+day1_consultation11,mixed,1,572.63,579.85,0,regularly,or something like that but not [[regularly]] sorry and the alcohol so alcohol,or something like that but not sorry and alcohol so alcohol you
+day1_consultation11,mixed,1,582.27,582.57,0,the,that but not regularly sorry and [[the]] alcohol so alcohol i you know,like that but not sorry and alcohol so alcohol you know i
+day1_consultation11,mixed,1,582.87,583.98,0,i,sorry and the alcohol so alcohol [[i]] you know i might have a,not sorry and alcohol so alcohol you know i might have a
+day1_consultation11,mixed,1,624.89,625.55,0,okay,are suggestive of something called gastroenteritis [[okay]] a bit of a basic infection,are suggestive of something called gastroenteritis ok bit of a basic infection
+day1_consultation11,mixed,1,624.89,629.92,0,okay,a basic infection of your tummy [[okay]] there is nothing to worry about,a basic infection of your tummy there is nothing to worry about
+day1_consultation11,mixed,1,647.71,651.25,0,and,you are losing minerals and vitamins [[and]] so you can get things like,you are losing minerals and vitamins so you can get things like
+day1_consultation11,mixed,1,651.39,653.58,0,dire,so you can get things like [[dire]] light which is a fluid replacement,so you can get things like diarolyte which is a fluid replacement
+day1_consultation11,mixed,1,698.19,698.97,0,really,as your body can tolerate but [[really]] let us try and keep yourself,as your body can tolerate but let us try and keep yourself
+day1_consultation11,mixed,1,714.35,719.31,1,all,okay thank you for your help [[all]] right thank you thank you very,ok thank you for your help alright thank you very much thanks
+day1_consultation12,mixed,1,0.0,0.15,0,0, [[0]] now it is yes hello hi,no it is yes hello hi
+day1_consultation12,mixed,1,0.0,4.74,0,and,hear me okay great hello there [[and]] before i go any further can,hear me ok great hello there before i go any further can
+day1_consultation12,mixed,1,177.0,178.92,0,i,working on my computer and yeah [[i]] just felt like some nausea and,working on my computer and yeah just felt like some nausea and
+day1_consultation12,mixed,2,221.44,225.95,0,yes it,blue inhaler is that the blue [[yes it]] is yeah okay all right any,inhaler sorry is that the blue inhaler blue inhaler ok alright any
+day1_consultation12,mixed,1,229.68,232.98,1,any,do you have any allergies to [[any]] medications not that i know and,do you have any allergies to medications not that i know of
+day1_consultation12,mixed,2,250.56,250.65,1,okay i,bowel cancer like 10 years ago [[okay i]] am sorry to hear this okay,bowel cancer like 10 years ago ok sorry to hear that ok
+day1_consultation12,mixed,1,256.14,258.02,0,it,your mother 0 yes so probably [[it]] is worth mentioning she has diabetes,your mother ohh yes so probably is worth mentioning she has diabetes
+day1_consultation12,mixed,1,264.94,265.04,0,okay,type 2 it is type 2 [[okay]] all right fine and just a,type 2 it is type 2 ok alright fine and just a
+day1_consultation12,mixed,1,289.04,289.23,0,okay,work i am a software engineer [[okay]] all right have you taken time,work i am a software engineer ok alright have you taken time
+day1_consultation12,mixed,1,301.24,301.38,1,okay,unwell so i could not work [[okay]] all right and just last couple,unwell so i could not work ok alright and just the last
+day1_consultation12,mixed,1,307.04,315.92,0,so,do not smoke all right fine [[so]] robert i think having listened to,do not smoke ok alright fine robert having listened to your story
+day1_consultation12,mixed,2,316.16,316.79,0,i think,smoke all right fine so robert [[i think]] having listened to your story i,not smoke ok alright fine robert having listened to your story i
+day1_consultation12,mixed,1,323.26,324.48,0,okay,suffering from what we call gastroenteritis [[okay]] which essentially is just a tummy,suffering from what we call gastroenteritis which essentially is just a a
+day1_consultation12,mixed,1,331.06,331.22,0,on,it is an infection of your [[on]] your tummy and normally lasts for,it is an infection of your your tummy and normally lasts about
+day1_consultation12,mixed,1,331.06,333.13,0,for,on your tummy and normally lasts [[for]] about 3 to 5 days and,your your tummy and normally lasts about 3 to 5 days and
+day1_consultation12,mixed,7,347.9,353.08,1,sorry what is the name of that,and vitamins you may have lost [[sorry what is the name of that]] it is called dirolyte it is,and vitamins you may have lost it is called dioralyte it is
+day1_consultation12,mixed,1,368.36,370.25,0,the,continue taking time off work for [[the]] next day or 2 until you,continue taking time off work for next day or 2 until you
+day1_consultation12,mixed,1,368.36,372.86,1,okay,or 2 until you get better [[okay]] normally you have to be diarrhea,or 2 until you get better normally you have to be diarrhea
+day1_consultation12,mixed,1,391.7,396.02,0,write,i will i will try to [[write]] and drink plenty of fluid and,i will i will try to and drink drink plenty of fluid
+day1_consultation13,mixed,1,0.0,2.06,1,delays,there is no [[delays]] hello hello there thanks for thanks,there is no hello hi there hello there thanks
+day1_consultation13,mixed,1,62.19,64.04,0,10,in a scale of one to [[10]] can be the worst type of,on a scale of one to 1010 being the worst type of
+day1_consultation13,mixed,1,67.87,70.93,1,to,an 8 if i ask you [[to]] describe the headache to me in,if i was to ask you describe the headache to me in
+day1_consultation13,mixed,1,125.95,129.77,1,for,any other symptoms at all so [[for]] example any problems with your eyesight,any other symptoms at all so example any problems your eyesight or
+day1_consultation13,mixed,1,125.95,131.38,0,with,all so for example any problems [[with]] your eyesight or your vision not,at all so example any problems your eyesight or your vision not
+day1_consultation13,mixed,1,341.31,344.28,0,not,i socially smoke and i drink [[not]] only socially only socially okay right,i socially smoke and i drink only socially but only socially ok
+day1_consultation13,mixed,1,428.85,432.4,0,have,your mom and your sister also [[have]] migraines i think it is something,your mum and your sister also migraines i think it is something
+day1_consultation13,mixed,2,441.09,444.08,0,with some,is certainly worth treating it today [[with some]] stronger analgesia or painkillers now moving,is certainly worth treating it today stronger analgesia or painkillers now moving
+day1_consultation13,mixed,1,477.53,479.15,0,codeine,helpful as well yeah i think [[codeine]] is what my mom takes for,helpful as well yeah i think is what my mom takes for
+day1_consultation14,mixed,1,1.2,2.19,0,hi,hello hello [[hi]] there before i go any further,hello hello hello before i go any further
+day1_consultation14,mixed,1,48.28,52.44,0,and,0 i can hear that yeah [[and]] you do not bring up any,ohh i can hear that yeah you are not bringing up any
+day1_consultation14,mixed,4,77.4,78.64,0,do you are you,swallow anything do you have any [[do you are you]] how are your ears your ears,anything right do you have any how are your ears do you
+day1_consultation14,mixed,2,82.9,86.0,0,is nothing,okay actually no pain or discharge [[is nothing]] nothing on the ears all right,the ears no pain no discharge coming from your ears ok alright
+day1_consultation14,mixed,1,93.04,94.88,0,breathe,of your breathing how is your [[breathe]] how is your chest is your,of your breathing how is your how is your chest is your
+day1_consultation14,mixed,1,100.4,101.59,0,like,not think so like i guess [[like]] it is labored when i am,not think so like i guess i get labored when i am
+day1_consultation14,mixed,2,160.78,169.94,0,this listen,when i was starting to have [[this listen]] to the the coughing and stuff,when i was starting to have the the the coughing and stuff
+day1_consultation14,mixed,1,197.14,198.26,0,water,go in any problems with your [[water]] works at all with my what,ok fine any problems with your waterworks at all with my what
+day1_consultation14,mixed,1,225.34,226.81,1,so,cold my muscle was really hurting [[so]] i am trying to do pilates,cold my muscle was really hurting yeah ok sometimes i do pilates
+day1_consultation14,mixed,2,292.16,292.28,0,blood pressure,same with the high blood pressure [[blood pressure]] like i have it under control,same with the high blood pressure like i i have it under
+day1_consultation14,mixed,1,325.2,326.41,0,because,the 1st day i skipped because [[because]] i was feeling just too shit,the 1st day i skipped because i was feeling just too shit
+day1_consultation14,mixed,1,364.64,369.97,0,and,know you are not feeling stressed [[and]] do you smoke at all april,are you are not feeling stressed do you smoke at all april
+day1_consultation14,mixed,1,402.14,407.25,0,we,limit of the recommended limit something [[we]] think about just because of your,limit of the recommended limit something think about just in terms of
+day1_consultation14,mixed,2,488.48,489.21,0,which can,you some antibiotics for your chest [[which can]] sometimes be a common source of,you some antibiotics for your chest some of the common source of
+day1_consultation15,mixed,2,9.68,10.24,0,i am,name and your age please yes [[i am]] laura parkinson and i am 45,name and your age please yes laura parkinson and i am 45
+day1_consultation15,mixed,1,17.7,20.89,0,and,i have soreness in my fingers [[and]] my finger like the skin on,i have soreness in my fingers my finger like the skin on
+day1_consultation15,mixed,1,31.4,34.09,0,yeah,has been that long has it [[yeah]] okay and so you mentioned your,has been that long has it ok and so you mentioned your
+day1_consultation15,mixed,1,76.38,78.03,0,noticed,palm okay all right have you [[noticed]] any itchiness in your palms yeah,get yeah ok alright have you any itchiness in your palms yeah
+day1_consultation15,mixed,1,82.38,82.58,0,but,itchy not all the time but [[but]] yeah it does get itchy okay,itchy not all the time but yeah it does get itchy ok
+day1_consultation15,mixed,4,105.42,106.5,0,just going to run,own fine okay sorry i am [[just going to run]] into notes as we go along,ok fine ok sorry i am writing notes as we go along
+day1_consultation15,mixed,1,162.24,165.43,1,okay,really it is not really major [[okay]] yeah it is just a little,really it is not really major yeah it is just like literally
+day1_consultation15,mixed,1,184.12,188.28,0,you,feel well do you and yourself [[you]] are eating drinking your appetite is,feel well do you and yourself your eating drinking your appetite is
+day1_consultation15,mixed,2,211.1,215.96,0,they are,okay which medications do you take [[they are]] forming okay do you have any,ok which medications do you take metformin ok do you have any
+day1_consultation15,mixed,1,246.32,246.61,0,are,are not always very good at [[are]] wearing gloves you have recently changed,are not always very good at wearing gloves yeah you have recently
+day1_consultation15,mixed,1,288.05,288.82,1,all,been able to go to work [[all]] right can i ask a couple,been able to go to work ok can i ask a couple
+day1_consultation15,mixed,1,288.05,290.35,0,of,right can i ask a couple [[of]] questions do you smoke at all,ok can i ask a couple questions do you smoke at all
+day1_consultation15,mixed,1,314.31,320.92,1,work,tried antihistamines but it did not [[work]] okay alright missus parkinson so i,antihistamine antihistamine but it did not ok alright missus parkinson so i
+day1_consultation15,mixed,1,336.07,337.42,0,you,using cleaning products not using gloves [[you]] can sometimes get a bit of,using cleaning products not using gloves and sometimes you get a bit
+day1_consultation15,mixed,1,336.07,339.14,0,a,can sometimes get a bit of [[a]] reaction between the chemicals and your,sometimes you get a bit of reaction between the chemicals and your
+day1_consultation15,mixed,1,346.63,348.96,0,trigger,do is you know avoid the [[trigger]] so in your case i strongly,do is you know avoid the triggers in your case i strongly
+day1_consultation15,mixed,3,363.39,367.62,0,throughout the day,need to kind of coat on [[throughout the day]] 34 times a day for the,need to kind of coat on 34 times a day for the
+day2_consultation01,mixed,1,31.5,32.42,0,like,right yeah so i just feel [[like]] i can not really hear as,right yeah so i just feel i can not really hear as
+day2_consultation01,mixed,1,69.56,69.64,0,all,ear just the left ear yeah [[all]] right so your right ear is,ear just the left ear yeah alright so your right ear is
+day2_consultation01,mixed,1,70.86,71.13,1,to,right ear is fine it seems [[to]] be yeah okay so you have,right ear is fine it seems be yeah ok so you have
+day2_consultation01,mixed,1,86.44,87.32,0,i,if i am watching tv or [[i]] listen to music or something that,if i am watching tv or listen to music or something that
+day2_consultation01,mixed,1,86.44,89.33,0,set,to music or something that will [[set]] off the ringing in my ear,to music or something that will solve the ringing in the ear
+day2_consultation01,mixed,3,102.52,104.25,0,and sickness i,not specifically apart from the dizziness [[and sickness i]] am sure right okay and has,not specifically apart from the dizziness so much right ok and has
+day2_consultation01,mixed,1,116.8,116.86,0,it,we should not be doing that [[it]] does not clean out the wax,you should not be doing that does not clean up wax it
+day2_consultation01,mixed,1,116.8,117.33,0,out,doing that it does not clean [[out]] the wax it pushes it back,be doing that does not clean up wax it pushes it back
+day2_consultation01,mixed,1,118.72,118.8,0,all,wax it pushes it back in [[all]] right the 1st thing that we,wax it pushes it back in alright the 1st thing that we
+day2_consultation01,mixed,2,154.0,157.1,0,4 or,can be done within the next [[4 or]] 5 days or so okay and,can be done within the next 45 days or so ok and
+day2_consultation01,mixed,1,157.9,160.18,0,is,and then what i will do [[is]] i will send a message to,and then what i will do i will send a message to
+day2_consultation01,mixed,1,161.26,163.99,0,in,ask them to slot you into [[in]] a clinic one of our clinics,ask them to slot you into the clinic one of our clinics
+day2_consultation01,mixed,1,168.64,171.41,0,a,and figure out whether there is [[a]] physical blockage or whether there is,and figure out whether there is physical blockage or whether there is
+day2_consultation01,mixed,4,202.32,205.41,0,are going to go,to figuring out which way we [[are going to go]] it might be that there is,to figuring out which way we it might be that there is
+day2_consultation01,mixed,1,210.3,212.42,0,a,need to exclude whether there is [[a]] physical blockage 1st and try and,need to exclude whether there is physical blockage 1st and trying to
+day2_consultation01,mixed,1,221.2,222.18,1,have,my ear the ringing that you [[have]] got you have got something called,it seems the ringing that you got that you have got it
+day2_consultation01,mixed,1,230.08,231.52,0,you,understand it fully we have not [[you]] know people can not give you,understand it fully we have not ok people can not give you
+day2_consultation01,mixed,1,264.54,265.45,0,you,about what we do next if [[you]] are it was clear okay so,about what we do next if your ear is clear ok so
+day2_consultation01,mixed,2,268.8,272.02,0,4 or,we will see you in about [[4 or]] 5 this time it will not,we will see you in about 45 days time it will not
+day2_consultation01,mixed,2,287.22,288.75,0,any if,in okay brilliant all right if [[any if]] there is any problem any issues,in ok ok brilliant alright if there is any problem any issues
+day2_consultation01,mixed,1,297.76,297.83,1,later,nice to see you this morning [[later]] okay bye bye,nice to see you this morning ok bye bye thank you see
+day2_consultation02,mixed,1,28.82,33.44,0,i,about a week ago or something [[i]] have like a weird swelling on,about a week ago or something have like a weird swelling on
+day2_consultation02,mixed,2,41.62,44.18,0,it is,feel fine but it is just [[it is]] just a bit a bit weird,feel fine but it is just just a bit a bit weird
+day2_consultation02,mixed,2,49.14,52.85,0,it is,i kind of feel like this [[it is]] a bit fluid in inside so,i i cannot feel like this little bit fluid in inside or
+day2_consultation02,mixed,1,181.9,184.68,0,i,a week yeah no i am [[i]] think i am okay good well,a week yeah no i am think i am healthy ok good
+day2_consultation02,mixed,1,181.9,187.95,1,good,okay good well done that is [[good]] it is good that you are,to hear well done that is it is good that you are
+day2_consultation02,mixed,1,208.57,210.89,0,essentially,bring it around to this side [[essentially]] i can see the other side,bring it round to this side i can see other side ok
+day2_consultation02,mixed,1,208.57,211.87,0,the,this side essentially i can see [[the]] other side okay fantastic all right,to this side i can see other side ok fantastic all right
+day2_consultation02,mixed,2,236.97,242.34,0,a bit,is a bit yeah it feels [[a bit]] fluid okay all right what i,is a bit yeah it feels weird ok all right well i
+day2_consultation02,mixed,1,249.45,253.45,1,more,the body no no i have [[more]] skin do you suffer from eczema,body no not really i have skin really dry now do you
+day2_consultation02,mixed,1,256.17,257.4,0,all,from eczema at all no no [[all]] right okay so what i think,from eczema at all no no alright ok so what i think
+day2_consultation02,mixed,1,333.31,333.98,0,a,the time that we are expecting [[a]] result back you know 12 days,the time that we are expecting result back you know one or
+day2_consultation02,mixed,1,333.31,336.25,0,at,days after that we are looking [[at]] maybe 6 days and what i,days after that we are looking maybe 6 days and what i
+day2_consultation02,mixed,1,395.97,397.8,1,i,not think this is anything dangerous [[i]] do not need to worry okay,not think this is anything dangerous do not need to worry ok
+day2_consultation02,mixed,6,400.93,404.49,1,if things were to work then,things were to develop okay so [[if things were to work then]] this this is not the case,were to to develop k so this this is not the case
+day2_consultation02,mixed,1,406.05,410.56,0,is,looks quite straightforward it is nothing [[is]] sinister or life threatening what i,ok i see it is nothing sinister or life threatening what i
+day2_consultation02,mixed,1,410.69,415.28,0,worse,am just saying in case things [[worse]] than these are the things that,am just saying in case things worsen these are the things that
+day2_consultation02,mixed,1,445.17,450.01,0,heart,empty stomach if you get any [[heart]] burns stop taking it okay all,empty stomach if you get any heartburn stop taking it ok ok
+day2_consultation02,mixed,1,478.61,481.01,0,i,then okay take care then so [[i]] will just leave that with me,then ok take care then so look just leave that with me
+day2_consultation03,mixed,1,0.5,2.52,1,i,hello hi there good morning [[i]] am doctor dean middleton from dupier,hello hi there good morning hi nice to meet you hello
+day2_consultation03,mixed,1,6.74,8.14,0,hello,see you nice to see you [[hello]] hi so before we start your,am doctor nice to see you hi so before we start your
+day2_consultation03,mixed,2,27.14,31.57,0,i have,can i help you today so [[i have]] just been having some problems with,can i help you today so just been having some problems with
+day2_consultation03,mixed,1,54.9,57.66,0,is,bit right okay and your face [[is]] feeling numb where exactly is that,bit right ok and your face feeling numb where exactly is that
+day2_consultation03,mixed,1,71.94,76.11,0,had,time any other symptoms you have [[had]] at all not that i i,time any other symptoms you have at all not that i not
+day2_consultation03,mixed,2,77.94,78.12,0,i do,had at all not that i [[i do]] not know if i have noticed,have at all not that i not that i have noticed i
+day2_consultation03,mixed,1,77.94,79.23,0,know,not that i i do not [[know]] if i have noticed i think,at all not that i not that i have noticed i think
+day2_consultation03,mixed,2,77.94,81.81,0,i have,if i have noticed i think [[i have]] occasionally noticed some ringing in the,that i have noticed i think occasionally noticed a ringing in my
+day2_consultation03,mixed,3,84.94,85.86,0,okay that is,ear some ringing in the ear [[okay that is]] part of it sure okay and,some some ringing in your ear ok yeah it is sure ok
+day2_consultation03,mixed,1,105.94,106.6,0,is,numbness present right now yeah it [[is]] kind of still there kind of,numbness present right now yeah it kind of kind of there quite
+day2_consultation03,mixed,2,105.94,107.39,0,still there,now yeah it is kind of [[still there]] kind of there quite often so,right now yeah it kind of kind of there quite often so
+day2_consultation03,mixed,2,114.98,118.53,0,muffled hearing,going back to the kind of [[muffled hearing]] feeling in the ear do you,going back to the kind of feeling in in the ear do
+day2_consultation03,mixed,1,135.14,137.61,0,cockle,in the ear do you use [[cockle]] or buds to kind of clean,in the ear do you use cotton buds to kind of clean
+day2_consultation03,mixed,2,156.03,158.1,0,half bernie,and occasionally get some kind of [[half bernie]] feeling that is all fine and,and occasionally get them kind of that that is all fine and
+day2_consultation03,mixed,1,169.39,171.38,0,i,ages ago i had something called [[i]] can not quite remember but labyrinthitis,ages ago i had something called can not quite remember but labyrinthitis
+day2_consultation03,mixed,1,179.23,179.98,1,i,you mentioned the spray yeah so [[i]] know i only take the spray,spray for your nose yeah so no i only take the spray
+day2_consultation03,mixed,1,179.23,185.34,0,over,need it for and sometimes take [[over]] like rennie is but i just,need it for and sometimes take like rennies but i just get
+day2_consultation03,mixed,1,185.79,185.86,0,rennie,for and sometimes take over like [[rennie]] is but i just get that,it for and sometimes take like rennies but i just get that
+day2_consultation03,mixed,1,267.21,271.87,0,up,the numbness that has got me [[up]] like yeah no idea what is,the numbness that has got me like yeah no idea what is
+day2_consultation03,mixed,1,280.81,283.52,0,and,panic and you can look online [[and]] get a bit frantic i guess,panic and you can look online get a bit frantic i guess
+day2_consultation03,mixed,2,291.93,295.44,0,is it,anything could make you really frantic [[is it]] hopefully nothing so seriously i would,can just make you really frantic hopefully nothing so serious i will
+day2_consultation03,mixed,1,302.49,306.86,0,but,of assessment by a video portal [[but]] from what you have told me,of assessment via the video portal from what you have told me
+day2_consultation03,mixed,1,320.33,321.78,0,yes,like a gp to assess you [[yes]] what you what you are describing,like a gp to assess you what you are what you are
+day2_consultation03,mixed,1,338.25,341.1,0,just,in is just that we can [[just]] do a what we call a,it is just that we can do a a what we call
+day2_consultation03,mixed,1,342.57,345.81,0,whether,nothing else going on and confirm [[whether]] that might be the diagnosis have,nothing else going on and confirm that might be the diagnosis have
+day2_consultation03,mixed,3,356.99,360.67,1,however do you,i can i can reassure you [[however do you]] know wanted in order to definitively,i can i can reassure you ok however in order to definitively
+day2_consultation03,mixed,1,364.65,366.02,1,am,examination today okay so what i [[am]] going to do is i am,examination today ok so what i want to do is i am
+day2_consultation03,mixed,1,372.13,375.6,0,this,okay and then you can ring [[this]] is the support team number i,ok and then you can ring the the support team number i
+day2_consultation03,mixed,1,384.35,387.48,0,you,we will be able to reassure [[you]] further but please make sure the,you will be able to reassure further but please make sure the
+day2_consultation04,mixed,3,18.78,18.95,1,i am 45,tell me how old you are [[i am 45]] 45 okay could you confirm the,tell me how old you are ok and could you just confirm
+day2_consultation04,mixed,1,57.18,60.35,0,a,i have got a bit of [[a]] slight fever and i coughed up,i have got a bit of slight fever and and well like
+day2_consultation04,mixed,1,164.28,164.44,0,the,have any other diagnosis any other [[the]] illnesses no right okay and do,have any other diagnoses any other illnesses at all no right ok
+day2_consultation04,mixed,1,174.56,180.54,0,okay,morning okay all right all right [[okay]] a couple things i would like,morning ok ohh right all right ok couple of things i would
+day2_consultation04,mixed,1,292.14,294.1,0,a,via a phone or a laptop [[a]] phone i just did it on,via a phone or a laptop phone a phone rested it on
+day2_consultation04,mixed,1,400.68,403.44,0,to,to listen to your chest and [[to]] check your blood pressure and to,to listen to your chest and check your blood pressure and to
+day2_consultation04,mixed,1,507.22,507.78,0,the,all right take care all the [[the]] best,right take care then all the best bye
+day2_consultation05,mixed,1,9.91,11.41,0,i,1st please john smith and i [[i]] am 32 years old sorry i,it is john smith and i am 32 years old sorry i
+day2_consultation05,mixed,1,19.91,20.49,0,at,and your postcode please it is [[at]] thorpe park avenue and it is,and your postcode please it is 4 park avenue and it is
+day2_consultation05,mixed,2,64.03,65.17,0,just to,like i get pins and needles [[just to]] say again the connection is not,like i guess pins and needles right again the connection is not
+day2_consultation05,mixed,1,103.67,105.25,0,a,getting weaker but it only lasts [[a]] few days and then goes back,getting weaker but it only lasts few days and then goes back
+day2_consultation05,mixed,1,388.18,391.73,0,at,to refer you to a stroke [[at]] the ia clinic now just to,to refer you to a stroke a tia clinic now just to
+day2_consultation05,mixed,1,442.1,447.12,0,not,have any illness okay you have [[not]] got any kind of stroke or,any illness ok whether you have got any kind of stroke or
+day2_consultation05,mixed,1,531.58,531.71,0,that,but it is something quite urgent [[that]] we need to deal with in,but it is something quite urgent we need to deal with in
+day2_consultation05,mixed,1,540.48,542.25,0,caught,know that you do not get [[caught]] something you know you get getting,know they you do not get called you you get get in
+day2_consultation05,mixed,1,540.48,543.06,0,know,do not get caught something you [[know]] you get getting contact back with,you do not get called you you get get in contact back
+day2_consultation06,mixed,2,0.78,4.92,1,i am,babylon good morning good morning hi [[i am]] john doe sorry before we start,babylon good morning good morning hi good morning sorry before we start
+day2_consultation06,mixed,1,10.66,19.81,0,1991,old so i was born in [[1991]] 17th of november thank you for,old so i was born in 199117th of november that is perfect
+day2_consultation06,mixed,1,85.48,88.18,0,and,all right to me right now [[and]] the reason why i am clarifying,all right to me right now the reason why i am clarifying
+day2_consultation06,mixed,1,93.88,95.56,1,it,into hospital straight away or whether [[it]] is more time to ask questions,hospital straight away yeah or whether we more time to ask questions
+day2_consultation06,mixed,1,114.14,117.76,0,ask,double check before we carry on [[ask]] any other questions have you got,double check before we carry on asking other questions have you got
+day2_consultation06,mixed,1,118.38,119.75,0,a,any other questions have you got [[a]] history of anaphylaxis not that i,asking other questions have you got history of anaphylaxis not that i
+day2_consultation06,mixed,1,123.88,124.35,0,epi,have you ever been given an [[epi]] pen i have not no let,have you ever been given an epipen i have not no no
+day2_consultation06,mixed,1,186.64,190.14,0,it,minutes ago but have you is [[it]] not taking any antihistamines or anything,minutes ago but have you is not taken any antihistamines or anything
+day2_consultation06,mixed,1,261.34,268.18,0,are,a computer scientist okay and you [[are]] living alone yes okay do you,a computer scientist ok and you living alone yes ok do you
+day2_consultation06,mixed,1,341.01,347.72,0,is,immediate reaction that redness and that [[is]] maybe slight swelling is usually temporary,immediate reaction that redness and that maybe slight swelling is usually temporary
+day2_consultation06,mixed,1,381.09,381.28,0,so,it will happen straight away so [[so]] we may be coming out of,it will happen straight away so we may be coming out of
+day2_consultation06,mixed,2,455.53,458.4,0,if someone,and we need to process that [[if someone]] actually needs to be taken urgently,and we need to process that action needs to be taken urgently
+day2_consultation06,mixed,1,472.21,474.71,0,anti,can i get the sorry the [[anti]] histamine from any shop or like,can i get the so the antihistamine from any shop or like
+day2_consultation06,mixed,1,483.65,486.49,1,okay,than to get it by prescription [[okay]] okay now on the basis of,than to get it via prescription ok now on the basis of
+day2_consultation06,mixed,1,517.83,521.63,0,the,for you to be aware what [[the]] symptoms are if those kind of,for you to be aware what symptoms are great yeah if those
+day2_consultation07,mixed,3,0.34,4.66,0,gp at hand,i am doctor dean meza from [[gp at hand]] nice to see you so before,i am doctor dean resor from nice to see you that is
+day2_consultation07,mixed,2,85.88,86.0,0,today okay,to call an ambulance for you [[today okay]] okay so what i am going,to call an ambulance for you ok so what i am going
+day2_consultation07,mixed,1,114.88,116.49,1,a,one side and it is quite [[a]] diffuse pain is it spreading anywhere,one side and it is quite diffuse pain is is it spreading
+day2_consultation07,mixed,1,139.28,140.12,0,it,was just kneeling down and yeah [[it]] was not running or anything it,was just kneeling down and yeah was not running or anything it
+day2_consultation07,mixed,1,263.44,267.26,0,are,yeah yeah all right now you [[are]] do you normally live alone yeah,yeah right ok alright now you do you normally live alone yeah
+day2_consultation07,mixed,2,299.56,304.04,1,okay yeah,number one priority to exclude that [[okay yeah]] i am but its team will,number one priority to exclude that ok ok so ambulance team will
+day2_consultation07,mixed,1,307.58,308.9,0,okay,line with you until they come [[okay]] okay yeah thank you when they,line with you until they come ok yeah ok when they come
+day2_consultation07,mixed,1,307.58,309.62,1,thank,until they come okay okay yeah [[thank]] you when they come what they,you until they come ok yeah ok when they come what they
+day2_consultation07,mixed,1,354.86,355.49,0,have,to the hospital okay detail you [[have]] just told me because we we,the hospital yeah the detail you just told me because we we
+day2_consultation07,mixed,1,362.46,369.16,0,in,and then they may take you [[in]] to one hospital or another based,and then they may take you into one hospital or another based
+day2_consultation08,mixed,2,2.26,4.88,0,doctor jean,hello there hi there this is [[doctor jean]] mizzo from gp at hand hello,hello there hi there this is this is doctor dean from hello
+day2_consultation08,mixed,1,39.04,41.08,1,okay,and just generally not feeling good [[okay]] all right sorry to hear that,and just generally not feeling good ok alright sorry to hear that
+day2_consultation08,mixed,4,42.48,44.65,0,feeling hot and sweaty,along with this fever and this [[feeling hot and sweaty]] any other symptoms at all i,along with this fever and this any other symptoms at all i
+day2_consultation08,mixed,2,75.9,78.5,0,yeah it,also crazy cold as well yes [[yeah it]] is quite interchangeable not really a,are feeling cold as well yes yes quite interchangeable not really a
+day2_consultation08,mixed,2,104.26,106.72,0,when you,cough or cold or sore throat [[when you]] know anything like that not those,cough or cold or sore throat or anything like that not those
+day2_consultation08,mixed,2,110.16,110.45,1,what sort,not those sort of symptoms really [[what sort]] of symptoms are you getting other,not those sort of symptoms really but which are you getting other
+day2_consultation08,mixed,2,121.96,128.63,0,at all,have you had any ear pain [[at all]] no my ears are fine actually,have you had any ear pain no my ears are fine actually
+day2_consultation08,mixed,1,159.09,165.14,0,nothing,just from staring at the screen [[nothing]] no migraines or anything you know,just from staring at the screen no migraines or anything ok ok
+day2_consultation08,mixed,1,207.75,207.9,0,all,other joints all right any problems [[all]] right and have you got any,other joints ok alright any problems alright and have you got any
+day2_consultation08,mixed,1,261.73,264.59,1,nice,kind of activities it was quite [[nice]] really because we were there for,were you doing it was quite really because we were there for
+day2_consultation08,mixed,1,328.91,329.74,0,a,sitting at a desk and just [[a]] bad posture so mainly the exercises,sitting at a desk and just bad posture so mainly the exercises
+day2_consultation08,mixed,1,351.27,359.69,0,sarazette,on any medication at all just [[sarazette]] okay okay do you have any,on any medication at all just seroxat ok do you have any
+day2_consultation08,mixed,2,360.63,363.41,0,tonya in,you have any allergies at all [[tonya in]] medication no i have just really,you have any allergies at all medication no i have just really
+day2_consultation08,mixed,1,410.57,412.73,0,all,times a week that is good [[all]] right so what i think we,a week ok that is good alright so what i think we
+day2_consultation08,mixed,1,418.23,420.47,0,you,into one of our clinics examine [[you]] and we are going to need,into one of our clinics examine and we are going to need
+day2_consultation08,mixed,1,422.29,427.93,0,that,to do is the 1st question [[that]] i have in my mind is,to do is the 1st question i have in my mind is
+day2_consultation08,mixed,1,473.65,477.49,1,can,go for the examination 1st you [[can]] come into one of our clinics,go for the examination 1st you come into one of our clinics
+day2_consultation09,mixed,1,131.61,137.05,0,but,you it is a telephone appointment [[but]] have you noticed any kind of,it is it is telephone appointment have you noticed any kind of
+day2_consultation09,mixed,1,188.48,193.5,0,okay,anyone at home with you no [[okay]] this is something i should be,anyone at home with you no ok is this something i should
+day2_consultation09,mixed,1,202.48,203.98,1,okay,may be symptoms of a stroke [[okay]] wow so that is something that,may be symptoms of a stroke wow ok so that is something
+day2_consultation09,mixed,1,218.84,220.8,0,okay,access to you when you come [[okay]] so maybe you could leave the,access to you when you come so maybe you could leave the
+day2_consultation09,mixed,1,218.84,223.81,0,to,could leave the front door unlocked [[to]] sit in the hallway but i,could leave the front door unlocked sit in the hallway but i
+day2_consultation09,mixed,3,248.56,254.58,0,melt form in,medication for that i am taking [[melt form in]] low certain and i am low,medication for that i am taking metformin losartan and amlodipine ok do
+day2_consultation09,mixed,4,256.94,257.67,0,i am low deep,melt form in low certain and [[i am low deep]] in okay do you have any,i am taking metformin losartan and amlodipine ok do you have any
+day2_consultation09,mixed,1,256.94,264.45,0,and,have any allergies to any medication [[and]] only penicillin i believe okay are,have any allergies to any medication only penicillin i believe ok are
+day2_consultation09,mixed,1,336.05,339.3,0,do,of treatment for that okay so [[do]] not worry they are on their,of treatment for that ok so no worry they are they are
+day2_consultation09,mixed,2,361.93,362.24,0,am just,front door alright then so i [[am just]] going to stay on the line,ok all right then so i will be staying on the line
+day2_consultation10,mixed,2,1.7,4.11,0,dean miser,hiya hi there this is doctor [[dean miser]] from gp at hand hi there,hiya hi there this is doctor from gp at hand hi there
+day2_consultation10,mixed,1,15.48,19.08,0,great,16th of may 1982 that is [[great]] thank you for that are you,16th of may 1982 that is thank you for that are you
+day2_consultation10,mixed,1,46.52,49.33,0,okay,get up at about 70 clock [[okay]] is the headache still present yes,get up at about 70 clock is the headache still present now
+day2_consultation10,mixed,1,77.8,81.99,1,i,have any neck stiffness at all [[i]] know okay and do you you,have any neck stiffness at all no ok and do you have
+day2_consultation10,mixed,1,83.48,83.61,0,you,i know okay and do you [[you]] have any fever no all right,all no ok and do you have any fever no all right
+day2_consultation10,mixed,1,120.24,121.05,1,well,any particular stress at the moment [[well]] it is kind of a bit,any particular stress at the moment work is kind of a bit
+day2_consultation10,mixed,1,167.12,168.6,0,search,now and i have been on [[search]] relief for a while okay are,now and i have been on sertraline for a while ok are
+day2_consultation10,mixed,1,268.72,271.4,0,and,and having taken paracetamol this morning [[and]] nothing do you have any allergies,and having taken paracetamol this morning nothing else do you have any
+day2_consultation10,mixed,1,296.56,298.92,0,and,it is nothing nothing really healthy [[and]] that it is fine okay now,nothing it is nothing really healthy but it is fine ok i
+day2_consultation10,mixed,1,347.42,348.46,0,okay,1st step for migraine type headaches [[okay]] okay so i will tell you,1st step for migraine type headaches ok so i will tell you
+day2_consultation10,mixed,1,356.68,358.85,1,okay,decrease the stress from work so [[okay]] the medication wise the things that,decrease the stress from work so the medication wise the things that
+day2_consultation10,mixed,1,371.12,372.91,0,of,bit more than the normal doses [[of]] ibuprofen so that is one thing,bit more than the normal doses ibuprofen so that is one thing
+day2_consultation10,mixed,1,375.76,381.05,0,and,is actually more effective for migraine [[and]] all right yeah so the guidelines,is actually more effective for migraine ok and yeah so the the
+day2_consultation10,mixed,1,410.38,410.52,1,yeah,link for you to self refer [[yeah]] that would be . okay i,for for you to self refer i would like you to ok
+day2_consultation10,mixed,1,432.32,434.85,0,a,sometimes dehydration and fatigue can be [[a]] because of headaches as well 0,and you know fatigue can be causes of headaches as well ohh
+day2_consultation10,mixed,1,489.1,489.93,0,could,of the other doctors and we [[could]] we will take it from there,of the other doctors and we we will take it from there
+day3_consultation01,mixed,2,62.34,70.26,0,fat park,friends to to this place called [[fat park]] and we we regularly have like,friends to to this place called and we we regularly have like
+day3_consultation01,mixed,2,92.18,92.69,0,a lux,soup it is it is called [[a lux]] it is like a soup i,it is it it is called it is like a soup i
+day3_consultation01,mixed,1,92.18,99.19,0,stuff,time yeah and then my feel [[stuff]] like my lips started feeling a,and yeah and then my feel like my lips started feeling a
+day3_consultation01,mixed,1,106.5,109.78,0,a,then we went back we had [[a]] little bit of a chat event,then we went back we had little bit of chat of banter
+day3_consultation01,mixed,1,106.5,110.92,0,a,we had a little bit of [[a]] chat event i was not really,back we had little bit of chat of banter i was not
+day3_consultation01,mixed,1,195.86,198.75,0,had,just a few have you ever [[had]] these any kind of lip swelling,just a few have you ever these any kind of lip swelling
+day3_consultation01,mixed,2,293.05,293.52,0,i have,a peanut allergy as well like [[i have]] always had it and i think,a peanut allergy as well like always had it yeah yeah i
+day3_consultation01,mixed,1,401.56,408.27,0,to,an anaphylactic reaction so you need [[to]] go straight away could you ask,an anaphylactic reaction so you need go straight away could you ask
+day3_consultation01,mixed,1,444.92,446.04,0,you,come up from the hospital do [[you]] give us a ring back we,come out from the hospital do give us a ring back we
+day3_consultation01,mixed,1,451.32,457.34,1,i,things like that okay yes yes [[i]] will do it yes okay then,things like that ok yes yes will do yes thank all ok
+day3_consultation01,mixed,1,451.32,460.12,0,it,okay yes yes i will do [[it]] yes okay then take care thank,that ok yes yes will do yes thank all ok then take
+day3_consultation02,mixed,1,0.0,0.17,0,it, [[it]] hello hi i am doctor jacob,hello hi i am doctor jacob
+day3_consultation02,mixed,1,0.0,6.71,0,all,just before we start is it [[all]] right if you could confirm your,just before we start is it alright if you could confirm your
+day3_consultation02,mixed,1,36.8,37.38,1,i,a headache is that correct yeah [[i]] have had a sort of a,a headache is that correct yeah iive had a a sort of
+day3_consultation02,mixed,1,36.8,42.4,0,for,fairly sort of bad severe headache [[for]] the past 4 days and i,very sort of bad severe headache the past 4 days and i
+day3_consultation02,mixed,1,54.58,56.59,0,for,fever right and so what started [[for]] us was it the headache or,ok right and so what started 1st was it the headache or
+day3_consultation02,mixed,1,93.46,97.15,0,sort,there any pain i have got [[sort]] of general aching muscles not necessary,any pain and i have got some general aching muscles not necessarily
+day3_consultation02,mixed,1,112.9,116.94,0,ear,ears are okay there is no [[ear]] aches no it it seems to,ears are ok there is no earaches no it is it seems
+day3_consultation02,mixed,1,155.78,160.64,1,or,no surgical history that no medical [[or]] surgical complaints no i suppose i,surgical history then and no medical surgical complaints yeah no i i
+day3_consultation02,mixed,1,162.26,166.5,0,a,i have been away to thailand [[a]] week or so ago i have,i have been away to thailand week or so ago had some
+day3_consultation02,mixed,2,162.26,169.0,0,i have,thailand a week or so ago [[i have]] had some like usual mosquito bites,to thailand week or so ago had some like usual mosquito bites
+day3_consultation02,mixed,1,200.18,202.62,0,ibuprofen,you mentioned about the paracetamol and [[ibuprofen]] now but are you on any,you mentioned about the paracetamol and now but are you on any
+day3_consultation02,mixed,1,206.18,215.5,0,all,no any allergies at all no [[all]] right okay and okay so i,ok any allergies at all no alright ok and ok so i
+day3_consultation02,mixed,3,248.24,252.58,1,area the the,bites or foreign travel like the [[area the the]] other common thing around thailand it,or foreign travel ok like the other common thing around thailand it
+day3_consultation02,mixed,1,278.0,278.16,0,all,is rash is kind of all [[all]] over my body how would you,the rash is kind of all over my body like it is
+day3_consultation02,mixed,1,278.0,279.42,1,how,of all all over my body [[how]] would you describe that it is,kind of all over my body like it is not it is
+day3_consultation02,mixed,1,301.67,304.56,1,some,urgently examine you and that is [[some]] time today okay and after our,urgently examine you and that is sometime today ok and after our
+day3_consultation02,mixed,5,318.13,319.82,0,write night notes in and,soon as possible so i will [[write night notes in and]] recommend that you would need to,possible ok ok so i will recommend that you would need to
+day3_consultation02,mixed,3,331.49,335.82,0,a okay all,like you to take yourself to [[a okay all]] right any questions no some theories,like you to take yourself to alright any questions at all ok
+day3_consultation02,mixed,1,357.19,360.43,0,so,problems looking at light or something [[so]] those are things when we think,looking at the light or something those are things when you think
+day3_consultation02,mixed,2,367.63,370.65,0,you know,while in any kind of virus [[you know]] the rash usually goes away saying,while in any kind of virus the rash usually goes away saying
+day3_consultation03,mixed,1,12.66,14.29,0,start,okay peter so just before we [[start]] is it alright if you could,ok peter so just before we is it alright if you could
+day3_consultation03,mixed,1,25.66,25.91,1,okay,is going to be difficult now [[okay]] fine and what is your email,is going to be difficult now and and what is your email
+day3_consultation03,mixed,1,39.64,39.95,1,all,is right thank you very much [[all]] right so you have mentioned that,is right thank you very much alright so you have mentioned that
+day3_consultation03,mixed,1,48.92,51.16,0,i,started long long ago now that [[i]] have been feeling down and and,started long long ago now that have been feeling down and and
+day3_consultation03,mixed,1,48.92,53.57,0,i,have been feeling down and and [[i]] did not really have yeah energy,have been feeling down and and did not really have yeah energy
+day3_consultation03,mixed,1,78.56,81.19,1,just,it is it is yeah just [[just]] down so so you are you,it is it is yeah just down so so you are you
+day3_consultation03,mixed,1,85.68,88.66,0,you,are trying to tell me yes [[you]] are like i am feeling short,are trying to tell me yes and like i am feeling short
+day3_consultation03,mixed,1,114.24,114.46,0,but,work sometimes having headaches feeling nauseous [[but]] i can do my work that,work sometimes having headaches feeling nauseous i can do my work that
+day3_consultation03,mixed,1,133.44,133.63,0,all,and how are things at home [[all]] right are you having any kind,and how are things at home alright are you having any kind
+day3_consultation03,mixed,1,141.04,146.38,0,complaints,am not eating very much and [[complaints]] other than that it is it,am not eating very much and other than that it is it
+day3_consultation03,mixed,2,174.88,179.07,1,if you,months 3 months or 6 months [[if you]] could have been 3 months ago,months 3 months or 6 months 3 months ago 3.5 months ago
+day3_consultation03,mixed,1,181.44,185.41,0,a,you said your weight loss is [[a]] much longer than that sorry i,you said your weight loss is much longer than that yeah it
+day3_consultation03,mixed,1,255.52,262.01,1,no,no no diarrhea so there is [[no]] blood in the poo no mucus,no no ok so there is blood in the poo no mucus
+day3_consultation03,mixed,1,301.7,305.65,0,deep,are feeling short of breath so [[deep]] yeah is there any cough no,are feeling short of breath so yeah is there any cough no
+day3_consultation03,mixed,1,337.44,341.31,0,we,of breath walk or run walk [[we]] will start with walk do you,of breath walk or run walk you start with walk do you
+day3_consultation03,mixed,1,355.54,357.87,0,to,just explain a bit more just [[to]] make myself clear about the lift,just explain a bit more just make myself clear about the lift
+day3_consultation03,mixed,2,363.16,368.85,0,it is,and and it is it is [[it is]] very difficult to yeah it is,and and it is it is very difficult too yeah 229 it
+day3_consultation03,mixed,1,389.78,394.06,0,okay,no chest pains no chest pain [[okay]] all right fine so what we,i am up no chest pain ok alright fine so what we
+day3_consultation03,mixed,1,452.7,454.47,0,it,you know generally for you know [[it]] for underactive thyroids what symptoms you,you know generally for you know for underactive thyroids what symptoms you
+day3_consultation03,mixed,1,462.46,463.49,0,all,usually happens yeah it is for [[all]] active thyroid like you can feel,usually happens yeah it is for overactive thyroid like you can feel
+day3_consultation03,mixed,1,462.46,475.61,0,idea,set of bloods is a good [[idea]] good start so what we look,set of bloods is a good good start so what we look
+day3_consultation03,mixed,1,486.4,486.55,1,exactly,low and things like that right [[exactly]] yes and weak and things like,low and things like that right well and weak and things like
+day3_consultation03,mixed,2,515.36,516.46,0,the thing,to then go in and do [[the thing]] but there is nothing from what,to then go in and do but there is nothing from what
+day3_consultation03,mixed,1,552.72,555.61,0,like,lately at all so it is [[like]] really hard for me to identify,at all so like it is really hard for me to identify
+day3_consultation03,mixed,1,581.2,582.04,0,do,ring up support and i will [[do]] the form for you but in,ring up support and i will the form for you but in
+day3_consultation03,mixed,1,604.4,607.55,1,old,number on that it is an [[old]] 300 number yeah so just call,number on there it is an 300 number yeah so just call
+day3_consultation03,mixed,1,610.16,610.83,0,all,just call that number thank you [[all]] right then you take care bye,i will find it thank you alright then you take care bye
+day3_consultation04,mixed,1,2.22,9.75,0,all,just before we start is it [[all]] right if you could confirm your,just before we start is it alright if you could confirm your
+day3_consultation04,mixed,1,30.22,33.94,1,so,bit more about it please yeah [[so]] about 2 to 3 days ago,bit more about it please yeah about 2 to 3 days ago
+day3_consultation04,mixed,1,80.14,82.12,0,a,name of your preventer it is [[a]] blue i think in totality my,name of your preventor it is blue i think in totality i
+day3_consultation04,mixed,1,80.14,85.51,0,my,a blue i think in totality [[my]] history is salbutamol clenil cetroben and,is blue i think in totality i am salbutamol flanel bactroban and
+day3_consultation04,mixed,3,89.18,93.8,0,you are salbutamol,well so could you repeat that [[you are salbutamol]] clenil cetroben and hydrocortisone and hydrocortisone,ok so could you repeat that er cetraben and hydrocortisone and hydrocortisone
+day3_consultation04,mixed,2,107.82,108.01,0,i have,sister had eczema and i have [[i have]] got a few issues that i,has eczema em and i have got a few issues that i
+day3_consultation04,mixed,1,129.5,131.94,0,clenil,how are you using your your [[clenil]] so are you using it every,how are you using your your so are you using it every
+day3_consultation04,mixed,1,137.38,140.73,0,clenil,so how are you using the [[clenil]] is it twice a day yeah,so how are you using the is it twice a day yes
+day3_consultation04,mixed,1,168.58,170.66,0,steroids,so you did not have any [[steroids]] or steroids or antibiotics not that,so you did not have any oral steroids or antibiotics not that
+day3_consultation04,mixed,3,205.78,206.65,0,it over the,and then i have not done [[it over the]] last since i have had symptoms,and then i have not done overlap since i have has symptoms
+day3_consultation04,mixed,1,242.08,244.97,0,med,have okay okay no no any [[med]] allergies to medication 0 no okay,have hay fever ok now any allergies to medication ohh no ok
+day3_consultation04,mixed,1,257.98,258.36,0,eat,need to do that obviously we [[eat]] you have not had an asthma,need to do that obviously we you have not had an asthma
+day3_consultation04,mixed,1,257.98,260.63,0,some,not had an asthma check for [[some]] time and it looks like you,not had an asthma check for sometime and it looks like you
+day3_consultation04,mixed,1,290.66,290.85,0,the,it but that is not ideal [[the]] new the brown in your clenil,it but that is not ideal but the brown your clenil the
+day3_consultation04,mixed,1,290.66,292.37,0,in,not ideal the new the brown [[in]] your clenil the brown inhaler you,is not ideal but the brown your clenil the brown inhaler yeah
+day3_consultation04,mixed,1,305.18,312.08,0,what,mentioned you know you are doing [[what]] you know increase the clenil to,mentioned you know you are doing you know increase the clenil to
+day3_consultation04,mixed,1,355.22,356.61,0,appointment,to ask yeah so book an [[appointment]] call support book an appointment you,is thanks yeah so book an call support book an appointment to
+day3_consultation05,mixed,3,1.42,6.29,1,okay i am,how are you doing i am [[okay i am]] okay thank you i am not,how are you doing i am ok thank you not feeling that
+day3_consultation05,mixed,2,7.26,8.32,1,i am,okay i am okay thank you [[i am]] not feeling great actually all right,doing i am ok thank you not feeling that great actually good
+day3_consultation05,mixed,1,20.62,21.23,0,all,just before we start is it [[all]] right if you could confirm your,just before we start is it alright if you could confirm your
+day3_consultation05,mixed,1,25.02,28.87,0,19,date of birth date of birth [[19]] 18 okay and your address for,date of birth date of birth 1980 ok and your address for
+day3_consultation05,mixed,1,50.2,51.64,0,just,feeling i am yeah i am [[just]] feeling very sick it is probably,am i am yeah i am feeling very sick it is probably
+day3_consultation05,mixed,1,87.58,89.09,0,you,started a few hours ago so [[you]] did not start what were you,started a few hours ago so did it start what were you
+day3_consultation05,mixed,1,169.28,175.98,0,5,episode last for probably only about [[5]] 10 minutes right and do you,episode last for probably only about 510 minutes ok right and do
+day3_consultation05,mixed,1,176.16,180.71,1,no,any problems hearing at the moment [[no]] like is it muffled or something,any problems hearing at the moment like is it muffled or something
+day3_consultation05,mixed,1,224.4,225.43,0,most,talking to you today in the [[most]] the most common you know diagnosis,talking to you today in the the most common you know diagnosis
+day3_consultation05,mixed,1,259.28,261.86,0,start,that is what we need to [[start]] because to actually make you able,that is what we need to because to actually make you function
+day3_consultation05,mixed,2,259.28,263.69,0,able to,start because to actually make you [[able to]] function a bit more we will,to because to actually make you function a bit more we will
+day3_consultation05,mixed,1,271.04,276.34,0,if,is like just symptomatic relief like [[if]] you have a fever we just,is like just symptomatic relief like you have a fever we just
+day3_consultation05,mixed,1,281.52,282.98,0,when,the doctors and things like that [[when]] while you are with the doctors,the doctors and things like that while you are with the doctors
+day3_consultation05,mixed,1,286.0,289.6,0,you,your you know you know how [[you]] are walking and everything is okay,your you know you know how your walking and everything is ok
+day3_consultation05,mixed,1,319.44,319.6,0,across,will i will send a prescription [[across]] to your pharmacy it looks like,i will send the a prescription at cross pharmacy looks like it
+day3_consultation05,mixed,1,319.44,320.88,0,it,a prescription across to your pharmacy [[it]] looks like it is the lloyd,the a prescription at cross pharmacy looks like it is the lloyd
+day3_consultation05,mixed,1,325.2,329.67,0,chemical,across that prescription it is called [[chemical]] yep it is one tablet 3,across that prescription it is called yeah it is one tablet 3
+day3_consultation05,mixed,1,332.0,334.3,0,for,day so i will give you [[for]] about 10 days worth in the,day so i will give you about 10 days worth in the
+day3_consultation06,mixed,1,9.71,11.31,0,all,just before we start is it [[all]] right if you could confirm your,just before we start is it alright if you could confirm your
+day3_consultation06,mixed,1,16.34,20.36,0,6,jonathan and your date of birth [[6]] 12 and your address for me,irving and your date of birth 61280 and your address for me
+day3_consultation06,mixed,1,38.66,41.91,1,yeah,notes how can i help you [[yeah]] so about 15 minutes ago i,notes how can i help you yes about 15 minutes ago i
+day3_consultation06,mixed,1,44.82,46.84,0,a,gardening and i was stung by [[a]] wasp ran inside and now i,gardening and i was stung by wasp ran inside and now i
+day3_consultation06,mixed,1,57.22,62.0,0,like,swelling of your lips you feel [[like]] your throat is closing up not,swelling of your lips you feel your throat is closing up not
+day3_consultation06,mixed,1,103.56,108.8,0,okay,on any regular medication at all [[okay]] right here fine are you having,on any regular medication at all ok righty ho are you having
+day3_consultation07,mixed,2,1.66,5.12,1,thank you,doctor jacob and welcome to babylon [[thank you]] how are you how are you,doctor jacob and welcome to babylon how are you thank you i
+day3_consultation07,mixed,1,1.66,6.63,0,how,babylon thank you how are you [[how]] are you i am i am,welcome to babylon how are you thank you i am i am
+day3_consultation07,mixed,2,7.98,10.29,0,can not,i am good i mean i [[can not]] i am so i am so,i am good i mean i i am so i am bad
+day3_consultation07,mixed,1,7.98,16.68,0,all,just before we start is it [[all]] right if you could confirm your,just before we start is it alright if you could confirm your
+day3_consultation07,mixed,1,25.36,29.65,0,and,your address for me please 60 [[and]] over steps and just to confirm,your address for me please 60 hanover steps that is good and
+day3_consultation07,mixed,1,41.36,43.0,0,a,our notes that you have got [[a]] skin problem if you can tell,our notes that you have got skin problem if you can tell
+day3_consultation07,mixed,1,76.0,77.72,0,it,the past yes yes i have [[it]] i had eczema okay do you,the past yes if i have not had ok do you think
+day3_consultation07,mixed,1,76.0,78.66,0,eczema,yes i have it i had [[eczema]] okay do you think this is,yes if i have not had ok do you think this is
+day3_consultation07,mixed,1,130.72,132.75,0,what,what do you do about it [[what]] how do you keep it under,what do you do about it how do you keep it under
+day3_consultation07,mixed,1,248.06,251.66,0,a,and in my family there is [[a]] hypothyroidism and migraine my mother my,and in my family there is hypothyroidism and migraine my mother has
+day3_consultation07,mixed,1,269.9,274.76,1,every,not you do not use it [[every]] day so you just use it,not you do not use it everyday so you just use it
+day3_consultation07,mixed,1,285.66,289.46,0,extent,do is obviously you have got [[extent]] as i have mentioned so extensive,do is obviously you have got as i have mentioned so extensive
+day3_consultation07,mixed,1,305.1,309.34,0,betna,a bit more stronger one like [[betna]] weight or something like that okay,a bit more stronger one like betnovate or something like that ok
+day3_consultation07,mixed,2,309.98,315.92,0,anti histamine,going to it is called the [[anti histamine]] it is called hexafenadine and then,going to it is called the antihistamine is called fexofenadine and then
+day3_consultation07,mixed,1,316.38,319.88,0,betna,then we will try with some [[betna]] weight 1st so it is like,then we will try with some betnovate 1st so it is like
+day3_consultation07,mixed,1,363.22,370.31,0,yes,systems is that correct yeah yes [[yes]] so i will send it across,systems is that correct yeah yes so i will send it across
+day3_consultation07,mixed,1,370.96,374.15,0,not,across to boots and it will [[not]] be there for collect collecting if,to boot is and it will be there for collecting yes if
+day3_consultation07,mixed,1,370.96,375.37,0,collect,it will not be there for [[collect]] collecting if things are getting worse,and it will be there for collecting yes if things are getting
+day3_consultation08,mixed,1,9.54,11.13,0,all,just before we start is it [[all]] right if you could confirm your,just before we start is it alright if you could confirm your
+day3_consultation08,mixed,1,56.04,59.78,0,at,what day is it today yeah [[at]] the week it started okay so,what day is it today yeah the week it started with the
+day3_consultation08,mixed,4,63.16,65.18,0,it is sort of,with a cold did it yeah [[it is sort of]] just like coughing and like runny,with a cold did it yeah just like coughing and like running
+day3_consultation08,mixed,2,69.08,71.44,0,occasionally just,of muscles aching and stuff like [[occasionally just]] like feeling like you know cold,of muscles aching and stuff like occasional feeling like headache cold chills
+day3_consultation08,mixed,1,69.08,73.58,0,you,like occasionally just like feeling like [[you]] know cold chills hot and cold,and stuff like occasional feeling like headache cold chills and things like
+day3_consultation08,mixed,1,75.08,75.26,0,hot,feeling like you know cold chills [[hot]] and cold yeah and so about,occasional feeling like headache cold chills and things like that ok important
+day3_consultation08,mixed,2,81.32,84.32,0,it is,it is like a dry cough [[it is]] sort of like like almost hacking,it is like a dry cough sort of like like almost hacking
+day3_consultation08,mixed,1,86.12,89.48,0,no,bringing up any blood are you [[no]] okay are you feeling short of,bringing up any blood are you ok are you feeling short of
+day3_consultation08,mixed,1,92.84,94.64,0,of,at all no no no shortness [[of]] like yeah yeah so you are,at all no no no shortness like yeah i am breathing fine
+day3_consultation08,mixed,1,111.48,114.7,1,have,medication and such but you mentioned [[have]] you come to your normal medications,such but like well you mentioned you have come to your normal
+day3_consultation08,mixed,1,135.88,139.32,0,it,you use them for yeah so [[it]] is like it is called this,you use them for yeah so i take what is it called
+day3_consultation08,mixed,1,140.84,142.57,0,i,is called this like metformin i [[i]] am a diabetic so and i,called it is like metformin i am a diabetic so and i
+day3_consultation08,mixed,1,140.84,145.27,0,would,am a diabetic so and i [[would]] also like to have okay for,am a diabetic so and i also like have lisinopril lisonopril ok
+day3_consultation08,mixed,1,140.84,146.42,0,to,so and i would also like [[to]] have okay for the like blood,diabetic so and i also like have lisinopril lisonopril ok yeah but
+day3_consultation08,mixed,2,194.26,199.06,1,yeah yeah,i hypothetically look into your mouth [[yeah yeah]] so just yeah okay so looking,i hypothetically look into your mouth here sure yeah yeah so looking
+day3_consultation08,mixed,2,280.58,281.8,0,is that,all no i i think that [[is that]] has been very helpful okay so,all no i i think that has been very helpful thank you
+day3_consultation08,mixed,1,296.18,299.1,0,okay,not need anything at the moment [[okay]] okay take care,not need anything at the moment ok take care then bye bye
+day3_consultation09,mixed,5,15.07,15.25,0,and your date of birth,sure my name is mary smith [[and your date of birth]] my date of birth is august,sure my name is mary smith my date of birth is august
+day3_consultation09,mixed,1,15.07,19.26,1,16th,my date of birth is august [[16th]] 1976 and your email address my,my date of birth is august 161976 and your email address for
+day3_consultation09,mixed,1,27.79,30.08,1,all,can have a confidential conversation absolutely [[all]] right so you have mentioned that,can have a confidential conversation absolutely right so you have mentioned that
+day3_consultation09,mixed,1,58.59,63.14,1,yes,numbness in the left arm yeah [[yes]] how long has it been going,numbness in the left arm yeah how long has it been going
+day3_consultation09,mixed,1,99.73,102.55,0,a,or you know try to take [[a]] warm baths it is not better,or you know try to take warm baths it is not better
+day3_consultation09,mixed,1,121.99,123.55,0,just,you know i do take ibuprofen [[just]] because my my muscles were sore,know i i do take ibuprofen because my muscles were sore a
+day3_consultation09,mixed,1,121.99,124.58,0,my,do take ibuprofen just because my [[my]] muscles were sore a little bit,i do take ibuprofen because my muscles were sore a little bit
+day3_consultation09,mixed,1,151.99,156.65,0,below,you know the tingling numbness elbow [[below]] not from your shoulder well it,you know the tingling numbness elbow not from your shoulder and well
+day3_consultation09,mixed,1,201.75,203.57,0,on,know when you try to hold [[on]] to things like a glass or,know when you try to hold onto things like a glass or
+day3_consultation09,mixed,1,201.75,205.81,1,yes,things like a glass or something [[yes]] have you dropping it so not,things like a glass or something have dropping it yes so not
+day3_consultation09,mixed,1,201.75,206.37,0,you,a glass or something yes have [[you]] dropping it so not so much,like a glass or something have dropping it yes so not so
+day3_consultation09,mixed,1,212.87,213.28,0,that,piano and so i just noticed [[that]] it is it has been kind,piano and so i just noticed it has been kind of harder
+day3_consultation09,mixed,2,212.87,213.83,0,is it,so i just noticed that it [[is it]] has been kind of harder to,and so i just noticed it has been kind of harder to
+day3_consultation09,mixed,1,225.35,226.89,0,there,of hard so you would say [[there]] is a mild weakness right so,to so so you would say this in mind weakness mind so
+day3_consultation09,mixed,1,241.27,246.69,0,of,you have definitely having some sort [[of]] some form of weakness okay any,you are definitely having some sort some form of weakness ok edward
+day3_consultation09,mixed,1,256.47,263.22,0,or,system do you have any past [[or]] medical history that you would like,system do you have any past medical history that you would like
+day3_consultation09,mixed,1,270.63,276.26,0,the,was out you know drinking with [[the]] friends one of our co workers,was out you know drinking with friends one of our co workers
+day3_consultation09,mixed,1,313.03,316.98,0,20,maybe for i do not know [[20]] 20 minutes and i kind of,maybe for i do not know 2020 minutes ok and i kind
+day3_consultation09,mixed,3,328.87,329.0,0,i mean i,i am i am pretty healthy [[i mean i]] you know i work out a,i am i am pretty healthy you know i work out and
+day3_consultation09,mixed,2,328.87,331.05,0,a lot,i you know i work out [[a lot]] and i i do not really,healthy you know i work out and i i do not really
+day3_consultation09,mixed,1,359.31,361.84,0,work,is kind of like hard to [[work]] out right do you wear glasses,is kind of like hard to workout right do you wear glasses
+day3_consultation09,mixed,1,359.31,364.52,0,yeah,do you wear glasses at all [[yeah]] glasses contact lenses no no so,do you wear glasses at all glasses contact lenses no no so
+day3_consultation09,mixed,1,365.27,367.89,0,right,lenses no no so no glasses [[right]] and you have not had experienced,lenses no no so no glasses and you have not experienced anything
+day3_consultation09,mixed,1,365.27,369.91,0,had,glasses right and you have not [[had]] experienced anything like a seizure fit,no glasses and you have not experienced anything like a seizure or
+day3_consultation09,mixed,1,422.33,425.18,0,jeep,take some i i like my [[jeep]] my gp really wants me to,take some i i like my my gp really wants me to
+day3_consultation09,mixed,1,429.37,431.51,0,am,like huge pills so i i [[am]] most of the time i just,like huge pills so i i most of the time i just
+day3_consultation09,mixed,2,459.21,462.45,0,she is,my mom my mom she is [[she is]] actually not in a great shape,my mom my mom she is actually not in a great shape
+day3_consultation09,mixed,2,492.81,494.81,0,on it,speaking and examining you know yourself [[on it]] i think it is quite important,speaking and examining you know yourself i think it is quite important
+day3_consultation09,mixed,1,503.99,505.24,0,okay,more than just the boxing here [[okay]] a few things that is made,more than just the boxing here ok few things that is made
+day3_consultation09,mixed,1,545.57,546.68,1,okay,tingling sensations going on my god [[okay]] well i mean wheelchair if we,on ok ohh ohh my god will i be in a wheelchair
+day3_consultation09,mixed,1,581.67,582.6,1,it,i am here i know this [[it]] might sound a bit of a,i am here i know this might sound a bit of a
+day3_consultation09,mixed,1,610.23,615.5,0,adopt,saying that 1st we need to [[adopt]] firm diagnosis yeah yes while you,saying that 1st we need to firm diagnosis yeah while you are
+day3_consultation09,mixed,1,610.23,617.33,1,yes,need to adopt firm diagnosis yeah [[yes]] while you are waiting for this,we need to firm diagnosis yeah while you are waiting for this
+day3_consultation09,mixed,1,633.39,639.07,1,all,an a any okay got it [[all]] right sounds okay thank you doctor,e yes ok ok got it alright sounds good ok thank you
+day3_consultation10,mixed,1,21.57,22.86,0,or,me please 231 leonard london street [[or]] sorry london okay and that is,me please 231 leonard london street sorry london ok and that is
+day3_consultation10,mixed,1,60.05,66.72,1,so,it just kind of kept up [[so]] i am a bit confused as,it just kind of kept up i am a bit confused as
+day3_consultation10,mixed,1,241.02,249.43,0,no,over the counter anything at all [[no]] okay right any allergies nothing no,over the counter anything at all ok right any allergies no nothing
+day3_consultation10,mixed,1,255.18,257.89,0,right,allergies nothing no allergies at all [[right]] here fine so obviously you know,yeah nothing no allergies at all righty fine so obviously you know
+day3_consultation10,mixed,1,295.86,304.13,0,mean,sorry soft diet what does that [[mean]] like outside of not those things,a soft diet what does that like outside of not those things
+day3_consultation10,mixed,1,335.06,340.31,0,immediately,so just do not have meat [[immediately]] once you feel like you are,so just do not have meat once you feel like you are
+day3_consultation10,mixed,1,416.88,420.4,0,might,stool sample because that means you [[might]] you may have one some particular,stool sample because that means you you may have some particular bugs
+day3_consultation10,mixed,1,416.88,422.06,0,one,means you might you may have [[one]] some particular bugs that might need,that means you you may have some particular bugs that might need
+day3_consultation10,mixed,1,472.06,472.53,0,not,in your app so you can [[not]] go back i will put that,in your app so you can go back i will put that
+day3_consultation10,mixed,1,472.06,475.13,0,if,in detail so if you know [[if]] i know sometimes it is bit,in detail so if you know i know sometimes it is a
+day4_consultation01,mixed,1,62.22,62.86,0,is,digging in the garden and it [[is]] if i had to describe where,digging in the garden and it if i had to describe where
+day4_consultation01,mixed,1,67.34,69.85,0,more,and it is more it feels [[more]] like a pressure they just come,and it is more it feels like it is pressure discomfort than
+day4_consultation01,mixed,2,67.34,70.62,0,a pressure,is more it feels more like [[a pressure]] they just come for them more,it is more it feels like it is pressure discomfort than more
+day4_consultation01,mixed,1,75.82,79.08,0,that,if i had to describe what [[that]] discomfort feeling is it is like,if i had to describe what discomfort feeling it is it is
+day4_consultation01,mixed,2,102.88,105.41,0,you see,be very sort of unbearable and [[you see]] their pain 7 is quite manageable,being very sort of unbearable and severe pain 7 is quite manageable
+day4_consultation01,mixed,1,102.88,109.11,0,this,is quite manageable it is quite [[this]] old and how about now it,quite manageable well it is quite ok and how about now it
+day4_consultation01,mixed,1,109.28,115.37,0,yeah,and tell me before this happened [[yeah]] what were were you doing i,and tell me before this happened what were you doing yeah i
+day4_consultation01,mixed,1,116.24,116.73,0,were,before this happened yeah what were [[were]] you doing i was relaxing and,me before this happened what were you doing yeah i was relaxing
+day4_consultation01,mixed,1,158.78,160.73,0,aspirin,medicine are you allergic to anything [[aspirin]] okay so let me summarize what,and are you allergic to anything ok so let me summarize what
+day4_consultation01,mixed,1,235.16,240.04,1,okay,be worth you calling an ambulance [[okay]] and get you to the hospital,be worth you calling an ambulance ok get you to the hospital
+day4_consultation01,mixed,2,245.88,248.08,0,i will,to do with your heart so [[i will]] talk to you i will ring,to do with your heart so while to you i will ring
+day4_consultation01,mixed,1,292.02,297.13,0,some,you about nausea i have noticed [[some]] nausea but no vomiting you have,you about nausea i have noticed nausea but no vomiting yet did
+day4_consultation02,mixed,1,106.62,108.33,1,it,the back i can not say [[it]] is like kind of over and,the back i can not say so like kind of over ok
+day4_consultation02,mixed,1,151.77,153.16,1,more,like my like health situation was [[more]] than the control yeah and then,like my like health situation was mostly under control ok yeah and
+day4_consultation02,mixed,1,192.03,195.28,0,a,no i was a lawyer at [[a]] previous job as well so talk,no i was a lawyer at previous job as well ok so
+day4_consultation02,mixed,4,203.25,206.36,0,you be at the,is being on vacation where would [[you be at the]] moment i think it is 7,is being on vacation where would moment think it is 7 or
+day4_consultation02,mixed,1,203.25,207.6,1,i,would you be at the moment [[i]] think it is 7 or 8,being on vacation where would moment think it is 7 or 8
+day4_consultation02,mixed,1,271.81,274.18,0,guess,like i would say like i [[guess]] it is like feeling of short,like i would say like i get this like feeling of short
+day4_consultation02,mixed,1,323.8,325.83,0,a,other medical problems well i have [[a]] hypothyroidism okay and do you take,other medical problems well i have hyperthyroidism ok and do you take
+day4_consultation02,mixed,1,336.84,337.71,0,a,do you drink once a week [[a]] couple of glasses and how about,you drink like once a week couple of glasses of wine ok
+day4_consultation03,mixed,2,72.76,73.18,1,yep he,am and how is baby doing [[yep he]] is good any coughs or colds,am and how is baby doing yeah ok any coughs or colds
+day4_consultation03,mixed,1,94.36,100.13,0,a,colds quite a lot but probably [[a]] good few months ago okay and,colds quite a lot but probably good few months ago ok and
+day4_consultation03,mixed,1,154.86,160.38,1,are,i should know about no and [[are]] you allergic i am allergic to,should know about yeah no and you were tell you i am
+day4_consultation04,mixed,1,2.8,10.11,0,little,although i am actually feeling a [[little]] bit wheezy my name is doctor,though i am actually feeling a bit wheezy ok my name is
+day4_consultation04,mixed,2,11.32,14.07,1,the physicians,doctor gohan i am one of [[the physicians]] that work for babylon can i,doctor like i am one of that work for babylon can i
+day4_consultation04,mixed,1,50.16,52.65,0,a,thought that maybe you have got [[a]] an allergy to like dust something,thought that maybe i have got an allergy to like dust i
+day4_consultation04,mixed,2,50.16,54.22,0,something so,a an allergy to like dust [[something so]] i do not know if it,got an allergy to like dust i think so so if it
+day4_consultation04,mixed,1,70.66,72.69,0,ah,start suddenly or was it gradual [[ah]] so it started after maybe an,start suddenly or was it gradual so it started after maybe an
+day4_consultation04,mixed,1,196.32,196.54,0,think,if you are allergic to anything [[think]] not that i know of okay,if you are allergic to anything not that i know of ok
+day4_consultation04,mixed,1,210.02,211.1,0,so,doctor is surgery at the moment [[so]] maybe a minute is drive away,doctor is surgery at the moment they may be minutes drive away
+day4_consultation04,mixed,1,219.5,227.01,0,is,the summer your shortness of breath [[is]] hi i have lost video signal,the summer your shortness of breath hi i have lost video signal
+day4_consultation04,mixed,1,256.64,256.8,0,a,we would do is use a [[a]] small device on your finger to,we would do is use a small device on your finger to
+day4_consultation04,mixed,1,284.12,284.22,0,and,one okay okay so i can [[and]] just get it over the counter,one ok ok so i can just get it over the counter
+day4_consultation04,mixed,1,319.04,319.54,0,okay,it will take probably 10 minutes [[okay]] cool that is great you should,it will take probably 10 minutes ok that is great cool you
+day4_consultation04,mixed,1,326.04,326.54,1,cool,yourself to the gp all right [[cool]] thank you very much okay bye,yourself to the gp all right thank you very much cool ok
+day4_consultation05,mixed,1,26.36,27.23,0,am,are able to talk sorry i [[am]] over 1990 sorry i am 48,able to talk ohh sorry i of 1990 sorry i am 48
+day4_consultation05,mixed,1,40.74,42.98,0,a,yes so i have i have [[a]] i do not know how do,yes so i have i have i do not know how do
+day4_consultation05,mixed,1,67.74,70.2,0,but,had a bit vomiting and yeah [[but]] these are kind of like what,a bit of vomiting and yeah so this kind of like what
+day4_consultation05,mixed,1,112.98,113.95,0,know,have anything else i do not [[know]] maybe it is because you know,have anything else i do not maybe it is work because you
+day4_consultation05,mixed,1,112.98,117.56,0,and,this thing here in the stomach [[and]] stuff always have in the back,this thing here in the stomach stuff i i always have in
+day4_consultation05,mixed,1,126.08,136.65,1,yeah,had the diarrhea for 3 days [[yeah]] and now you are having pain,had the diarrhea for 3 days and now you are having pain
+day4_consultation05,mixed,1,166.76,167.27,0,know,go like every i do not [[know]] is this feeling like i go,go like every i do not is this feeling like i go
+day4_consultation05,mixed,1,236.1,243.96,0,.,not know what it is but [[.]] okay and when was the last,not know what it is but ok and when was the last
+day4_consultation05,mixed,1,272.64,276.43,0,not,that was it and i have [[not]] eaten since then so now i,that was it and i have any today and so now i
+day4_consultation05,mixed,1,300.64,300.81,1,3,so yeah it was not blood [[3]] years ago did you eat anything,so yeah it was not blood ok and did you eat anything
+day4_consultation05,mixed,1,354.08,357.31,0,action,of the asthma like when i [[action]] i need to use my inhaler,of the asthma like when i i need to use my inhaler
+day4_consultation05,mixed,1,361.4,361.77,0,a,my inhaler a little bit but [[a]] part of the normal i have,my inhaler a little bit but apart of the normal i have
+day4_consultation05,mixed,1,403.55,407.72,0,normal,your tummy pain and it is [[normal]] this is normally called gastroenteritis so,your tummy pain and it is this is normally called gastroenteritis so
+day4_consultation05,mixed,1,409.71,414.27,0,we,okay normally when patients have this [[we]] do 3 things number one is,ok normally when patients have this do some things number one is
+day4_consultation05,mixed,2,428.99,430.25,0,to eat,getting a temperature then you need [[to eat]] them all and 3 is stay,getting a temperature then you need ok huh and please stay home
+day4_consultation05,mixed,1,428.99,432.05,1,3,need to eat them all and [[3]] is stay home for the time,then you need ok huh and please stay home for the time
+day4_consultation05,mixed,1,436.19,438.53,1,okay,get slightly better okay and normally [[okay]] normally things like antibiotics do not,ok ok i yeah and normally normally things like antibiotics do not
+day4_consultation05,mixed,1,454.07,457.99,0,a,i not sure if i had [[a]] bit of fever but very little,not sure if if i had bit of fever but very little
+day4_consultation05,mixed,1,473.91,474.39,1,okay,real in real life in person [[okay]] so they can look at your,real in real life in person so they can loot at your
+day4_consultation05,mixed,1,494.77,494.96,1,yes,father is medical history that would [[yes]] i could add some kind of,father is medical history that would i could be at some kind
+day4_consultation05,mixed,2,511.59,512.16,1,okay does,can look up from the gp [[okay does]] that sound okay yeah that sounds,can look up from the gp ok ok ok yeah that sounds
+day4_consultation05,mixed,2,511.59,516.7,1,thank you,that sounds good that sounds good [[thank you]] okay thank you very much doctor,that sounds good that sounds good ok thank you very much doctor
+day4_consultation06,mixed,1,28.84,29.05,0,okay,and how can i help today [[okay]] so i am having like a,again how can i help today so i am having like a
+day4_consultation06,mixed,1,68.38,71.71,0,you,like kind of suddenly and if [[you]] if 10 is the worst pain,like kind of suddenly and if if 10 is the worst pain
+day4_consultation06,mixed,1,135.3,138.05,0,it,already yeah i tried paracetamol but [[it]] did not work to be honest,already yeah i tried paracetemol but did not work to be honest
+day4_consultation06,mixed,1,149.06,149.21,0,the,it you taking it well the [[the]] headache started like 4 years 4,you would taken it well the headache started like 4 year 4
+day4_consultation06,mixed,1,212.26,213.0,1,yes,past you have had kidney stones [[yes]] have you had any other medical,past you have had kidney stones have you had any other medical
+day4_consultation06,mixed,1,271.2,272.47,0,find,are not allergic to any medications [[find]] it from and what what were,are not allergic to any medications fine from and what what were
+day4_consultation06,mixed,1,293.36,297.51,0,to,many stories that you definitely start [[to]] wonder if i should go to,many stories that you definitely start wonder if i should go to
+day4_consultation06,mixed,1,357.28,357.89,0,have,you feel a bit nauseous you [[have]] vomited twice and you are feeling,you feel a bit nauseous you vomited twice and you feeling dizzy
+day4_consultation06,mixed,1,357.28,359.93,1,are,you have vomited twice and you [[are]] feeling dizzy as well but you,nauseous you vomited twice and you feeling dizzy as well but your
+day4_consultation06,mixed,2,369.4,369.82,0,what you,it has not helped is that [[what you]] said okay yeah so it sounds,it has not helped is that all ok no so it sounds
+day4_consultation06,mixed,1,423.36,427.65,0,the,also typical of a migraine now [[the]] obviously if the headache headache is,also typical of a migraine now obviously if the headache is really
+day4_consultation06,mixed,1,429.2,429.31,0,headache,now the obviously if the headache [[headache]] is really severe and i will,migraine now obviously if the headache is really severe and i will
+day4_consultation06,mixed,1,433.36,434.77,0,and,we would want to see you [[and]] as soon as possible to do,we would want to see you as soon as possible to do
+day4_consultation06,mixed,4,438.96,439.08,1,0 that is great,a full neurological exam as well [[0 that is great]] to make sure that you know,a full neurological exam as well to make sure that you know
+day4_consultation06,mixed,1,471.76,473.95,0,and,the migraine does not improve and [[and]] it can last from anywhere from,the migraine does not improve and they can last from anywhere from
+day4_consultation06,mixed,1,491.28,491.77,0,a,pharmacy and you also to drink [[a]] sugary carbonated drink something like okay,pharmacy and you also to drink sugary and carbonated drinks something like
+day4_consultation07,mixed,1,21.18,23.62,0,are,2016 okay great and now you [[are]] in a safe place sorry a,2016 ok great and are you in a a safe place ohh
+day4_consultation07,mixed,1,34.5,35.08,0,i,how can i help yeah so [[i]] have a call up i have,how can i help yeah so have a i have been having
+day4_consultation07,mixed,2,34.5,35.77,0,call up,help yeah so i have a [[call up]] i have been having a cough,i help yeah so have a i have been having a cough
+day4_consultation07,mixed,1,62.64,66.76,0,then,questions about your current symptoms and [[then]] a little bit about your background,about the your current symptoms and a little bit about your background
+day4_consultation07,mixed,1,88.5,90.04,0,it,things could be it could be [[it]] could be a cold or flu,it could be it could be could be a cold or flu
+day4_consultation07,mixed,1,94.1,100.52,0,little,so yeah i can provide a [[little]] bit of reassurance and we can,so yeah i can provide a bit of reassurance and we can
+day4_consultation07,mixed,1,114.66,118.18,0,is,too serious but also if there [[is]] anything you can prescribe me to,too serious but also is there anything you can prescribe me to
+day4_consultation07,mixed,1,130.5,135.19,0,sickness,we can get a those things [[sickness]] and some reassurance about your concerns,we can get a those things and some reassurance about your concerns
+day4_consultation07,mixed,1,138.9,140.7,0,a,you mentioned that you started with [[a]] sore throat about a week ago,you mentioned that you started with sore throat about a week ago
+day4_consultation07,mixed,1,138.9,142.86,0,a,about a week ago developed into [[a]] bit of a dry cough and,about a week ago developed into bit of a dry cough i
+day4_consultation07,mixed,1,143.7,144.69,1,and,a bit of a dry cough [[and]] i just asked a few questions,into bit of a dry cough i will just ask a few
+day4_consultation07,mixed,1,153.72,161.2,0,0,have any wheeze or chest pain [[0]] yeah you are feeling a bit,have any wheeze or chest pain yeah a bit of both you
+day4_consultation07,mixed,2,169.08,171.98,0,i think,to develop a shortness of breath [[i think]] so so the so throw today,to develop the shortness of breath so so the sore throat so
+day4_consultation07,mixed,1,212.72,215.08,0,super,then so it has not been [[super]] bad like has not stopped me,so it it has not been superbad like has not stopped me
+day4_consultation07,mixed,1,234.28,242.58,0,these,on your legs or your lungs [[these]] are these are peas no one,on your legs or your lungs so these no one in your
+day4_consultation07,mixed,2,244.12,244.25,0,are peas,or your lungs these are these [[are peas]] no one your family is had,legs or your lungs so these no one in your family is
+day4_consultation07,mixed,1,271.72,273.61,0,you,not coughing up any phlegm do [[you]] do you have and you do,not coughing up any flem do do you have and you do
+day4_consultation07,mixed,1,309.96,315.41,0,almost,or no it seems to be [[almost]] entirely with just my throat like,or no it seems to be entirely with just my throat so
+day4_consultation07,mixed,1,395.8,399.04,0,really,being variable okay and i just [[really]] need to ask any other sort,that makes ok and i just need to ask any other sort
+day4_consultation07,mixed,1,412.68,413.58,0,anyone,weight loss or unexplained weight loss [[anyone]] is so no weight loss but,weight loss or unexplained weight loss any so no weight loss but
+day4_consultation07,mixed,1,418.44,420.39,0,it,recently and i mean i usually [[it]] is a lot so i enjoy,recently and i mean i usually eat a lot so and i
+day4_consultation07,mixed,1,426.78,428.66,1,yes,a little bit concerned about that [[yes]] but you have not you have,a little bit concerned about that but you have not you have
+day4_consultation07,mixed,1,448.68,452.85,0,this,is a 0 we can try [[this]] 0 no well no it is,there is ohh we can try ohh no well no it is
+day4_consultation07,mixed,1,482.38,483.83,0,the,just coming to the end of [[the]] consultation now is if you feel,just coming to the end of consultation now if you feel significantly
+day4_consultation07,mixed,1,482.38,485.08,0,is,the end of the consultation now [[is]] if you feel significantly worse if,to the end of consultation now if you feel significantly worse if
+day4_consultation08,mixed,1,10.92,16.74,0,was,name is brian sorry your name [[was]] my name was brian hi brian,sense yeah so sorry your name is name was brian brian hi
+day4_consultation08,mixed,1,20.7,20.96,0,meet,was brian hi brian nice to [[meet]] you and your date of birth,brian brian hi brian nice to hi and your date of birth
+day4_consultation08,mixed,1,32.22,34.66,0,for,confidential place where you can speak [[for]] you yeah no no right and,confidential place where you can speak freely yeah no no one else
+day4_consultation08,mixed,1,59.1,64.47,0,it,that i would normally find easy [[it]] is become quite difficult okay so,that i would normally find easy is become quite difficult ok so
+day4_consultation08,mixed,1,80.38,85.73,0,have,sorry to hear that so you [[have]] had difficulty waking up no energy,sorry to hear that so you had difficulty waking up no energy
+day4_consultation08,mixed,1,97.02,103.29,0,it,i guess might be related to [[it]] so i also started a new,i guess might be related to so i also started a new
+day4_consultation08,mixed,1,119.26,128.41,0,okay,22 months i would say yeah [[okay]] all right so is there anything,2 months i would say yeah ok alright so is there anything
+day4_consultation08,mixed,2,147.14,151.46,0,you know,not have any problem sort of [[you know]] eating what i want to eat,not have any problems sort of eating what i want to eat
+day4_consultation08,mixed,1,158.82,164.29,0,way,that is what what the best [[way]] is of doing that after yeah,that is what what the best ways of doing that are but
+day4_consultation08,mixed,1,165.78,171.73,0,i,whatever okay sure okay well what [[i]] would like to do is just,useful ok sure ok well what would i like to do is
+day4_consultation08,mixed,1,191.86,195.36,0,note,you tend to just on that [[note]] do you tend to wake up,you tend to just on that do you tend to wake up
+day4_consultation08,mixed,1,209.16,210.13,1,the,probably i think that is probably [[the]] case difficulty sleeping as well and,really i think that is probably closer difficulty sleeping as well yeah
+day4_consultation08,mixed,1,276.54,278.71,0,there,well and just on that note [[there]] is a few questions around that,well and just on that note just a few questions around that
+day4_consultation08,mixed,1,310.76,317.82,1,sorry,important one i do not think [[sorry]] yeah i do not think it,important one i do not think yeah not i do not think
+day4_consultation08,mixed,1,345.24,349.09,1,i,a relationship yeah i am married [[i]] have been for many years and,moment yeah i i am married have been for many years and
+day4_consultation08,mixed,1,380.97,385.79,1,no,past or any physical health problems [[no]] so in the past i have,past or any physical health problems so in the past i have
+day4_consultation08,mixed,1,405.61,408.95,0,okay,hypothyroid thank you thank you yeah [[okay]] and also in the past i,hypothyroid thank you thank you yeah and also in the past i
+day4_consultation08,mixed,1,499.98,501.62,0,your,random question but any change in [[your]] vision no no nothing like that,random question but any change in vision no no no nothing like
+day4_consultation08,mixed,1,508.68,509.89,0,are,had low mood some people who [[are]] who do have low mood and,had low mood some people who who do have low mood and
+day4_consultation08,mixed,2,525.22,532.69,0,and my,have been doing sports as well [[and my]] i find sometimes it is quite,have been doing sports as well i find sometimes it is quite
+day4_consultation08,mixed,1,595.68,601.78,0,yes,would be ideal i think here [[yes]] and then we can we could,would be ideal i think here and then we can we can
+day4_consultation08,mixed,1,610.0,612.24,1,all,more that makes sense is that [[all]] right yeah it is very useful,that makes sense yeah is that alright yeah that is very useful
+day4_consultation08,mixed,1,624.16,627.08,0,that,investigations and tests i am glad [[that]] you are you know you are,investigations and tests i am glad you are you know you are
+day4_consultation08,mixed,1,636.0,640.84,0,of,get to the bottom of some [[of]] your tiredness and your other symptoms,get to the bottom of some your tiredness and your other symptoms
+day4_consultation09,mixed,2,45.6,46.06,1,26 yeah,92 so it makes you 26 [[26 yeah]] and you are any shortness of,92 so that makes you 26 and you are any shortness of
+day4_consultation09,mixed,1,73.84,76.73,0,you,nose just feeling under the weather [[you]] are feeling better now i mean,nose just feeling under the weather are you feeling better now other
+day4_consultation09,mixed,1,102.29,106.9,0,hay,and then i have like a [[hay]] fever you know some allergies dust,and then i have like a hayfever you know and some allergies
+day4_consultation09,mixed,1,133.73,134.96,0,you,and the ventolin and how often [[you]] have been using well to be,and the ventolin and how often have you been using them well
+day4_consultation09,mixed,1,201.17,207.17,0,not,and probably getting my inhalers would [[not]] be helpful it is just kind,and probably getting my inhalers would be helpful it is just kind
+day4_consultation09,mixed,1,254.93,258.41,0,clean,to certainly get you some ventolin [[clean]] or modulate have you had asthma,to certainly get you some ventolin clenil modulite have you had asthma
+day4_consultation09,mixed,1,279.01,283.54,0,had,okay so so so you you [[had]] you went to hospital and had,so you so so you you you went to hospital and had
+day4_consultation09,mixed,1,403.95,408.28,0,uncommon,about the side effects they are [[uncommon]] most you know most the time,about the side effects they are most you know most of the
+day4_consultation09,mixed,2,409.63,412.77,0,probably do,are very well tolerated and you [[probably do]] have you had them in the,are very well tolerated and you have you had them in the
+day4_consultation09,mixed,1,431.59,433.24,0,that,you a high blood sugar and [[that]] okay they can also because rash,you a high blood sugar and their they can also because rash
+day4_consultation09,mixed,1,447.61,451.44,0,are,the some prescriptions for your inhalers [[are]] ongoing so you can once you,the some prescriptions for your inhalers ongoing so you you can once
+day4_consultation09,mixed,1,459.99,462.99,0,but,morning with ventolin as a prn [[but]] so a ventolin when you need,morning with ventolin as a prn so a ventolin when you need
+day4_consultation09,mixed,1,504.29,507.14,0,a,how to use it but essentially [[a]] couple of puffs to prime it,how to use it but essentially couple of puffs to prime it
+day4_consultation09,mixed,1,537.37,537.53,0,a,bit until you are feeling a [[a]] bit better if you are okay,bit until you are feeling a bit better if you are ok
+day4_consultation10,mixed,1,43.47,46.96,0,i,and sweaty and it is yeah [[i]] am really uncomfortable okay so you,and sweaty and it is yeah getting really uncomfortable ok so you
+day4_consultation10,mixed,1,57.13,62.0,0,think,my lower tummy and then i [[think]] it is feeling hot sweaty sometimes,my lower tummy and then i i think feeling hot and sweaty
+day4_consultation10,mixed,1,136.95,139.81,0,are,am normal now okay and you [[are]] saying you are going you are,a normal now ok and you say you are going you are
+day4_consultation10,mixed,1,285.26,286.14,0,you,in your pee did you say [[you]] are so your pee is slightly,in your pee did you say your so your pee is slightly
+day4_consultation10,mixed,1,303.56,311.5,0,are,say so you are sexually active [[are]] you using contraception i have got,say so you are sexually active you are using contraception and what
+day4_consultation10,mixed,2,368.17,368.39,0,it has,now the last few days yeah [[it has]] been okay okay all right so,now the last few days yeah i k ok all right so
+day4_consultation10,mixed,1,455.51,459.8,0,something,it is called implanon yeah sure [[something]] okay do you smoke no okay,is called implanon implanon yeah sure ok do you smoke or something
+day4_consultation10,mixed,1,502.4,503.2,0,is,constipation i do not know it [[is]] just a really like a really,constipation i do not know it just a really like really horrible
+day4_consultation10,mixed,1,502.4,505.88,0,a,it is just a really like [[a]] really horrible ache and i am,know it just a really like really horrible ache and i am
+day4_consultation10,mixed,1,595.8,596.48,0,i,gp face to face soon today [[i]] do yes yeah sure are you,gp face to face soon today ideally yes yeah yeah sure i
+day4_consultation10,mixed,2,619.6,620.4,0,but then,examination investigations if in the meantime [[but then]] between now and and me so,examination investigations if in the meantime between now and and me sort
+day4_consultation10,mixed,1,624.72,624.98,0,feel,or agp seeing you you feel [[feel]] worse in any way you get,a gp seeing you you feel worse in any way you get
+day4_consultation10,mixed,1,639.92,644.93,0,have,right now i am glad we [[have]] got the ball rolling with this,right now i am glad we got the ball rolling with this
+day5_consultation01,mixed,1,0.46,4.65,0,0,hello hello i am doctor geraghty [[0]] wrong side can i take your,hello hello i am doctor geraghty ohh sorry can i take your
+day5_consultation01,mixed,1,14.1,17.43,0,jempton,home address please yeah it is [[jempton]] and 5 kings place and are,home address please yeah it is and 5 kings place and are
+day5_consultation01,mixed,1,27.06,28.58,0,so,are you in a private place [[so]] you can have a confidential consultation,are you in a private place you can have a confidential consultation
+day5_consultation01,mixed,2,31.96,33.29,0,i have,have got a really bad headache [[i have]] had it for about a day,have got a really bad headache had it for about a day
+day5_consultation01,mixed,1,46.1,46.17,0,i,just yeah kind of throbbing headache [[i]] have not really wanted to leave,just yeah kind of throbbing headache have not really wanted to leave
+day5_consultation01,mixed,1,50.86,50.95,1,okay,pain mainly on the left side [[okay]] and what does it feel like,pain mainly on the left side ok what does it feel like
+day5_consultation01,mixed,1,65.46,65.56,1,it,goes does it completely go away [[it]] just kind of fades so it,goes does it completely go away just kind of fades so it
+day5_consultation01,mixed,2,81.46,82.08,0,i have,no any nausea vomiting no no [[i have]] been feeling fine actually and have,any any nausea vomiting no no been feeling fine actually and have
+day5_consultation01,mixed,1,84.46,84.58,1,yes,have you been eating and drinking [[yes]] yes same problem okay and normally,have you been eating and drinking ok yeah yeah ok and normally
+day5_consultation01,mixed,1,101.86,103.7,0,day,okay and how were you the [[day]] before it came on have you,and how we are you the before it came on have you
+day5_consultation01,mixed,1,108.22,108.38,0,fraternity,any other symptoms like feeling feverish [[fraternity]] runny nose sore ears no not,any other symptoms like feeling feverish runny nose sore ears no not
+day5_consultation01,mixed,1,108.22,113.0,0,was,any sort of cold symptoms i [[was]] feeling okay the day okay and,any sort of cold symptoms i seemed ok the day before ok
+day5_consultation01,mixed,1,152.08,156.54,0,i,or when you bend forward no [[i]] think i have generally been lying,or when you bend forward no think i have generally been lying
+day5_consultation01,mixed,1,168.72,172.39,0,and,medical problems any hospital admissions operations [[and]] things like that no not recently,medical problems any hospital admissions operations something like that no not recently
+day5_consultation01,mixed,1,196.4,197.53,0,for,have you your blood pressure checked [[for]] recently i have not actually no,you had your blood pressure checked recently i have not actually no
+day5_consultation01,mixed,1,244.3,246.02,0,the,past have not been taking it [[the]] last few days okay so this,i have not been taking it last few days ok so this
+day5_consultation01,mixed,1,350.38,353.8,0,to,brilliant okay so i will take [[to]] my boyfriend and i will hopefully,brilliant ok so i will take some ibuprofen and i will hopefully
+day5_consultation01,mixed,1,355.58,359.29,1,i,have you got any other questions [[i]] know that was it today okay,have you got any other questions no that was it today ok
+day5_consultation02,mixed,2,8.76,12.58,0,i am,please hi my name is susan [[i am]] 30 redbridge street sw 2 to,please hi my name is susan 30 redbridge street sw 22 hz
+day5_consultation02,mixed,1,8.76,16.74,0,2,i am 30 redbridge street sw [[2]] to hz and your date of,is susan 30 redbridge street sw 22 hz hello and your date
+day5_consultation02,mixed,2,19.92,20.26,0,14 2,hz and your date of birth [[14 2]] 1997 okay are you in a,hello and your date of birth 40021974 ok are you in a
+day5_consultation02,mixed,1,63.22,63.34,1,10,a scale of one to 10 [[10]] with 10 being the worst pain,a scale of one to 10 with 10 being the worst pain
+day5_consultation02,mixed,1,150.32,153.18,0,no,any change in your bowel habit [[no]] any weight loss or anything no,any change in your bowel habit any weight loss or anything no
+day5_consultation02,mixed,2,169.9,176.16,0,clean the,milligrams yes any allergies any allergies [[clean the]] mice you are allergic to clindamycin,milligrams yes any allergies any allergies clindamycin you are allergic to clindamycin
+day5_consultation02,mixed,1,255.4,260.55,1,and,2.5 to 3 liters a day [[and]] you can get some cranberry juice,2.5 to 3 liters a day you can get some cranberry juice
+day5_consultation02,mixed,1,289.96,293.23,0,okay,that we speak to you again [[okay]] and the other thing is if,that we speak to you again ok the other thing is that
+day5_consultation02,mixed,1,299.54,304.1,1,okay,no not if you are better [[okay]] if you are if you feel,no not if you are better if you are if you feel
+day5_consultation02,mixed,1,331.2,336.05,0,knights,i just check that with you [[knights]] bridge practice okay that is fine,i just check that with you knightsbridge practice ok that is fine
+day5_consultation02,mixed,2,337.22,341.97,0,and we,that i am going to prescribe [[and we]] will go through to that pharmacy,that i am going to prescribe will go through to that pharmacy
+day5_consultation02,mixed,2,353.3,356.96,0,thank you,that up okay all right then [[thank you]] take care bye sorry i did,at lunchtime ok all right then take care bye thank you bye
+day5_consultation03,mixed,1,31.14,35.27,0,and,anxious over the past few months [[and]] i just get really nervous every,anxious over the past few months i just get really nervous every
+day5_consultation03,mixed,1,139.78,141.2,0,i,work i just feel so stressed [[i]] am so worried about everything i,work i just feel so stressed and so worried about everything i
+day5_consultation03,mixed,2,215.24,217.29,0,i am,bit more about that yeah so [[i am]] it is it is usually kind,bit more about that yeah so it is it is usually kind
+day5_consultation03,mixed,3,249.14,251.06,0,it was a,it can be anything i think [[it was a]] couple of minutes or the other,it can be anything i think couple of minutes or the other
+day5_consultation03,mixed,1,263.04,265.86,0,a,in the past sort of like [[a]] couple of months as i say,in the past sort of like couple of months as i say
+day5_consultation03,mixed,1,288.92,290.29,0,in,all kind of day to day [[in]] the thing that i am doing,is kind of day to day and anything that i am doing
+day5_consultation03,mixed,2,317.4,322.24,0,in so,still see them i avoid them [[in so]] much that i feel like i,still see them i avoid them insomuch that i feel like i
+day5_consultation03,mixed,1,336.46,339.71,0,have,i say like everything that i [[have]] had previously been doing has been,i say like everything that i had previously been doing has been
+day5_consultation03,mixed,1,367.52,367.7,0,let,should call in sick or like [[let]] us not go and what is,should call in sick or like just not go ok and what
+day5_consultation03,mixed,1,391.68,393.33,0,because,is why i wanted to call [[because]] i am just worried it is,is why i wanted to call i am just worried it is
+day5_consultation03,mixed,2,410.34,413.01,0,in a,i find public transport really stressful [[in a]] way especially being on the tube,i find public transport really stressful anyway especially being on the tube
+day5_consultation03,mixed,1,436.94,439.46,0,that,but i have never felt anything [[that]] is bad before okay and what,but i have never felt anything this bad before ok and what
+day5_consultation03,mixed,1,474.88,476.11,0,if,felt yourself i do not know [[if]] that is a good question i,felt yourself i do not know that is a good question i
+day5_consultation03,mixed,1,474.88,480.49,1,date,i can not really put a [[date]] on that at all and has,i can not really put a on that at all and has
+day5_consultation03,mixed,1,498.84,501.41,0,a,support system like i do have [[a]] good family and stuff so i,support system like i do have good family and stuff so i
+day5_consultation03,mixed,1,594.34,598.3,0,not,not sought any other and would [[not]] you be happy to have some,sought any other ok and would you be happy to have some
+day5_consultation03,mixed,1,619.2,623.95,0,the,reacting to the what was provoking [[the]] anxiety and what you can do,to the why what is provoking anxiety and what you can do
+day5_consultation03,mixed,1,630.68,630.81,0,and,send you the link for that [[and]] in the meantime so it can,send you the link for that in the meantimes it can be
+day5_consultation03,mixed,1,630.68,631.56,0,meantime,link for that and in the [[meantime]] so it can be a bit,the link for that in the meantimes it can be a bit
+day5_consultation03,mixed,1,680.6,683.83,0,a,but it is probably worth having [[a]] couple of basic blood tests just,but it is probably worth having couple of basic blood tests just
+day5_consultation04,mixed,1,17.46,19.89,1,the,confirm your date of birth and [[the]] 1st line of your address okay,confirm your date of birth and 1st line 1996 ok and your
+day5_consultation04,mixed,2,17.46,20.75,1,of your,of birth and the 1st line [[of your]] address okay and your address my,date of birth and 1st line 1996 ok and your address and
+day5_consultation04,mixed,1,23.46,27.06,0,sloan,your address my address is 60 [[sloan]] yep okay and you are you,address and my address is 60 yep ok and are you in
+day5_consultation04,mixed,1,33.78,39.36,0,mine,can i do for you today [[mine]] i am having really bad tummy,can i do for you today i am having really bad tummy
+day5_consultation04,mixed,1,41.7,48.29,0,a,okay and when did it start [[a]] few days ago i was all,ok and when did it start few days ago i was all
+day5_consultation04,mixed,1,49.14,50.47,0,where,few days ago i was all [[where]] i was doing well everything was,few days ago i was all well was being well everything was
+day5_consultation04,mixed,4,49.14,52.54,0,okay just started and,i was doing well everything was [[okay just started and]] it is kind of really getting,well was being well everything was 0 k kind of really getting
+day5_consultation04,mixed,1,66.1,67.48,1,i,the middle or to one side [[i]] know it is it is in,the middle or to one side no it is it is in
+day5_consultation04,mixed,2,94.34,100.01,0,i am,light color and sometimes i am [[i am]] constipated like so when was your,light color and sometimes i am constipated like k so when when
+day5_consultation04,mixed,1,109.22,115.88,0,before,yes yes i do 4 weeks [[before]] like 4 days i was right,yes yes i do 4 weeks ago 4 days ago sorry i
+day5_consultation04,mixed,1,116.1,120.47,0,use,any contraception yes i am i [[use]] it from last one year and,any contraception yes i am i usually come last one year and
+day5_consultation04,mixed,1,122.58,128.2,0,pair,okay and do you have your [[pair]] do you have your periods when,ok and do you have your do you have your periods when
+day5_consultation04,mixed,1,131.86,134.25,0,implement,since you have been using the [[implement]] implant do you have periods yes,since you have been using the implanon do you have periods regularly
+day5_consultation04,mixed,1,138.1,141.22,0,all,no they are arthritic like not [[all]] the time it changes right okay,they they are spreading like not the time it changes yeah right
+day5_consultation04,mixed,3,147.62,148.19,0,it was normal,was your last period normal yeah [[it was normal]] and any problems with nausea or,was your last period normal yeah and any problems with nausea or
+day5_consultation04,mixed,1,152.82,153.83,0,nauseated,nausea or vomiting yeah i feel [[nauseated]] like i feel like vomiting but,nausea or vomiting yeah i feel like i feel like vomiting but
+day5_consultation04,mixed,2,152.82,156.15,0,do not,i feel like vomiting but i [[do not]] i get nauseated but i do,i feel like vomiting but i i get nauseated but i do
+day5_consultation04,mixed,5,161.7,164.3,0,and drinking and other things,okay yeah yeah my regular activities [[and drinking and other things]] okay yeah but it is just,ok yeah yeah my regular activities ok yeah but it is just
+day5_consultation04,mixed,1,167.38,168.63,0,a,okay yeah but it is just [[a]] very uncomfortable okay and have you,ok yeah but it is just very uncomfortable at times and ok
+day5_consultation04,mixed,2,188.66,192.93,0,yeah and,go to the toilet every day [[yeah and]] is the stool normal or diarrhea,going to the toilet every day is the stool normal or diarrhea
+day5_consultation04,mixed,1,215.51,216.9,0,it,different i can i can see [[it]] because it is not really like,different i can i can see because it is not really like
+day5_consultation04,mixed,1,243.37,243.63,0,got,a high temperature have you got [[got]] a thermometer do you feel feverish,a high temperature have you got a thermometer no i do not
+day5_consultation04,mixed,1,255.71,258.19,0,okay,at work as normal it seems [[okay]] just when i get the pain,and stuff everything but it seems ok when i get the pain
+day5_consultation04,mixed,1,297.75,298.08,1,when,test this time yeah i did [[when]] was that around like a month,when was that yeah i did yeah yeah around like a month
+day5_consultation04,mixed,2,351.25,353.83,0,i do,like before so yeah i do [[i do]] drink a lot of water right,high before so yeah i do drink a lot though right ok
+day5_consultation04,mixed,1,351.25,355.82,1,of,do i do drink a lot [[of]] water right okay and any weight,yeah i do drink a lot though right ok and any any
+day5_consultation04,mixed,2,359.19,364.3,0,can see,we said i have some i [[can see]] some discharge and bleeding but then,i said i have some i guess discharge and pain but then
+day5_consultation04,mixed,3,359.19,367.08,0,do not want,discharge and bleeding but then i [[do not want]] to go in there there is,discharge and pain but then i there is is not a lot
+day5_consultation04,mixed,1,395.29,396.86,0,have,advise further from them when we [[have]] got more of an idea what,advise further from there when we got more of an idea what
+day5_consultation05,mixed,1,26.91,30.05,0,in,a pain in my lower tummy [[in]] the last 2 days i feel,a pain in my lower tummy the last 2 days i feel
+day5_consultation05,mixed,1,154.43,157.76,0,it,no no nothing sorry i mean [[it]] depends what like normal stuff like,no no nothing sore i mean depends what like normal stuff like
+day5_consultation05,mixed,1,171.79,173.63,0,i,over the counter medications no i [[i]] have had just the the implant,over the counter medications no i have had the just the internal
+day5_consultation05,mixed,1,171.79,174.48,0,just,medications no i i have had [[just]] the the implant the contraceptive implant,counter medications no i have had the just the internal contraceptive implant
+day5_consultation05,mixed,1,174.91,175.22,0,the,i i have had just the [[the]] implant the contraceptive implant but like,medications no i have had the just the internal contraceptive implant but
+day5_consultation05,mixed,2,192.91,196.05,0,yeah no,intercourse no no no just like [[yeah no]] right and you have not felt,no no no ok just like right and you have not felt
+day5_consultation05,mixed,3,237.03,239.72,0,alcohol let us,i do not smoke i drink [[alcohol let us]] say 4 times per week and,i do not smoke i drink i 4 times per week and
+day5_consultation05,mixed,2,243.41,248.38,0,on average,like per time let us say [[on average]] what per time let us say,like per time let us say what per time let us say
+day5_consultation05,mixed,1,276.41,283.43,0,or,back pain or developing new symptoms [[or]] you feel like it is not,pain or develop any new symptoms we feel like it is not
+day5_consultation05,mixed,1,307.85,311.67,0,but,twice a day for 3 days [[but]] if your pain is getting worse,twice a day for 3 days if your pain is getting worse
+day5_consultation05,mixed,1,314.49,315.96,0,straight,get new symptoms just contact us [[straight]] away or if you are getting,got new symptoms just contact us straightaway or if you are getting
+day5_consultation06,mixed,2,14.88,19.05,1,calder okay,please yeah my name is barbara [[calder okay]] and my date of birth 4th,ok yeah my name is barbara and my date of birth 4th
+day5_consultation06,mixed,1,30.2,34.15,0,stooling,for you i have just been [[stooling]] for the past couple of days,for you i have just been for the past couple of days
+day5_consultation06,mixed,1,36.6,39.51,0,it,been having the serious diarrhea and [[it]] is really giving me trouble okay,been having this serious diarrhea and this really giving me trouble ok
+day5_consultation06,mixed,1,69.88,70.02,0,or,okay and any any high temperatures [[or]] are you feeling feverish yes i,ok and any any high temperatures are you feeling feverish yes i
+day5_consultation06,mixed,3,113.24,117.24,1,can not know,the urine to be honest i [[can not know]] how to look so i really,the urine to be honest i have a look so i really
+day5_consultation06,mixed,2,119.04,125.21,0,at least,last pass urine do you think [[at least]] an hour okay and any blood,last pass urine do you think an hour ago ok and any
+day5_consultation06,mixed,1,142.95,143.04,0,and,normally my bowels is normally fine [[and]] i would normally go to the,my my bowels is normally fine i would normally go to the
+day5_consultation06,mixed,1,186.18,187.92,1,like,rash no no rash no nothing [[like]] that any surgery before or abdominal,rash no no rash no nothing that no ok any surgery before
+day5_consultation06,mixed,4,223.62,226.38,0,sort of releases me,the to the loo and then [[sort of releases me]] and sort of like comes again,the to the loo and then and sort of like comes again
+day5_consultation06,mixed,3,231.7,236.51,0,i call it,i i take my my vitamins [[i call it]] vitamin d okay every day that,i i take my my vitamins vitamin d every day that is
+day5_consultation06,mixed,1,231.7,238.17,1,okay,vitamins i call it vitamin d [[okay]] every day that is about that,take my my vitamins vitamin d every day that is about that
+day5_consultation06,mixed,1,266.26,273.56,0,and,regular sexual intercourse no okay and [[and]] what is your job graphics have,regular sexual intercourse no ok and what is your job a graphics
+day5_consultation06,mixed,1,453.66,454.51,0,straight,you can send that sample off [[straight]] away otherwise we would have to,you can send that sample off straightaway otherwise we would have to
+day5_consultation06,mixed,1,485.2,490.79,0,then,please book me the appointment and [[then]] yeah i will see how i,please book me the appointment and yeah i will see how i
+day5_consultation06,mixed,1,518.16,520.61,0,and,light like that avoid fruit vegetables [[and]] milk anything like that which might,light like that avoid fruit vegetables milk anything like that which might
+day5_consultation07,mixed,2,15.3,15.56,0,74 rolland,february 1958 and your home address [[74 rolland]] hill court in saint albans are,1958 hello and your home address 734 court in saint ok that
+day5_consultation07,mixed,1,47.64,49.49,0,20,dry i am coughing maybe every [[20]] 30 minutes okay you are bringing,dry i am coughing maybe every 2030 minutes or so ok you
+day5_consultation07,mixed,1,81.32,84.3,1,have,like sore ears sore throat i [[have]] i have been feeling really hot,like sore ears sore throat i i have been feeling really hot
+day5_consultation07,mixed,1,110.9,113.31,1,i,well holding down fluids okay yeah [[i]] am passing water okay yeah that,well holding down fluids ok yeah and passing water ok yeah that
+day5_consultation07,mixed,3,192.3,192.49,0,the lysine of,you know what dose of the [[the lysine of]] how you are taking 200 okay,you know what dose of the lisinopril you are taking 200 ok
+day5_consultation07,mixed,1,199.46,200.05,0,path,pass water normally any increase in [[path]] in frequency that you are passing,pass water normally any increase in in frequency that you are passing
+day5_consultation07,mixed,1,213.6,218.35,0,do,and do you smoke at all [[do]] you drink any alcohol yes the,and do you smoke at all you drink any alcohol yes the
+day5_consultation07,mixed,1,270.28,276.19,0,the,you know you are obviously getting [[the]] symptoms of from your nose and,you know you are obviously getting symptoms of from your nose and
+day5_consultation07,mixed,1,276.36,280.93,0,it,it sounds like you might have [[it]] at high temperatures it is definitely,it sounds like you might have a high temperature it is definitely
+day5_consultation07,mixed,1,306.28,306.39,0,and,the cough ongoing longer than that [[and]] the important thing to do would,the cough ongoing longer than that the important thing to do would
+day5_consultation07,mixed,1,310.2,316.64,0,37.5,if the temperature is ongoing above [[37.5]] 38 and you keep spiking temperatures,if the temperature is ongoing above 37.538 and you keep spiking temperatures
+day5_consultation07,mixed,1,327.02,329.99,0,and,get blood coming out your nose [[and]] or any shorts of breast chest,get blood coming out your nose or any shortness of breath chest
+day5_consultation07,mixed,1,342.56,343.38,0,that,the diabetes so it is something [[that]] we do need to be careful,the diabetes so it is something we do need to be careful
+day5_consultation07,mixed,1,342.56,346.41,0,look,of okay so then we would [[look]] at potentially antibiotics at that time,ok ok so then we would at potentially antibiotics at that time
+day5_consultation07,mixed,1,362.08,364.05,0,is,i would not take and that [[is]] that contains paracetamol so do not,i would not take and that that contains paracetamol so do not
+day5_consultation07,mixed,3,384.58,389.69,0,not at home,you have blood sugar checking equipment [[not at home]] do you check no okay well,you have blood sugar checking equipment do you check no ok well
+day5_consultation08,mixed,4,9.97,15.63,0,dress sw 3 dd,date of birth 22nd december 1990 [[dress sw 3 dd]] 60 strong avenue okay that is,of birth 22nd of december 1990 address 16 avenue ok that is
+day5_consultation08,mixed,1,66.8,68.32,0,a,i had asthma i also had [[a]] hay fever and asthma eczema as,i had asthma i also had hay fever and eczema sorry ok
+day5_consultation08,mixed,1,66.8,70.05,0,asthma,also had a hay fever and [[asthma]] eczema as well sorry okay and,i also had hay fever and eczema sorry ok and when you
+day5_consultation08,mixed,2,66.8,70.92,0,as well,a hay fever and asthma eczema [[as well]] sorry okay and when you were,also had hay fever and eczema sorry ok and when you were
+day5_consultation08,mixed,1,109.2,109.48,1,a,you were not taking medication anymore [[a]] few years ago like 3 or,you were not taking medication anymore few years ago like 3 or
+day5_consultation08,mixed,2,143.36,143.59,0,saying a,like i can not even finish [[saying a]] sentence it is quite difficult to,like i can not even finish sentence is quite difficult to to
+day5_consultation08,mixed,1,143.36,144.94,0,it,not even finish saying a sentence [[it]] is quite difficult to to complete,i can not even finish sentence is quite difficult to to complete
+day5_consultation08,mixed,1,170.8,175.09,1,do,where you measure your breathing sorry [[do]] you have what is called a,where you measure your breathing sorry you have what is called a
+day5_consultation08,mixed,1,181.84,185.36,0,and,the last few years you do [[and]] so you said you stopped them,few years yes yeah you do so you said you stopped them
+day5_consultation08,mixed,1,243.2,243.38,0,i,energy do you smoke no i [[i]] do not smoke do you drink,allergies do you smoke no i do not smoke do you drink
+day5_consultation08,mixed,1,266.32,266.85,0,an,job day to day i am [[an]] engineer and have you been at,job day to day i am engineer and have you been at
+day5_consultation08,mixed,1,266.32,271.33,0,work,can not because i used to [[work]] i work to work but recently,can not because i used to walk walk to work but recently
+day5_consultation08,mixed,1,278.56,283.95,1,no,breath when you are sitting still [[no]] or just when you walk just,breath when you are sitting still or just when you walk no
+day5_consultation08,mixed,2,300.64,302.13,0,and like,your sentences yeah sometimes okay yeah [[and like]] this yeah right okay i mean,your sentences yeah sometimes ok yeah days yeah right ok i mean
+day5_consultation08,mixed,1,372.88,373.09,0,it,it so you are taking it [[it]] 2 to 4 puffs like every,it so you are taking it 2 to 4 puffs like every
+day5_consultation08,mixed,1,372.88,377.21,0,and,puffs like every 4 hours initially [[and]] if you get a high temperature,puffs like every 4 hours initially if you get a high temperature
+day5_consultation08,mixed,1,379.48,384.78,0,straight,you need to call us back [[straight]] away so we can just advise,you need to call us back straightaway so we can just advise
+day5_consultation08,mixed,1,410.74,416.75,0,question,the pharmacy i can put a [[question]] on your notes about what to,the pharmacy i can put a on your notes about what to
+day5_consultation09,mixed,1,0.0,0.17,0,hello, [[hello]] hi there it is doctor smith,hi there it is doctor smith
+day5_consultation09,mixed,1,21.18,24.05,0,yes,you can have a consultation today [[yes]] what can i do for you,you can have a consultation today what can i do for you
+day5_consultation09,mixed,1,25.34,25.5,1,and,what can i do for you [[and]] it coming i do not really,what can i do for you yes coming i i do not
+day5_consultation09,mixed,1,39.5,43.17,0,when,tired run down okay so when [[when]] do you think you were last,tired run down ok so when do you think you were last
+day5_consultation09,mixed,1,86.84,88.51,0,.,not that i recall yeah not [[.]] no the symptoms sort of all,not that i recall yeah not no the symptoms sort of all
+day5_consultation09,mixed,1,210.82,211.32,0,definitely,any bites that you noticed i [[definitely]] like i do quite a lot,any bites that you noticed i like i do quite a lot
+day5_consultation09,mixed,4,226.26,229.78,0,you feel the other,was in shorts and boots but [[you feel the other]] bit whereabouts were you in the,in shorts and and boots but ok whereabouts were you in the
+day5_consultation09,mixed,2,269.02,272.46,0,less engaged,yeah less energy sort of probably [[less engaged]] than i i would have been,yeah less energy sort of probably than i i would normally be
+day5_consultation09,mixed,2,286.7,289.85,0,much as,it i am not exercising as [[much as]] i would normally and how is,i i am not exercising as i would normally ok fine and
+day5_consultation09,mixed,4,365.02,365.32,0,so there is a,do you take any other medications [[so there is a]] i think one of the antiques,do you take any other medications i take one of the antihistamines
+day5_consultation09,mixed,1,374.7,374.86,0,kerosene,of the antiques it might be [[kerosene]] can i get that from yeah,of the antihistamines it might be can i get that from just
+day5_consultation09,mixed,5,431.58,433.81,0,am in general happy with,happy to do that yeah i [[am in general happy with]] blood tests what is the infection,happy to do that yeah i but what what is the infection
+day5_consultation09,mixed,1,453.9,454.05,1,okay,do a test for as well [[okay]] and if that comes back positive,do a test for as well and if that comes back positive
+day5_consultation09,mixed,3,459.02,463.99,0,other things and,we would also check just for [[other things and]] which can because reduced energy tiredness,we would also check just for which can because reduced energy tiredness
+day5_consultation10,mixed,1,23.1,26.33,0,so,are you in a private place [[so]] you can have a consultation yes,are you in a private place you can have a consultation yes
+day5_consultation10,mixed,1,96.64,102.64,0,a,explain it just a bit of [[a]] weird kind of vision okay and,explain it just a bit of weird kind of vision ok and
+day5_consultation10,mixed,1,182.3,184.44,0,tear,a stabbing pain or if i [[tear]] in my head like i kind,a stabbing pain or if i throw my head like it i
+day5_consultation10,mixed,1,192.14,193.07,0,i,had any eye checks recently yeah [[i]] actually had one recently and nothing,had any eye checks recently yeah actually had one recently and nothing
+day5_consultation10,mixed,1,219.98,220.86,0,a,that no change of way maybe [[a]] lack of energy but it might,that no change of weight maybe lack of energy but it might
+day5_consultation10,mixed,1,225.26,227.92,0,but,to go through my daily activities [[but]] you know when you have been,to go through my daily activities you know when you have this
+day5_consultation10,mixed,1,248.3,248.42,0,the,work from home and then the [[the]] 2nd day i just took the,worked from home and then the 2nd i just took the whole
+day5_consultation10,mixed,1,248.3,248.91,0,day,home and then the the 2nd [[day]] i just took the whole day,from home and then the 2nd i just took the whole day
+day5_consultation10,mixed,1,263.32,265.2,0,problem,i think i only had a [[problem]] with pain when i was younger,i think i only had a a pain when i was younger
+day5_consultation10,mixed,1,263.32,267.81,0,because,when i was younger but no [[because]] was found and i went away,when i was younger but no causes found and that went away
+day5_consultation10,mixed,2,284.42,290.51,0,because this,headaches since you started that no [[because this]] headache is just very recent it,headaches since you started that no these headaches just very recently but
+day5_consultation10,mixed,2,293.12,293.64,0,recent it,because this headache is just very [[recent it]] has been nothing i am 30,that no these headaches just very recently but nothing but nothing really
+day5_consultation10,mixed,5,293.12,295.38,0,i am 30 years ago,very recent it has been nothing [[i am 30 years ago]] but nothing really changed okay and,headaches just very recently but nothing but nothing really changes ok and
+day5_consultation10,mixed,1,332.04,336.39,1,beers,do you think probably like 3 [[beers]] once a week okay and do,do you think probably like 3 once a week ok and do
+day5_consultation10,mixed,1,338.68,342.54,0,upper,at all no apart from the [[upper]] broth and i take sometimes and,at all no apart from the ibuprofen that i take sometimes when
+day5_consultation10,mixed,1,375.56,376.8,0,and,an appointment to get an examination [[and]] obviously if it settles in the,an appointment to get an examination obviously if it settles in the
+day5_consultation10,mixed,1,417.72,419.09,0,me,you mentioned migraine and that reminded [[me]] that my mom suffers from like,you mentioned migraine and that reminded that my mum suffers from like
+day5_consultation10,mixed,1,439.96,445.38,0,and,a e and have an examination [[and]] you can call us for further,and e and have an examination you can call us for further
+day5_consultation10,mixed,1,469.56,470.55,0,my,that pill if you were having [[my]] regular migraines with flashing lights or,that pill if you were having regular migraines with flashing lights or
+day5_consultation11,mixed,1,144.67,146.75,0,it,hurt you know i would say [[it]] probably starts like after maybe 20,hurt you know i would say probably starts off like after maybe
+day5_consultation11,mixed,2,157.83,158.0,0,i am,3 miles 0 you are fast [[i am]] switching my kilometers and miles i,miles ok ooh you are fast switching my kilometers and miles i
+day5_consultation11,mixed,3,448.27,448.61,0,a sit and,will take like ibuprofen or actually [[a sit and]] i will take what am i,will take like ibuprofen or actually i will take what am i
+day5_consultation11,mixed,1,448.27,450.85,0,a,will take what am i taking [[a]] leave whatever i will leave is,will take what am i taking aleve whatever aleve is think that
+day5_consultation11,mixed,2,448.27,451.52,0,i will,am i taking a leave whatever [[i will]] leave is i think that is,what am i taking aleve whatever aleve is think that is maybe
+day5_consultation11,mixed,1,448.27,452.42,0,i,leave whatever i will leave is [[i]] think that is maybe set aminophen,i taking aleve whatever aleve is think that is maybe acetaminophen or
+day5_consultation11,mixed,1,452.53,454.18,0,set,is i think that is maybe [[set]] aminophen or i can not remember,aleve is think that is maybe acetaminophen or i can not remember
+day5_consultation11,mixed,1,561.77,562.69,0,phone,possible to diagnose that over the [[phone]] over the video so we definitely,possible to diagnose that over the over the video so we definitely
+day5_consultation12,mixed,1,14.02,19.25,0,405,28 and i live at apartment [[405]] 9 c clerkenwell road are you,28 and i live at apartment 4059 c clerkenwell road ok that
+day5_consultation12,mixed,1,115.92,117.7,0,okay,that make any difference not really [[okay]] and last night did you manage,that make any difference not really and last night did you manage
+day5_consultation12,mixed,1,137.64,142.26,0,i,the counter medications or allergies no [[i]] need the nurofen i took yesterday,the counter medications or allergies no only the nurofen i took yesterday
+day5_consultation12,mixed,1,190.2,193.9,0,or,think is changed any increased stress [[or]] change in your diet or lifestyle,think is changed any increased stress change in your diet or lifestyle
+day5_consultation12,mixed,1,201.48,208.1,0,it,so similar to ibuprofen but taking [[it]] instead of ibuprofen not at the,so similar to ibuprofen but taking instead of ibuprofen not at the
+day5_consultation12,mixed,1,243.78,245.4,0,pull,well i should think it should [[pull]] down if it is getting worse,well i should think it should down if it is getting worse

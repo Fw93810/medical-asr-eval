@@ -216,7 +216,99 @@ To do. The first to be dropped if time runs out.
 
 ## 5. Results
 
-To be added.
+**Data**: test set, 47 consultations, mixed channel, 68,168 reference words per level. Summary table: `results/stress/test47/asr_summary.csv`; per-level analysis in `results/stress/test47/<level>/`. Intervals are 95% bootstrap intervals over consultations (10,000 resamples). Dev-set (10 consultations) results are in `results/stress/full10/` and were used only to validate the synthesis.
+
+**Achieved SNR on the test set**: within ±0.4 dB of the target for every consultation (six consultations are off by 0.1–0.37 dB, the same offset at every level); 23 consultations use PCAFETER and 24 PRESTO. S3b adds 1,278 alarm events in total.
+
+### 5.1 ASR level
+
+**Corrected WER** (raw WER in `asr_summary.csv`):
+
+| Level | Whisper large-v3 | Qwen3-ASR-1.7B | Qwen3-ASR − Whisper |
+|---|---|---|---|
+| S1 1× | 10.0% [9.3, 10.7] | 8.4% [7.8, 9.0] | −1.65 [−1.96, −1.37] |
+| S1 2× | 11.2% [10.3, 12.0] | 9.3% [8.7, 10.0] | −1.86 [−2.28, −1.47] |
+| S1 3× | 13.3% [12.4, 14.2] | 11.1% [10.4, 11.9] | −2.12 [−2.47, −1.76] |
+| S3 no noise (stage 2) | 10.3% [9.5, 11.1] | 8.6% [8.1, 9.2] | −1.67 [−2.09, −1.27] |
+| S3 20 dB | 12.3% [11.5, 13.1] | 9.9% [9.2, 10.6] | −2.41 [−2.90, −1.94] |
+| S3 10 dB | 15.5% [14.4, 16.5] | 13.3% [12.3, 14.3] | −2.14 [−2.58, −1.69] |
+| S3 5 dB | 20.3% [19.0, 21.6] | 18.8% [17.2, 20.2] | −1.53 [−2.13, −0.94] |
+| S3 0 dB | 31.4% [29.2, 33.6] | 32.8% [30.2, 35.3] | **+1.37 [+0.48, +2.31]** |
+| S3b 10 dB + alarms | 16.0% [14.9, 17.1] | 13.8% [12.7, 14.8] | −2.29 [−2.76, −1.78] |
+
+Figures: `results/stress/test47/fig_s1_overlap.svg`, `fig_s3_noise.svg`, `fig_overlap_came_in.svg`.
+
+**Test-set 1× vs the original mixed channel**: Whisper 10.0% vs 10.3%, Qwen3-ASR 8.4% vs 8.6%. As on the dev set, re-synthesis lowers WER slightly (fewer deletions outside overlap, 3.9% vs 4.1% for Whisper); the deletion rate inside overlap is the same (25.3% vs 25.3%). S1 levels are therefore compared only with S1 1×.
+
+**Error composition** (rate per reference word):
+
+| Level | Model | Substitutions | Deletions | Insertions | Deletions outside overlap | Deletions inside overlap | … speaker who came in | … speaker holding the turn |
+|---|---|---|---|---|---|---|---|---|
+| S1 1× | Whisper | 5.0% | 5.5% | 1.8% | 3.9% | 25.3% | 34.6% | 17.4% |
+| S1 1× | Qwen3-ASR | 5.0% | 4.0% | 1.8% | 2.7% | 20.1% | 29.0% | 12.5% |
+| S1 2× | Whisper | 4.9% | 6.7% | 1.7% | 4.0% | 21.5% | 27.4% | 16.2% |
+| S1 2× | Qwen3-ASR | 5.0% | 4.8% | 1.7% | 2.8% | 16.2% | 21.3% | 11.6% |
+| S1 3× | Whisper | 4.6% | 9.0% | 1.4% | 4.3% | 24.5% | 30.6% | 19.1% |
+| S1 3× | Qwen3-ASR | 4.7% | 7.0% | 1.4% | 3.1% | 19.9% | 23.4% | 16.8% |
+| S3 no noise | Whisper | 5.0% | 5.7% | 1.9% | 4.1% | 25.3% | 34.4% | 17.5% |
+| S3 no noise | Qwen3-ASR | 5.0% | 4.1% | 1.9% | 2.9% | 20.3% | 29.1% | 12.9% |
+| S3 10 dB | Whisper | 5.7% | 9.8% | 1.6% | 8.2% | 30.8% | 37.8% | 24.8% |
+| S3 10 dB | Qwen3-ASR | 6.5% | 7.2% | 1.6% | 5.7% | 25.9% | 32.4% | 20.4% |
+| S3 5 dB | Whisper | 7.0% | 12.7% | 2.0% | 10.9% | 34.3% | 41.0% | 28.6% |
+| S3 5 dB | Qwen3-ASR | 7.9% | 11.0% | 1.5% | 9.5% | 30.4% | 36.0% | 25.7% |
+| S3 0 dB | Whisper | 11.4% | 18.6% | 2.3% | 16.9% | 39.6% | 45.4% | 34.6% |
+| S3 0 dB | Qwen3-ASR | 10.9% | 21.8% | 1.2% | 20.0% | 44.5% | 49.6% | 40.2% |
+
+**Medical terms and clinical negations** (500 clinical negations in the reference; "lost" = deleted or replaced by a non-negation):
+
+| Level | Medical-term error rate, Whisper | Qwen3-ASR | Clinical negations lost, Whisper | Qwen3-ASR |
+|---|---|---|---|---|
+| S1 1× | 6.5% | 5.4% | 5.2% [3.6, 6.9] | 2.4% [1.3, 3.6] |
+| S1 3× | 10.0% | 8.1% | 8.2% [5.6, 10.9] | 5.4% [3.6, 7.3] |
+| S3 no noise | 6.8% | 5.6% | 5.0% [2.9, 7.1] | 2.2% [1.1, 3.4] |
+| S3 10 dB | 11.2% | 10.5% | 9.8% [7.4, 12.3] | 6.6% [4.4, 9.1] |
+| S3 5 dB | 16.4% | 16.3% | 16.6% [13.2, 20.2] | 11.0% [8.7, 13.4] |
+| S3 0 dB | 28.7% | 32.7% | 26.0% [21.3, 30.8] | 25.0% [21.1, 29.1] |
+| S3b 10 dB + alarms | 12.0% | 11.0% | 11.2% [8.1, 14.3] | 7.0% [5.0, 9.1] |
+
+**Long repetitions**: rare at every level — at most 3 phrase loops and 2 same-word loops per model and level (Whisper at 0 dB and 5 dB); none for Qwen3-ASR.
+
+### 5.2 Predictions checked
+
+1. **S1 — partly holds.**
+   - Total deletions rise with overlap (Whisper 5.5% → 6.7% → 9.0%), but the deletion rate *per word inside overlap* does not rise (Whisper 25.3% → 21.5% → 24.5%). The growth comes from more words falling inside overlap, not from each overlapped word being harder.
+   - The speaker who came in is deleted about twice as often as the one holding the turn at every level, but the growth is **not** concentrated on them: their deletion rate is flat or lower at 2× and 3× (Whisper 34.6% → 27.4% → 30.6%). On the dev set the rise was in the holding role; on the test set neither role rises clearly. Not as predicted.
+   - WER rises faster than linearly: +1.2 points from 1× to 2×, +2.1 from 2× to 3× (Whisper).
+   - The Qwen3-ASR advantage stays about the same, widening slightly (−1.65 → −2.12 points, overlapping intervals). Holds.
+   - Overall, tripling overlap raises corrected WER by only 3 points (Whisper 10.0% → 13.3%); overlap is a mild stressor compared with noise.
+2. **S2 — not run.**
+3. **S3 — partly holds, and one part is reversed.**
+   - WER rises sharply at 0–5 dB: holds (Whisper 10.3% → 20.3% at 5 dB → 31.4% at 0 dB).
+   - Whisper's long repetitions increase clearly: **does not hold** — at most 3 loops at any level. With VAD and no conditioning on previous text, the stage-2 Whisper setting is robust to this failure even in noise.
+   - Qwen3-ASR's advantage widens at low SNR: **reversed**. The advantage is largest at 20 dB (−2.4 points), shrinks at 5 dB (−1.5), and at 0 dB Qwen3-ASR is worse than Whisper (+1.4 [+0.5, +2.3]). Qwen3-ASR fails by dropping speech: at 0 dB its deletion rate is 21.8% vs Whisper's 18.6%, with fewer insertions (1.2% vs 2.3%). On medical terms the advantage is already gone at 5 dB (16.3% vs 16.4%).
+   - Clinical negations: Qwen3-ASR loses fewer than Whisper down to 5 dB (11.0% vs 16.6%); at 0 dB both lose about a quarter.
+   - **S3b alarms** add little on top of the 10 dB background: +0.6 points for Whisper, +0.4 for Qwen3-ASR (no interval computed for this difference). At 0 dB relative to speech and 2–4 alarms per minute, the alarms are a much weaker stressor than lowering the babble SNR by 5 dB.
+4. **S4 — not run.**
+5. **Note level — not yet run** (section 5.4).
+
+### 5.3 Key cases
+
+Times are the start of the utterance in the original PriMock57 timing. Each case is a clinical negation that the model kept at the baseline level and lost at the stressed level.
+
+| # | Consultation · time | Level | Original (human transcript) | ASR output at the stressed level |
+|---|---|---|---|---|
+| S1-a | day2_consultation08 · 482.8 s, patient | S1 3× | "Mmm, moderate alcohol intake. Yeah, I **don't** drink too much." | Both models drop the negation with its clause; at 1× both keep "I do not drink too much". The alcohol history answer disappears. |
+| S1-b | day1_consultation14 · 593.8 s, patient | S1 3× | "OK. But otherwise, I **don't** need to worry." | Both models drop it at 3×; both keep it at 1×. |
+| S3-a | day1_consultation15 · 112.7 s, patient | S3 5 dB | "…yes it has bled sometimes but, yeah. Otherwise, it **hasn't bled** on its own." | Qwen3-ASR: "otherwise it has **blood** okay okay" — the negation becomes a positive. Correct with no noise. |
+| S3-b | day1_consultation12 · 436.7 s, doctor | S3 5 dB | "And if you're still **not** better next week, I want you to come back" | Qwen3-ASR: "if you feel a **lot** better next week" — the safety-net advice is inverted. |
+| S3-c | day1_consultation13 · 186.5 s and 193.2 s | S3 5 dB | Patient: "But I, **no vomiting**." Doctor restates: "Yeah, **no vomiting**, OK." | Whisper drops "no" both times. In the clean audio the doctor's restatement protects such answers (stage-3 case A2); in noise both copies are lost together. |
+| S3b-a | day2_consultation04 · 542.5 s, doctor | S3b | "…a follow-up chest X-ray, if things **don't** settle down." | Qwen3-ASR: "x ray things going **from** session down". Correct at 10 dB without alarms. |
+
+Counts of clinical negations kept at the baseline level and lost at the stressed level (same model, same context): S1 3× Whisper 16, Qwen3-ASR 12; S3 5 dB Whisper 55, Qwen3-ASR 39; S3b (vs S3 10 dB) Whisper 14, Qwen3-ASR 5.
+
+### 5.4 Note level
+
+Not yet run. The plan's conditions are S1 3× and the S3 SNR at which WER is about twice the baseline. On the test set that is **5 dB** for both models (Whisper 20.3% vs 2 × 10.3%; Qwen3-ASR 18.8% vs 2 × 8.6%). Note that S1 3× raises WER only by a factor of about 1.3. The choice of conditions, and the rental estimate, go to the project lead for approval before anything is run.
 
 ## 6. Limitations
 

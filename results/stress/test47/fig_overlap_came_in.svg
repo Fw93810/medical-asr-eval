@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="640" height="392" fill="#fcfcfb"/>
+<text x="16" y="26" font-size="15" font-weight="600" fill="#0b0b0b">S1: deletions of the speaker who came in</text>
+<text x="16" y="44" font-size="12" fill="#52514e">Overlap ratio (overlap s / speech s) vs deletion rate inside overlap, came_in role, test47</text>
+<line x1="64" x2="470" y1="336.0" y2="336.0" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="340.0" font-size="11" text-anchor="end" fill="#52514e">0%</text>
+<line x1="64" x2="470" y1="302.3397059983696" y2="302.3397059983696" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="306.3397059983696" font-size="11" text-anchor="end" fill="#52514e">5%</text>
+<line x1="64" x2="470" y1="268.6794119967392" y2="268.6794119967392" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="272.6794119967392" font-size="11" text-anchor="end" fill="#52514e">10%</text>
+<line x1="64" x2="470" y1="235.01911799510873" y2="235.01911799510873" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="239.01911799510873" font-size="11" text-anchor="end" fill="#52514e">15%</text>
+<line x1="64" x2="470" y1="201.35882399347832" y2="201.35882399347832" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="205.35882399347832" font-size="11" text-anchor="end" fill="#52514e">20%</text>
+<line x1="64" x2="470" y1="167.6985299918479" y2="167.6985299918479" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="171.6985299918479" font-size="11" text-anchor="end" fill="#52514e">25%</text>
+<line x1="64" x2="470" y1="134.0382359902175" y2="134.0382359902175" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="138.0382359902175" font-size="11" text-anchor="end" fill="#52514e">30%</text>
+<line x1="64" x2="470" y1="100.37794198858705" y2="100.37794198858705" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="104.37794198858705" font-size="11" text-anchor="end" fill="#52514e">35%</text>
+<text x="64.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">4.8%</text>
+<text x="266.99999999999994" y="356" font-size="11" text-anchor="middle" fill="#52514e">9.6%</text>
+<text x="470.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">14.4%</text>
+<text x="16" y="70" font-size="11" fill="#52514e">deletion rate</text>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2" points="63.57708333333334,103.27272727272728 267.42291666666665,151.74355063507508 470.8458333333333,130.33560365003814"/>
+<circle cx="63.57708333333334" cy="103.27272727272728" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 34.6%</title></circle>
+<circle cx="267.42291666666665" cy="151.74355063507508" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 27.4%</title></circle>
+<circle cx="470.8458333333333" cy="130.33560365003814" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 30.6%</title></circle>
+<text x="480.8458333333333" y="134.33560365003814" font-size="12" fill="#0b0b0b">Whisper large-v3 30.6%</text>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="63.57708333333334,140.83761537854684 267.42291666666665,192.74178872906094 470.8458333333333,178.5371446603729"/>
+<circle cx="63.57708333333334" cy="140.83761537854684" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 29.0%</title></circle>
+<circle cx="267.42291666666665" cy="192.74178872906094" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 21.3%</title></circle>
+<circle cx="470.8458333333333" cy="178.5371446603729" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 23.4%</title></circle>
+<text x="480.8458333333333" y="182.5371446603729" font-size="12" fill="#0b0b0b">Qwen3-ASR-1.7B 23.4%</text>
+</svg>

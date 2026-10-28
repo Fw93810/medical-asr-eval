@@ -14,10 +14,10 @@ import csv
 import json
 import os
 
-FACTORS = {  # factor -> [(level, x value, x label)]
-    "s1_overlap": [("s1_1x", 1, "1x"), ("s1_2x", 2, "2x"), ("s1_3x", 3, "3x")],
-    "s3_noise": [("clean", 0, "clean"), ("s3_snr20", 1, "20 dB"), ("s3_snr10", 2, "10 dB"),
-                 ("s3_snr5", 3, "5 dB"), ("s3_snr0", 4, "0 dB"), ("s3b_snr10_alarms", 5, "10 dB + alarms")],
+FACTORS = {  # factor -> [(level, x value, x label, line group)]; points in different groups are not joined
+    "s1_overlap": [("s1_1x", 1, "1x", 0), ("s1_2x", 2, "2x", 0), ("s1_3x", 3, "3x", 0)],
+    "s3_noise": [("clean", 0, "clean", 0), ("s3_snr20", 1, "20 dB", 0), ("s3_snr10", 2, "10 dB", 0),
+                 ("s3_snr5", 3, "5 dB", 0), ("s3_snr0", 4, "0 dB", 0), ("s3b_snr10_alarms", 5.4, "10 dB + alarms", 1)],
 }
 MODELS = [("whisper", "Whisper large-v3", "#2a78d6"), ("qwen3asr", "Qwen3-ASR-1.7B", "#eb6834")]  # palette slots 1, 2
 SURFACE, INK, INK2, GRID = "#fcfcfb", "#0b0b0b", "#52514e", "#d6d5d0"
@@ -64,8 +64,8 @@ def collect(root, level, model):
 
 
 def line_chart(path, title, subtitle, xs, series, ylabel):
-    """series: [(name, colour, [(x, y, lo, hi)])]; y in percent."""
-    w, h, left, right, top, bottom = 640, 380, 64, 170, 64, 56
+    """series: [(name, colour, [(x, y, lo, hi[, group])])]; y in percent; a line joins points of one group."""
+    w, h, left, right, top, bottom = 640, 392, 64, 170, 80, 56
     ys = [v for _, _, pts in series for p in pts for v in p[1:] if v is not None]
     ymax = max(ys) * 1.1 if ys else 1
     xmin, xmax = min(x for x, _ in xs), max(x for x, _ in xs)
@@ -89,16 +89,20 @@ def line_chart(path, title, subtitle, xs, series, ylabel):
         pts = [p for p in pts if p[1] is not None]
         if not pts:
             continue
-        for x, y, lo, hi in pts:
+        pts = [p if len(p) == 5 else (*p, 0) for p in pts]
+        for x, y, lo, hi, _ in pts:
             if lo is not None:
                 out.append(f'<line x1="{sx(x)}" x2="{sx(x)}" y1="{sy(lo)}" y2="{sy(hi)}" stroke="{colour}" '
                            f'stroke-width="2" stroke-opacity="0.45"/>')
-        out.append(f'<polyline fill="none" stroke="{colour}" stroke-width="2" points="'
-                   + " ".join(f"{sx(x)},{sy(y)}" for x, y, _, _ in pts) + '"/>')
-        for x, y, _, _ in pts:
+        for g in dict.fromkeys(p[4] for p in pts):
+            seg = [p for p in pts if p[4] == g]
+            if len(seg) > 1:
+                out.append(f'<polyline fill="none" stroke="{colour}" stroke-width="2" points="'
+                           + " ".join(f"{sx(x)},{sy(y)}" for x, y, *_ in seg) + '"/>')
+        for x, y, *_ in pts:
             out.append(f'<circle cx="{sx(x)}" cy="{sy(y)}" r="4" fill="{colour}" stroke="{SURFACE}" stroke-width="2">'
                        f'<title>{name}: {y:.1f}%</title></circle>')
-        x, y, _, _ = pts[-1]
+        x, y, *_ = pts[-1]
         out.append(f'<text x="{sx(x) + 10}" y="{sy(y) + 4}" font-size="12" fill="{INK}">{name} {y:.1f}%</text>')
     out.append("</svg>")
     with open(path, "w", encoding="utf-8") as f:
@@ -113,7 +117,7 @@ def main():
 
     rows = []
     for factor, levels in FACTORS.items():
-        for level, _, _ in levels:
+        for level, *_ in levels:
             for model, _, _ in MODELS:
                 r = collect(root, level, model)
                 if r:
@@ -135,16 +139,16 @@ def main():
         series = []
         for model, name, colour in MODELS:
             pts = []
-            for level, x, _ in levels:
+            for level, x, _, group in levels:
                 r = by.get((level, model))
                 if r:
                     lo, hi = ci(r, "wer_corrected")
-                    pts.append((x, 100 * r["wer_corrected"], lo, hi))
+                    pts.append((x, 100 * r["wer_corrected"], lo, hi, group))
             series.append((name, colour, pts))
         if any(pts for _, _, pts in series):
             line_chart(f"{root}/fig_{factor}.svg", titles[factor],
                        f"Mixed channel, corrected WER, {args.set}; bars = 95% bootstrap interval over consultations",
-                       [(x, lab) for _, x, lab in levels], series, "corrected WER")
+                       [(x, lab) for _, x, lab, _ in levels], series, "corrected WER")
 
     # overlap ratio vs deletion rate of the speaker who came in
     levels_file = f"data/stress/{args.set}/s1_levels.json"
@@ -153,9 +157,9 @@ def main():
         series = []
         for model, name, colour in MODELS:
             pts = [(100 * ratio[lv], 100 * by[(lv, model)]["del_rate_came_in"], None, None)
-                   for lv, _, _ in FACTORS["s1_overlap"] if (lv, model) in by and by[(lv, model)]["del_rate_came_in"] != ""]
+                   for lv, *_ in FACTORS["s1_overlap"] if (lv, model) in by and by[(lv, model)]["del_rate_came_in"] != ""]
             series.append((name, colour, pts))
-        xs = [(round(100 * ratio[lv], 1), f"{100 * ratio[lv]:.1f}%") for lv, _, _ in FACTORS["s1_overlap"] if lv in ratio]
+        xs = [(round(100 * ratio[lv], 1), f"{100 * ratio[lv]:.1f}%") for lv, *_ in FACTORS["s1_overlap"] if lv in ratio]
         line_chart(f"{root}/fig_overlap_came_in.svg", "S1: deletions of the speaker who came in",
                    f"Overlap ratio (overlap s / speech s) vs deletion rate inside overlap, came_in role, {args.set}",
                    xs, series, "deletion rate")

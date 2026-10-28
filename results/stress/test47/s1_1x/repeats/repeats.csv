@@ -1,0 +1,2 @@
+run,id,condition,kind,unit,repeats,words,t_start,t_end,segments,text
+s1_1x-whisper,day4_consultation09,mixed,phrase,thank you,9,18,21.0,30.0,9,i would like to say [thank you thank you thank you ...]

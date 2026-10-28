@@ -1,0 +1,4 @@
+run,id,condition,kind,unit,repeats,words,t_start,t_end,segments,text
+s3_snr0-whisper,day3_consultation04,mixed,phrase,thank you,13,26,16.1,29.1,13,confidential conversation thank you okay [thank you thank you thank you ...]
+s3_snr0-whisper,day3_consultation05,mixed,phrase,zeta burn,10,20,17.14,27.14,10,am mary jane gray and [zeta burn zeta burn zeta burn ...]
+s3_snr0-whisper,day3_consultation08,mixed,phrase,it has been,9,27,53.9,59.9,1,on for a while now [it has been it has been it has been ...]

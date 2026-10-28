@@ -1,0 +1,4 @@
+metric,condition,run_a,run_b,a,b,diff_a_minus_b,ci95_low,ci95_high,excludes_zero,share_boot_a_better
+wer_corrected,mixed,s3_snr0-whisper,s3_snr0-qwen3asr,0.314,0.3277,-0.0137,-0.0231,-0.0048,True,0.9985
+medical_term_error_rate,mixed,s3_snr0-whisper,s3_snr0-qwen3asr,0.2874,0.3266,-0.0392,-0.0509,-0.027,True,1.0
+clinical_negation_lost,mixed,s3_snr0-whisper,s3_snr0-qwen3asr,0.26,0.25,0.01,-0.0258,0.0455,False,0.272

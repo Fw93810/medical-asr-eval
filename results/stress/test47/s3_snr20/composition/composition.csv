@@ -1,0 +1,17 @@
+run,condition,word_class,ref_words,ref_share,sub,del,ins,share_of_sub,share_of_del,share_of_ins,share_of_errors,error_rate,wer_points
+s3_snr20-qwen3asr,mixed,negation_clinical,500,0.0073,13,10,6,0.0035,0.003,0.0048,0.0035,0.058,0.04
+s3_snr20-qwen3asr,mixed,negation_discourse,1326,0.0195,75,92,32,0.0202,0.0278,0.0258,0.0241,0.1501,0.29
+s3_snr20-qwen3asr,mixed,number_duration,1104,0.0162,63,26,32,0.0169,0.0079,0.0258,0.0146,0.1096,0.18
+s3_snr20-qwen3asr,mixed,proper_or_drug,527,0.0077,88,19,17,0.0237,0.0057,0.0137,0.015,0.2353,0.18
+s3_snr20-qwen3asr,mixed,medical_term,9837,0.1443,461,205,151,0.124,0.0619,0.122,0.0988,0.0831,1.2
+s3_snr20-qwen3asr,mixed,backchannel,4587,0.0673,1535,718,214,0.4129,0.2169,0.1729,0.2985,0.5378,3.62
+s3_snr20-qwen3asr,mixed,function,40864,0.5995,1178,2019,691,0.3168,0.61,0.5582,0.4704,0.0951,5.7
+s3_snr20-qwen3asr,mixed,content,9423,0.1382,305,221,95,0.082,0.0668,0.0767,0.0751,0.0659,0.91
+s3_snr20-whisper,mixed,negation_clinical,500,0.0073,10,26,7,0.0029,0.005,0.0062,0.0044,0.086,0.06
+s3_snr20-whisper,mixed,negation_discourse,1326,0.0195,70,160,24,0.0204,0.031,0.0214,0.0262,0.1916,0.37
+s3_snr20-whisper,mixed,number_duration,1104,0.0162,71,56,37,0.0207,0.0109,0.033,0.0169,0.1486,0.24
+s3_snr20-whisper,mixed,proper_or_drug,527,0.0077,85,20,11,0.0248,0.0039,0.0098,0.012,0.2201,0.17
+s3_snr20-whisper,mixed,medical_term,9837,0.1443,459,368,108,0.1338,0.0714,0.0963,0.0963,0.095,1.37
+s3_snr20-whisper,mixed,backchannel,4587,0.0673,1300,1122,140,0.3789,0.2177,0.1249,0.264,0.5585,3.76
+s3_snr20-whisper,mixed,function,40864,0.5995,1134,3059,697,0.3305,0.5935,0.6218,0.5038,0.1197,7.17
+s3_snr20-whisper,mixed,content,9423,0.1382,302,343,97,0.088,0.0666,0.0865,0.0764,0.0787,1.09
