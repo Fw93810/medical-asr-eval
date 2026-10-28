@@ -135,7 +135,7 @@ The larger d is, the more turn changes the two limits stop from starting early, 
 
 ### S2 a third speaker
 
-To do.
+Not run (dropped for time; see section 6).
 
 ### S3 background noise (`scripts/stress_noise.py`, `configs/stress/s3_noise.yaml`)
 
@@ -212,7 +212,7 @@ Two other CC0 candidates were not used:
 
 ### S4 reverberation / far field
 
-To do. The first to be dropped if time runs out.
+Not run (dropped for time; see section 6).
 
 ## 5. Results
 
@@ -281,14 +281,14 @@ Figures: `results/stress/test47/fig_s1_overlap.svg`, `fig_s3_noise.svg`, `fig_ov
    - WER rises faster than linearly: +1.2 points from 1× to 2×, +2.1 from 2× to 3× (Whisper).
    - The Qwen3-ASR advantage stays about the same, widening slightly (−1.65 → −2.12 points, overlapping intervals). Holds.
    - Overall, tripling overlap raises corrected WER by only 3 points (Whisper 10.0% → 13.3%); overlap is a mild stressor compared with noise.
-2. **S2 — not run.**
+2. **S2 — not run** (dropped for time; see section 6).
 3. **S3 — partly holds, and one part is reversed.**
    - WER rises sharply at 0–5 dB: holds (Whisper 10.3% → 20.3% at 5 dB → 31.4% at 0 dB).
    - Whisper's long repetitions increase clearly: **does not hold** — at most 3 loops at any level. With VAD and no conditioning on previous text, the stage-2 Whisper setting is robust to this failure even in noise.
    - Qwen3-ASR's advantage widens at low SNR: **reversed**. The advantage is largest at 20 dB (−2.4 points), shrinks at 5 dB (−1.5), and at 0 dB Qwen3-ASR is worse than Whisper (+1.4 [+0.5, +2.3]). Qwen3-ASR fails by dropping speech: at 0 dB its deletion rate is 21.8% vs Whisper's 18.6%, with fewer insertions (1.2% vs 2.3%). On medical terms the advantage is already gone at 5 dB (16.3% vs 16.4%).
    - Clinical negations: Qwen3-ASR loses fewer than Whisper down to 5 dB (11.0% vs 16.6%); at 0 dB both lose about a quarter.
    - **S3b alarms** add little on top of the 10 dB background: +0.6 points for Whisper, +0.4 for Qwen3-ASR (no interval computed for this difference). At 0 dB relative to speech and 2–4 alarms per minute, the alarms are a much weaker stressor than lowering the babble SNR by 5 dB.
-4. **S4 — not run.**
+4. **S4 — not run** (dropped for time; see section 6).
 5. **Note level — not yet run** (section 5.4).
 
 ### 5.3 Key cases
@@ -308,10 +308,26 @@ Counts of clinical negations kept at the baseline level and lost at the stressed
 
 ### 5.4 Note level
 
-Not yet run. The plan's conditions are S1 3× and the S3 SNR at which WER is about twice the baseline. On the test set that is **5 dB** for both models (Whisper 20.3% vs 2 × 10.3%; Qwen3-ASR 18.8% vs 2 × 8.6%). Note that S1 3× raises WER only by a factor of about 1.3. The choice of conditions, and the rental estimate, go to the project lead for approval before anything is run.
+**Conditions: S3 5 dB and S3 0 dB** (decided 2026-10-28 after the ASR results; the plan named S1 3× and one S3 level).
+
+- **Why S1 3× is not run**: it raises corrected WER by only about 3 points (Whisper 10.0% → 13.3%, Qwen3-ASR 8.4% → 11.1%), a factor of about 1.3. In stage 3 a 1.7-point WER gap between the two ASR systems already gave note-level differences within the ±2-point regeneration noise. An increment of this size is not expected to produce a measurable note-level effect, so renting a GPU for it is not worth it.
+- **Why 5 dB and 0 dB**:
+  - Same factor at two strengths, about 2× and 3× baseline WER, gives a dose-response curve: the level at which the bottleneck moves from writing to listening, if it does, is visible.
+  - 0 dB is where Qwen3-ASR falls behind Whisper, and the two fail differently: Qwen3-ASR drops whole stretches (deletions 21.8% vs 18.6%), Whisper mishears more (more substitutions and insertions). Deletions should show up as missing facts and substitutions as contradicted facts; the note level can test this correspondence directly.
+  - About a quarter of clinical negations are lost at 0 dB, so negation flips reaching the notes are likely.
+
+**Setup**: Qwen3.8-27B (`qwen3.8:27b-q4_K_M`) on one rented RunPod A100 80GB, Ollama 0.40.11, `generate_notes.py` with the stage-3 settings (prompt v3, greedy, thinking off), on the 25 grid consultations. In the same rental session, the human-transcript column is regenerated first, then four stress columns: {5 dB, 0 dB} × {Whisper, Qwen3-ASR}, mixed channel. 125 notes and 125 judge calls (judge protocol v1).
+
+**Analysis, beyond stated-fact recall and the contradiction rate**: attribute note errors to ASR error types — of the facts missing from a note, how many fall in stretches the ASR deleted; of the contradicted facts, how many match a substitution — comparing Qwen3-ASR (more deletions) and Whisper (more substitutions) at 0 dB. Key cases focus on negation flips that reach the note.
+
+Results: to be added.
 
 ## 6. Limitations
 
 - **Synthetic overlap is not real interruption**: real interruptions change how people speak (louder, breaking off mid-sentence); here two recordings are only overlapped in time. Also, p = 1.0 makes every change of speaker an interruption, more extreme than reality.
 - **The stressed levels do not represent a real setting**: S1's 2× and 3× and S3's low SNRs are artificial stress, not a particular trauma bay. Only each factor's 1× or no-noise level is the real level.
 - **A noise library is not a real trauma bay**: the main condition has only two speech-babble backgrounds (cafeteria and restaurant) and no medical equipment sounds; S3b's alarm material is limited.
+- **Not covered: more speakers and the far field.** S2 (a third speaker) and S4 (reverberation / far-field microphones) were dropped for time. A trauma bay has both, so these are the first next steps:
+  - S2: insertions of the third speaker's words, and whether Whisper writes in background speech more readily than Qwen3-ASR (prediction 2);
+  - S4: room impulse responses with a per-speaker distance, to test whether the speaker farther from the microphone is hit harder (prediction 4).
+- **One stressor at a time**: each factor was swept alone. Real settings combine overlap, noise and distance, and their effects may compound.
