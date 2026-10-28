@@ -4,7 +4,7 @@
 # Level "clean" is the original mixed channel with the stage-2 runs (copied to clean-<model>, so every
 # condition has the same run names). Results go to results/stress/<set>/.
 #
-# Usage (from D:\medical-asr-eval):
+# Usage (from the repository root):
 #   powershell -File scripts/run_stress_analysis.ps1 -Set test47 -Levels clean,s1_1x,s1_2x,s1_3x
 param(
     [Parameter(Mandatory = $true)][string]$Set,

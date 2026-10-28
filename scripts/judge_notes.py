@@ -140,7 +140,7 @@ def main():
     ap.add_argument("--gold", default="data/primock57/notes")
     ap.add_argument("--out", required=True)
     ap.add_argument("--model", default="opus", help="Claude model for both steps (recorded per call)")
-    ap.add_argument("--claude", default=r"D:\Tools\ClaudeCode\claude.exe")
+    ap.add_argument("--claude", default=os.environ.get("CLAUDE_BIN", "claude"), help="Claude Code CLI (default: $CLAUDE_BIN or claude on PATH)")
     ap.add_argument("--seed", type=int, default=0)
     ap.add_argument("--limit", type=int, help="judge at most this many notes this run (resumable)")
     ap.add_argument("--spotcheck", type=int, default=20)

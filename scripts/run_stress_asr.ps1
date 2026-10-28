@@ -3,15 +3,16 @@
 #   Qwen3-ASR-1.7B: shared chunk plan from plan_chunks.py, re-planned on each condition's own audio
 # One GPU job at a time. Finished files are skipped, so the script can be re-run after an interruption.
 #
-# Usage (from D:\medical-asr-eval):
-#   powershell -File scripts/run_stress_asr.ps1 -Root data/stress/full10 -Set full10 -Levels s1_1x,s1_2x,s1_3x
+# Usage (from the repository root; -HfHome sets the Hugging Face model cache, default $env:HF_HOME):
+#   powershell -File scripts/run_stress_asr.ps1 -Root data/stress/full10 -Set full10 -Levels s1_1x,s1_2x,s1_3x -HfHome D:\cache\huggingface
 param(
     [Parameter(Mandatory = $true)][string]$Root,
     [Parameter(Mandatory = $true)][string]$Set,
-    [Parameter(Mandatory = $true)][string[]]$Levels
+    [Parameter(Mandatory = $true)][string[]]$Levels,
+    [string]$HfHome = $env:HF_HOME
 )
 $Levels = $Levels -split ','  # "powershell -File" passes a comma list as one string
-$env:HF_HOME = 'D:\cache\huggingface'
+if ($HfHome) { $env:HF_HOME = $HfHome }
 $env:HF_HUB_DISABLE_SYMLINKS_WARNING = '1'
 $env:PYTHONUNBUFFERED = '1'
 
