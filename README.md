@@ -103,6 +103,7 @@ Whisper large-v3 on 10 development consultations:
 | + VAD, no conditioning on previous text | **14.6%** | **0 / 0** |
 
 - Most "hallucination" in the default setting is the decoder feeding its own output back as context and looping. With conditioning off, long insertion runs disappear. Reports of Whisper hallucination should state the decoding settings.
+- Once decoding is fixed, the architectures are close: apart from Qwen3-ASR (best) and Granite (worst), the mixed-channel corrected WERs of the other systems lie within about 2 points (9.7–11.5%), and many pairwise intervals include 0, so they are not ranked (`results/test47/asr_selection.md`).
 - On the test set (mixed channel, 12.5% raw WER for Whisper), **2.2 points** are normaliser artefacts ("okay" vs "ok", "O.K." becoming "0 k"; removed by a fixed equivalence table, giving corrected WER) and **up to 3.5 points** fall on reference words the transcribers themselves marked as uncertain. Together, up to about 45% of the raw WER is not a recognition error.
 - **Limitations**: the decoding comparison is on 10 consultations without intervals; the uncertain-reference share is an upper bound and is not subtracted from any reported WER.
 
@@ -153,7 +154,9 @@ Whisper large-v3 on 10 development consultations:
 - **Real multi-speaker data**: recordings with several clinicians, alarms and distance.
 - **Who said what**: target-speaker ASR (e.g. DiCoW) or speech separation before recognition, aimed at the incoming speaker in overlaps.
 - **Medical-domain fine-tuning** of the ASR, judged by its effect on notes rather than WER alone.
-- **Semantic metrics** that weight negations, drugs and allergies rather than counting all words equally.
+- **The remaining stress factors**: a third speaker and far-field reverberation (planned as S2 and S4, not run).
+- **Audio-visual speaker diarisation** where a camera is available, to know who is speaking in overlaps.
+- **Semantic metrics** (e.g. tcpSemER) that weight negations, drugs and allergies rather than counting all words equally.
 - **Flag high-risk content for review**: negations and allergies recognised with low confidence, or answers produced under noise, highlighted for a human.
 - **Not "denoise first"**: denoising before medical ASR made results worse in all 40 configurations tested by Chondhekar et al. (arXiv 2512.17562), so stress conditions go straight into the ASR.
 
