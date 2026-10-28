@@ -1,10 +1,10 @@
 # medical-asr-eval experiment plan (2026-10-27 – 11-06)
 
-> The original plan, written on 2026-10-27 and translated from Chinese. It is kept as written; later decisions are recorded where they were made: `docs/stage3-llm-plan.md` (generation models, GPU rental), `docs/stage3-grid-results.md` (note grid) and `docs/stress-test.md` (stress test, added after this plan).
+> The original plan, written on 2026-10-27 and translated from Chinese. It is kept as written, apart from two personal details removed from sections 0 and 1; later decisions are recorded where they were made: `docs/stage3-llm-plan.md` (generation models, GPU rental), `docs/stage3-grid-results.md` (note grid) and `docs/stress-test.md` (stress test, added after this plan).
 
 ## 0. Goal and research question
 
-**Goal**: by Friday 6 November, produce a public repository to support an application for an RA position in a collaboration between the CCB and Penn Medicine trauma surgery.
+**Goal**: by Friday 6 November, produce a public repository.
 
 **Core question**: from a multi-speaker, single-microphone recording to a clinical note, is the quality bottleneck in "listening" (ASR) or in "writing" (the LLM that generates the note)? As both ends get stronger, how does the bottleneck shift?
 
@@ -23,7 +23,7 @@ Every configuration gets an error-composition analysis at the ASR level and at t
 - **Frozen judging**: after stage 1, the judge prompts and each consultation's fact list do not change, and the version number is recorded. Any change means re-judging everything.
 - **Fixed note-generation settings**: temperature 0, fixed seed, thinking mode off (the same for every LLM; where a model does not support this, say so).
 - **Every LLM has its own noise floor**: for the same LLM, the difference between "human transcript" and "human transcript with only the surface form changed", used to judge whether the ASR's effect exceeds noise.
-- **Own resources only**: no Haz Lab servers or Claude Team account. Judging uses the user's personal subscription (first confirm with /status that the personal account is logged in).
+- **Own resources only**: judging uses the user's personal Claude subscription (first confirm with /status that the personal account is logged in).
 - **Commit after each stage**; raw audio, virtual environments and model files are not committed.
 - **Anything that needs the user's decision** (spending money, quotas, choices between approaches): stop and ask; do not decide alone.
 
