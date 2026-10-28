@@ -127,3 +127,10 @@ Fill in after running the commands above (small model, small subset, so don't re
 - Parakeet / NeMo backend (not installed; the model is also on Hugging Face).
 - The scispaCy path. Here, scispaCy failed to build on Python 3.13, and the `en_core_sci_sm` S3 URL is blocked.
   On Colab the optional cell may work. If it doesn't, the lexicon fallback is used automatically.
+
+## License
+- Code and documentation: MIT (`LICENSE`).
+- Data: PriMock57 is CC BY 4.0 (see "Data: PriMock57" above); result files that quote its transcripts and
+  clinician notes are derived from it and keep that attribution. Stress-test noise (DEMAND) and alarm sounds
+  (Freesound, CC0) are not redistributed; sources and licences are in `docs/stress-test.md`.
+- Note judging calls the Claude Code CLI (`claude -p`); reproducing it needs a Claude Code installation.
