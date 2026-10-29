@@ -1,231 +1,247 @@
-# 本地冒烟测试：环境与配置说明
+# Local smoke test: environment and configuration
 
-记录时间：2026-10-26。这份文件说明这台电脑上冒烟测试的环境怎么搭、每一轮怎么跑、有哪些已知问题，方便以后复现或换机器。
+Recorded 2026-10-26. How the environment on this machine was set up, how each round was run, and the known issues, so the work can be reproduced or moved to another machine.
 
-## 1. 硬件与系统
+## 1. Hardware and system
 
-| 项目 | 配置 |
+| Item | Configuration |
 |---|---|
-| 显卡 | NVIDIA GeForce RTX 5080 Laptop，16 GB 显存，Blackwell 架构（sm_120） |
-| 驱动 | 610.62（支持 CUDA 13.3） |
-| 系统 | Windows 11 家庭中文版 |
-| 系统级 CUDA Toolkit | 没有安装。CUDA 运行库都用 pip 装在各个虚拟环境里 |
-| ffmpeg | 没有安装，也不需要（音频是 wav，PyAV 自带解码） |
+| GPU | NVIDIA GeForce RTX 5080 Laptop, 16 GB VRAM, Blackwell (sm_120) |
+| Driver | 610.62 (CUDA 13.3) |
+| OS | Windows 11 Home (Chinese edition) |
+| System-wide CUDA Toolkit | Not installed. CUDA runtime libraries are pip-installed inside each virtual environment |
+| ffmpeg | Not installed and not needed (audio is wav; PyAV has its own decoder) |
 
-## 2. 文件位置（全部在 D 盘）
+## 2. File locations (all on drive D)
 
-| 路径 | 内容 |
+| Path | Contents |
 |---|---|
-| `D:\medical-asr-eval` | 仓库 |
-| `D:\Python311` | Python 3.11.9（通过 winget 安装，没有加进系统 PATH，不影响原来的 Python 3.13） |
-| `D:\cache\huggingface` | 模型缓存（`HF_HOME`） |
-| `D:\cache\pip` | pip 缓存 |
-| `data\primock57` | PriMock57 原始数据（57 段问诊全部下载） |
-| `data\prepared_3min` | 前 3 段问诊，每段裁剪到前约 3 分钟 |
-| `data\prepared_full10` | 前 10 段问诊，完整长度：**开发集**，用来选解码设置和定分析方法 |
-| `data\prepared_test47` | 其余 47 段问诊，完整长度：**测试集**，最终数字只报这一组 |
-| `D:\Tools\GitHubCLI` | GitHub CLI（`gh`），已登录 Fw93810 |
-| `D:\Tools\Ollama`、`D:\cache\ollama` | Ollama 程序和模型（用户环境变量 `OLLAMA_MODELS=D:\cache\ollama`） |
-| `D:\Tools\ClaudeCode` | Claude Code CLI，用个人订阅登录，供 `judge_notes.py` 调用 |
-| `outputs\<运行名>` | 每轮转写的 JSON |
-| `results\<运行名>` | 每轮评估的 CSV |
-| `results\viewer\index.html` | 对照听写页面 |
+| `D:\medical-asr-eval` | Repository |
+| `D:\Python311` | Python 3.11.9 (installed with winget, not on the system PATH; the existing Python 3.13 is untouched) |
+| `D:\cache\huggingface` | Model cache (`HF_HOME`) |
+| `D:\cache\pip` | pip cache |
+| `data\primock57` | PriMock57 raw data (all 57 consultations) |
+| `data\prepared_3min` | First 3 consultations, each cropped to about the first 3 minutes |
+| `data\prepared_full10` | First 10 consultations, full length: the **dev set**, used to choose decoding settings and analysis methods |
+| `data\prepared_test47` | Remaining 47 consultations, full length: the **test set**; final numbers are reported on this set only |
+| `D:\Tools\GitHubCLI` | GitHub CLI (`gh`), logged in as Fw93810 |
+| `D:\Tools\Ollama`, `D:\cache\ollama` | Ollama and its models (user environment variable `OLLAMA_MODELS=D:\cache\ollama`) |
+| `D:\Tools\ClaudeCode` | Claude Code CLI, logged in with a personal subscription, called by `judge_notes.py` |
+| `outputs\<run>` | Transcription JSON per run |
+| `results\<run>` | Evaluation CSVs per run |
+| `results\viewer\index.html` | Side-by-side listening page |
 
-## 3. 三个虚拟环境
+## 3. Virtual environments
 
-依赖互相冲突，所以分成三个环境，都基于 `D:\Python311`：
+The dependencies conflict, so there are six environments, all based on `D:\Python311`:
 
-| 环境 | 用途 | 关键版本 | 为什么单独分开 |
+| Environment | Used for | Key versions | Why separate |
 |---|---|---|---|
-| `.venv` | faster-whisper 转写、生成对照页面 | faster-whisper 1.2.1，ctranslate2 4.8.4，cuBLAS 12.9，CUDA runtime 12.9，cuDNN 9.27，numpy 2.4.6 | 主环境，按 requirements.txt 安装 |
-| `.venv-sci` | 用 scispaCy 抽取医学术语、跑 evaluate.py | scispacy 0.6.2，spaCy 3.7.5，en_core_sci_sm 0.5.4，jiwer 4.0.0，numpy 1.26.4 | scispaCy 要求 numpy 1.x，会把主环境的 numpy 降级 |
-| `.venv-nemo` | Parakeet 转写（`--backend parakeet`） | PyTorch 2.11.0+cu128，NeMo 3.0.0，numpy 2.4.6 | NeMo 依赖很多，而且要带 CUDA 的 PyTorch |
-| `.venv-hf` | Granite Speech、Cohere Transcribe（`--backend granite/cohere`） | PyTorch 2.11.0+cu128，transformers 5.21.0，accelerate 1.15 | Cohere 要求 transformers ≥ 5.4 |
-| `.venv-qwen` | Qwen3-ASR（`--backend qwen3asr`） | PyTorch 2.11.0+cu128，qwen-asr 0.0.6，transformers 4.57.6 | `qwen-asr` 把 transformers 锁在 4.57，跟 Cohere 冲突 |
-| `.venv-canary` | Canary-Qwen（`--backend canary-qwen`） | PyTorch 2.11.0+cu128，NeMo 3.1.0 开发版（GitHub），peft 0.21 | 要 NeMo 开发版，不能动已经能用的 Parakeet 环境 |
+| `.venv` | faster-whisper transcription, viewer page | faster-whisper 1.2.1, ctranslate2 4.8.4, cuBLAS 12.9, CUDA runtime 12.9, cuDNN 9.27, numpy 2.4.6 | Main environment, installed from requirements.txt |
+| `.venv-sci` | Medical-term extraction with scispaCy, evaluate.py | scispacy 0.6.2, spaCy 3.7.5, en_core_sci_sm 0.5.4, jiwer 4.0.0, numpy 1.26.4 | scispaCy needs numpy 1.x and would downgrade numpy in the main environment |
+| `.venv-nemo` | Parakeet (`--backend parakeet`) | PyTorch 2.11.0+cu128, NeMo 3.0.0, numpy 2.4.6 | NeMo has many dependencies and needs PyTorch with CUDA |
+| `.venv-hf` | Granite Speech, Cohere Transcribe (`--backend granite/cohere`) | PyTorch 2.11.0+cu128, transformers 5.21.0, accelerate 1.15 | Cohere needs transformers ≥ 5.4 |
+| `.venv-qwen` | Qwen3-ASR (`--backend qwen3asr`) | PyTorch 2.11.0+cu128, qwen-asr 0.0.6, transformers 4.57.6 | `qwen-asr` pins transformers 4.57, which conflicts with Cohere |
+| `.venv-canary` | Canary-Qwen (`--backend canary-qwen`) | PyTorch 2.11.0+cu128, NeMo 3.1.0 development version (GitHub), peft 0.21 | Needs the NeMo development version; the working Parakeet environment is left alone |
 
-### 让 faster-whisper 找到 CUDA 运行库
+### Making faster-whisper find the CUDA libraries
 
-ctranslate2 在 Windows 上要从 PATH 里找 `cublas64_12.dll` 和 `cudnn*64_9.dll`。pip 装的 NVIDIA 运行库不会自动加进 PATH，所以主环境里加了一个启动钩子：
+On Windows, ctranslate2 looks for `cublas64_12.dll` and `cudnn*64_9.dll` on the PATH. The pip-installed NVIDIA libraries are not added to the PATH, so the main environment has a start-up hook:
 
 `.venv\Lib\site-packages\_cuda_dlls.pth`
 
-每次启动这个环境的 Python 时，它会做两件事：
-- 把 `site-packages\nvidia\{cublas,cudnn,cuda_runtime,cuda_nvrtc}\bin` 加进 PATH 和 DLL 搜索路径；
-- 把 `HF_HOME` 默认设为 `D:\cache\huggingface`。
+Every time this environment's Python starts, the hook:
+- adds `site-packages\nvidia\{cublas,cudnn,cuda_runtime,cuda_nvrtc}\bin` to the PATH and the DLL search path;
+- sets `HF_HOME` to `D:\cache\huggingface` by default.
 
-加 `-I` 运行时它也照样生效。重建主环境时要记得把这个文件补回来。
+It also works with `-I`. Restore this file if the main environment is rebuilt.
 
-另外两个环境不需要这个钩子：PyTorch 自带 CUDA 库。但 `.venv-nemo` 和 `.venv-sci` 没有这个默认设置，运行前要手动设 `HF_HOME=D:\cache\huggingface`，否则模型会下到 C 盘。
+The other environments do not need the hook (PyTorch ships its own CUDA libraries). `.venv-nemo` and `.venv-sci` do not set `HF_HOME` either, so set `HF_HOME=D:\cache\huggingface` before running them, or models are downloaded to drive C.
 
-### 已验证的 GPU 功能
+### GPU checks
 
-- faster-whisper large-v3 以 float16 在 cuda 上加载、转写都正常。50 系显卡没有报错，所以没有用到 transformers 版 Whisper 这个备选方案。
-- PyTorch 2.11+cu128 能识别 sm_120，`torch.cuda.is_available()` 返回 True。Parakeet-TDT-0.6B-v2 能正常转写。
+- faster-whisper large-v3 loads and transcribes in float16 on CUDA. There were no errors on the 50-series GPU, so the fallback (transformers Whisper) was not needed.
+- PyTorch 2.11+cu128 recognises sm_120 (`torch.cuda.is_available()` is True). Parakeet-TDT-0.6B-v2 transcribes normally.
 
-## 4. 各轮运行
+## 4. Runs
 
-| 运行名 | 数据 | 模型 | 设置 | 环境 | 状态 |
+| Run | Data | Model | Settings | Environment | Status |
 |---|---|---|---|---|---|
-| `fw-large-v3` | 3 段 × 3 分钟 | large-v3 | 默认（beam 5，不开 VAD） | `.venv` | 已完成 |
-| `fw-large-v3-turbo` | 3 段 × 3 分钟 | large-v3-turbo | 默认 | `.venv` | 已完成 |
-| `fw-large-v3-vad` | 3 段 × 3 分钟 | large-v3 | `--vad` | `.venv` | 已完成 |
-| `full10-large-v3` | 10 段完整 | large-v3 | 默认 | `.venv` | 已完成 |
-| `full10-large-v3-vad` | 10 段完整 | large-v3 | `--vad` | `.venv` | 已完成 |
-| `full10-parakeet` | 10 段完整，只跑合并声道 | parakeet-tdt-0.6b-v2 | 默认（全注意力） | `.venv-nemo` | 已完成（单独占用 GPU 重跑） |
-| `full10-vad-nocond` | 10 段完整 | large-v3 | `--vad --no-condition-on-previous-text`（H1b） | `.venv` | 已完成 |
-| `full10-vad-nocond-hst2` | 10 段完整 | large-v3 | 上一组再加 `--hallucination-silence-threshold 2`（自动打开词级时间戳） | `.venv` | 已完成 |
+| `fw-large-v3` | 3 × 3 min | large-v3 | Defaults (beam 5, no VAD) | `.venv` | Done |
+| `fw-large-v3-turbo` | 3 × 3 min | large-v3-turbo | Defaults | `.venv` | Done |
+| `fw-large-v3-vad` | 3 × 3 min | large-v3 | `--vad` | `.venv` | Done |
+| `full10-large-v3` | 10 full | large-v3 | Defaults | `.venv` | Done |
+| `full10-large-v3-vad` | 10 full | large-v3 | `--vad` | `.venv` | Done |
+| `full10-parakeet` | 10 full, mixed channel only | parakeet-tdt-0.6b-v2 | Defaults (full attention) | `.venv-nemo` | Done (re-run with the GPU to itself) |
+| `full10-vad-nocond` | 10 full | large-v3 | `--vad --no-condition-on-previous-text` (H1b) | `.venv` | Done |
+| `full10-vad-nocond-hst2` | 10 full | large-v3 | As above plus `--hallucination-silence-threshold 2` (turns on word timestamps) | `.venv` | Done |
 
-汇总表：`results/full10/comparison.csv`、`results/full10/top_insertions.csv`（scispaCy 术语）；`results/lexicon/full10/` 是同样的数据用自带词表算的版本。
+Summary tables: `results/full10/comparison.csv`, `results/full10/top_insertions.csv` (scispaCy terms); `results/lexicon/full10/` is the same data scored with the built-in term list.
 
-`full10-parakeet` 的结果 JSON 里 `model` 字段写的是 `base`：当时 transcribe.py 的 parakeet 后端没有改写 `--model` 的默认值，实际用的是 `nvidia/parakeet-tdt-0.6b-v2`。之后的运行已经修好。
+In the `full10-parakeet` JSON the `model` field says `base`: at the time, the parakeet backend of transcribe.py did not override the `--model` default. The model actually used was `nvidia/parakeet-tdt-0.6b-v2`. Fixed for later runs.
 
-所有 Whisper 运行的共同设置：`language="en"`，float16，beam size 5，不加 initial prompt；是否开 VAD、是否用前文提示见上表（开发集上选定的最终设置是 VAD + 关前文提示）。三种音轨：医生声道、病人声道、合并单声道（两声道相加后峰值归一化到 -1 dBFS）。
+Settings shared by all Whisper runs: `language="en"`, float16, beam size 5, no initial prompt. VAD and previous-text conditioning as in the table above; the final setting chosen on the dev set is VAD on, previous-text conditioning off. Three tracks: doctor channel, patient channel, and the mixed mono channel (the two channels summed and peak-normalised to −1 dBFS).
 
-### 测试集（47 段，只用最终设置跑一次）
+### Test set (47 consultations, final settings only, run once)
 
-| 运行名 | 模型 | 设置 | 用途 |
+| Run | Model | Settings | Purpose |
 |---|---|---|---|
-| `test47-vad-nocond` | large-v3 | `--vad --no-condition-on-previous-text`，三种音轨 | 主结果 |
-| `test47-parakeet-local` | parakeet-tdt-0.6b-v2 | `--local-attention`，三种音轨 | 架构对照 |
-| `test47-vad-nocond-wt` | large-v3 | 同主结果，再加 `--word-timestamps`，只跑医生和病人声道 | 给"分声道"病历按句子穿插两个声道用 |
+| `test47-vad-nocond` | large-v3 | `--vad --no-condition-on-previous-text`, three tracks | Main result |
+| `test47-parakeet-local` | parakeet-tdt-0.6b-v2 | `--local-attention`, three tracks | Architecture comparison |
+| `test47-vad-nocond-wt` | large-v3 | As the main result plus `--word-timestamps`, doctor and patient channels only | Interleaving the two channels for separated-channel notes |
 
-打开词级时间戳会改变 faster-whisper 的解码窗口，所以 `test47-vad-nocond-wt` 的文字跟 `test47-vad-nocond` 不完全一样：两次运行之间约 4.4% 的词不同。但 WER 几乎相同（医生 11.2% 对 11.0%，病人 13.0% 对 13.0%），所以只是解码波动，不是质量差异。
+Turning on word timestamps changes faster-whisper's decoding windows, so the text of `test47-vad-nocond-wt` is not identical to `test47-vad-nocond`: about 4.4% of words differ between the two runs. WER is almost the same (doctor 11.2% vs 11.0%, patient 13.0% vs 13.0%), so this is decoding variation, not a quality difference.
 
-汇总表：`results/test47/comparison.csv`。其他分析：`results/test47/overlap/`（重叠段，Whisper）、`results/test47/overlap-parakeet/`、`results/test47/negations/`（否定词）、`results/test47/listening_sample.csv`（待人工标注的 40 处插入）。对照页面：`results/viewer-test47/`。
+Summary table: `results/test47/comparison.csv`. Other analyses: `results/test47/overlap/` (overlap, Whisper), `results/test47/overlap-parakeet/`, `results/test47/negations/` (negations), `results/test47/listening_sample.csv` (40 insertions awaiting manual labels). Viewer page: `results/viewer-test47/`.
 
-### 规范化：原始 WER 和修正 WER
+### Normalisation: raw and corrected WER
 
-Whisper 的英文规范化器有几处不统一的写法，会被算成错误。`evaluate.py --equivalence` 在规范化之后再套一张固定的等价词表：
+The Whisper English normaliser writes some words inconsistently, which is counted as errors. `evaluate.py --equivalence` applies a fixed equivalence table after normalisation:
 
-| 统一成 | 原写法 |
+| Mapped to | Original forms |
 |---|---|
-| okay | ok，o k，0 k（"O.K." 经规范化器会变成 "0 k"） |
+| okay | ok, o k, 0 k ("O.K." becomes "0 k" in the normaliser) |
 | alright | all right |
-| mom、mommy | mum、mummy |
-| 0 | ohh、ooh（规范化器会把 "oh" 变成 "0"） |
+| mom, mommy | mum, mummy |
+| 0 | ohh, ooh (the normaliser turns "oh" into "0") |
 
-所有运行都按两种方式各算一遍：原始结果在 `results/<运行名>/`，修正结果在 `results/equiv/<运行名>/`；主结果表（`comparison.csv`）里的 `wer` 和 `wer_corrected` 两列并列。原始 WER 用于跟文献比较，修正 WER 反映真实识别水平。人工标了"不确定"的地方造成的错误只作为上限单独报告，不从 WER 里扣除。
+Every run is scored both ways: raw results in `results/<run>/`, corrected results in `results/equiv/<run>/`; the main table (`comparison.csv`) shows `wer` and `wer_corrected` side by side. Raw WER is for comparison with the literature; corrected WER reflects actual recognition. Errors at places the annotators marked as uncertain are reported separately as an upper bound and are not subtracted from WER.
 
-### 2026 年的新 ASR 模型
+### 2026 ASR models
 
-| 模型 | Hugging Face | 许可证 | 环境 | 安装和运行中的问题 |
+| Model | Hugging Face | Licence | Environment | Installation and runtime issues |
 |---|---|---|---|---|
-| Granite Speech 4.1 2B | `ibm-granite/granite-speech-4.1-2b` | Apache 2.0 | `.venv-hf` | 无。模型卡没说明长音频怎么处理，用统一切分 |
-| Cohere Transcribe 03-2026 | `CohereLabs/cohere-transcribe-03-2026` | Apache 2.0，**受限访问** | `.venv-hf` | 要用 HF 账号在模型页同意共享联系方式，并在本机 `hf auth login`（令牌存在 `D:\cache\huggingface`）。同意之后才能下载，否则 403 |
-| Qwen3-ASR-1.7B | `Qwen/Qwen3-ASR-1.7B` | Apache 2.0 | `.venv-qwen` | 专用库 `qwen-asr` 锁定 transformers 4.57，跟 Cohere 冲突，所以单独建环境 |
-| Canary-Qwen 2.5B | `nvidia/canary-qwen-2.5b` | CC-BY-4.0 | `.venv-canary` | 要 NeMo 开发版：`pip install "nemo_toolkit[asr] @ git+https://github.com/NVIDIA/NeMo.git"`。按模型卡装 `[asr,tts]` 会失败（tts 里的 `pyopenjtalk` 在 Windows 上要 CMake 编译）；实际只需另外 `pip install peft` |
+| Granite Speech 4.1 2B | `ibm-granite/granite-speech-4.1-2b` | Apache 2.0 | `.venv-hf` | None. The model card does not say how to handle long audio; the shared chunk plan is used |
+| Cohere Transcribe 03-2026 | `CohereLabs/cohere-transcribe-03-2026` | Apache 2.0, **gated** | `.venv-hf` | Agree to share contact details on the model page with a Hugging Face account, and run `hf auth login` locally (the token is stored in `D:\cache\huggingface`). Downloads return 403 until then |
+| Qwen3-ASR-1.7B | `Qwen/Qwen3-ASR-1.7B` | Apache 2.0 | `.venv-qwen` | Its library `qwen-asr` pins transformers 4.57, which conflicts with Cohere, hence a separate environment |
+| Canary-Qwen 2.5B | `nvidia/canary-qwen-2.5b` | CC-BY-4.0 | `.venv-canary` | Needs the NeMo development version: `pip install "nemo_toolkit[asr] @ git+https://github.com/NVIDIA/NeMo.git"`. Installing `[asr,tts]` as the model card says fails (`pyopenjtalk` in tts needs a CMake build on Windows); only `pip install peft` is needed in addition |
 
-**统一切分**：这四个模型都只适合短输入，所以用 `plan_chunks.py` 生成同一份切分方案（`outputs/chunks/test47/`）：Silero VAD 找说话区间，只在停顿处切，每段不超过 30 秒，两端各留 0.3 秒边距；超过 30 秒的连续说话在最安静的 100 ms 处切开。测试集 141 个文件切成 2482 段，最长 30.6 秒，保留 84.8% 的音频；约 0.7% 的参考词落在所有段之外（按估计的词时间算）。每段单独解码，输出的片段时间就是段的起止时间。Cohere 的处理器自己会把超过 35 秒的输入再切开，我们的段都短于这个长度，所以不会触发。
+**Shared chunk plan**: all four models only suit short inputs, so `plan_chunks.py` makes one chunk plan (`outputs/chunks/test47/`):
+- Silero VAD finds speech regions; cuts happen only at pauses;
+- chunks are at most 30 s, with 0.3 s padding at each end;
+- continuous speech longer than 30 s is cut at its quietest 100 ms frame.
 
-为了不把"切分方式"混进模型比较，Whisper 和 Parakeet 也用同一份切分方案各跑了一遍（`test47-whisper-chunked`、`test47-parakeet-chunked`）；原来各自的最佳设置（Whisper 自带 VAD、Parakeet 整段输入）也保留。
+The 141 test-set files become 2,482 chunks, longest 30.6 s, keeping 84.8% of the audio; about 0.7% of reference words fall outside every chunk (by estimated word times). Each chunk is decoded on its own and its output segment takes the chunk's start and end times. Cohere's processor splits inputs longer than 35 s by itself; all our chunks are shorter, so this never triggers.
 
-**逐段解码，不用批量**：`--batch-size` 可以一次解码多段，快 3–4 倍，但结果跟逐段解码不完全一致（同一文件上 Granite 有 1.6% 的词不同，Qwen3-ASR 有 0.2%），原因是批量时短段被填充到同一长度。为了让各模型可比，正式运行都用逐段（`--batch-size 1`）。
+To keep chunking out of the model comparison, Whisper and Parakeet were also run with the same chunk plan (`test47-whisper-chunked`, `test47-parakeet-chunked`); their own best settings (Whisper's built-in VAD, Parakeet on whole files) are kept as well.
 
-**测试集结果**（47 段，WER 为原始 → 修正；速度为每分钟音频所需秒数，RTX 5080 笔记本，逐段解码）：
+**One chunk at a time, no batching**: `--batch-size` decodes several chunks at once and is 3–4× faster, but the output differs from one-at-a-time decoding (on the same file, 1.6% of words differ for Granite, 0.2% for Qwen3-ASR), because short chunks are padded to a common length in a batch. For comparability, all reported runs use `--batch-size 1`.
 
-| 运行 | 医生 | 病人 | 合并 | 合并：替换/删除/插入 | 合并：重叠内/外删除率 | 合并 s/音频分钟 |
+**Test-set results** (47 consultations; WER raw → corrected; speed in seconds per audio minute on the RTX 5080 laptop, one chunk at a time):
+
+| Run | Doctor | Patient | Mixed | Mixed: sub / del / ins | Mixed: deletion in / out of overlap | Mixed s per audio min |
 |---|---|---|---|---|---|---|
 | `test47-qwen3-asr-1.7b` | 9.5 → 6.1 | 10.7 → 9.5 | **11.0 → 8.6** | 5.0 / 4.2 / 1.8 | 20.3 / 2.9 | 5.5 |
 | `test47-canary-qwen-2.5b` | 10.4 → 7.0 | 12.0 → 10.9 | 12.0 → 9.7 | 5.2 / 4.6 / 2.2 | 21.3 / 3.3 | 5.7 |
 | `test47-parakeet-chunked` | 10.5 → 7.2 | 12.6 → 11.5 | 12.3 → 10.0 | 5.1 / 5.1 / 2.1 | 21.6 / 3.8 | 0.25 |
-| `test47-vad-nocond`（Whisper，自带 VAD） | 11.0 → 7.8 | 13.0 → 11.9 | 12.5 → 10.3 | 5.0 / 5.7 / 1.9 | 25.3 / 4.1 | 5.1 |
-| `test47-parakeet-local`（整段） | 11.4 → 7.9 | 14.5 → 13.4 | 12.9 → 10.7 | 4.9 / 6.2 / 1.8 | 22.7 / 4.9 | 0.16 |
+| `test47-vad-nocond` (Whisper, built-in VAD) | 11.0 → 7.8 | 13.0 → 11.9 | 12.5 → 10.3 | 5.0 / 5.7 / 1.9 | 25.3 / 4.1 | 5.1 |
+| `test47-parakeet-local` (whole files) | 11.4 → 7.9 | 14.5 → 13.4 | 12.9 → 10.7 | 4.9 / 6.2 / 1.8 | 22.7 / 4.9 | 0.16 |
 | `test47-whisper-chunked` | 11.2 → 8.0 | 14.6 → 13.5 | 13.0 → 10.8 | 5.0 / 6.0 / 2.0 | 23.4 / 4.6 | 5.0 |
 | `test47-cohere-transcribe` | 11.5 → 8.2 | 15.1 → 14.1 | 13.7 → 11.5 | 4.9 / 6.9 / 2.0 | 22.3 / 5.6 | 1.05 |
 | `test47-granite-4.1-2b` | 12.1 → 9.0 | 23.5 → 22.5 | 14.7 → 12.6 | 4.9 / 8.4 / 1.4 | 30.3 / 6.7 | 5.5 |
 
-- Qwen3-ASR-1.7B 三个声道都最好；医学术语错误率（合并 5.6%，Whisper 6.8%）和临床否定词丢失率（合并 2.2%，Whisper 5.0%）也最低。
-- 统一切分对 Parakeet 有帮助（合并 12.9 → 12.3，病人 14.5 → 12.6），对 Whisper 略有损失（合并 12.5 → 13.0）：Whisper 自带的 VAD 切法比统一切分更适合它。
-- Granite 在病人声道上有 6 处长重复（共 1372 词，如连续几百个 "no"、"yeah"），病人 WER 被拉到 23.5%；除重复外的删除率也最高。
-- 重叠段：所有模型合并声道比分声道多删 10.6–13.9 个百分点，后插话的人损失都远大于正在说话的人（+15.5–20.0 对 +6.4–10.5）。这是合并声道本身的问题，换模型解决不了。
-- Cohere 是四个新模型里最快的（1.05 s/分钟，Parakeet 更快），但删除偏多，病人声道尤其明显。
-- 详细结果：`results/test47/comparison.csv`、`results/test47/overlap-<模型>/`、`results/test47/error_composition/`、`results/test47/negations/`。
+- Qwen3-ASR-1.7B is best on all three tracks, and also has the lowest medical-term error rate (mixed 5.6%, Whisper 6.8%) and clinical-negation loss (mixed 2.2%, Whisper 5.0%).
+- The shared chunk plan helps Parakeet (mixed 12.9 → 12.3, patient 14.5 → 12.6) and costs Whisper a little (mixed 12.5 → 13.0): Whisper's own VAD segmentation suits it better.
+- Granite has 6 long repetitions on the patient channel (1,372 words in total, e.g. hundreds of "no" or "yeah" in a row), which pushes its patient WER to 23.5%; apart from the repetitions, its deletion rate is also the highest.
+- Overlap: every model deletes 10.6–13.9 points more on the mixed channel than on the separated channels, and the speaker who comes in loses far more than the speaker who is already talking (+15.5–20.0 vs +6.4–10.5). This is a property of the mixed channel that a different model does not fix.
+- Cohere is the fastest of the four new models (1.05 s per minute; Parakeet is faster still), but it deletes more, especially on the patient channel.
+- Details: `results/test47/comparison.csv`, `results/test47/overlap-<model>/`, `results/test47/error_composition/`, `results/test47/negations/`.
 
-### VAD 边距（开发集）
+### VAD padding (dev set)
 
-为检查"句首第一个词错误率高"是不是 VAD 把句首切掉了，在开发集上对比了 `speech_pad_ms` 400（默认）、800、1500 和不开 VAD（都关前文提示）：句首错误率在四组之间几乎不变（合并声道 36.1–36.8%），不开 VAD 时也一样高，所以不是 VAD 造成的。句首错误里 60% 是附和词，替换里 58% 是 "OK/okay" 这类写法差异。WER 的变化都在噪声范围内，测试集保持默认边距。结果在 `results/full10/vad_padding/`。
+To check whether the high error rate on the first word of an utterance comes from VAD clipping utterance starts, the dev set was run with `speech_pad_ms` 400 (default), 800 and 1500, and without VAD (all with previous-text conditioning off). The first-word error rate barely changes across the four (mixed channel 36.1–36.8%) and is just as high without VAD, so VAD is not the cause. 60% of first-word errors are backchannels, and 58% of the substitutions are spelling variants such as "OK/okay". WER changes are within noise, so the test set keeps the default padding. Results: `results/full10/vad_padding/`.
 
-### 病历层面评测
+### Note-level evaluation
 
-1. `generate_notes.py`：本地 Ollama 跑 `qwen3:14b`（4 位量化），温度 0、固定种子、关闭思考模式，提示词版本 v3。每段问诊生成三份病历：人工转写、分声道 ASR（`test47-vad-nocond-wt`，按词级时间戳把两个声道合并成话轮并标注说话人）、合并声道 ASR（`test47-vad-nocond`，无说话人标注）。
-   - 最初按句子穿插两个声道，但无前文提示的 Whisper 输出常常没有标点，"一句"会跨好几个话轮，问答被切开错位，分声道组的病历召回因此低了 3.5 个百分点。旧结果保存在 `*-separated-by-sentence` 文件夹里。
-   - 噪声对照：`human_rejudge`（同一份人工版病历再评一次，测评判噪声）、`human_plain`（人工转写经 Whisper 规范化，测写法本身带来的生成波动）、`human_unlabelled_plain` 和 `asr_mixed_plain`（两边写法完全一致，只差识别出的词，测纯 ASR 错误）、`asr_separated_plain`。
-   - 配对比较：`compare_notes.py`，每段问诊算一个差值，bootstrap 95% 区间，结果在 `results/notes/test47/paired_summary.csv`。
-2. `judge_notes.py`：用 Claude Code CLI 非交互调用（`claude -p`，不开工具，JSON schema 输出），先把每份医生病历拆成事实清单（每段问诊只拆一次），再逐份评判候选病历。评判模型看不到病历来源，任务顺序打乱（种子 0）。每次调用记录实际模型（本轮为 `claude-opus-5-5`）。遇到服务过载会自动重试。
-3. 比较时以"人工转写"组为基线：医生病历本身就和谈话有出入（例如谈话说"三到四天"，病历写"3–5 天"），所以看的是 ASR 组比人工转写组多错多少。
-4. 人工抽查：`results/notes/test47/spotcheck.csv`，20 份病历的逐条评判，填 `your_label` 一列。
-5. **评判流程已冻结（judge v1）**：`judge_notes.py` 里的系统提示词、拆事实和评判两个提示词、两个 JSON schema，以及 `results/notes/test47/facts/` 下每段问诊的事实清单（2026-10-26 拆分，每段只拆一次）都不再改动。之后新增的病历（新的 LLM、新的 ASR）都用同一份事实清单和同样的提示词评判。要改任何一处，就要升版本号并全部重评。判定结果 JSON 里记录 `judge_version`（v1 之前生成的文件没有这个字段，但用的是同一份提示词）。
+1. `generate_notes.py`: `qwen3:14b` (4-bit) in local Ollama, temperature 0, fixed seed, thinking off, prompt version v3. Three notes per consultation: human transcript; separated-channel ASR (`test47-vad-nocond-wt`, the two channels merged into labelled speaker turns using word timestamps); mixed-channel ASR (`test47-vad-nocond`, no speaker labels).
+   - The channels were first interleaved by sentence, but Whisper without previous-text conditioning often outputs no punctuation, so one "sentence" spans several turns and questions and answers get out of order. That lowered note recall for the separated-channel source by 3.5 points. The old results are kept in the `*-separated-by-sentence` folders.
+   - Noise controls:
+     - `human_rejudge`: the same human-transcript note judged again (judge noise);
+     - `human_plain`: the human transcript passed through the Whisper normaliser (generation variation from surface form alone);
+     - `human_unlabelled_plain` and `asr_mixed_plain`: identical surface form on both sides, differing only in the recognised words (pure ASR error);
+     - `asr_separated_plain`.
+   - Paired comparison: `compare_notes.py`, one difference per consultation, bootstrap 95% interval; results in `results/notes/test47/paired_summary.csv`.
+2. `judge_notes.py`: the Claude Code CLI called non-interactively (`claude -p`, no tools, JSON-schema output).
+   - Each clinician note is first split into a fact list (once per consultation); then each candidate note is judged against it.
+   - The judge never sees which source a note came from, and jobs run in shuffled order (seed 0).
+   - Every call records the model actually used (`claude-opus-5-5` in this round). Overload errors are retried automatically.
+3. The human-transcript notes are the baseline. The clinician's notes themselves differ from the conversation (e.g. the conversation says "three to four days", the note "3–5 days"), so what matters is how much more the ASR sources get wrong than the human transcript.
+4. Manual spot check: `results/notes/test47/spotcheck.csv`, per-fact judgements for 20 notes; fill in the `your_label` column.
+5. **The judging protocol is frozen (judge v1).** The following no longer change:
+   - the system prompt, the fact-splitting and judging prompts, and the two JSON schemas in `judge_notes.py`;
+   - the per-consultation fact lists under `results/notes/test47/facts/` (split on 2026-10-26, once per consultation).
 
-### 复现命令（在 `D:\medical-asr-eval` 下运行）
+   All later notes (new LLMs, new ASR) are judged with the same fact lists and prompts. Changing any of these means a new version number and re-judging everything. Judgement JSON files record `judge_version` (files made before v1 lack the field but used the same prompts).
+
+### Reproduction commands (run from `D:\medical-asr-eval`)
 
 ```bash
-# 数据
+# Data
 .venv/Scripts/python.exe -I scripts/download_data.py --out data/primock57 --limit 10
 .venv/Scripts/python.exe -I scripts/prep_data.py --src data/primock57 --out data/prepared_full10 --limit 10
 
-# 转写（Whisper）
+# Transcription (Whisper)
 .venv/Scripts/python.exe -I scripts/transcribe.py --data data/prepared_full10 --out outputs/full10-large-v3 --model large-v3 --device cuda
 .venv/Scripts/python.exe -I scripts/transcribe.py --data data/prepared_full10 --out outputs/full10-large-v3-vad --model large-v3 --device cuda --vad
 
-# 转写（Parakeet，只跑合并声道；需要先设 HF_HOME=D:\cache\huggingface）
+# Transcription (Parakeet, mixed channel only; set HF_HOME=D:\cache\huggingface first)
 .venv-nemo/Scripts/python.exe -I scripts/transcribe.py --backend parakeet --data data/prepared_full10 --out outputs/full10-parakeet --conditions mixed
 
-# 评估（scispaCy 环境）
+# Evaluation (scispaCy environment)
 .venv-sci/Scripts/python.exe -I scripts/evaluate.py --data data/prepared_full10 --hyp outputs/full10-large-v3 --results results/full10-large-v3 --terms scispacy
 
-# 汇总成对比表，并列出最长的 10 处插入
+# Summary table plus the 10 longest insertions
 .venv-sci/Scripts/python.exe -I scripts/aggregate_results.py --results "results/full10-*" --out results/full10 --top 10
 
-# 对照听写页面
+# Viewer page
 .venv/Scripts/python.exe -I scripts/make_viewer.py --data data/prepared_3min --outputs outputs --out results/viewer
 .venv/Scripts/python.exe -I -m http.server 8765 --bind 127.0.0.1
 ```
 
-转写脚本支持断点续跑：已有的输出会跳过，中断后重新运行同一条命令即可。
+Transcription resumes after interruptions: existing outputs are skipped, so re-run the same command.
 
-## 5. 相对原仓库的改动
+## 5. Changes relative to the original repository
 
-第一轮改动（PR #1、#2 已合并）：
+First round (PR #1 and #2, merged):
 
 - **`scripts/evaluate.py`**
-  - 新增"重叠说话段内/段外"分析。先从 `utterances.json` 求出医生和病人发言时间重叠的区间，再把替换、删除、插入分到段内或段外，各自除以该区域的参考词数，得到错误率。结果写进 `wer.csv`、`summary.csv` 的 `ov_*`、`*_rate_in`、`*_rate_out` 列，`insertions.csv` 里新增 `in_overlap` 列。
-    - 注意：词的时间是把每句话（或每个转写片段）的起止时间平均分给句中各词估出来的，不是真正的词级时间戳。
-  - scispaCy 的过滤词表里加了 i、you、we 等代词，因为 en_core_sci_sm 会把 "I" 标成实体。
-- **`scripts/aggregate_results.py`**（新增）：把多个结果文件夹汇总成 `comparison.csv` 和 `top_insertions.csv`。
-- **`scripts/make_viewer.py`、`scripts/viewer_template.html`**（新增）：生成对照听写页面，可以听原声、看分析步骤、并排比较多种方法。
-- **`transcribe.py`**：`--word-timestamps`、`--hallucination-silence-threshold`，输出里记录运行设置。
+  - Inside/outside-overlap analysis: the intervals where the doctor's and patient's utterances overlap are taken from `utterances.json`, substitutions, deletions and insertions are assigned to inside or outside, and each is divided by that region's reference words. Written to the `ov_*`, `*_rate_in` and `*_rate_out` columns of `wer.csv` and `summary.csv`; `insertions.csv` gains an `in_overlap` column.
+    - Note: word times are estimated by spreading each utterance's (or transcript segment's) start and end evenly over its words; they are not real word timestamps.
+  - Pronouns such as i, you and we were added to the scispaCy stop list, because en_core_sci_sm tags "I" as an entity.
+- **`scripts/aggregate_results.py`** (new): combines result folders into `comparison.csv` and `top_insertions.csv`.
+- **`scripts/make_viewer.py`, `scripts/viewer_template.html`** (new): the listening page — play the original audio, see the analysis steps, compare methods side by side.
+- **`transcribe.py`**: `--word-timestamps`, `--hallucination-silence-threshold`; run settings recorded in the output.
 
-测试集这一轮新增（`test47-final` 分支）：
-- **`analyze_overlap.py`**：重叠段里被丢掉的是谁、是什么词（说话人、谁后插话、谁声音小、词的类别），分声道和合并声道逐词对照。
-- **`analyze_negations.py`**：所有否定词的去向（认对 / 删除 / 替换成什么），区分临床否定和话语标记，并标出重复的否定。
-- **`sample_insertions.py`**：随机抽插入做人工标注，每行带对照页面的跳转链接。
-- **`generate_notes.py`、`judge_notes.py`、`compare_notes.py`**：病历层面评测（见上）。
-- **对照页面**：支持 `#id=…&cond=…&t=…` 深链接，`make_viewer.py` 加了 `--methods`。
-- **`evaluate.py`**：`insertions.csv` 新增按词估计的时间 `t_approx_s`。
-- **`bootstrap_asr.py`**：模型两两配对 bootstrap，以问诊为单位重采样，比较修正 WER、医学术语错误率和临床否定词丢失率。
-- **`count_repeats.py`**：统计长重复，包括同一个词连续 ≥ 10 次，以及 2–4 词的短语连续 ≥ 5 次。
-- 选定 Qwen3-ASR 的理由见 `results/test47/asr_selection.md`；第三阶段的 LLM 候选和费用估算见 `docs/stage3-llm-plan.md`。
-- **病历网格**（第三阶段）：
-  - `run_grid.sh` 在租用的服务器上生成病历；
-  - `generate_notes.py` 新增四个参数：`--think`（推理强度）、`--asr-name`（第二个 ASR 作为单独一行）、`--ids-file`、`--openai-url`；
-  - `combine_grid.py` 做跨列汇总；
-  - `note_error_composition.py` 加入了 `asr_mixed_qwen3asr`。
-  - 结果见 `docs/stage3-grid-results.md`。
+Test-set round (`test47-final` branch) and later:
+- **`analyze_overlap.py`**: who and what is lost in overlaps (speaker, who came in, who is quieter, word class), word by word, separated vs mixed channel.
+- **`analyze_negations.py`**: what happens to every negation (correct / deleted / replaced by what), clinical negations vs discourse markers, repeated negations marked.
+- **`sample_insertions.py`**: random insertions for manual labelling, each row with a viewer deep link.
+- **`generate_notes.py`, `judge_notes.py`, `compare_notes.py`**: note-level evaluation (above).
+- **Viewer page**: deep links `#id=…&cond=…&t=…`; `make_viewer.py` gains `--methods`.
+- **`evaluate.py`**: `insertions.csv` gains an estimated word time `t_approx_s`.
+- **`bootstrap_asr.py`**: paired bootstrap between ASR runs, resampling consultations, for corrected WER, medical-term error rate and clinical-negation loss.
+- **`count_repeats.py`**: long repetitions — the same word ≥ 10 times in a row, or a 2–4 word phrase ≥ 5 times in a row.
+- Why Qwen3-ASR was chosen: `results/test47/asr_selection.md`. Stage-3 LLM candidates and cost estimates: `docs/stage3-llm-plan.md`.
+- **Note grid** (stage 3):
+  - `run_grid.sh` generates notes on a rented server;
+  - `generate_notes.py` gains `--think` (reasoning effort), `--asr-name` (a second ASR as its own row), `--ids-file` and `--openai-url`;
+  - `combine_grid.py` combines the columns;
+  - `note_error_composition.py` includes `asr_mixed_qwen3asr`.
+  - Results: `docs/stage3-grid-results.md`.
 
-`.claude/` 只在本机使用，不提交。
+`.claude/` is local only and not committed.
 
-## 6. 已知问题与注意事项
+## 6. Known issues
 
-- **Parakeet 长音频很慢。** 默认全注意力，音频超过约 10 分钟时显存会占满（16 GB），速度骤降：短音频几秒，14 分钟音频要 110 秒以上。测试集已改用 `--local-attention`，每分钟音频约 0.15 秒。
-- **Ollama 服务要手动启动。** 托盘程序第一次启动时服务没起来，现在是直接运行 `D:\Tools\Ollama\ollama.exe serve`；电脑重启后要重新启动。跑 Qwen 时不要同时跑转写，显存不够。
-- **Qwen 会编阴性发现。** 例如"无近期旅行"、"无药物过敏"，谈话里没说过；三种来源都有，评判脚本把这类计入 `extra_not_mentioned`。在提示词里举例说"不要加旅行、过敏"反而会让它写出这几项。
-- **`claude -p` 的输出不完全确定。** 同一份医生病历两次拆出的事实条数略有不同，所以事实清单每段问诊只拆一次并缓存，所有来源共用。
-- **GPU 不要同时跑两个模型。** Whisper 和 Parakeet 同时运行时，显存会占到 15.8/16 GB，两边都慢好几倍。这段时间测到的速度数据不能用：`full10-parakeet` 前 4 段，以及同一时段的 `full10-large-v3`。
-- **large-v3 的速度比预期慢。** 显卡空闲时，每分钟音频也要大约 10 秒，GPU 利用率只有约 40%，瓶颈可能在 CPU 那一侧，还没查。这不影响 WER。
-- **3 分钟那批的速度数据也不准。** 那批运行时，有游戏同时占用 GPU（约 6 GB 显存）。
-- **Hugging Face 缓存不能用符号链接。** 这台电脑没开开发者模式，缓存会退回到复制文件的方式，多占一些磁盘，功能不受影响。可以设置 `HF_HUB_DISABLE_SYMLINKS_WARNING=1` 关掉警告。
-- **对照页面要通过 HTTP 打开。** `python -m http.server` 不支持 Range 请求，页面里改成把整段 wav 读进内存再播放，这样才能跳转。直接双击打开 html 文件时，浏览器会拦截读取音频。
-- **术语召回的两种算法不能互相比较。** 3 分钟那批用的是自带词表（约 320 个词），这一轮改用 scispaCy。
-- **CSV 要用 UTF-8 写。** 中文 Windows 默认用 GBK 写文件，新模型会输出 "£" 这类符号，`evaluate.py` 写 `insertions.csv` 时报错，文件只写了一半（`wer.csv` 和 `summary.csv` 在它之前写完，不受影响）。现在所有 CSV 都按 UTF-8 写和读；旧的 3 个 GBK 文件（`full10-large-v3` 的 `insertions.csv`）已转成 UTF-8。
-- **开发集比测试集难。** 开发集 10 段都来自第 1 天，WER 明显高于测试集（例如合并声道 17.2% 对 12.5%）。只看开发集会高估错误率。
+- **Parakeet is slow on long audio.** With full attention (the default), audio longer than about 10 minutes fills the 16 GB of VRAM and speed collapses: a few seconds for short files, over 110 s for a 14-minute file. The test set uses `--local-attention`, about 0.15 s per audio minute.
+- **The Ollama server has to be started by hand.** The tray app did not start the server on first launch; it is now run directly with `D:\Tools\Ollama\ollama.exe serve` and must be restarted after a reboot. Do not transcribe while Qwen is running; VRAM is not enough for both.
+- **Qwen invents negative findings.** For example "no recent travel" or "no drug allergies" when nobody said so; this happens for all three sources and the judge counts them as `extra_not_mentioned`. Naming examples in the prompt ("do not add travel, allergies") made the model write exactly those.
+- **`claude -p` output is not fully deterministic.** Splitting the same clinician note twice gives slightly different fact counts, so the fact list is split once per consultation, cached, and shared by all sources.
+- **Do not run two models on the GPU at once.** With Whisper and Parakeet running together, VRAM reaches 15.8/16 GB and both slow down several-fold. Speed figures from that period are not usable: the first 4 consultations of `full10-parakeet`, and `full10-large-v3` from the same period.
+- **large-v3 is slower than expected.** Even with the GPU idle, it takes about 10 s per audio minute at about 40% GPU utilisation; the bottleneck may be on the CPU side, not yet investigated. This does not affect WER.
+- **Speed figures for the 3-minute batch are also unreliable.** A game was using the GPU (about 6 GB VRAM) at the time.
+- **The Hugging Face cache cannot use symlinks.** Developer mode is off on this machine, so the cache falls back to copying files. This takes more disk space but works; set `HF_HUB_DISABLE_SYMLINKS_WARNING=1` to silence the warning.
+- **The viewer page must be opened over HTTP.** `python -m http.server` does not support Range requests, so the page loads the whole wav into memory before playing, which makes seeking work. Opening the html file directly makes the browser block the audio.
+- **The two term-recall methods are not comparable.** The 3-minute batch used the built-in term list (about 320 terms); later rounds use scispaCy.
+- **Write CSVs as UTF-8.** Windows with a Chinese locale writes files as GBK by default. The new models output symbols such as "£", and `evaluate.py` failed while writing `insertions.csv`, leaving it half written (`wer.csv` and `summary.csv` are written before it and were not affected). All CSVs are now written and read as UTF-8; the 3 old GBK files (`insertions.csv` of `full10-large-v3`) were converted.
+- **The dev set is harder than the test set.** All 10 dev consultations are from day 1, and their WER is clearly higher than the test set's (e.g. mixed channel 17.2% vs 12.5%). Looking only at the dev set overestimates error rates.
