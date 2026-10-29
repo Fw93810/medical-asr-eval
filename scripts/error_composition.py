@@ -339,6 +339,8 @@ def main():
                     row["compound_part"] = int(x in compound)
                     ops.append({"run": run, "condition": cond, "id": cid, **row})
 
+            if not tot_ref:  # channel not transcribed in this run (e.g. stress conditions: mixed only)
+                continue
             wer_all = sum(1 for o in ops if o["run"] == run and o["condition"] == cond) / tot_ref
             d = {"run": run, "condition": cond, "ref_words": tot_ref, "wer": round(wer_all, 4)}
             for name, (r, h) in filt.items():

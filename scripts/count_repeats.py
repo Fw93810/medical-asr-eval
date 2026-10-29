@@ -114,9 +114,10 @@ def main():
                             **{f"{k}_{x}": a[f"{k}_{x}"] for k in ("same_word", "phrase") for x in ("loops", "words", "segments")},
                             "consultations_affected": len(ids)})
 
+    loop_fields = ["run", "id", "condition", "kind", "unit", "repeats", "words", "t_start", "t_end", "segments", "text"]
     for name, data in (("repeats.csv", rows), ("summary.csv", summary)):
         with open(os.path.join(args.out, name), "w", newline="", encoding="utf-8") as f:
-            w = csv.DictWriter(f, fieldnames=list(data[0].keys()))
+            w = csv.DictWriter(f, fieldnames=list(data[0].keys()) if data else loop_fields)  # no loops at all
             w.writeheader()
             w.writerows(data)
     print("| run | channel | same-word loops (words) | phrase loops (words) | consultations |")

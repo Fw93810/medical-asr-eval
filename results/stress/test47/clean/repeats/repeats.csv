@@ -1,0 +1,2 @@
+run,id,condition,kind,unit,repeats,words,t_start,t_end,segments,text
+clean-whisper,day4_consultation08,mixed,phrase,thank you,5,10,29.42,34.42,5,8th of august 1982 okay [thank you thank you thank you ...]

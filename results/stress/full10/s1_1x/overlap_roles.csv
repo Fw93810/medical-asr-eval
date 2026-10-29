@@ -1,0 +1,3 @@
+run,ref_all,del_rate_all,ref_out_of_overlap,del_rate_out_of_overlap,ref_in_overlap,del_rate_in_overlap,ref_came_in,del_rate_came_in,ref_holding,del_rate_holding
+s1_1x-whisper,17088,0.083,15171,0.0597,1917,0.2676,857,0.4037,1060,0.1575
+s1_1x-qwen3asr,17088,0.0575,15171,0.0381,1917,0.2107,857,0.3337,1060,0.1113

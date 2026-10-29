@@ -1,0 +1,21 @@
+# Stress test S3: background noise (scripts/stress_noise.py).
+# DEMAND (Thiemann et al. 2013, Zenodo record 1227121), 16 kHz versions. The Zenodo record lists
+# CC BY 4.0, the PDF shipped with the data CC BY-SA 3.0; used for research, no audio redistributed.
+# Neither environment contains medical equipment sounds.
+seed: 0                          # random.Random("<seed>:<consultation id>"): environment, channel order, offset
+noise_root: data/noise/demand
+environments: [PCAFETER, PRESTO] # cafeteria and restaurant: background talk (babble), dishes, footsteps
+levels:                          # SNR in dB, speech power measured inside utterance intervals
+  s3_snr20: 20
+  s3_snr10: 10
+  s3_snr5: 5
+  s3_snr0: 0
+  s3b_snr10_alarms: {snr: 10, alarms: true}   # S3b: the 10 dB background plus alarms
+alarms:                          # Freesound, all CC0 1.0 (checked on each sound's page, 2026-10-27); the
+  files:                         # public "hq" previews (MP3), since originals need a Freesound login
+    - data/noise/alarms/668978_14100561-hq.mp3   # "beeps for heart monitor.wav" by vestibule-door, https://freesound.org/people/vestibule-door/sounds/668978/
+    - data/noise/alarms/148897_2464203-hq.mp3    # "Heart Monitor Beep" by samfk360, https://freesound.org/people/samfk360/sounds/148897/
+    - data/noise/alarms/617170_2467044-hq.mp3    # "Hospital infusion pump. Alarm" by SonoRec, https://freesound.org/people/SonoRec/sounds/617170/
+  per_minute: [2, 4]             # events per minute: a seeded integer in this range for each minute
+  event_s: [3, 6]                # event length, seconds (capped by the file length)
+  db_rel_speech: 0               # event power relative to speech power (provisional; alarms as loud as speech)

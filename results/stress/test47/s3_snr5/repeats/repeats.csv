@@ -1,0 +1,5 @@
+run,id,condition,kind,unit,repeats,words,t_start,t_end,segments,text
+s3_snr5-whisper,day1_consultation12,mixed,same_word,no,16,16,198.46,214.46,16,any takeaway food or anything [no no no ...]
+s3_snr5-whisper,day4_consultation08,mixed,same_word,no,16,16,556.87,572.87,16,you had any of those [no no no ...]
+s3_snr5-whisper,day4_consultation10,mixed,phrase,confidential .,12,24,16.07,28.07,12,and are you in a [confidential . confidential . confidential . ...]
+s3_snr5-whisper,day5_consultation06,mixed,phrase,thank you,15,30,334.57,349.57,15,okay that is it okay [thank you thank you thank you ...]

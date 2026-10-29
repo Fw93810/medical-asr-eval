@@ -1,0 +1,15 @@
+run,condition,sub_type,count,share,wer_points
+s1_2x-qwen3asr,mixed,number_format,0,0.0,0.0
+s1_2x-qwen3asr,mixed,spelling_variant,192,0.201,1.12
+s1_2x-qwen3asr,mixed,compound,31,0.0325,0.18
+s1_2x-qwen3asr,mixed,inflection,44,0.0461,0.26
+s1_2x-qwen3asr,mixed,near_homophone,13,0.0136,0.08
+s1_2x-qwen3asr,mixed,number_value,1,0.001,0.01
+s1_2x-qwen3asr,mixed,other,674,0.7058,3.94
+s1_2x-whisper,mixed,number_format,0,0.0,0.0
+s1_2x-whisper,mixed,spelling_variant,156,0.1622,0.91
+s1_2x-whisper,mixed,compound,28,0.0291,0.16
+s1_2x-whisper,mixed,inflection,41,0.0426,0.24
+s1_2x-whisper,mixed,near_homophone,19,0.0198,0.11
+s1_2x-whisper,mixed,number_value,0,0.0,0.0
+s1_2x-whisper,mixed,other,718,0.7464,4.2

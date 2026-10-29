@@ -1,0 +1,3 @@
+run,condition,ref_words,wer,wer_no_backchannel,wer_content_only,medical_term_error_rate,number_error_rate,clinical_negation_error_rate
+s1_1x-whisper,mixed,17088,0.1657,0.1349,0.1059,0.0846,0.0979,0.1154
+s1_1x-qwen3asr,mixed,17088,0.1412,0.1104,0.0912,0.0653,0.0809,0.0692

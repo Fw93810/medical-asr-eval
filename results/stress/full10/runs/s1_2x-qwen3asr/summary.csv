@@ -1,0 +1,2 @@
+condition,model,normalisation,n_consultations,audio_min,ref_words,corpus_wer,substitutions,deletions,insertions,term_recall_pooled,sec_per_audio_min,ov_overlap_s,ov_ref_in,ov_ref_out,ov_sub_in,ov_sub_out,ov_del_in,ov_del_out,ov_ins_in,ov_ins_out,sub_rate_in,sub_rate_out,del_rate_in,del_rate_out,ins_rate_in,ins_rate_out
+mixed,Qwen/Qwen3-ASR-1.7B,whisper,10,87.69,17088,0.1608,955,1477,315,0.8968,6.14,762.3000000000001,3977,13111,439,516,931,546,71,244,0.1104,0.0394,0.2341,0.0416,0.0179,0.0186

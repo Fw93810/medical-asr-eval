@@ -1,0 +1,10 @@
+run,condition,same_word_loops,same_word_words,same_word_segments,phrase_loops,phrase_words,phrase_segments,consultations_affected
+reference,doctor,0,0,0,0,0,0,0
+reference,patient,0,0,0,0,0,0,0
+reference,mixed,0,0,0,0,0,0,0
+clean-whisper,doctor,0,0,0,0,0,0,0
+clean-whisper,patient,0,0,0,0,0,0,0
+clean-whisper,mixed,0,0,0,1,10,5,1
+clean-qwen3asr,doctor,0,0,0,0,0,0,0
+clean-qwen3asr,patient,0,0,0,0,0,0,0
+clean-qwen3asr,mixed,0,0,0,0,0,0,0

@@ -1,0 +1,1005 @@
+run,id,condition,word,class,outcome,hyp_word,negation_kept,repeat,ref_context,hyp_context
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,blood in your stools [no] no blood yeah just,any other things like [no] no blood yeah just
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,correct,no,1,1,in your stools no [no] blood yeah just watery,other things like no [no] blood yeah just watery
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,example towards your back [no] just maybe my stomach,pain move anywhere else [no] just mainly in my
+s1_3x-whisper,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,yeah yeah it does [not] feel like yeah it,example yeah it does [not] feel like . yeah
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,feel weak i have [not] had a fever at,feel weak i have [not] had a fever at
+s1_3x-whisper,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,yeah i i did [not] mention my temperature no,ago yeah i did [not] measure my temperature no
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,not mention my temperature [no] but i felt just,not measure my temperature [no] but i felt just
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,sweating or night sweats [no] and any vomiting at,sweating or . no [no] and any vomiting yeah
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,any vomiting at all [no] yeah so i vomited,
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,i know it is [not] a nice thing to,i know it is [not] nice to talk about
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,correct,no,1,0,yeah and there was [no] blood in your vomit,yeah and there was [no] part in your vomit
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,just normal vomit yeah [no] no blood no yeah,is that right yeah [no] okay and any other
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,deleted,,0,1,normal vomit yeah no [no] blood no yeah no,
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,yeah no no blood [no] yeah no okay and,
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,no blood no yeah [no] okay and any any,
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,appetite so i have [not] been eating as much,appetite so i have [not] been eating as much
+s1_3x-whisper,day1_consultation01,mixed,nothing,negation_clinical,substituted,i,0,0,yeah been eating normally [nothing] unusual here okay do,yeah been eating normally [i] think you remember when
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,correct,no,1,0,with similar symptoms so [no] one else in the,well with symptoms so [no] one else in the
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,vomiting but they have [not] got diarrhea there is,vomiting but they have [not] got diarrhea it is
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,correct,no,1,0,got diarrhea there is [no] one with the same,got diarrhea it is [no] one with the same
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,fine and you do [not] have any other tummy,inhaler and you do [not] have any other tummy
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] no okay and apart,should be aware of [no] okay and apart from
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,deleted,,0,1,be aware of no [no] okay and apart from,
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,take any other medications [no] no other medications okay,take any other medications [no] no other medications in
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,correct,no,1,1,any other medications no [no] other medications okay fine,any other medications no [no] other medications in terms
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,you smoke at all [no] i do not smoke,we need to ask [no] i do not smoke
+s1_3x-whisper,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,all no i do [not] smoke and do you,ask no i do [not] smoke do you drink
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,the way of alcohol [no] i i do not,smoke do you drink [no] i do not drink
+s1_3x-whisper,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,no i i do [not] drink alcohol no okay,drink no i do [not] drink alcohol though so
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,substituted,though,0,0,do not drink alcohol [no] okay so er normally,do not drink alcohol [though] so normally at this
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,management so i do [not] think you need anything,management so i do [not] think you are needing
+s1_3x-whisper,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,if your symptoms have [not] got better you know,if your symptoms have [not] got better you know
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,any questions for me [no] no further questions no,have any questions for [no] no further is the
+s1_3x-whisper,day1_consultation01,mixed,no,negation_clinical,correct,no,1,1,questions for me no [no] further questions no okay,any questions for no [no] further is the treatment
+s1_3x-whisper,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,no no further questions [no] okay and is is,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,a bit it is [not] very clear but let,a bit it is [not] very clear but let
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,to solve it ok [no] no problem i am,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,solve it ok no [no] problem i am happy,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,time and i can [not] even sleep at night,time and i can [not] even sleep at night
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,my work i can [not] focus i can not,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,not focus i can [not] actually focus on my,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,annoying because i can [not] actually think about what,annoying because i can [not] actually think about what
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,by this disease yeah [no] no ok i am,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,this disease yeah no [no] ok i am certain,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,those and it did [not] work i have tried,those and it did [not] work i have tried
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,but it apparently did [not] help because it is,but it apparently did [not] help because it is
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,i am i can [not] really do it anymore,i am i can [not] really do it anymore
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,very very annoying yes [no] well ok that is,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,from your skins ok [no] so my skin is,discharge from your skin [no] so my skin is
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,yeah ok you have [not] have not seen any,i mean you do [not] have any other pus
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,you have not have [not] seen any other pus,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,out of your skin [no] no and you mentioned,out of your skin [no] and you mentioned it
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,of your skin no [no] and you mentioned it,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,been around anyone else [no] i it is actually,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,because i i have [not] and i do not,something because i have [not] and i do not
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,not and i do [not] understand i cannot afraid,not and i do [not] understand that i am
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,you know i do [not] feel really comfortable asking,you know i do [not] feel really comfortable asking
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,i your help now [no] no ok that is,of intimate and so [no] no that is okay
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,your help now no [no] ok that is ok,intimate and so no [no] that is okay fine
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,legs as well yeah [no] just the chest hands,legs as well and [no] just the chest hands
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,face on my face [no] no ok and apart,face on my face [no] okay and apart from
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,substituted,okay,0,1,on my face no [no] ok and apart from,on my face no [okay] and apart from this
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,any temperature or fevers [no] just very itchy nothing,any temperature or fevers [no] just very cheap okay
+s1_3x-whisper,day1_consultation02,mixed,nothing,negation_clinical,correct,nothing,1,0,no just very itchy [nothing] else itchy ok so,just very cheap okay [nothing] your bowels are working
+s1_3x-whisper,day1_consultation02,mixed,no,negation_clinical,correct,no,1,0,your chest is ok [no] cough no breathing difficulties,your chest is okay [no] cough no breathing difficulties
+s1_3x-whisper,day1_consultation02,mixed,no,negation_clinical,correct,no,1,0,is ok no cough [no] breathing difficulties no you,is okay no cough [no] breathing difficulties you are
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,cough no breathing difficulties [no] you are passing urine,
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,i am i am [not] sure i i really,arm so i am [not] sure i really that
+s1_3x-whisper,day1_consultation02,mixed,no,negation_clinical,deleted,,0,0,i i really have [no] idea ok that is,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] i just had asthma,any other medical problems [no] i just had asthma
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,in the past but [not] anymore ok not anymore,asthma in the past [not] anymore okay and do
+s1_3x-whisper,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,but not anymore ok [not] anymore ok and do,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,medications at the moment [no] no ok do you,medications at the moment [no] okay do you have
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,substituted,okay,0,1,at the moment no [no] ok do you have,at the moment no [okay] do you have any
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,at all ohh allergies [no] no ok and tell,have allergies at all [no] no okay and tell
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,all ohh allergies no [no] ok and tell me,allergies at all no [no] okay and tell me
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,more about it ok [no] no no that is,you want to know [no] no that is absolutely
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,about it ok no [no] no that is that,want to know no [no] that is absolutely that
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,it ok no no [no] that is that is,
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,you smoke at all [no] no and do you,you smoke at all [no] and do you drink
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,smoke at all no [no] and do you drink,
+s1_3x-whisper,day1_consultation02,mixed,nothing,negation_discourse,correct,nothing,1,0,week something like this [nothing] nothing crazy i used,week something like this [nothing] nothing crazy i used
+s1_3x-whisper,day1_consultation02,mixed,nothing,negation_clinical,correct,nothing,1,1,something like this nothing [nothing] crazy i used to,something like this nothing [nothing] crazy i used to
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,this sound quality is [not] great but i will,the sound quality is [not] great but i will
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,it is working or [not] ok it is also,it is working or [not] it is also worth
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,lately but it did [not] really help ohh could,lately but it did [not] really could you say
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,but but it did [not] really help ok ok,antihistamines but it did [not] okay so it is
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,trying and it is [not] going to do you,worth trying it is [not] going to do you
+s1_3x-whisper,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,week if things do [not] get better that sounds,week if things do [not] get that sounds good
+s1_3x-whisper,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,any questions for me [no] that is it thank,any questions for me [no] that is it okay
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,deleted,,0,0,gradual build up do [not] know really it just,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,anywhere else at all [no] but it is worse,anywhere else at all [no] but it is worse
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,you but why do [not] we why do not,you but why do [not] we why do not
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,not we why do [not] we take a good,not we why do [not] we take a good
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,any temperatures or fevers [no] i do not feel,any temperatures or fevers [no] i do not feel
+s1_3x-whisper,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,fevers no i do [not] feel feverish ok any,fevers no i do [not] feel feverish any other
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,you may have noticed [no] i have not noticed,
+s1_3x-whisper,day1_consultation03,mixed,not,negation_clinical,deleted,,0,0,noticed no i have [not] noticed anything like that,
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,get headaches i am [not] really prone to them,you normally get headaches [not] really prone to them
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,really prone to them [no] no but i did,really prone to them [no] no but i did
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,1,prone to them no [no] but i did i,prone to them no [no] but i did i
+s1_3x-whisper,day1_consultation03,mixed,never,negation_discourse,correct,never,1,0,know really about this [never] had headaches like this,about this i have [never] had headaches like this
+s1_3x-whisper,day1_consultation03,mixed,no,negation_clinical,correct,no,1,0,you some very yes [no] questions if that is,you some very yes [no] questions that is okay
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,difficulties with your words [no] any problems with your,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,and,0,0,example numbness or weakness [no] any difficulty with balance,example numbness or weakness [and] any difficulty with balance
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,0,your balance or coordination [no] ok and have you,your balance or coordination [okay] and have you had
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,0,knocked on the head [no] ok alright and and,knocked on the head [okay] all right and and
+s1_3x-whisper,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,is ok you are [not] feeling breathless or no,is okay you are [not] feeling breathless or no
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,not feeling breathless or [no] ok do you have,not feeling breathless or [no] okay do you have
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] nothing no so for,should be aware of [no] no so for example
+s1_3x-whisper,day1_consultation03,mixed,nothing,negation_discourse,deleted,,0,1,be aware of no [nothing] no so for example,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,1,aware of no nothing [no] so for example have,be aware of no [no] so for example have
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,migraines in the past [no] no ok do you,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,1,in the past no [no] ok do you no,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,no ok do you [no] my mum my mum,
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,deleted,,0,0,i have i have [not] been diagnosed ok right,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,is,0,0,other family history of [no] no ok in terms,other family sure that [is] no okay in terms
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,correct,no,1,1,family history of no [no] ok in terms of,family sure that is [no] okay in terms of
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,substituted,down,0,0,and yeah it is [not] a good time is,is it getting you [down] a good time i
+s1_3x-whisper,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,you down i do [not] feel down just a,good time i do [not] feel down just feel
+s1_3x-whisper,day1_consultation03,mixed,nothing,negation_discourse,deleted,,0,0,alleviate your stress normally [nothing] really ok do you,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,0,the way of exercise [no] no ok who is,the way of exercise [okay] who is at home
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,1,way of exercise no [no] ok who is at,
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,0,the way of alcohol [no] no ok alright so,the way of alcohol [okay] all right so normally
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,substituted,all,0,1,way of alcohol no [no] ok alright so normally,way of alcohol okay [all] right so normally i
+s1_3x-whisper,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,reassured that you do [not] have anything more serious,reassured that you do [not] have anything more serious
+s1_3x-whisper,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,if your symptoms are [not] getting better next 23,if your symptoms are [not] getting better in the
+s1_3x-whisper,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,headache is getting worse [not] responding to medications or,headaches getting worse and [not] responding to medications or
+s1_3x-whisper,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,any questions for me [no] thank you ok have,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,throat in the mirror [no] not really no ok,throat in the mirror [no] no you did not
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,deleted,,0,1,in the mirror no [not] really no ok you,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,mirror no not really [no] ok you did not,in the mirror no [no] you did not you
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,no ok you did [not] you did not notice,no no you did [not] you did not notice
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,did not you did [not] notice any abnormal white,did not you did [not] notice the abnormal white
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,back of your throat [no] i i did not,back of your throat [no] i did not think
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,no i i did [not] think about that is,throat no i did [not] think about that is
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] very painful but it,for now it is [not] very painful but it
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,mornings throughout the day [no] it is it is,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_clinical,correct,no,1,0,in your chest so [no] pain in chest but,any pain obvious so [no] pain in chest but
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,i i i have [not] been going going to,if i i have [not] been going going to
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,are resting there is [no] problem yeah yeah yeah,are resting there is [no] problem yeah yeah when
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,questions if you do [not] mind any pain in,surface if you do [not] mind any pain in
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,substituted,you,0,0,your ears at all [no] no you do not,your ears at all [you] know you know block
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,substituted,know,0,1,ears at all no [no] you do not feel,ears at all you [know] you know block to
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,substituted,block,0,0,no no you do [not] feel blocked or any,you know you know [block] to any discharge coming
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,out of your ears [no] i do not think,
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,deleted,,0,0,ears no i do [not] think so ok fine,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_clinical,correct,no,1,0,through a few yes [no] questions if you if,through a few yes [no] questions if you do
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,you if you do [not] mind just a review,questions if you do [not] mind just a review
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,general and they are [not] they are not always,general and they are [not] they are not always
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,are not they are [not] always there but you,are not they are [not] always there but you
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,your eyesight your vision [no] any difficulty with seeing,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,substituted,okay,0,0,with seeing bright lights [no] i do not think,with seeing bright lights [okay] and just moving down
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,deleted,,0,0,lights no i do [not] think so no ok,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,do not think so [no] ok and just moving,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,substituted,okay,0,0,nausea or any vomiting [no] none of that ok,nausea or any vomiting [okay] tell me about your
+s1_3x-whisper,day1_consultation04,mixed,none,negation_discourse,deleted,,0,1,or any vomiting no [none] of that ok tell,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,all on your skin [no] no no and any,all on your skin [no] no and any general
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,1,on your skin no [no] no and any general,on your skin no [no] and any general muscle
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,deleted,,0,1,your skin no no [no] and any general muscle,
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,there is there is [not] anything that i am,am fine there is [not] anything that i am
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] no ok any family,you are aware of [no] no okay any family
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,1,be aware of no [no] ok any family history,are aware of no [no] okay any family history
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,any in any way [no] i think i think,all in any way [no] i think it is
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,deleted,,0,0,to help i do [not] know i i like,
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,company parties ok so [not] not regular and what,cigars and things on [not] regular and what about
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,deleted,,0,1,parties ok so not [not] regular and what about,
+s1_3x-whisper,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,and what about alcohol [no] occasionally yeah i would,
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,i am i am [not] a very big drinker,have some i am [not] especially with work yeah
+s1_3x-whisper,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,now settled i do [not] think there is a,now settled i do [not] think there is a
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,week you are still [not] better i would like,week you are still [not] better i will let
+s1_3x-whisper,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,if you are really [not] getting better if you,if you are really [not] getting better if you
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,deleted,,0,0,more gradual it has [not] been it is more,
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,deleted,,0,0,feeling it it has [not] spread anywhere else just,
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,getting worse it is [not] like i i can,getting worse it is [not] like i can still
+s1_3x-whisper,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,so you have got [no] other symptoms like diarrhea,so you have got [no] other symptoms like diarrhea
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,deleted,,0,0,diarrhea or loose stools [no] i am i am,
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,substituted,okay,0,0,movements are normal now [no] ok and what about,movements are normal now [okay] and what about your
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,color but i have [not] like it has not,color but i have [not] like it has not
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,not like it has [not] really been burning specifically,not like it has [not] really been burning specifically
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,fluids so i was [not] sure i was not,fluids so i was [not] sure i was not
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,not sure i was [not] sure like you know,not sure i was [not] sure like you know
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,to say i can [not] say i mean maybe,in urine i can [not] say i mean maybe
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,but otherwise it does [not] hurt or or or,but otherwise it does [not] hurt or i have
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,urine and i have [not] noticed that it really,hurt or i have [not] noticed that it really
+s1_3x-whisper,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,a little nauseous but [no] vomiting no vomiting any,a little nauseous but [no] vomiting temperatures i have
+s1_3x-whisper,day1_consultation05,mixed,no,negation_clinical,deleted,,0,0,nauseous but no vomiting [no] vomiting any temperatures or,
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,or fevers i have [not] i felt a bit,vomiting temperatures i have [not] really i felt a
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,sweaty but i have [not] really measured it so,sweaty but i have [not] really measured it so
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,it so i can [not] really say ok fine,it so i can [not] really say and came
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,cycle if you do [not] mind me asking are,cycle if you do [not] mind me asking are
+s1_3x-whisper,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,so you have had [no] other partner since then,so you have had [no] other partners since then
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,other partner since then [no] the ok and do,other partners since then [no] other partners since then
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,about well we do [not] use any other barrier,think about we do [not] use any other barrier
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,if the implanon has [not] been working then i,if the implanon has [not] been working then i
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,deleted,,0,0,pregnant but i do [not] suspect yeah ok well,
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,far if you do [not] mind it is really,far if you do [not] mind it is really
+s1_3x-whisper,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,some pink urine but [no] burning or stinging pain,some pink urine but [no] burning or stinging pain
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,be important i do [not] think so i think,this stage i do [not] think so i think
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,yeah well i have [not] had any surgical i,well well i have [not] had any surgical i
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,any surgical i do [not] have any surgical history,any surgical i do [not] have any surgical history
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,surgical history i do [not] have any previous i,surgical history i do [not] have any previous i
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,any previous i have [not] had any operations before,any previous i have [not] had any operations before
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,or and i am [not] on any other medication,or and i am [not] on any other medication
+s1_3x-whisper,day1_consultation05,mixed,never,negation_discourse,correct,never,1,0,similar symptoms i have [never] i have never had,the past i have [never] had i have never
+s1_3x-whisper,day1_consultation05,mixed,never,negation_discourse,correct,never,1,0,have never i have [never] had these symptoms before,never had i have [never] had these fine any
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,deleted,,0,0,had these symptoms before [no] ok fine any other,
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,maybe related to history [no] not that not that,maybe related to gynecology [no] not that i am
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,1,related to history no [not] that not that i,related to gynecology no [not] that i am aware
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,deleted,,0,0,history no not that [not] that i am aware,
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,deleted,,0,0,i am aware of [no] ok alright and socially,
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,smoke at all kim [no] no and do you,you smoke at all [no] and do you drink
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,deleted,,0,1,at all kim no [no] and do you drink,
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,drink but i do [not] think more more than,drink but i do [not] think more than normal
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,substituted,i,0,0,more more than normal [no] ok ok just before,normal but i think [i] will understand just before
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,is ok yes or [no] we have we have,is okay yes or [no] we have covered the
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,make sure i am [not] missing anything else all,make sure i am [not] missing anything else how
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,breathing any i do [not] feel short of breath,your breathing i do [not] have a lot of
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,breath or i am [not] having any problems or,breath or i am [not] having any problems or
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,problems or i do [not] have a cough or,problems or i do [not] have a cough or
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,substituted,nothing,1,0,heartbeats or rhythms palpitations [not] that it no ok,heartbeats or rhythms palpitations [nothing] no okay any headaches
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,palpitations not that it [no] ok any headaches any,or rhythms palpitations nothing [no] okay any headaches any
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,problems with your vision [no] no ok alright fine,problems with your vision [no] no okay all right
+s1_3x-whisper,day1_consultation05,mixed,no,negation_discourse,correct,no,1,1,with your vision no [no] ok alright fine ok,with your vision no [no] okay all right fine
+s1_3x-whisper,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,tummy pain you do [not] exactly know what is,primary pain we do [not] exactly know what is
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,make sure we are [not] missing anything else here,make sure we are [not] missing anything else here
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,if your symptoms are [not] getting any better or,if your symptoms are [not] getting any better or
+s1_3x-whisper,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,sweaty your temperature is [not] coming down vomiting et,and sweaty the temperatures [not] coming down vomiting etc
+s1_3x-whisper,day1_consultation06,mixed,without,negation_discourse,correct,without,1,0,walk to the shops [without] a problem but now,walk to the shops [without] a problem but now
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,kind of worried do [not] really know what is,of worried i do [not] really know what is
+s1_3x-whisper,day1_consultation06,mixed,no,negation_clinical,correct,no,1,0,pain in your chest [no] pain in my chest,pain in your chest [no] pain in my chest
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,cough but it is [not] too troublesome ok ok,cough but it is [not] too troublesome and how
+s1_3x-whisper,day1_consultation06,mixed,no,negation_clinical,correct,no,1,0,in your ankles reporting [no] chest pain and and,your ankles but importantly [no] chest pain and and
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,palpitations or skipped heartbeat [no] not really ok and,palpitations or skipped heart [no] not really okay and
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,1,or skipped heartbeat no [not] really ok and any,or skipped heart no [not] really okay and any
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,any temperatures or fevers [no] ok and how about,any temperatures or fevers [no] okay and how about
+s1_3x-whisper,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,a diagnosis i can [not] remember they just called,a diagnosis i can [not] remember they just called
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,substituted,know,0,0,it like angina or [no] they they said that,that angina or i [know] they they said they
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,ok but i did [not] but i only had,angina but i did [not] but i only had
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] i think i am,should be aware of [no] i think i am
+s1_3x-whisper,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,are taking i can [not] remember i am sorry,are taking i can [not] remember i am sorry
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,check that is ok [no] problems any other medications,i am sorry doctor [no] problems any other medications
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,sorry the connection is [not] very good ok thank,metoprolol was it or [not] very good okay thank
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,at all any medications [no] no allergies no ok,at all any medications [no] allergies okay and is
+s1_3x-whisper,day1_consultation06,mixed,no,negation_clinical,deleted,,0,1,all any medications no [no] allergies no ok and,
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,substituted,okay,0,0,medications no no allergies [no] ok and is there,any medications no allergies [okay] and is there anything
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,get sick i will [not] if i get more,get sick i will [not] if i get more
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,sick then i will [not] be able to work,sick then i will [not] be able to work
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,certainly a consideration is [not] it so let us,certainly a consideration is [not] it so let us
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,soon so it does [not] have any impact on,soon so it does [not] have any impact on
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,deleted,,0,0,your on your job [no] and do you find,
+s1_3x-whisper,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,driving weekend driving ohh [no] i i i i,night driving weekend driving [no] i i i only
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,the day i do [not] like working at night,the day i do [not] like working and what
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,you smoke at all [not] any more so you,you smoke at all [not] anymore so you used
+s1_3x-whisper,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,about alcohol i do [not] drink alcohol ok do,about alcohol i do [not] drink alcohol do you
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,have yeah i do [not] i do not go,have yeah i do [not] i do not get
+s1_3x-whisper,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,do not i do [not] go running like i,do not i do [not] get running like i
+s1_3x-whisper,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,like your heart is [not] pumping as well as,like your heart is [not] pumping as well as
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,afternoon sir i am [not] feeling very well i,afternoon sir i am [not] feeling very well i
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,to and i have [not] been feeling well for,sorry and i have [not] been feeling well for
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,deleted,,0,0,aye so you are [not] bringing up any mucky,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,yeah yeah i do [not] like to admit that,yeah yeah i do [not] like to admit that
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,to hear that yeah [no] and any other symptoms,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,that but i am [not] sure if that is,that but i am [not] sure if that is
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,that is related or [not] ah ok who do,that is related or [not] who do you support
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,in the they are [not] even in the top,thistle and they are [not] even in the top
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_clinical,substituted,the,0,0,them all the best [nothing] table so so you,through to be on [the] table so you mentioned
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,at myself it is [not] not not a pretty,at myself it is [not] a pretty sight to
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,1,myself it is not [not] not a pretty sight,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,1,it is not not [not] a pretty sight to,
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,looking ah right yeah [no] i i do not,sorry you mean looking [no] i mean no i
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,no i i do [not] i do not really,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,do not i do [not] really like to look,mean no i do [not] really like to look
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i i i have [not] have not tried to,it so i have [not] tried to do any
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,deleted,,0,0,i have not have [not] tried to do any,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,i understand it is [not] pretty but as i,that no it is [not] pretty as i say
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i say it is [not] it is not something,i say it is [not] something we always recommend
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,deleted,,0,0,is not it is [not] something we we always,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you know it is [not] as good as it,you know it is [not] as good as it
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,tight in your chest [no] no no it is,tight in your chest [no] so you are breathing
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,substituted,so,0,1,in your chest no [no] no it is it,in your chest no [so] you are breathing no
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,substituted,you,0,1,your chest no no [no] it is it is,your chest no so [you] are breathing no no
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,it is it is [not] no no no so,
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,is it is not [no] no no so your,you are breathing no [no] no no sorry your
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,it is not no [no] no so your breathing,are breathing no no [no] no sorry your breathing
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,is not no no [no] so your breathing is,breathing no no no [no] sorry your breathing is
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,it your it is [not] labored or no it,is your it is [not] labored or no it
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,is not labored or [no] it is it is,is not labored or [no] it is it is
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] it is not good,it is it is [not] it is not it
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,is not it is [not] good it is not,is not it is [not] it is not good
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,not good it is [not] good ok it is,is not it is [not] good it is not
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,good ok it is [not] good no no no,not good it is [not] good no no no
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,it is not good [no] no no no ok,it is not good [no] no no okay okay
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,is not good no [no] no no ok ok,is not good no [no] no okay okay so
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,not good no no [no] no ok ok so,not good no no [no] okay okay so you
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,substituted,okay,0,1,good no no no [no] ok ok so you,good no no no [okay] okay so you are
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,your chest at all [no] no it is it,your chest at all [no] no it is it
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,chest at all no [no] it is it is,chest at all no [no] it is it is
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,breath but it is [not] it is it is,breath but it is [not] it is not it
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] it is not pain,is not it is [not] it is not pain
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,is not it is [not] pain you know as,is not it is [not] pain you know any
+s1_3x-whisper,day1_consultation07,mixed,no,negation_clinical,deleted,,0,0,you know as such [no] pain ok ok have,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] it is not pleasant,it is it is [not] it is not pleasant
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,is not it is [not] pleasant i mean i,is not it is [not] pleasant i mean i
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,you got a but [no] i mean no you,at all i mean [no] i mean you know
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,but no i mean [no] you know you know,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i mean i have [not] have not you know,i mean i have [not] i have not you
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i have not have [not] you know used a,have not i have [not] you know used a
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,but apart from that [no] ok and how is,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,feed the i can [not] remember what it is,feed the i can [not] remember what it is
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,it is it is [not] something that i i,it is it is [not] something that i was
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,i am i am [not] feeling great you know,i am i am [not] feeling great you know
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,substituted,something,0,0,set your symptoms off [no] i have not been,symptoms off is it [something] you have eaten or
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,substituted,eaten,0,0,off no i have [not] been have not been,it something you have [eaten] or have you been
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,substituted,you,0,0,have not been have [not] been i mean as,have eaten or have [you] been traveling recently abroad
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,my wife i do [not] know whether it is,my wife i do [not] know whether it is
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,good so i would [not] have expected them to,good so i would [not] have expected them to
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i i i do [not] know you know so,but i i do [not] know you know so
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,0,know you know so [nothing] that i can see,
+s1_3x-whisper,day1_consultation07,mixed,without,negation_clinical,correct,without,1,0,can see ok and [without] prying too much what,know you know so [without] crying too much what
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,correctly because i have [not] got i have not,correctly because i have [not] got i have not
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,not got i have [not] got my glasses with,not got i have [not] got my glasses with
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,yeah that sounds like [no] problems no problem that,
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,sounds like no problems [no] problem that is fine,
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,fine anything else sir [no] no just just just,paper anything else sir [no] just those 2 i
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,1,anything else sir no [no] just just just those,
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_clinical,substituted,alright,0,0,again but you know [nothing] long term right ok,again but you know [alright] just moving on swiftly
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,any allergies at all [not] that i am not,any allergies at all [not] that i am aware
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,not that i am [not] that i am aware,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,just you know nah [not] just allergies to medications,
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,am i am asking [not] as opposed to other,
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,things right ah yeah [no] nothing nothing that nothing,
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_discourse,correct,nothing,1,1,right ah yeah no [nothing] nothing that nothing that,you know i mean [nothing] nothing that nothing i
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_discourse,correct,nothing,1,1,ah yeah no nothing [nothing] that nothing that i,know i mean nothing [nothing] that nothing i am
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_discourse,correct,nothing,1,0,no nothing nothing that [nothing] that i am aware,mean nothing nothing that [nothing] i am aware of
+s1_3x-whisper,day1_consultation07,mixed,never,negation_discourse,correct,never,1,0,aware of doctor is [never] said nothing to me,am aware of doctors [never] said and just very
+s1_3x-whisper,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,0,doctor is never said [nothing] to me so ok,
+s1_3x-whisper,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,at home with you [no] no kids the kids,at home with you [no] not kids the kids
+s1_3x-whisper,day1_consultation07,mixed,no,negation_clinical,substituted,not,1,1,home with you no [no] kids the kids have,home with you no [not] kids the kids have
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i mean i am [not] like you know i,too much i am [not] like you know i
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you know i am [not] not an alky or,you know i am [not] not an alky or
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,1,know i am not [not] an alky or anything,know i am not [not] an alky or anything
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you yeah i am [not] worry i think you,am not i am [not] worried i think you
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you antibiotics i do [not] think you have got,you antibiotics i do [not] think you have got
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,if your symptoms do [not] get better right so,if your symptoms do [not] get better so if
+s1_3x-whisper,day1_consultation07,mixed,no,negation_clinical,correct,no,1,0,i think there is [no] harm in starting a,i think there is [no] harm in starting a
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,if you are still [not] better by next week,if you are still [not] bested by next week
+s1_3x-whisper,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,hope so it is [not] not looking too good,hope so it is [not] looking too good thank
+s1_3x-whisper,day1_consultation07,mixed,not,negation_clinical,deleted,,0,1,so it is not [not] looking too good but,
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,substituted,i,0,0,you have had before [no] never had so did,you have had before [i] know so did it
+s1_3x-whisper,day1_consultation08,mixed,never,negation_discourse,substituted,know,0,1,have had before no [never] had so did it,have had before i [know] so did it come
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,your legs your face [no] ok so apart from,your legs your face [no] okay so apart from
+s1_3x-whisper,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,has that i do [not] have any spots and,few days i do [not] have any spots no
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,have any spots and [no] fever and i am,not have any spots [no] fevers and i am
+s1_3x-whisper,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,fever and i am [not] sweating either ok thank,fevers and i am [not] sweating either thank you
+s1_3x-whisper,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,the coconut butter has [not] helped with the itch,the coconut butter has [not] helped with the itch
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,helped with the itch [no] ok and you mentioned,helped with the itch [no] okay and you mentioned
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,have you been before [no] i have been before,have you been before [no] i have been before
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,mentioned you have had [no] other fevers is that,mentioned you have had [no] other fevers is that
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,fevers is that right [no] fevers no vomiting no,fevers is that right [no] fevers no vomiting no
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,that right no fevers [no] vomiting no no how,that right no fevers [no] vomiting no no how
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,no fevers no vomiting [no] no how is your,no fevers no vomiting [no] no how is your
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,1,fevers no vomiting no [no] how is your health,fevers no vomiting no [no] how is your health
+s1_3x-whisper,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,good yeah i am [not] on any medication and,good yeah i am [not] on any medication we
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,bowels working ok yeah [no] no problems with vomiting,your bowels working okay [no] problems with vomiting or
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,deleted,,0,1,working ok yeah no [no] problems with vomiting or,
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,vomiting or loose stools [no] ok and your waterworks,vomiting or loose stools [no] okay and your water
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,0,know what that is [no] ok it is a,know what that is [okay] it is a contraceptive
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,medications that you take [no] no so in terms,it any other medications [no] so in terms medical
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,deleted,,0,1,that you take no [no] so in terms of,
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,medical history there is [no] problems of skin problems,medical history there is [no] problems of skin problems
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,like eczema or dermatitis [no] i think it might,like eczema or dermatitis [no] i think it might
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,deleted,,0,0,the weather ok ok [no] that is ok no,
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,no that is ok [no] no problems well move,okay that is okay [no] problems we will move
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,substituted,problems,0,1,that is ok no [no] problems well move do,that is okay no [problems] we will move and
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,are aware of yep [no] no ok all right,you are aware of [no] okay alright socially who
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,1,aware of yep no [no] ok all right socially,are aware of no [okay] alright socially who do
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,are you a smoker [no] i do not smoke,you smoke at all [no] i do not smoke
+s1_3x-whisper,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,smoker no i do [not] smoke do you drink,all no i do [not] smoke do you drink
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,the way of alcohol [no] recreational drugs no ok,are aware of alcohol [no] recreational drugs you work
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,deleted,,0,0,alcohol no recreational drugs [no] ok and you said,
+s1_3x-whisper,day1_consultation08,mixed,not,negation_discourse,deleted,,0,0,your symptoms i do [not] i certainly think so,
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,few days ago but [no] other symptoms you are,few days ago but [no] other symptoms you are
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,are feeling otherwise well [no] fevers no bleeding or,are feeling otherwise well [no] fevers no bleeding or
+s1_3x-whisper,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,otherwise well no fevers [no] bleeding or discharge from,otherwise well no fevers [no] bleeding or discharge from
+s1_3x-whisper,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,on this occasion would [not] be helpful painkillers would,on this occasion would [not] be helpful painkillers would
+s1_3x-whisper,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,be helpful painkillers would [not] be helpful on this,be helpful painkillers would [not] be helpful on this
+s1_3x-whisper,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,if it is still [not] getting better come back,if you are still [not] getting better come back
+s1_3x-whisper,day1_consultation08,mixed,no,negation_discourse,substituted,know,0,0,any questions for me [no] ok well i wish,questions for me i [know] okay well i wish
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,bit worried about it [not] sure what to do,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] too bad it is,it is it is [not] too bad it is
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of pain it is [not] like unbearable but it,of pain it is [not] like unbearable but it
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,sharp yeah i do [not] know maybe sort of,know yeah i do [not] know maybe sort of
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of cramping i am [not] really sure but it,of cramping i am [not] really sure but it
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,sure but it is [not] like it is not,sure but it is [not] like it is not
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,not like it is [not] like cramping like when,not like it is [not] like cramping like when
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,is like i do [not] know right right ok,is like i do [not] know okay fine and
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,more often than normal [not] i do not think,more often than normal [not] i do not think
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,normal not i do [not] think so i have,normal not i do [not] think so okay fine
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,deleted,,0,0,think so i have [not] noticed that no ok,
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,deleted,,0,0,have not noticed that [no] ok fine have you,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,today but besides that [not] at all no it,today but besides that [not] at all no it
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,that not at all [no] it does kind of,that not at all [no] it does kind of
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,kind of like does [not] smell very it smells,of like it does [not] smell very it smells
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,weird i guess but [no] not really anything anything,weird i guess but [no] not really anything anything
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,1,i guess but no [not] really anything anything drastic,i guess but no [not] really anything anything drastic
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,your flank the sides [no] not really no no,your flank the sides [no] not really okay fine
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,1,flank the sides no [not] really no no ok,flank the sides no [not] really okay fine would
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,substituted,okay,0,0,sides no not really [no] no ok fine with,sides no not really [okay] fine would this symptoms
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,deleted,,0,1,no not really no [no] ok fine with those,
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,symptoms like nausea vomiting [no] not not at all,symptoms like nausea vomiting [no] any fevers or temperatures
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,1,like nausea vomiting no [not] not at all ok,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,1,nausea vomiting no not [not] at all ok any,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,deleted,,0,0,temperatures sorry i did [not] hear you no no,
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,did not hear you [no] no no fever no,any fevers or temperatures [no] no no fever okay
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,1,not hear you no [no] no fever no no,fevers or temperatures no [no] no fever okay fine
+s1_3x-whisper,day1_consultation09,mixed,no,negation_clinical,correct,no,1,1,hear you no no [no] fever no no fever,or temperatures no no [no] fever okay fine sorry
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,substituted,okay,0,0,no no no fever [no] no fever ok fine,no no no fever [okay] fine sorry okay in
+s1_3x-whisper,day1_consultation09,mixed,no,negation_clinical,deleted,,0,1,no no fever no [no] fever ok fine sorry,
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,any diarrhea loose stool [no] not that i have,so yeah any diarrhea [no] not that i have
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,1,diarrhea loose stool no [not] that i have not,yeah any diarrhea no [not] that i have noticed
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,not that i have [not] that i have noticed,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,deleted,,0,0,history hope you do [not] mind me asking but,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,down below i have [not] noticed anything no ok,down below i have [not] noticed anything when was
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,deleted,,0,0,have not noticed anything [no] ok when was your,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,if if ever do [not] think i have ever,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,have ever i do [not] think i have ever,if ever i do [not] think i have ever
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,deleted,,0,0,have ever had one [no] ok fine and and,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,be pregnant i do [not] think so i do,be pregnant i do [not] think so it is
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,think so i do [not] no no it is,
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,deleted,,0,1,so i do not [no] no it is always,
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,deleted,,0,1,i do not no [no] it is always worth,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,about the pain yeah [not] getting any better then,worried about the pain [not] getting any better and
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,than that i think [no] like real serious medical,than that i think [no] like no serious medical
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,take any regular medications [no] i did i did,take any regular medications [no] i did a little
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,pain but it was [not] it was not really,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,was not it was [not] really helping ok so,
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,that and it did [not] help ok all right,that and it did [not] help alright do you
+s1_3x-whisper,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,bladder bowels guts yeah [no] i do not think,kidneys bladder bowels gut [no] i do not think
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,yeah no i do [not] think so not that,gut no i do [not] think so not that
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,do not think so [not] that i not anything,do not think so [not] that i not anything
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,so not that i [not] anything i know about,so not that i [not] anything i know about
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,i am i am [not] like living at home,mine so i am [not] like living at home
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of careers i do [not] know maybe a doctor,of career i do [not] know maybe a doctor
+s1_3x-whisper,day1_consultation09,mixed,never,negation_discourse,correct,never,1,0,a doctor someday you [never] know recommend it we,a doctor someday you [never] know what about smoking
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of alcohol i do [not] i do not smoke,drink much i do [not] i do not smoke
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,do not i do [not] smoke i do drink,do not i do [not] smoke i do drink
+s1_3x-whisper,day1_consultation09,mixed,no,negation_clinical,correct,no,1,0,down essentially but but [no] other fevers or back,lower down essentially but [no] other fevers or back
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,if you are still [not] better by the end,if you are still [not] better by the end
+s1_3x-whisper,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,if it still does [not] go away call back,if it still does [not] go away call back
+s1_3x-whisper,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,worried about like like [not] having sex or anything,i be worried about [not] having sex or anything
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,days now it is [not] happened before and i,days now it is [not] happened before and i
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,really like i can [not] like go to uni,really like i can [not] like go to uni
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,sorry my ok sorry [no] i did not explain,under a week sorry [no] i did not explain
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,sorry no i did [not] explain it properly before,sorry no i did [not] explain it properly before
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,it properly before yeah [no] i it has been,it properly before yeah [no] it has been going
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,probably but i do [not] know it was pink,mixed in i do [not] know we will definitely
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,burning pain i would [not] describe it as crampy,burning pain i would [not] describe it as crampy
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,as crampy i do [not] think it is like,as crampy i do [not] think it is like
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,back towards your sides [no] no no ok all,back towards your sides [no] no okay alright any
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,towards your sides no [no] no ok all right,towards your sides no [no] okay alright any other
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,substituted,okay,0,1,your sides no no [no] ok all right any,your sides no no [okay] alright any other symptoms
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,other symptoms nausea vomiting [no] no nausea vomiting ok,for example nausea vomiting [no] no nausea vomiting any
+s1_3x-whisper,day1_consultation10,mixed,no,negation_clinical,correct,no,1,1,symptoms nausea vomiting no [no] nausea vomiting ok any,example nausea vomiting no [no] nausea vomiting any temperatures
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,any temperatures or fevers [no] no not that i,any temperatures or fevers [no] and how are your
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,deleted,,0,1,temperatures or fevers no [no] not that i have,
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,deleted,,0,1,or fevers no no [not] that i have noticed,
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,anyway so i do [not] think it is any,anyway so i do [not] think it is any
+s1_3x-whisper,day1_consultation10,mixed,no,negation_clinical,correct,no,1,0,and you have noticed [no] new symptoms no no,is a bit harder [no] new symptoms in your
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,substituted,bowels,0,0,noticed no new symptoms [no] no no new symptoms,new symptoms in your [bowels] no no not that
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,no new symptoms no [no] no new symptoms in,symptoms in your bowels [no] no not that i
+s1_3x-whisper,day1_consultation10,mixed,no,negation_clinical,correct,no,1,1,new symptoms no no [no] new symptoms in your,in your bowels no [no] not that i have
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,deleted,,0,0,active at the moment [no] no not yeah i,
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,deleted,,0,1,at the moment no [no] not yeah i have,
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,deleted,,0,1,the moment no no [not] yeah i have a,
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,from the front passage [no] i do not think,the front passage not [no] i do not think
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,passage no i do [not] think so nothing unusual,not no i do [not] think so nothing unusual
+s1_3x-whisper,day1_consultation10,mixed,nothing,negation_clinical,correct,nothing,1,0,do not think so [nothing] unusual ok have you,do not think so [nothing] unusual do you use
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,deleted,,0,0,sex if you do [not] want me asking i,
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,unprotected as in like [no] no condoms or anything,mean i am protected [no] condoms or anything i
+s1_3x-whisper,day1_consultation10,mixed,no,negation_clinical,deleted,,0,1,as in like no [no] condoms or anything yeah,
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,guess because i do [not] really use condoms with,guess because i do [not] really use condoms with
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,boyfriend like i do [not] know we have just,just like i do [not] know we have just
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,if your symptoms do [not] get any better ok,if your symptoms do [not] get any better okay
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,of concern i do [not] know so i i,of concern i do [not] know so i smoked
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,related at all probably [not] but i just thought,related at all probably [not] but i just thought
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,so i i do [not] think it is is,me so i do [not] think it is related
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,be aware of sure [no] nope no ok great,should be aware of [no] no okay great and
+s1_3x-whisper,day1_consultation10,mixed,nope,negation_discourse,deleted,,0,1,aware of sure no [nope] no ok great and,
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,of sure no nope [no] ok great and what,be aware of no [no] okay great and what
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,yeah that that did [not] go too well with,yeah that that did [not] right go too well
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,bladder or the kidneys [no] no no or generally,bladder or the kidneys [no] no anything else good
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,or the kidneys no [no] no or generally anything,or the kidneys no [no] anything else good and
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,deleted,,0,1,the kidneys no no [no] or generally anything else,
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,of outside of london [not] too far away so,of outside of london [not] too far away so
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,time but i do [not] smoke i drink occasionally,time but i do [not] smoke i drink occasionally
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,tipsy so probably was [not] thinking quite straight but,bit tipsy probably was [not] thinking quite straight but
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,completely agree it is [not] something i want to,completely agree it is [not] something i want to
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,this stage i would [not] normally examine you but,this said i would [not] normally examine you but
+s1_3x-whisper,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,you know you have [not] got any other symptoms,you know you have [not] any other symptoms that
+s1_3x-whisper,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,things still are still [not] getting any better next,if things are still [not] getting better next week
+s1_3x-whisper,day1_consultation10,mixed,no,negation_discourse,deleted,,0,0,i will give yeah [no] it is a well,
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,blood in your stools [no] no blood yeah just,noticed any other things [no] no blood yeah just
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,correct,no,1,1,in your stools no [no] blood yeah just watery,any other things no [no] blood yeah just watery
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,example towards your back [no] just maybe my stomach,pain move anywhere else [no] just mainly in my
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,yeah yeah it does [not] feel like yeah it,example yeah it does [not] feel like yeah i
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,feel weak i have [not] had a fever at,feel weak i have [not] had a fever at
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,yeah i i did [not] mention my temperature no,ago yeah i did [not] measure my temperature no
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,not mention my temperature [no] but i felt just,not measure my temperature [no] but i felt just
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,sweating or night sweats [no] and any vomiting at,sweating or no nights [no] and any vomiting yeah
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,any vomiting at all [no] yeah so i vomited,
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,i know it is [not] a nice thing to,i know it is [not] nice to talk about
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,correct,no,1,0,yeah and there was [no] blood in your vomit,vomit yeah there was [no] blood in your vomit
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,just normal vomit yeah [no] no blood no yeah,is that right yeah [no] okay and any other
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,deleted,,0,1,normal vomit yeah no [no] blood no yeah no,
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,yeah no no blood [no] yeah no okay and,
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,no blood no yeah [no] okay and any any,
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,appetite so i have [not] been eating as much,of appetite i have [not] been eating as much
+s1_3x-qwen3asr,day1_consultation01,mixed,nothing,negation_clinical,correct,nothing,1,0,yeah been eating normally [nothing] unusual here okay do,yeah been eating normally [nothing] unusual yeah yeah i
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,correct,no,1,0,with similar symptoms so [no] one else in the,with similar symptoms so [no] one else in the
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,vomiting but they have [not] got diarrhea there is,vomiting but they have [not] got diarrhea there is
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,correct,no,1,0,got diarrhea there is [no] one with the same,got diarrhea there is [no] one with the same
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,fine and you do [not] have any other tummy,that is you do [not] have any other tummy
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] no okay and apart,should be aware of [no] okay apart from inhalers
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,deleted,,0,1,be aware of no [no] okay and apart from,
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,take any other medications [no] no other medications okay,take any other medication [no] no other medication and
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,correct,no,1,1,any other medications no [no] other medications okay fine,any other medication no [no] other medication and in
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,you smoke at all [no] i do not smoke,we need to ask [no] i do not smoke
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,all no i do [not] smoke and do you,ask no i do [not] smoke and do you
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,the way of alcohol [no] i i do not,you drink much alcohol [no] i do not drink
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_clinical,correct,not,1,0,no i i do [not] drink alcohol no okay,alcohol no i do [not] drink alcohol so normally
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,do not drink alcohol [no] okay so er normally,
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,management so i do [not] think you need anything,management so i do [not] think you need anything
+s1_3x-qwen3asr,day1_consultation01,mixed,not,negation_discourse,correct,not,1,0,if your symptoms have [not] got better you know,if your symptoms have [not] got better you know
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,correct,no,1,0,any questions for me [no] no further questions no,general questions for me [no] no further is the
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_clinical,correct,no,1,1,questions for me no [no] further questions no okay,questions for me no [no] further is the treatment
+s1_3x-qwen3asr,day1_consultation01,mixed,no,negation_discourse,deleted,,0,0,no no further questions [no] okay and is is,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,a bit it is [not] very clear but let,a bit it is [not] very clear but let
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,to solve it ok [no] no problem i am,
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,solve it ok no [no] problem i am happy,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,time and i can [not] even sleep at night,time and i can [not] even sleep at night
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,my work i can [not] focus i can not,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,not focus i can [not] actually focus on my,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,annoying because i can [not] actually think about what,annoying because i can [not] actually think about what
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,by this disease yeah [no] no ok i am,
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,this disease yeah no [no] ok i am certain,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,those and it did [not] work i have tried,those and it did [not] work i have tried
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,but it apparently did [not] help because it is,but it apparently did [not] help because it is
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,i am i can [not] really do it anymore,and i i can [not] really do it anymore
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,very very annoying yes [no] well ok that is,
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,from your skins ok [no] so my skin is,discharge from your skins [no] so my skin is
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,yeah ok you have [not] have not seen any,what i mean you [not] have any other pus
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,you have not have [not] seen any other pus,
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,out of your skin [no] no and you mentioned,out of your skin [no] and you mentioned it
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,1,of your skin no [no] and you mentioned it,
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,deleted,,0,0,been around anyone else [no] i it is actually,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,because i i have [not] and i do not,because i i have [not] and i do not
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,not and i do [not] understand i cannot afraid,not and i do [not] understand and i am
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,you know i do [not] feel really comfortable asking,you know i do [not] feel really comfortable asking
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,i your help now [no] no ok that is,of intimate and so [no] no that is okay
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,your help now no [no] ok that is ok,intimate and so no [no] that is okay fine
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,legs as well yeah [no] just the chest hands,and legs as well [no] just the chest hands
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,face on my face [no] no ok and apart,face on my face [no] okay and apart from
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,substituted,okay,0,1,on my face no [no] ok and apart from,on my face no [okay] and apart from this
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,any temperature or fevers [no] just very itchy nothing,any temperature or fevers [no] just the itching okay
+s1_3x-qwen3asr,day1_consultation02,mixed,nothing,negation_clinical,correct,nothing,1,0,no just very itchy [nothing] else itchy ok so,just the itching okay [nothing] else your bowels are
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_clinical,correct,no,1,0,your chest is ok [no] cough no breathing difficulties,your chest is okay [no] cough no breathing difficulties
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_clinical,correct,no,1,0,is ok no cough [no] breathing difficulties no you,is okay no cough [no] breathing difficulties no you
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,cough no breathing difficulties [no] you are passing urine,cough no breathing difficulties [no] you are passing urine
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,i am i am [not] sure i i really,arms so i am [not] sure okay i really
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_clinical,correct,no,1,0,i i really have [no] idea ok that is,okay i really have [no] so normally at this
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] i just had asthma,any other medical problems [no] i just had asthma
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,correct,not,1,0,in the past but [not] anymore ok not anymore,asthma in the past [not] anymore okay do you
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_clinical,deleted,,0,0,but not anymore ok [not] anymore ok and do,
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,medications at the moment [no] no ok do you,medications at the moment [no] okay do you have
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,substituted,okay,0,1,at the moment no [no] ok do you have,at the moment no [okay] do you have any
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,at all ohh allergies [no] no ok and tell,any allergies at all [no] no okay and tell
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,all ohh allergies no [no] ok and tell me,allergies at all no [no] okay and tell me
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,more about it ok [no] no no that is,to to know more [no] no no that is
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,about it ok no [no] no that is that,to know more no [no] no that is absolutely
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,it ok no no [no] that is that is,know more no no [no] that is absolutely that
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,you smoke at all [no] no and do you,you smoke at all [no] no and do you
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,1,smoke at all no [no] and do you drink,smoke at all no [no] and do you drink
+s1_3x-qwen3asr,day1_consultation02,mixed,nothing,negation_discourse,correct,nothing,1,0,week something like this [nothing] nothing crazy i used,week something like this [nothing] nothing crazy i used
+s1_3x-qwen3asr,day1_consultation02,mixed,nothing,negation_clinical,correct,nothing,1,1,something like this nothing [nothing] crazy i used to,something like this nothing [nothing] crazy i used to
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,this sound quality is [not] great but i will,the sound quality is [not] great but i will
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,it is working or [not] ok it is also,it is working or [not] it is also worth
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,lately but it did [not] really help ohh could,lately but it did [not] really could you say
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,deleted,,0,0,but but it did [not] really help ok ok,
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,trying and it is [not] going to do you,worth trying it is [not] going to do you
+s1_3x-qwen3asr,day1_consultation02,mixed,not,negation_discourse,correct,not,1,0,week if things do [not] get better that sounds,week if things do [not] get that sounds good
+s1_3x-qwen3asr,day1_consultation02,mixed,no,negation_discourse,correct,no,1,0,any questions for me [no] that is it thank,any questions for me [no] that is it okay
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,deleted,,0,0,gradual build up do [not] know really it just,
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,anywhere else at all [no] but it is worse,anywhere else at all [no] but it is worse
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,you but why do [not] we why do not,you but why do [not] we why do not
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,not we why do [not] we take a good,not we why do [not] we take a good
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,any temperatures or fevers [no] i do not feel,any temperatures or fevers [no] i do not feel
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,fevers no i do [not] feel feverish ok any,fevers no i do [not] feel feverish any other
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,you may have noticed [no] i have not noticed,you may have noticed [no] i have not noticed
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,noticed no i have [not] noticed anything like that,noticed no i have [not] noticed anything like that
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,get headaches i am [not] really prone to them,you normally get headaches [not] really prone to them
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,really prone to them [no] no but i did,really prone to them [no] no but i did
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,1,prone to them no [no] but i did i,prone to them no [no] but i did i
+s1_3x-qwen3asr,day1_consultation03,mixed,never,negation_discourse,correct,never,1,0,know really about this [never] had headaches like this,really worried about this [never] had headaches like this
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_clinical,correct,no,1,0,you some very yes [no] questions if that is,you some very yes [no] questions that is okay
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,difficulties with your words [no] any problems with your,
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,example numbness or weakness [no] any difficulty with balance,
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,0,your balance or coordination [no] ok and have you,your balance or coordination [okay] and have you had
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,0,knocked on the head [no] ok alright and and,knocked on the head [okay] all right and and
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,is ok you are [not] feeling breathless or no,is okay you are [not] feeling breathless or no
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,not feeling breathless or [no] ok do you have,not feeling breathless or [no] okay do you have
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] nothing no so for,should be aware of [no] no so for example
+s1_3x-qwen3asr,day1_consultation03,mixed,nothing,negation_discourse,deleted,,0,1,be aware of no [nothing] no so for example,
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,1,aware of no nothing [no] so for example have,be aware of no [no] so for example have
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,migraines in the past [no] no ok do you,migraines in the past [no] okay my mum my
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,1,in the past no [no] ok do you no,in the past no [okay] my mum my mum
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,no ok do you [no] my mum my mum,
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,deleted,,0,0,i have i have [not] been diagnosed ok right,
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,substituted,is,0,0,other family history of [no] no ok in terms,other brain issue that [is] no okay in terms
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,1,family history of no [no] ok in terms of,brain issue that is [no] okay in terms of
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,and yeah it is [not] a good time is,it getting you down [not] a good time i
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,you down i do [not] feel down just a,good time i do [not] feel down just feel
+s1_3x-qwen3asr,day1_consultation03,mixed,nothing,negation_discourse,correct,nothing,1,0,alleviate your stress normally [nothing] really ok do you,to alleviate your stress [nothing] really okay do you
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,the way of exercise [no] no ok who is,the way of exercise [no] okay who is at
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,1,way of exercise no [no] ok who is at,way of exercise no [okay] who is at home
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,correct,no,1,0,the way of alcohol [no] no ok alright so,the way of alcohol [no] okay all right so
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,substituted,okay,0,1,way of alcohol no [no] ok alright so normally,way of alcohol no [okay] all right so normally
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_discourse,correct,not,1,0,reassured that you do [not] have anything more serious,reassured that you do [not] have anything more serious
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,if your symptoms are [not] getting better next 23,if your symptoms are [not] getting better in next
+s1_3x-qwen3asr,day1_consultation03,mixed,not,negation_clinical,correct,not,1,0,headache is getting worse [not] responding to medications or,headaches getting worse and [not] responding to medications or
+s1_3x-qwen3asr,day1_consultation03,mixed,no,negation_discourse,deleted,,0,0,any questions for me [no] thank you ok have,
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,throat in the mirror [no] not really no ok,throat in the mirror [no] no okay you did
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,deleted,,0,1,in the mirror no [not] really no ok you,
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,mirror no not really [no] ok you did not,in the mirror no [no] okay you did not
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,no ok you did [not] you did not notice,no okay you did [not] you did not notice
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,did not you did [not] notice any abnormal white,did not you did [not] notice any abnormal white
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,back of your throat [no] i i did not,back of your throat [no] i i did not
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,no i i did [not] think about that is,no i i did [not] think about that is
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] very painful but it,for now it is [not] very painful but it
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,mornings throughout the day [no] it is it is,just throughout the day [no] it is it is
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_clinical,correct,no,1,0,in your chest so [no] pain in chest but,in your chest so [no] pain in chest but
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,i i i have [not] been going going to,if i i have [not] been going going to
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,are resting there is [no] problem yeah yeah yeah,are resting there is [no] problem yeah yeah when
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,questions if you do [not] mind any pain in,sir if you do [not] mind any pain in
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,substituted,you,0,0,your ears at all [no] no you do not,your ears at all [you] know you do not
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,substituted,know,0,1,ears at all no [no] you do not feel,ears at all you [know] you do not feel
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,no no you do [not] feel blocked or any,you know you do [not] feel blocked or any
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,out of your ears [no] i do not think,out of your ears [no] i do not think
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,ears no i do [not] think so ok fine,ears no i do [not] think so okay fine
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_clinical,correct,no,1,0,through a few yes [no] questions if you if,through a few yes [no] questions if you if
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,you if you do [not] mind just a review,you if you do [not] mind just a review
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,general and they are [not] they are not always,general and they are [not] they are not always
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,are not they are [not] always there but you,are not they are [not] always there but you
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,your eyesight your vision [no] any difficulty with seeing,
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,substituted,okay,0,0,with seeing bright lights [no] i do not think,with seeing bright lights [okay] and just moving down
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,deleted,,0,0,lights no i do [not] think so no ok,
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,do not think so [no] ok and just moving,
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,nausea or any vomiting [no] none of that ok,
+s1_3x-qwen3asr,day1_consultation04,mixed,none,negation_discourse,deleted,,0,1,or any vomiting no [none] of that ok tell,
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,all on your skin [no] no no and any,all on your skin [no] no and any general
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,1,on your skin no [no] no and any general,on your skin no [no] and any general muscle
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,deleted,,0,1,your skin no no [no] and any general muscle,
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,there is there is [not] anything that i am,there is there is [not] anything that i am
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] no ok any family,should be aware of [no] okay any family history
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,substituted,okay,0,1,be aware of no [no] ok any family history,be aware of no [okay] any family history at
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,correct,no,1,0,any in any way [no] i think i think,all in any way [no] i think i think
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,substituted,happy,0,0,to help i do [not] know i i like,and anything i am [happy] to help i like
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,company parties ok so [not] not regular and what,and things okay so [not] not regular and what
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,1,parties ok so not [not] regular and what about,things okay so not [not] regular and what about
+s1_3x-qwen3asr,day1_consultation04,mixed,no,negation_discourse,deleted,,0,0,and what about alcohol [no] occasionally yeah i would,
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,i am i am [not] a very big drinker,would have some can [not] socially with work yeah
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_discourse,correct,not,1,0,now settled i do [not] think there is a,now settled i do [not] think there is a
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,week you are still [not] better i would like,week you are still [not] better i would like
+s1_3x-qwen3asr,day1_consultation04,mixed,not,negation_clinical,correct,not,1,0,if you are really [not] getting better if you,if you are really [not] getting better if if
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,more gradual it has [not] been it is more,gradual no it has [not] been it is more
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,deleted,,0,0,feeling it it has [not] spread anywhere else just,
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,getting worse it is [not] like i i can,getting worse it is [not] like i can still
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,so you have got [no] other symptoms like diarrhea,so you have got [no] other symptoms like diarrhea
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,diarrhea or loose stools [no] i am i am,like diarrhea or loose [no] i am my bowel
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,substituted,okay,0,0,movements are normal now [no] ok and what about,movements are normal now [okay] and what about your
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,color but i have [not] like it has not,color but i have [not] like it has not
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,not like it has [not] really been burning specifically,not like it has [not] really been burning specifically
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,fluids so i was [not] sure i was not,fluids so i was [not] sure i was not
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,not sure i was [not] sure like you know,not sure i was [not] sure like you know
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,to say i can [not] say i mean maybe,in urine i can [not] say i mean maybe
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,but otherwise it does [not] hurt or or or,but otherwise it does [not] hurt or sting i
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,urine and i have [not] noticed that it really,or sting i have [not] noticed that it really
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,a little nauseous but [no] vomiting no vomiting any,a little nauseous but [no] vomiting any temperatures or
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_clinical,deleted,,0,0,nauseous but no vomiting [no] vomiting any temperatures or,
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,or fevers i have [not] i felt a bit,or feeling i have [not] i felt a bit
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,sweaty but i have [not] really measured it so,sweaty but i have [not] really measured it so
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,it so i can [not] really say ok fine,it so i can [not] really say and kim
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,cycle if you do [not] mind me asking are,cycle if you do [not] mind me asking are
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,so you have had [no] other partner since then,months you have had [no] other partners no other
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,substituted,partners,0,0,other partner since then [no] the ok and do,other partners no other [partners] okay and do you
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,about well we do [not] use any other barrier,think about we do [not] use any other barrier
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,deleted,,0,0,if the implanon has [not] been working then i,
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,deleted,,0,0,pregnant but i do [not] suspect yeah ok well,
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,far if you do [not] mind it is really,far if you do [not] mind it is really
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_clinical,correct,no,1,0,some pink urine but [no] burning or stinging pain,some pink urine but [no] burning or stinging pain
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,be important i do [not] think so i think,this stage i do [not] think so i think
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,yeah well i have [not] had any surgical i,quite well i have [not] had any surgical i
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,any surgical i do [not] have any surgical history,any surgical i do [not] have any surgical history
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,surgical history i do [not] have any previous i,surgical history i do [not] have any previous i
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,any previous i have [not] had any operations before,any previous i have [not] had any operations before
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,or and i am [not] on any other medication,or and i am [not] on any other medication
+s1_3x-qwen3asr,day1_consultation05,mixed,never,negation_discourse,correct,never,1,0,similar symptoms i have [never] i have never had,anything similar i have [never] had these okay fine
+s1_3x-qwen3asr,day1_consultation05,mixed,never,negation_discourse,deleted,,0,0,have never i have [never] had these symptoms before,
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,deleted,,0,0,had these symptoms before [no] ok fine any other,
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,maybe related to history [no] not that not that,maybe related to gut [no] nothing i am aware
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,substituted,nothing,1,1,related to history no [not] that not that i,related to gut no [nothing] i am aware of
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,deleted,,0,0,history no not that [not] that i am aware,
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,substituted,okay,0,0,i am aware of [no] ok alright and socially,i am aware of [okay] all right and socially
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,smoke at all kim [no] no and do you,you smoke at all [no] and do you drink
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,deleted,,0,1,at all kim no [no] and do you drink,
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,drink but i do [not] think more more than,drink but i do [not] think more no okay
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,deleted,,0,0,more more than normal [no] ok ok just before,
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,is ok yes or [no] we have we have,is okay yes or [no] we have covered the
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,make sure i am [not] missing anything else all,make sure i am [not] missing anything else how
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,breathing any i do [not] feel short of breath,your breathing i do [not] have a lot of
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,breath or i am [not] having any problems or,breath or i am [not] having any problems or
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,problems or i do [not] have a cough or,problems or i do [not] have a cough or
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,deleted,,0,0,heartbeats or rhythms palpitations [not] that it no ok,
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,palpitations not that it [no] ok any headaches any,heartbeats or rhythms palpitations [no] okay any headaches any
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,0,problems with your vision [no] no ok alright fine,problems with your vision [no] no okay all right
+s1_3x-qwen3asr,day1_consultation05,mixed,no,negation_discourse,correct,no,1,1,with your vision no [no] ok alright fine ok,with your vision no [no] okay all right fine
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_discourse,correct,not,1,0,tummy pain you do [not] exactly know what is,primary pain we do [not] exactly know what is
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,make sure we are [not] missing anything else here,make sure we are [not] missing anything else here
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,if your symptoms are [not] getting any better or,time if symptoms are [not] getting better or indeed
+s1_3x-qwen3asr,day1_consultation05,mixed,not,negation_clinical,correct,not,1,0,sweaty your temperature is [not] coming down vomiting et,sweaty the temperature is [not] coming down vomiting etc
+s1_3x-qwen3asr,day1_consultation06,mixed,without,negation_discourse,correct,without,1,0,walk to the shops [without] a problem but now,walk to the shops [without] a problem but now
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,kind of worried do [not] really know what is,of worried i do [not] really know what is
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_clinical,correct,no,1,0,pain in your chest [no] pain in my chest,pain in your chest [no] pain in my chest
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,cough but it is [not] too troublesome ok ok,cough but it is [not] too troublesome and how
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_clinical,correct,no,1,0,in your ankles reporting [no] chest pain and and,your ankles but importantly [no] chest pain and and
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,palpitations or skipped heartbeat [no] not really ok and,palpitations or skipped heartbeats [no] not really okay and
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,1,or skipped heartbeat no [not] really ok and any,or skipped heartbeats no [not] really okay and any
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,any temperatures or fevers [no] ok and how about,any temperatures or fevers [no] okay and how about
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,a diagnosis i can [not] remember they just called,a diagnosis i can [not] remember they just called
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,it like angina or [no] they they said that,it like angina or [no] they they said they
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,ok but i did [not] but i only had,angina but i did [not] but i only had
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,should be aware of [no] i think i am,should be aware of [no] i think i am
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,are taking i can [not] remember i am sorry,are taking i can [not] remember i am sorry
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,check that is ok [no] problems any other medications,i am sorry doctor [no] problems any other medications
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,sorry the connection is [not] very good ok thank,was it or lotrelol [not] very good okay thank
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,at all any medications [no] no allergies no ok,at all any medications [no] no allergies okay any
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_clinical,correct,no,1,1,all any medications no [no] allergies no ok and,all any medications no [no] allergies okay any anything
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,substituted,okay,0,0,medications no no allergies [no] ok and is there,medications no no allergies [okay] any anything in the
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,get sick i will [not] if i get more,get sick i will [not] if i get more
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,sick then i will [not] be able to work,sick then i will [not] be able to work
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,certainly a consideration is [not] it so let us,certainly a consideration is [not] there so let us
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,soon so it does [not] have any impact on,soon so it does [not] have any impact on
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,deleted,,0,0,your on your job [no] and do you find,
+s1_3x-qwen3asr,day1_consultation06,mixed,no,negation_discourse,correct,no,1,0,driving weekend driving ohh [no] i i i i,driving weekend driving 0 [no] i i i only
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,the day i do [not] like working at night,the day i do [not] like working at night
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,you smoke at all [not] any more so you,you smoke at all [not] anymore so you used
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,about alcohol i do [not] drink alcohol ok do,about alcohol i do [not] drink alcohol do you
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,have yeah i do [not] i do not go,it yeah i do [not] i do not go
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_discourse,correct,not,1,0,do not i do [not] go running like i,do not i do [not] go running like i
+s1_3x-qwen3asr,day1_consultation06,mixed,not,negation_clinical,correct,not,1,0,like your heart is [not] pumping as well as,like your heart is [not] pumping as well as
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,afternoon sir i am [not] feeling very well i,this afternoon i am [not] feeling very well and
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,to and i have [not] been feeling well for,well and i have [not] been feeling well for
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,aye so you are [not] bringing up any mucky,dry so you do [not] bring up any mucky
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,yeah yeah i do [not] like to admit that,yeah yeah i do [not] like to mention it
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,to hear that yeah [no] and any other symptoms,
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,that but i am [not] sure if that is,that but i am [not] sure if that is
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,that is related or [not] ah ok who do,that is related or [not] who do you support
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,in the they are [not] even in the top,in the they are [not] even in the top
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_clinical,substituted,the,0,0,them all the best [nothing] table so so you,the best yeah yeah [the] table so so you
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,at myself it is [not] not not a pretty,at myself it is [not] not not a pretty
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,1,myself it is not [not] not a pretty sight,myself it is not [not] not a pretty sight
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,1,it is not not [not] a pretty sight to,it is not not [not] a pretty sight to
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,looking ah right yeah [no] i i do not,mean looking nah nah [no] i do not i
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,no i i do [not] i do not really,nah no i do [not] i do not really
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,do not i do [not] really like to look,do not i do [not] really like to look
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i i i have [not] have not tried to,it so i have [not] i have not tried
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,i have not have [not] tried to do any,have not i have [not] tried to do any
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,i understand it is [not] pretty but as i,of that it is [not] pretty it is not
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i say it is [not] it is not something,not pretty it is [not] it is not something
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,is not it is [not] something we we always,is not it is [not] something we we always
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you know it is [not] as good as it,you know it is [not] as good as it
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,tight in your chest [no] no no it is,tight in your chest [no] you are breathing no
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,substituted,you,0,1,in your chest no [no] no it is it,in your chest no [you] are breathing no no
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,substituted,are,0,1,your chest no no [no] it is it is,your chest no you [are] breathing no no no
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,it is it is [not] no no no so,
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,is it is not [no] no no so your,no you are breathing [no] no no sorry what
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,it is not no [no] no so your breathing,you are breathing no [no] no sorry what was
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,is not no no [no] so your breathing is,are breathing no no [no] sorry what was that
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,it your it is [not] labored or no it,it your it is [not] labored or no it
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,is not labored or [no] it is it is,is not labored or [no] it is it is
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] it is not good,it is it is [not] it is not it
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,is not it is [not] good it is not,is not it is [not] it is not good
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,not good it is [not] good ok it is,is not it is [not] good it is not
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,good ok it is [not] good no no no,not good it is [not] good no no no
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,it is not good [no] no no no ok,it is not good [no] no no okay okay
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,is not good no [no] no no ok ok,is not good no [no] no okay okay so
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,not good no no [no] no ok ok so,not good no no [no] okay okay so you
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,substituted,okay,0,1,good no no no [no] ok ok so you,good no no no [okay] okay so you are
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,your chest at all [no] no it is it,your chest at all [no] no it is it
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,chest at all no [no] it is it is,chest at all no [no] it is it is
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,breath but it is [not] it is it is,breath but it is [not] it is it is
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] it is not pain,it is it is [not] it is not pain
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,is not it is [not] pain you know as,is not it is [not] pain okay any any
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_clinical,deleted,,0,0,you know as such [no] pain ok ok have,
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] it is not pleasant,it is it is [not] it is not pleasant
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,is not it is [not] pleasant i mean i,is not it is [not] pleasant i mean i
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,you got a but [no] i mean no you,temperature at all yeah [no] i mean no you
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,but no i mean [no] you know you know,yeah no i mean [no] you know i can
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i mean i have [not] have not you know,i mean i have [not] have not and just
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i have not have [not] you know used a,i have not have [not] and just moving on
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,but apart from that [no] ok and how is,
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,feed the i can [not] remember what it is,feed that i can [not] remember what it is
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,it is it is [not] something that i i,it is it is [not] something that i was
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,i am i am [not] feeling great you know,i am i am [not] feeling great you know
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,substituted,something,0,0,set your symptoms off [no] i have not been,symptoms off is it [something] you have eaten or
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,substituted,eaten,0,0,off no i have [not] been have not been,it something you have [eaten] or have you been
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,substituted,you,0,0,have not been have [not] been i mean as,have eaten or have [you] been traveling recently abroad
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,my wife i do [not] know whether it is,my wife i do [not] know whether it is
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,good so i would [not] have expected them to,good so i would [not] have expected them to
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i i i do [not] know you know so,but i i do [not] know you know so
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,0,know you know so [nothing] that i can see,
+s1_3x-qwen3asr,day1_consultation07,mixed,without,negation_clinical,correct,without,1,0,can see ok and [without] prying too much what,you know so and [without] crying too much what
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,correctly because i have [not] got i have not,correctly because i have [not] i have not got
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,not got i have [not] got my glasses with,have not i have [not] got my glasses with
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,yeah that sounds like [no] problems no problem that,
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,sounds like no problems [no] problem that is fine,
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,0,fine anything else sir [no] no just just just,so anything else sir [no] no just just just
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,correct,no,1,1,anything else sir no [no] just just just those,anything else sir no [no] just just just those
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_clinical,substituted,not,1,0,again but you know [nothing] long term right ok,again but you know [not] okay all right among
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,any allergies at all [not] that i am not,any allergies at all [not] that i am not
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,not that i am [not] that i am aware,not that i am [not] that i am aware
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,just you know nah [not] just allergies to medications,
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,deleted,,0,0,am i am asking [not] as opposed to other,
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,things right ah yeah [no] nothing nothing that nothing,
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,1,right ah yeah no [nothing] nothing that nothing that,
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,1,ah yeah no nothing [nothing] that nothing that i,
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,0,no nothing nothing that [nothing] that i am aware,
+s1_3x-qwen3asr,day1_consultation07,mixed,never,negation_discourse,deleted,,0,0,aware of doctor is [never] said nothing to me,
+s1_3x-qwen3asr,day1_consultation07,mixed,nothing,negation_discourse,deleted,,0,0,doctor is never said [nothing] to me so ok,
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_discourse,deleted,,0,0,at home with you [no] no kids the kids,
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_clinical,deleted,,0,1,home with you no [no] kids the kids have,
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,i mean i am [not] like you know i,i mean i am [not] like you know i
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you know i am [not] not an alky or,you know i am [not] not an alch or
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,1,know i am not [not] an alky or anything,know i am not [not] an alch or anything
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you yeah i am [not] worry i think you,am not i am [not] worried i think you
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,you antibiotics i do [not] think you have got,you antibiotics i do [not] think you have got
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,if your symptoms do [not] get better right so,if your symptoms do [not] get better right so
+s1_3x-qwen3asr,day1_consultation07,mixed,no,negation_clinical,correct,no,1,0,i think there is [no] harm in starting a,i think there is [no] harm in starting a
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,0,if you are still [not] better by next week,if you are still [not] better by next week
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_discourse,correct,not,1,0,hope so it is [not] not looking too good,hope so it is [not] not looking too good
+s1_3x-qwen3asr,day1_consultation07,mixed,not,negation_clinical,correct,not,1,1,so it is not [not] looking too good but,so it is not [not] looking too good thank
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,i,0,0,you have had before [no] never had so did,you have had before [i] know did it did
+s1_3x-qwen3asr,day1_consultation08,mixed,never,negation_discourse,substituted,know,0,1,have had before no [never] had so did it,have had before i [know] did it did it
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,0,your legs your face [no] ok so apart from,your legs your face [okay] so apart from being
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,has that i do [not] have any spots and,few days i do [not] have any spots no
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,have any spots and [no] fever and i am,not have any spots [no] fevers i am not
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,fever and i am [not] sweating either ok thank,no fevers i am [not] sweating either thank you
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,the coconut butter has [not] helped with the itch,the coconut butter has [not] helped no with the
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,0,helped with the itch [no] ok and you mentioned,no with the itch [okay] and you mentioned work
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,have you been before [no] i have been before,or have you been [no] i have been before
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,mentioned you have had [no] other fevers is that,mentioned you have had [no] other fevers is that
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,fevers is that right [no] fevers no vomiting no,fevers is that right [no] fevers no vomiting no
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,that right no fevers [no] vomiting no no how,that right no fevers [no] vomiting no no how
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,no fevers no vomiting [no] no how is your,no fevers no vomiting [no] no how is your
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,1,fevers no vomiting no [no] how is your health,fevers no vomiting no [no] how is your health
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,good yeah i am [not] on any medication and,is pretty good yeah [not] on any we will
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,bowels working ok yeah [no] no problems with vomiting,working okay yeah and [no] no problems with vomiting
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,1,working ok yeah no [no] problems with vomiting or,okay yeah and no [no] problems with vomiting or
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,vomiting or loose stools [no] ok and your waterworks,vomiting or loose stools [no] okay and your waterworks
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,0,know what that is [no] ok it is a,know what that is [okay] it is a contraceptive
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,medications that you take [no] no so in terms,any other medications 0 [no] no so in terms
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,1,that you take no [no] so in terms of,other medications 0 no [no] so in terms of
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,medical history there is [no] problems of skin problems,your medication there is [no] problems of skin problems
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,like eczema or dermatitis [no] i think it might,like eczema or dermatitis [no] i think it might
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,the weather ok ok [no] that is ok no,think the weather okay [no] it is okay no
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,no that is ok [no] no problems well move,no it is okay [no] no problems well moving
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,1,that is ok no [no] problems well move do,it is okay no [no] problems well moving do
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,are aware of yep [no] no ok all right,should be aware of [no] okay all right socially
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,1,aware of yep no [no] ok all right socially,be aware of no [okay] all right socially who
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,are you a smoker [no] i do not smoke,i ask you smoke [no] do you smoke no
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_clinical,substituted,you,0,0,smoker no i do [not] smoke do you drink,you smoke no do [you] smoke no do you
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,correct,no,1,0,the way of alcohol [no] recreational drugs no ok,in terms of alcohol [no] recreational drugs okay and
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,okay,0,0,alcohol no recreational drugs [no] ok and you said,alcohol no recreational drugs [okay] and you said you
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,your symptoms i do [not] i certainly think so,i mean i do [not] i do not think
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,few days ago but [no] other symptoms you are,few days ago but [no] other symptoms you are
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,are feeling otherwise well [no] fevers no bleeding or,are feeling otherwise well [no] fevers no bleeding or
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_clinical,correct,no,1,0,otherwise well no fevers [no] bleeding or discharge from,otherwise well no fevers [no] bleeding or discharge from
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,on this occasion would [not] be helpful painkillers would,on this occasion would [not] be helpful painkillers would
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_discourse,correct,not,1,0,be helpful painkillers would [not] be helpful on this,be helpful painkillers would [not] be helpful on this
+s1_3x-qwen3asr,day1_consultation08,mixed,not,negation_clinical,correct,not,1,0,if it is still [not] getting better come back,if it is still [not] getting better come back
+s1_3x-qwen3asr,day1_consultation08,mixed,no,negation_discourse,substituted,know,0,0,any questions for me [no] ok well i wish,questions for me i [know] okay well wish you
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,substituted,no,1,0,bit worried about it [not] sure what to do,bit worried about it [no] well thank you for
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,it is it is [not] too bad it is,it is it is [not] too bad it is
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of pain it is [not] like unbearable but it,of pain it is [not] like unbearable but it
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,sharp yeah i do [not] know maybe sort of,not yeah i do [not] know maybe sort of
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of cramping i am [not] really sure but it,of cramping i am [not] really sure but it
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,sure but it is [not] like it is not,sure but it is [not] like it is not
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,not like it is [not] like cramping like when,not like it is [not] like cramping like when
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,is like i do [not] know right right ok,is like i do [not] know okay fine and
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,more often than normal [not] i do not think,more often than normal [not] i do not think
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,normal not i do [not] think so i have,normal not i do [not] think so okay fine
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,deleted,,0,0,think so i have [not] noticed that no ok,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,deleted,,0,0,have not noticed that [no] ok fine have you,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,today but besides that [not] at all no it,today but besides that [not] at all no it
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,that not at all [no] it does kind of,that not at all [no] it does kind of
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,kind of like does [not] smell very it smells,kind of like does [not] smell very it smells
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,weird i guess but [no] not really anything anything,weird i guess but [no] not really anything anything
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,1,i guess but no [not] really anything anything drastic,i guess but no [not] really anything anything drastic
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,your flank the sides [no] not really no no,your flank the sides [no] not really okay fine
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,1,flank the sides no [not] really no no ok,flank the sides no [not] really okay fine with
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,substituted,okay,0,0,sides no not really [no] no ok fine with,sides no not really [okay] fine with the symptoms
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,deleted,,0,1,no not really no [no] ok fine with those,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,symptoms like nausea vomiting [no] not not at all,symptoms like nausea vomiting [no] any fevers or temperatures
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,deleted,,0,1,like nausea vomiting no [not] not at all ok,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,deleted,,0,1,nausea vomiting no not [not] at all ok any,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,deleted,,0,0,temperatures sorry i did [not] hear you no no,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,did not hear you [no] no no fever no,any fevers or temperatures [no] no fever no fever
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,1,not hear you no [no] no fever no no,fevers or temperatures no [no] fever no fever okay
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_clinical,deleted,,0,1,hear you no no [no] fever no no fever,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,no no no fever [no] no fever ok fine,temperatures no no fever [no] fever okay fine sorry
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_clinical,deleted,,0,1,no no fever no [no] fever ok fine sorry,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,any diarrhea loose stool [no] not that i have,yeah any any diarrhea [no] not that i not
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,1,diarrhea loose stool no [not] that i have not,any any diarrhea no [not] that i not that
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,not that i have [not] that i have noticed,no not that i [not] that i have noticed
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,history hope you do [not] mind me asking but,history hope you do [not] mind me asking are
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,down below i have [not] noticed anything no ok,down below i have [not] noticed any no okay
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,have not noticed anything [no] ok when was your,have not noticed any [no] okay when was your
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,if if ever do [not] think i have ever,if if ever do [not] think i have ever
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,have ever i do [not] think i have ever,have ever i do [not] think i have one
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,deleted,,0,0,have ever had one [no] ok fine and and,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,be pregnant i do [not] think so i do,be pregnant i do [not] think so it is
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,think so i do [not] no no it is,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,deleted,,0,1,so i do not [no] no it is always,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,deleted,,0,1,i do not no [no] it is always worth,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,about the pain yeah [not] getting any better then,worried about the pain [not] getting any better then
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,than that i think [no] like real serious medical,than that i think [no] like no serious medical
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,take any regular medications [no] i did i did,take any regular medications [no] i did a i
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,pain but it was [not] it was not really,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,deleted,,0,0,was not it was [not] really helping ok so,
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,deleted,,0,0,that and it did [not] help ok all right,
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_discourse,correct,no,1,0,bladder bowels guts yeah [no] i do not think,kidneys bladder bowels gut [no] i do not think
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,yeah no i do [not] think so not that,gut no i do [not] think so not that
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,do not think so [not] that i not anything,do not think so [not] that i not anything
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,so not that i [not] anything i know about,so not that i [not] anything i know about
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,i am i am [not] like living at home,i am i am [not] like living at home
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of careers i do [not] know maybe a doctor,of career i do [not] know maybe a doctor
+s1_3x-qwen3asr,day1_consultation09,mixed,never,negation_discourse,correct,never,1,0,a doctor someday you [never] know recommend it we,a doctor someday you [never] know we need doctors
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,of alcohol i do [not] i do not smoke,way about i do [not] i do not smoke
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,do not i do [not] smoke i do drink,do not i do [not] smoke i do drink
+s1_3x-qwen3asr,day1_consultation09,mixed,no,negation_clinical,correct,no,1,0,down essentially but but [no] other fevers or back,down essentially but but [no] other fevers or back
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,if you are still [not] better by the end,if you are still [not] better by the end
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_discourse,correct,not,1,0,if it still does [not] go away call back,if it still does [not] go away call back
+s1_3x-qwen3asr,day1_consultation09,mixed,not,negation_clinical,correct,not,1,0,worried about like like [not] having sex or anything,worried about like like [not] having sex or anything
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,days now it is [not] happened before and i,days now it is [not] happened before and i
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,really like i can [not] like go to uni,really like i can [not] like go to uni
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,sorry my ok sorry [no] i did not explain,under a week sorry [no] i did not explain
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,sorry no i did [not] explain it properly before,sorry no i did [not] explain it properly before
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,it properly before yeah [no] i it has been,it properly before yeah [no] it has been going
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,probably but i do [not] know it was pink,a problem i do [not] know we will have
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,burning pain i would [not] describe it as crampy,burning pain i would [not] describe as crampy i
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,as crampy i do [not] think it is like,as crampy i do [not] think it is like
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,back towards your sides [no] no no ok all,back towards your sides [no] no okay all right
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,towards your sides no [no] no ok all right,towards your sides no [no] okay all right any
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,substituted,okay,0,1,your sides no no [no] ok all right any,your sides no no [okay] all right any other
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,substituted,for,0,0,other symptoms nausea vomiting [no] no nausea vomiting ok,other symptoms at all [for] example nausea vomiting no
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_clinical,substituted,example,0,1,symptoms nausea vomiting no [no] nausea vomiting ok any,symptoms at all for [example] nausea vomiting no any
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,any temperatures or fevers [no] no not that i,any temperatures or fevers [no] no not that i
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,temperatures or fevers no [no] not that i have,temperatures or fevers no [no] not that i have
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,1,or fevers no no [not] that i have noticed,or fevers no no [not] that i have noticed
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,anyway so i do [not] think it is any,anyway so i do [not] think it is any
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_clinical,correct,no,1,0,and you have noticed [no] new symptoms no no,of but there is [no] new no no no
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,noticed no new symptoms [no] no no new symptoms,there is no new [no] no no new symptoms
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,no new symptoms no [no] no new symptoms in,is no new no [no] no new symptoms in
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_clinical,correct,no,1,1,new symptoms no no [no] new symptoms in your,no new no no [no] new symptoms in your
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,deleted,,0,0,active at the moment [no] no not yeah i,
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,deleted,,0,1,at the moment no [no] not yeah i have,
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,deleted,,0,1,the moment no no [not] yeah i have a,
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,from the front passage [no] i do not think,the front passage not [no] i do not think
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,passage no i do [not] think so nothing unusual,not no i do [not] think so nothing unusual
+s1_3x-qwen3asr,day1_consultation10,mixed,nothing,negation_clinical,correct,nothing,1,0,do not think so [nothing] unusual ok have you,do not think so [nothing] unusual do you use
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,sex if you do [not] want me asking i,sex if you do [not] want me to i
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,unprotected as in like [no] no condoms or anything,mean unprotected means like [no] condoms or anything i
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_clinical,deleted,,0,1,as in like no [no] condoms or anything yeah,
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,guess because i do [not] really use condoms with,guess because i do [not] really use condoms with
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,boyfriend like i do [not] know we have just,was like i do [not] know we have just
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,if your symptoms do [not] get any better ok,if your symptoms do [not] get any better okay
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,of concern i do [not] know so i i,of concern i do [not] know so i smoked
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,related at all probably [not] but i just thought,related at all probably [not] but i just thought
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,so i i do [not] think it is is,so i i do [not] think it is is
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,be aware of sure [no] nope no ok great,should be aware of [no] no okay great and
+s1_3x-qwen3asr,day1_consultation10,mixed,nope,negation_discourse,deleted,,0,1,aware of sure no [nope] no ok great and,
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,of sure no nope [no] ok great and what,be aware of no [no] okay great and what
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,yeah that that did [not] go too well with,yeah that that did [not] go too well sure
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,0,bladder or the kidneys [no] no no or generally,bladder or the kidneys [no] no no and any
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,or the kidneys no [no] no or generally anything,or the kidneys no [no] no and any anything
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,correct,no,1,1,the kidneys no no [no] or generally anything else,the kidneys no no [no] and any anything else
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,of outside of london [not] too far away so,kind of outside london [not] too far away so
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,time but i do [not] smoke i drink occasionally,time but i do [not] smoke i drink occasionally
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,tipsy so probably was [not] thinking quite straight but,tipsy so probably was [not] thinking quite straight but
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,completely agree it is [not] something i want to,completely agree it is [not] something i want to
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,this stage i would [not] normally examine you but,this is i would [not] normally examine you but
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_discourse,correct,not,1,0,you know you have [not] got any other symptoms,you know you have [not] got any other symptoms
+s1_3x-qwen3asr,day1_consultation10,mixed,not,negation_clinical,correct,not,1,0,things still are still [not] getting any better next,if things are still [not] getting any better next
+s1_3x-qwen3asr,day1_consultation10,mixed,no,negation_discourse,deleted,,0,0,i will give yeah [no] it is a well,

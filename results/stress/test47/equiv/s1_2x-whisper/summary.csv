@@ -1,0 +1,2 @@
+condition,model,normalisation,n_consultations,audio_min,ref_words,corpus_wer,substitutions,deletions,insertions,term_recall_pooled,sec_per_audio_min,ov_overlap_s,ov_ref_in,ov_ref_out,ov_sub_in,ov_sub_out,ov_del_in,ov_del_out,ov_ins_in,ov_ins_out,sub_rate_in,sub_rate_out,del_rate_in,del_rate_out,ins_rate_in,ins_rate_out
+mixed,large-v3,whisper+equivalence,47,386.37,68050,0.1116,1904,4567,1121,0.9297,4.93,2113.600000000001,10427,57623,513,1391,2280,2287,179,942,0.0492,0.0241,0.2187,0.0397,0.0172,0.0163

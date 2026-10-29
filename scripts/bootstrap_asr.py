@@ -10,7 +10,8 @@ consultations in the sample:
 
 The same resampled consultation sets are used for every run, so each pair's
 difference is paired. Writes <out>/pairwise.csv (every pair, both orders not
-repeated) and <out>/per_consultation.csv.
+repeated), <out>/per_run.csv (each run's value with its own 95% interval) and
+<out>/per_consultation.csv.
 
 Usage:
   python -I scripts/bootstrap_asr.py --data data/prepared_test47 --runs test47-qwen3-asr-1.7b test47-vad-nocond ...
@@ -110,6 +111,17 @@ def main():
             n, d = arr[m][run]
             point[(m, run)] = n.sum() / d.sum()
             boot[(m, run)] = (counts @ n) / (counts @ d)
+
+    per_run = []
+    for m in METRICS:
+        for run in args.runs:
+            lo, hi = np.percentile(boot[(m, run)], [2.5, 97.5])
+            per_run.append({"metric": m, "condition": cond, "run": run, "value": round(point[(m, run)], 4),
+                            "ci95_low": round(lo, 4), "ci95_high": round(hi, 4)})
+    with open(os.path.join(args.out, "per_run.csv"), "w", newline="", encoding="utf-8") as f:
+        w = csv.DictWriter(f, fieldnames=list(per_run[0].keys()))
+        w.writeheader()
+        w.writerows(per_run)
 
     rows = []
     for a, b in combinations(args.runs, 2):

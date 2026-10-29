@@ -57,7 +57,7 @@ def main():
     ap.add_argument("--data", required=True)
     ap.add_argument("--judged", required=True, help="judge_notes.py output folder (uses its facts/)")
     ap.add_argument("--model", default="opus")
-    ap.add_argument("--claude", default=r"D:\Tools\ClaudeCode\claude.exe")
+    ap.add_argument("--claude", default=os.environ.get("CLAUDE_BIN", "claude"), help="Claude Code CLI (default: $CLAUDE_BIN or claude on PATH)")
     args = ap.parse_args()
 
     rows = []

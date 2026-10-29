@@ -1,0 +1,6 @@
+﻿source,notes,facts,recall,missing_rate,contradicted_rate,negative_facts,negative_missing_rate,negative_contradicted,extra_contradicts_per_note,extra_not_mentioned_per_note
+asr_mixed_s3_snr0_qwen3asr,25,725,0.6814,0.2179,0.1007,196,0.2092,20,2.56,10.48
+asr_mixed_s3_snr0_whisper,25,725,0.6814,0.2359,0.0828,196,0.2296,14,2.36,10.28
+asr_mixed_s3_snr5_qwen3asr,25,725,0.7545,0.1807,0.0648,196,0.1684,15,1.76,11.48
+asr_mixed_s3_snr5_whisper,25,725,0.7434,0.189,0.0676,196,0.1429,12,1.6,11.52
+human,25,725,0.7931,0.1531,0.0538,196,0.1378,11,1.32,11.88

@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="640" height="392" fill="#fcfcfb"/>
+<text x="16" y="26" font-size="15" font-weight="600" fill="#0b0b0b">S3: background noise (DEMAND babble)</text>
+<text x="16" y="44" font-size="12" fill="#52514e">Mixed channel, corrected WER, test47; bars = 95% bootstrap interval over consultations</text>
+<line x1="64" x2="470" y1="336.0" y2="336.0" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="340.0" font-size="11" text-anchor="end" fill="#52514e">0%</text>
+<line x1="64" x2="470" y1="303.0357970641257" y2="303.0357970641257" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="307.0357970641257" font-size="11" text-anchor="end" fill="#52514e">5%</text>
+<line x1="64" x2="470" y1="270.0715941282514" y2="270.0715941282514" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="274.0715941282514" font-size="11" text-anchor="end" fill="#52514e">10%</text>
+<line x1="64" x2="470" y1="237.107391192377" y2="237.107391192377" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="241.107391192377" font-size="11" text-anchor="end" fill="#52514e">15%</text>
+<line x1="64" x2="470" y1="204.1431882565027" y2="204.1431882565027" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="208.1431882565027" font-size="11" text-anchor="end" fill="#52514e">20%</text>
+<line x1="64" x2="470" y1="171.17898532062839" y2="171.17898532062839" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="175.17898532062839" font-size="11" text-anchor="end" fill="#52514e">25%</text>
+<line x1="64" x2="470" y1="138.21478238475405" y2="138.21478238475405" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="142.21478238475405" font-size="11" text-anchor="end" fill="#52514e">30%</text>
+<line x1="64" x2="470" y1="105.25057944887973" y2="105.25057944887973" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="109.25057944887973" font-size="11" text-anchor="end" fill="#52514e">35%</text>
+<text x="64.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">clean</text>
+<text x="139.18518518518516" y="356" font-size="11" text-anchor="middle" fill="#52514e">20 dB</text>
+<text x="214.37037037037035" y="356" font-size="11" text-anchor="middle" fill="#52514e">10 dB</text>
+<text x="289.55555555555554" y="356" font-size="11" text-anchor="middle" fill="#52514e">5 dB</text>
+<text x="364.7407407407407" y="356" font-size="11" text-anchor="middle" fill="#52514e">0 dB</text>
+<text x="470.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">10 dB + alarms</text>
+<text x="16" y="70" font-size="11" fill="#52514e">corrected WER</text>
+<line x1="64.0" x2="64.0" y1="273.49987123358227" y2="262.75354107648724" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="139.18518518518516" x2="139.18518518518516" y1="260.5119752768478" y2="249.43600309039402" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="214.37037037037035" x2="214.37037037037035" y1="240.9971671388102" y2="227.21813031161474" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="289.55555555555554" x2="289.55555555555554" y1="210.86788565542105" y2="193.79242853463816" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="364.7407407407407" x2="364.7407407407407" y1="143.35719804275044" y2="114.81019830028325" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="470.0" x2="470.0" y1="237.63481843935102" y2="222.9987123358228" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2" points="64.0,268.15967035797064 139.18518518518516,254.97398918362092 214.37037037037035,234.00875611640484 289.55555555555554,202.29719289209373 364.7407407407407,128.98480556270925"/>
+<circle cx="64.0" cy="268.15967035797064" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 10.3%</title></circle>
+<circle cx="139.18518518518516" cy="254.97398918362092" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 12.3%</title></circle>
+<circle cx="214.37037037037035" cy="234.00875611640484" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 15.5%</title></circle>
+<circle cx="289.55555555555554" cy="202.29719289209373" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 20.3%</title></circle>
+<circle cx="364.7407407407407" cy="128.98480556270925" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 31.4%</title></circle>
+<circle cx="470.0" cy="230.25083698171517" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 16.0%</title></circle>
+<text x="480.0" y="234.25083698171517" font-size="12" fill="#0b0b0b">Whisper large-v3 16.0%</text>
+<line x1="64.0" x2="64.0" y1="282.8617048673706" y2="275.34586659799123" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="139.18518518518516" x2="139.18518518518516" y1="275.34586659799123" y2="266.37960339943345" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="214.37037037037035" x2="214.37037037037035" y1="254.84213237187743" y2="241.52459438578416" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="289.55555555555554" x2="289.55555555555554" y1="222.40535668297707" y2="202.62683492145248" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="364.7407407407407" x2="364.7407407407407" y1="136.9621426731908" y2="103.27272727272728" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="470.0" x2="470.0" y1="252.33685294875096" y2="238.49188771568373" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="64.0,279.16971413855265 139.18518518518516,270.9286634045841 214.37037037037035,248.11743497295905 289.55555555555554,212.38423899047126 364.7407407407407,119.9526139582797"/>
+<circle cx="64.0" cy="279.16971413855265" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 8.6%</title></circle>
+<circle cx="139.18518518518516" cy="270.9286634045841" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 9.9%</title></circle>
+<circle cx="214.37037037037035" cy="248.11743497295905" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 13.3%</title></circle>
+<circle cx="289.55555555555554" cy="212.38423899047126" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 18.8%</title></circle>
+<circle cx="364.7407407407407" cy="119.9526139582797" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 32.8%</title></circle>
+<circle cx="470.0" cy="245.3484419263456" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 13.8%</title></circle>
+<text x="480.0" y="249.3484419263456" font-size="12" fill="#0b0b0b">Qwen3-ASR-1.7B 13.8%</text>
+</svg>

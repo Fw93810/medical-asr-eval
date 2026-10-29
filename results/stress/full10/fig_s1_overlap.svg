@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 392" width="640" height="392" font-family="Inter, Segoe UI, Helvetica, Arial, sans-serif">
+<rect width="640" height="392" fill="#fcfcfb"/>
+<text x="16" y="26" font-size="15" font-weight="600" fill="#0b0b0b">S1: more doctor-patient overlap</text>
+<text x="16" y="44" font-size="12" fill="#52514e">Mixed channel, corrected WER, full10; bars = 95% bootstrap interval over consultations</text>
+<line x1="64" x2="470" y1="336.0" y2="336.0" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="340.0" font-size="11" text-anchor="end" fill="#52514e">0%</text>
+<line x1="64" x2="470" y1="287.5151515151515" y2="287.5151515151515" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="291.5151515151515" font-size="11" text-anchor="end" fill="#52514e">5%</text>
+<line x1="64" x2="470" y1="239.03030303030303" y2="239.03030303030303" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="243.03030303030303" font-size="11" text-anchor="end" fill="#52514e">10%</text>
+<line x1="64" x2="470" y1="190.54545454545456" y2="190.54545454545456" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="194.54545454545456" font-size="11" text-anchor="end" fill="#52514e">15%</text>
+<line x1="64" x2="470" y1="142.06060606060606" y2="142.06060606060606" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="146.06060606060606" font-size="11" text-anchor="end" fill="#52514e">20%</text>
+<line x1="64" x2="470" y1="93.57575757575759" y2="93.57575757575759" stroke="#d6d5d0" stroke-width="1"/>
+<text x="56" y="97.57575757575759" font-size="11" text-anchor="end" fill="#52514e">25%</text>
+<text x="64.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">1x</text>
+<text x="267.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">2x</text>
+<text x="470.0" y="356" font-size="11" text-anchor="middle" fill="#52514e">3x</text>
+<text x="16" y="70" font-size="11" fill="#52514e">corrected WER</text>
+<line x1="64.0" x2="64.0" y1="212.0727272727273" y2="180.94545454545457" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="267.0" x2="267.0" y1="180.84848484848487" y2="150.98181818181823" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="470.0" x2="470.0" y1="139.15151515151516" y2="103.27272727272728" stroke="#2a78d6" stroke-width="2" stroke-opacity="0.45"/>
+<polyline fill="none" stroke="#2a78d6" stroke-width="2" points="64.0,195.8787878787879 267.0,165.91515151515154 470.0,120.14545454545458"/>
+<circle cx="64.0" cy="195.8787878787879" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 14.4%</title></circle>
+<circle cx="267.0" cy="165.91515151515154" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 17.5%</title></circle>
+<circle cx="470.0" cy="120.14545454545458" r="4" fill="#2a78d6" stroke="#fcfcfb" stroke-width="2"><title>Whisper large-v3: 22.3%</title></circle>
+<text x="480.0" y="124.14545454545458" font-size="12" fill="#0b0b0b">Whisper large-v3 22.3%</text>
+<line x1="64.0" x2="64.0" y1="230.9818181818182" y2="211.5878787878788" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="267.0" x2="267.0" y1="208.87272727272727" y2="185.11515151515155" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<line x1="470.0" x2="470.0" y1="163.68484848484852" y2="133.52727272727273" stroke="#eb6834" stroke-width="2" stroke-opacity="0.45"/>
+<polyline fill="none" stroke="#eb6834" stroke-width="2" points="64.0,221.09090909090912 267.0,196.75151515151515 470.0,148.0727272727273"/>
+<circle cx="64.0" cy="221.09090909090912" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 11.8%</title></circle>
+<circle cx="267.0" cy="196.75151515151515" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 14.4%</title></circle>
+<circle cx="470.0" cy="148.0727272727273" r="4" fill="#eb6834" stroke="#fcfcfb" stroke-width="2"><title>Qwen3-ASR-1.7B: 19.4%</title></circle>
+<text x="480.0" y="152.0727272727273" font-size="12" fill="#0b0b0b">Qwen3-ASR-1.7B 19.4%</text>
+</svg>

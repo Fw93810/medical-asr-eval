@@ -1,0 +1,15 @@
+run,condition,sub_type,count,share,wer_points
+s3_snr20-qwen3asr,mixed,number_format,0,0.0,0.0
+s3_snr20-qwen3asr,mixed,spelling_variant,1215,0.3268,1.78
+s3_snr20-qwen3asr,mixed,compound,184,0.0495,0.27
+s3_snr20-qwen3asr,mixed,inflection,144,0.0387,0.21
+s3_snr20-qwen3asr,mixed,near_homophone,77,0.0207,0.11
+s3_snr20-qwen3asr,mixed,number_value,19,0.0051,0.03
+s3_snr20-qwen3asr,mixed,other,2079,0.5592,3.05
+s3_snr20-whisper,mixed,number_format,2,0.0006,0.0
+s3_snr20-whisper,mixed,spelling_variant,1034,0.3014,1.52
+s3_snr20-whisper,mixed,compound,162,0.0472,0.24
+s3_snr20-whisper,mixed,inflection,118,0.0344,0.17
+s3_snr20-whisper,mixed,near_homophone,76,0.0222,0.11
+s3_snr20-whisper,mixed,number_value,22,0.0064,0.03
+s3_snr20-whisper,mixed,other,2017,0.5879,2.96
