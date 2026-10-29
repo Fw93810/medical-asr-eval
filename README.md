@@ -151,14 +151,27 @@ Whisper large-v3 on 10 development consultations:
 
 ## 7. Next steps
 
+Where to put the effort depends on what the target audio looks like. In quiet audio the note writer dominates (3.1); in heavy babble and overlap the acoustic end costs as much (3.2, 3.4). So the first step is to measure, and the next steps branch on the result.
+
+**First, place the real audio on the stress-test axes.** A handful of recorded cases with reference transcripts are enough to measure overlap, SNR at the microphone, number of speakers and distance. Running the same pipeline on them and comparing notes from ASR transcripts with notes from reference transcripts (the paired comparison of 3.1) shows which stage loses the facts.
+
+**If the audio is close to clean** (separate channels or close-talk microphones, little overlap, SNR well above 5 dB), the ASR costs 1–3 points and the problem becomes one of LLM note writing:
+- stronger or fine-tuned generation models, compared by fact recall rather than fluency;
+- agent-style writing: draft the note, check each fact against the transcript, and drop or flag what the transcript does not support, starting with the invented negatives of 3.6;
+- the fact-level judge used here as an evaluation or training signal.
+
+**If overlap and noise are heavy** (one room microphone, several speakers, SNR near 0 dB), recognition and separation come first:
+- **who said what**: target-speaker ASR (e.g. DiCoW) or speech separation before recognition, aimed at the incoming speaker in overlaps;
+- microphone placement and multi-channel capture;
+- **audio-visual speaker diarisation** where a camera is available;
+- **medical-domain fine-tuning** of the ASR, judged by its effect on notes rather than WER alone;
+- **not "denoise first"**: denoising before medical ASR made results worse in all 40 configurations tested by Chondhekar et al. (arXiv 2512.17562), so stress conditions go straight into the ASR.
+
+**In either case:**
 - **Real multi-speaker data**: recordings with several clinicians, alarms and distance.
-- **Who said what**: target-speaker ASR (e.g. DiCoW) or speech separation before recognition, aimed at the incoming speaker in overlaps.
-- **Medical-domain fine-tuning** of the ASR, judged by its effect on notes rather than WER alone.
-- **The remaining stress factors**: a third speaker and far-field reverberation (planned as S2 and S4, not run).
-- **Audio-visual speaker diarisation** where a camera is available, to know who is speaking in overlaps.
+- **The remaining stress factors**: a third speaker and far-field reverberation (planned as S2 and S4, not run), to fill in the map that real audio is placed on.
 - **Semantic metrics** (e.g. tcpSemER) that weight negations, drugs and allergies rather than counting all words equally.
-- **Flag high-risk content for review**: negations and allergies recognised with low confidence, or answers produced under noise, highlighted for a human.
-- **Not "denoise first"**: denoising before medical ASR made results worse in all 40 configurations tested by Chondhekar et al. (arXiv 2512.17562), so stress conditions go straight into the ASR.
+- **Flag high-risk content for review**: negations and allergies recognised with low confidence, or answers produced under noise, highlighted for the clinician who was present.
 
 ## 8. Reproduction
 
